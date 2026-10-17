@@ -14,7 +14,6 @@ Numbers for skills are given for ranks 1 / 5 / 10. "Before" means Spectre v0.93,
 - **General Spectre skills work without a slot**, as Spectre intended, and the school techniques count the armor you wear.
 - **Better character stats**: the real toxicity decrease rate, potion duration and bomb damage bonuses, and Sign Intensity per sign with decimals.
 - **Spectre can be uninstalled from a save.** Before, it could not: a save loaded without Spectre lost Geralt's skill tree, skills, mutations and stats, with no way back. The new option "Remove Spectre from this save" prepares the save, and loaded without Spectre it plays as the base game (see Fixes).
-- **Spanish translation** added.
 - **5.01 fixes**: dismounting, gear loading, starter skills charging points, enemy scaling options that were ignored, and more (see Fixes).
 
 ## Options you can change
@@ -134,13 +133,13 @@ Spectre's skills go to 10 ranks on purpose: with Eternal Hunt, skill points can 
   | +200%           | +155%     | +130%         |
   | +300%           | +190%     | +165%         |
   | +500% and above | +225%     | +220%         |
-- The first skill of each sign (Aard: Far-Reaching, Igni: Melt Armor, Yrden: Sustained Glyphs, Quen: Exploding Shield, Axii: Delusion) adds 2.5% Sign Intensity to its own sign per rank, 25% at rank 10, while slotted. 4.04 gave each sign an intensity skill of 5 ranks of 5%; these skills have their own effect on top, so they end at the same 25%. In English and Spanish their names start with the sign. The five sign intensity skills are off the tree and get no free rank.
+- The first skill of each sign (Aard: Far-Reaching, Igni: Melt Armor, Yrden: Sustained Glyphs, Quen: Exploding Shield, Axii: Delusion) adds 2.5% Sign Intensity to its own sign per rank, 25% at rank 10, while slotted. 4.04 gave each sign an intensity skill of 5 ranks of 5%; these skills have their own effect on top, so they end at the same 25%. In English their names start with the sign. The five sign intensity skills are off the tree and get no free rank.
 - Descriptions that scale with Sign Intensity end with "Damage scales with Sign Intensity (current damage: N)". The "Sign Intensity: +N%" line of the first skill of each sign is always last, with one decimal when it has one.
 
 ### Combat
 
 - **Whirl**: spinning attack that hits everyone around and drains Stamina and Adrenaline. Cost: 100% / 60% / 10% (10% less per rank after the first). Before: 15% less per rank, free and then negative from rank 8.
-- **Rend**: charged heavy attack that goes through blocks, armor and shields. Critical chance: 10% / 50% / 100% (+10% per rank). Before: +20% per rank, 100% at rank 5. Its description was reordered: the extra damage it lists only applies to Rend itself, and the shock wave radius is given in meters in Spanish.
+- **Rend**: charged heavy attack that goes through blocks, armor and shields. Critical chance: 10% / 50% / 100% (+10% per rank). Before: +20% per rank, 100% at rank 5. Its description was reordered: the extra damage it lists only applies to Rend itself, and the shock wave radius is given in meters.
 - **Crippling Strikes**: chance to make an enemy bleed on a fast attack: 2.5% / 12.5% / 25%. Before: 5% per rank, 50% at rank 10. The damage bonus is unchanged.
 - **Deadly Precision**: a melee hit on an enemy you just countered can kill it outright, with 0.5% / 2.5% / 5% chance per Adrenaline Point (15% at rank 10 with 3 points). Enemies immune to instant kills, and special attacks such as Whirl and Rend, are excluded. Before: 1% per rank and point, 30% at rank 10.
 - **Counterattack**: the attack after a counter gets 15% / 75% / 150% more attack power and 25% / 58% / 100% more critical chance (25% plus 8.33% per rank after the first). Before: +33.4% attack power per rank (+334% at rank 10), and 35% critical chance per rank, over 100% from rank 4. Rank 10 still counters on its own while guarding.
@@ -291,7 +290,7 @@ This bug came from Spectre v0.93 (and the Alchemy mod it is based on), not from 
 
 ## Strings
 
-- Spanish (Spain) translation. `strings/es.csv` is the source, compiled into `es.w3strings`.
+- `es.w3strings` uses the English text, with the Spanish language id. Without that file, a game set to Spanish showed the raw string keys.
 - Ukrainian (`ua.w3strings`) with the English text. Without it, a game in Ukrainian showed the raw string keys for Spectre's lines.
 - The other languages keep the v0.93 text, plus the English text of the lines added in this port.
 - The skill tree notice reads "Skill tree updated." in every language. The other languages had no line for it, so the script showed a hard-coded Spanish text.
@@ -321,7 +320,7 @@ This bug came from Spectre v0.93 (and the Alchemy mod it is based on), not from 
 ### Building
 
 - `bundle/build_bundle.py` builds the bundle from the v0.93 release and the files in `bundle`.
-- `pack-release.ps1` builds `Spectre.-.Release.-.vX.zip` with `bin`, `mods` and `dlc`. `-Base` rebuilds the bundle from the v0.93 release; `-Bundle` takes the published bundle and checks it against `bundle/bundle.sha256`. It builds the `.w3strings` from `strings/en.csv` and `strings/es.csv` first (`strings/build_w3strings.py`), so a text changed in a `.csv` always ships; the other languages get the English text of new or changed lines and keep their own translations.
+- `pack-release.ps1` builds `Spectre.-.Release.-.vX.zip` with `bin`, `mods` and `dlc`. `-Base` rebuilds the bundle from the v0.93 release; `-Bundle` takes the published bundle and checks it against `bundle/bundle.sha256`. It builds the `.w3strings` from `strings/en.csv` first (`strings/build_w3strings.py`), so a text changed there always ships. `es.w3strings` gets that English text. The other languages get the English text of new or changed lines and keep their own translations.
 - `install-release.ps1` builds the zip and installs it. It first moves the old Spectre install to `build\old-install-<time>`, then checks every installed file against the zip.
 
 ### Left as Spectre

@@ -1,9 +1,9 @@
-"""Builds strings/*.w3strings from strings/en.csv and strings/es.csv.
+"""Builds strings/*.w3strings from strings/en.csv.
 
-pack-release.ps1 runs it before packing, so a text edited in a .csv always reaches the game.
+pack-release.ps1 runs it before packing, so a text edited in en.csv always reaches the game.
 
-  en.w3strings  every row of en.csv.
-  es.w3strings  every row of es.csv.
+  en.w3strings and es.w3strings  every row of en.csv. The Spanish file keeps its own language id and shows
+                                 English, so a game set to Spanish does not display raw keys.
   the others    the rows of en.csv they already have, plus rows that are new in en.csv, in English. A text that
                 differs from the previous English one is a translation and is kept.
 
@@ -166,16 +166,13 @@ def read_csv(path):
 def main():
     check = '--check' in sys.argv
     en_rows = read_csv(HERE / 'en.csv')
-    es_rows = read_csv(HERE / 'es.csv')
     old_en = load(HERE / 'en.w3strings')['texts']
     changed = 0
     for path in sorted(HERE.glob('*.w3strings')):
         lang = path.stem
         doc = load(path)
-        if lang == 'en':
+        if lang in ('en', 'es'):
             rows = dict(en_rows)
-        elif lang == 'es':
-            rows = dict(es_rows)
         else:
             rows = {}
             for sid, (key, text) in en_rows.items():

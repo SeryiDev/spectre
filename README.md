@@ -260,6 +260,6 @@ To build and install in one step (it moves the old Spectre install out of the ga
 - `bundle\xml` is the gameplay XML rebased onto 5.01. Edit these to change skills, effects, or items. They replace the v0.93 copies.
 - `bundle\files` is the files v0.93 does not have, such as the 5.01 character panel.
 - `bundle\metadata.store` is the bundle index. The build only rewrites sizes and offsets. A new file in `bundle\files` needs a record here first, made with w3edit.
-- `strings\*.w3strings` are the 17 language files. `strings\en.csv` and `strings\es.csv` are the editable sources for the lines added in this port. The other languages are still the v0.93 text.
+- `strings\*.w3strings` are the 17 language files. `strings\en.csv` is the source for the lines added in this port. `es.w3strings` carries that English text, so a game set to Spanish still shows it. The other languages keep the v0.93 text, plus the English text of the new lines.
 - `bin\config\r4game\user_config_matrix\pc\000Spectre.xml` is the options menu.
 - `dlc\dlc000Spectre` is the DLC bundle, metadata, and texture cache.

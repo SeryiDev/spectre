@@ -94,7 +94,7 @@ Require-Path $StringsDir "The repo has no strings folder."
 Require-Path $MenuXml "The repo has no bin menu file for Spectre."
 Require-Path $DlcContent "The repo has no dlc\dlc000Spectre\content."
 
-# The .w3strings are built from strings\en.csv and strings\es.csv, so an edit in a .csv always ships.
+# The .w3strings are built from strings\en.csv, so an edit there always ships. es.w3strings gets that English text.
 # Without Python, the .w3strings already in the repo are used as they are.
 $python = Get-Command python -ErrorAction SilentlyContinue
 if (-not $python) { $python = Get-Command py -ErrorAction SilentlyContinue }
