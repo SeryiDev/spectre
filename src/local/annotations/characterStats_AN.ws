@@ -99,12 +99,34 @@
 	}
 }
 
+// Fixative: different oils a blade can hold at once. 1 up to rank 4, 2 from rank 5, 3 at rank 10.
+function spectreFixativeMaxOils( level : int ) : int
+{
+	if (level >= 10)
+		return 3;
+	if (level >= 5)
+		return 2;
+	return 1;
+}
+
+// Fortified Signs: longer Yrden, Quen and Axii, as a multiplier for tooltips and stats.
+function spectreFortifiedSignsMult() : float
+{
+	var att : SAbilityAttributeValue;
+
+	if (!GetWitcherPlayer() || !GetWitcherPlayer().CanUseSkill(S_Magic_s36))
+		return 1;
+	att = GetWitcherPlayer().GetSkillAttributeValue(S_Magic_s36, 'duration', false, true);
+	return 1 + att.valueMultiplicative * GetWitcherPlayer().GetSkillLevel(S_Magic_s36);
+}
+
 function SignPowerStatToPowerBonus( valueMult : float ) : float
 {
 	valueMult -= 1;
 	if(valueMult <= 0) return 0;
-	return	ClampF(valueMult * 2 - 0, 0, 1)*0.40 +
-			ClampF(valueMult * 2 - 1, 0, 1)*0.35 +
+	// One to one up to +100% Sign Intensity, then each extra +50% gives less.
+	return	ClampF(valueMult * 2 - 0, 0, 1)*0.50 +
+			ClampF(valueMult * 2 - 1, 0, 1)*0.50 +
 			ClampF(valueMult * 2 - 2, 0, 1)*0.30 +
 			ClampF(valueMult * 2 - 3, 0, 1)*0.25 +
 			ClampF(valueMult * 2 - 4, 0, 1)*0.20 +

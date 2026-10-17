@@ -2,10 +2,10 @@
 var bWasCountered				: bool;	
 
 @addField(CActor)
-var lastAttackTime				: float;	
+var isFocusGainPaused			: bool;	
 
 @addField(CActor)
-var isFocusGainPaused			: bool;	
+var spectreLastAttackTime		: float;	
 
 @wrapMethod(CActor) function GetTotalWeaponDamage(weaponId : SItemUniqueId, damageTypeName : name, crossbowId : SItemUniqueId) : float
 {
@@ -98,8 +98,17 @@ var cachedIsSpecter : int;
 	return cachedIsSpecter;
 }
 
-@replaceMethod(CActor) function HasStaminaToParry( attActionName : name, optional mult : float ) : bool
+@replaceMethod(CActor) function HasStaminaToParry( attActionName : name ) : bool
 {
+	var mult : float;
+
+	if ( IsSuperHeavyAttack( attActionName ) )
+		mult = theGame.params.SUPERHEAVY_STRIKE_COST_MULTIPLIER;
+	else if( IsHeavyAttack( attActionName ) )
+		mult = theGame.params.HEAVY_STRIKE_COST_MULTIPLIER;
+	else
+		mult = 0.0f;
+
 	return HasStaminaToUseAction( ESAT_Parry, '', 0, mult );
 }
 
@@ -374,7 +383,9 @@ var cachedIsSpecter : int;
 	else if(!(action.IsDoTDamage() && (CBaseGameplayEffect)action.causer))
 	{
 		if(!HasTag('HideHealthBarModule'))
+		{
 			DrainStamina(ESAT_FixedValue, 0.0, 1.0 * GetHitSeverityFromDamageData(action) / 4.0);
+		}
 	}
 
 	SignalGameplayDamageEvent('DamageTaken', action );
@@ -606,7 +617,6 @@ var cachedIsSpecter : int;
 	var parriedBy : array<CActor>;
 	var npc : CNewNPC;
 	var playerTarget : CR4Player;
-	var levelDiff : int;
 	var chanceToFailParry : float;
 	
 	if(false) 
@@ -628,11 +638,7 @@ var cachedIsSpecter : int;
 		playerTarget = (CR4Player)hitTargets[i];
 		parried = false;
 		countered = false;
-		
-		if( FactsQuerySum( "tut_fight_start" ) > 0 || actor.HasAbility( 'IgnoreLevelDiffForParryTest' ) )
-			levelDiff = 0;
-		else
-			levelDiff = GetLevel() - actor.GetLevel();
+	
 		
 		if( thePlayer.IsInFistFightMiniGame() || (!playerTarget || playerTarget.IsActionAllowed(EIAB_Counter)) )
 			countered = actor.PerformCounterCheck(parryInfo);
@@ -805,7 +811,8 @@ var cachedIsSpecter : int;
 		if(parried)
 		{
 			attackAction.SetIsParried(true);
-			SignalGameplayEvent('AttackParried');
+				SignalGameplayEvent('AttackParried');
+				actor.SignalGameplayEvent('ParryingAttack');
 		}
 		else if(countered)
 		{
@@ -863,7 +870,7 @@ var cachedIsSpecter : int;
 
 		//damageData.SetWasDodged();
 		//damageData.SetAllProcessedDamageAs(0);
-		//damageData.ClearEffects();
+		damageData.ClearEffects();
 
 		if (this.UsesVitality())
 		{
@@ -874,7 +881,7 @@ var cachedIsSpecter : int;
 			damageData.processedDmg.essenceDamage -= damageData.processedDmg.essenceDamage * 0.5;
 		}
 
-		damageData.SetHitAnimationPlayType(EAHA_ForceYes);
+		damageData.SetHitAnimationPlayType(EAHA_ForceNo);
 	}
 }
 
@@ -899,7 +906,7 @@ var cachedIsSpecter : int;
 	var dmgTypes 				: array< SRawDamage >;
 	var mutagen28dmgMult		: float;
 	var maxAllowedDmg, minAllowedDmg, dmg : float;
-	
+
 	if(false) 
 	{
 		wrappedMethod( damageData );
@@ -955,8 +962,8 @@ var cachedIsSpecter : int;
 		{
 			LogDMHits("CActor.ReduceDamage: victim is heavily armored and attacker bounces of his armor", damageData );
 		}
+
 		damageData.SetAllProcessedDamageAs(0);
-		((CActor)damageData.attacker).ReactToReflectedAttack( this );
 		damageData.ClearEffects();
 		return;
 	}
@@ -967,8 +974,8 @@ var cachedIsSpecter : int;
 		{
 			LogDMHits("CActor.ReduceDamage: victim attacked from behind and immune to this type of strike - no damage will be done", damageData );
 		}
+
 		damageData.SetAllProcessedDamageAs(0);
-		((CActor)damageData.attacker).ReactToReflectedAttack( this );
 		damageData.ClearEffects();
 		return;
 	}
@@ -980,12 +987,28 @@ var cachedIsSpecter : int;
 		{
 			LogDMHits("CActor.ReduceDamage: victim attacked from behind and immune to this type of strike - no damage will be done", damageData );
 		}
+
 		damageData.SetAllProcessedDamageAs(0);
-		((CActor)damageData.attacker).ReactToReflectedAttack( this );
 		damageData.ClearEffects();
 		return;
 	}
 
+	if(this != thePlayer && IsCurrentlyDodging() && damageData.CanBeDodged() && ( VecDistanceSquared(this.GetWorldPosition(),damageData.attacker.GetWorldPosition()) > 1.7 
+		|| this.HasAbility( 'IgnoreDodgeMinimumDistance' ) ))
+	{
+		if ( canLog )
+		{
+			LogDMHits("Non-player character dodge - no damage dealt", damageData);
+		}
+		damageData.SetWasDodged();
+		damageData.SetAllProcessedDamageAs(0);
+		damageData.ClearEffects();
+		damageData.SetHitAnimationPlayType(EAHA_ForceNo);
+
+		GainStat(BCS_Stamina, GetStatMax(BCS_Stamina) * 0.25f);
+
+		return;
+	}
 	
 	if(this != thePlayer && FactsDoesExist("debug_fact_weak"))
 	{
@@ -1185,7 +1208,7 @@ var cachedIsSpecter : int;
 
 @addMethod(CActor) function GetDelaySinceLastAttack() : float
 {
-	return theGame.GetEngineTimeAsSeconds() - lastAttackTime;
+	return theGame.GetEngineTimeAsSeconds() - spectreLastAttackTime;
 }
 
 @addField(CActor) 
@@ -1203,7 +1226,7 @@ var shouldWaitForStaminaRegen : bool;
 {
 	wrappedMethod(action);
 		
-	lastAttackTime = theGame.GetEngineTimeAsSeconds();
+	spectreLastAttackTime = theGame.GetEngineTimeAsSeconds();
 }
 
 @wrapMethod(CActor) function IsHuge() : bool

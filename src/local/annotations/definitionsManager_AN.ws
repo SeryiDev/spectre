@@ -109,5 +109,6 @@
 	ItemHasTag(itemName, theGame.params.ITEM_SET_TAG_GRYPHON_MINOR) ||
 	ItemHasTag(itemName, theGame.params.ITEM_SET_TAG_LYNX_MINOR) ||
 	ItemHasTag(itemName, theGame.params.ITEM_SET_TAG_WOLF_MINOR) ||
-	ItemHasTag(itemName, theGame.params.ITEM_SET_TAG_RED_WOLF_MINOR);	
+	ItemHasTag(itemName, theGame.params.ITEM_SET_TAG_RED_WOLF_MINOR) ||
+	ItemHasTag(itemName, theGame.params.ITEM_SET_TAG_NETFLIX_MINOR);	
 }

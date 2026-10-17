@@ -2,7 +2,7 @@
 public var alchexts : SpectreAlchemyExtensions; 
 
 @addField(CR4Game)
-public saved var spawnareas : array<S_SpawnArea>;
+public saved var spawnareas : array<S_spectreSpawnArea>;
 
 @wrapMethod(CR4Game) function OnGameStarting(restored : bool )
 {
@@ -76,12 +76,17 @@ public saved var spawnareas : array<S_SpawnArea>;
 {
 	var i : int;
 	var all : array<CActor>;
-	
+	var npc : CNewNPC;
+
+	if(thePlayer.IsInCombat())
+		return;
+
 	all = GetActorsInRange(thePlayer, 10000.f, 10000, '', true);
 	for(i = 0; i < all.Size(); i += 1)
 	{
-		if((CNewNPC)all[i])
-			((CNewNPC)all[i]).ResetLevel();
+		npc = (CNewNPC)all[i];
+		if(npc && !npc.IsInCombat())
+			npc.ResetLevel();
 	}
 }
 
@@ -96,7 +101,6 @@ public saved var spawnareas : array<S_SpawnArea>;
 
 @addMethod(CR4Game) function spectreUserSettingsGameplay()
 {
-	params.spectreResetCachedValuesGameplay();
 	spectreUpdateRegenEffects();
 }
 
@@ -109,7 +113,7 @@ public saved var spawnareas : array<S_SpawnArea>;
 		wrappedMethod(filePath);
 	}
 	
-	if( theGame.params.GetNoQuestLevels() )
+	if( spectre_Settings_Main_Bool('spectreExpOptions','spectreNoQuestLevels', false) )
 	{
 		questLevelsFilePaths.Clear();
 		questLevelsContainer.Clear();
@@ -156,11 +160,11 @@ public saved var spawnareas : array<S_SpawnArea>;
 
 			if(FactsQuerySum("NewGamePlus") > 0) 
 				playerLevel -= params.GetNewGamePlusLevel();
-			if(theGame.params.GetNoQuestLevels()) 
+			if(spectre_Settings_Main_Bool('spectreExpOptions','spectreNoQuestLevels', false)) 
 				rewardLevel = 0;
 			else
 				rewardLevel = rewrd.level;
-			if(theGame.params.GetFixedExp() == false && rewardLevel > 0) 
+			if(!spectre_Settings_Main_Bool('spectreExpOptions','spectreUseXMLExp', false) && rewardLevel > 0) 
 			{
 				lvlDiff = rewardLevel - playerLevel; 
 
@@ -174,8 +178,8 @@ public saved var spawnareas : array<S_SpawnArea>;
 
 			expPoints = Max(5, expPoints);
 
-			if( theGame.params.GetQuestExpModifier() != 0 )
-				expPoints = RoundMath(expPoints * (1 + theGame.params.GetQuestExpModifier()));
+			if( spectre_Settings_Main_Float('spectreExpOptions','spectreQuestExpModifier', 0) != 0 )
+				expPoints = RoundMath(expPoints * (1 + spectre_Settings_Main_Float('spectreExpOptions','spectreQuestExpModifier', 0)));
 			GetWitcherPlayer().AddPoints(EExperiencePoint, expPoints, true);
 		}
    

@@ -1,6 +1,6 @@
 function spectreGetVersion() : float
 {
-	return 0.36;
+	return 0.94;
 }
 
 function spectreSettingsGetConfigValue(menuName, menuItemName : name) : string
@@ -32,93 +32,39 @@ function spectreVersionControl(): float
 	else return configValue;
 }
 
-function spectreInitAttempt()
-{
-	if (!spectreIsInitialized()) 
-	{
-		spectreInitializeSettings(); 
-    }
-	else
-	{
-		theGame.GetInGameConfigWrapper().SetVarValue('spectreMainOptions', 'spectreVersionControl', spectreGetVersion());
-	}
-}
-
-function spectreIsInitialized(): bool 
-{
-	var configValue :int;
-	var configValueString : string;
-	
-	configValueString = spectreSettingsGetConfigValue('spectreMainOptions', 'spectreInit');
-
-	configValue =(int) configValueString;
-
-	if(configValueString=="" || configValue<0)
-	{
-		return false;
-	}
-
-	else return (bool)configValueString;
-}
-
-function spectreInitializeSettings() 
-{
-	theGame.GetInGameConfigWrapper().SetVarValue('spectreMainOptions', 'spectreInit', "true");
-
-	theGame.GetInGameConfigWrapper().SetVarValue('spectreMainOptions', 'spectreVersionControl', spectreGetVersion());
-
-	theGame.GetInGameConfigWrapper().ApplyGroupPreset('spectreScalingOptions', 0);
-
-	theGame.GetInGameConfigWrapper().ApplyGroupPreset('spectreExpOptions', 0);
-
-	theGame.GetInGameConfigWrapper().ApplyGroupPreset('spectreGameplayOptions', 0);
-
-	theGame.GetInGameConfigWrapper().ApplyGroupPreset('spectreLootingOptions', 0);
-
-	theGame.GetInGameConfigWrapper().ApplyGroupPreset('spectreAlchemyBrewing', 0);
-
-	theGame.GetInGameConfigWrapper().ApplyGroupPreset('spectreAlchemyPotionsAndOils', 0);
-
-	theGame.GetInGameConfigWrapper().ApplyGroupPreset('spectreAlchemyToxicitySettings', 0);
-
-	theGame.GetInGameConfigWrapper().ApplyGroupPreset('spectreAlchemyMiscellaneousSettings', 0);
-
-	theGame.SaveUserSettings();
-}
-
 function spectreModRegenValue(attributeName : name, out effectValue : SAbilityAttributeValue)
 {
 	if(attributeName == 'staminaOutOfCombatRegen')
-		effectValue.valueAdditive += theGame.params.GetOutOfCombatStaminaRegen();
+		effectValue.valueAdditive += spectreCombatFloat('spectreOutOfCombatStaminaRegen', 0);
 	else if(attributeName == 'staminaRegenGuarded' || attributeName == 'staminaRegen')
-		effectValue.valueAdditive += theGame.params.GetCombatStaminaRegen();
+		effectValue.valueAdditive += spectreCombatFloat('spectreCombatStaminaRegen', 0);
 	else if(attributeName == 'vitalityRegen')
-		effectValue.valueAdditive += theGame.params.GetOutOfCombatVitalityRegen();
+		effectValue.valueAdditive += spectreCombatFloat('spectreOutOfCombatVitalityRegen', 0);
 	else if(attributeName == 'vitalityCombatRegen')
-		effectValue.valueAdditive += theGame.params.GetCombatVitalityRegen();
+		effectValue.valueAdditive += spectreCombatFloat('spectreCombatVitalityRegen', 0);
 }
 
 function spectreModAgilityStaminaCost(out cost : float)
 {
-	cost *= 1 + theGame.params.GetAgilityStaminaCostMult();
+	cost *= 1 + spectreCombatFloat('spectreAgilityStaminaCostMultiplier', 0);
 	cost = ClampF(cost, 0, 100);
 }
 
 function spectreModMeleeStaminaCost(out cost : float)
 {
-	cost *= 1 + theGame.params.GetMeleeStaminaCostMult();
+	cost *= 1 + spectreCombatFloat('spectreMeleeStaminaCostMultiplier', 0);
 	cost = ClampF(cost, 0, 100);
 }
 
 function spectreModSignStaminaCost(out cost : float)
 {
-	cost *= 1 + theGame.params.GetSignStaminaCostMult();
+	cost *= 1 + spectreCombatFloat('spectreSignStaminaCostMultiplier', 0);
 	cost = ClampF(cost, 0, 100);
 }
 
 function spectreModStaminaDelay(out delay : float)
 {
-	delay += theGame.params.GetStaminaDelay();
+	delay += spectreCombatFloat('spectreStaminaDelay', 0);
 	delay = MaxF(delay, 0);
 }
 
@@ -150,23 +96,44 @@ function spectreUpdateRegenEffects()
 
 function spectreIsGameplayOption(optionName : name) : bool
 {
-	return (optionName == 'spectreSinkBoat' || optionName == 'spectreSinkBoatOverEnc' || optionName == 'spectreEncumbranceMultiplier'
-			|| optionName == 'spectreSignStaminaCostMultiplier' || optionName == 'spectreMeleeStaminaCostMultiplier' || optionName == 'spectreAgilityStaminaCostMultiplier'
-			|| optionName == 'spectreOutOfCombatVitalityRegen' || optionName == 'spectreCombatVitalityRegen'
-			|| optionName == 'spectreOutOfCombatStaminaRegen' || optionName == 'spectreCombatStaminaRegen'
-			|| optionName == 'spectreStaminaDelay' || optionName == 'spectreMeleeSpecialCooldown'
-			|| optionName == 'spectreSignCooldown' || optionName == 'spectreAltSignCooldown'
-			|| optionName == 'spectreArmorRegenPenalty'
-			|| optionName == 'spectreSignInstantCast'
-			);
+	return (
+	optionName == 'spectreSinkBoat' 
+	|| optionName == 'spectreSinkBoatOverEnc' 
+	|| optionName == 'spectreEncumbranceMultiplier'
+	|| optionName == 'spectreSignStaminaCostMultiplier' 
+	|| optionName == 'spectreMeleeStaminaCostMultiplier' 
+	|| optionName == 'spectreAgilityStaminaCostMultiplier'
+	|| optionName == 'spectreOutOfCombatVitalityRegen' 
+	|| optionName == 'spectreCombatVitalityRegen'
+	|| optionName == 'spectreOutOfCombatStaminaRegen' 
+	|| optionName == 'spectreCombatStaminaRegen'
+	|| optionName == 'spectreStaminaDelay' 
+	|| optionName == 'spectreMeleeSpecialCooldown'
+	|| optionName == 'spectreSignCooldown' 
+	|| optionName == 'spectreAltSignCooldown'
+	|| optionName == 'spectreArmorRegenPenalty'
+	|| optionName == 'spectreSignInstantCast'
+	);
 }
 
 function spectreIsScalingOption(optionName : name) : bool
 {
-	return (optionName == 'Virtual_spectreScaling' || optionName == 'spectreRandomScalinspectreinLevel'
-			|| optionName == 'spectreRandomScalinspectreaxLevel' || optionName == 'spectreNoAnimalUpscaling'
-			|| optionName == 'spectreNoAddLevelsGuards' || optionName == 'spectreHealthMultiplier'
-			|| optionName == 'spectreDamageMultiplier');
+	return (
+	optionName == 'Virtual_spectreScaling' 
+	|| optionName == 'spectreRandomScalingMinLevel'
+	|| optionName == 'spectreRandomScalingMaxLevel' 
+	|| optionName == 'spectreNoAnimalUpscaling'
+	|| optionName == 'spectreNoAddLevelsGuards' 
+	|| optionName == 'spectreNonlinearLevelup'
+	|| optionName == 'spectreNonlinearLevelDelta'
+	|| optionName == 'spectreNonlinearAbilitiesDelta'
+	|| optionName == 'spectreMonsterHealthMultiplier'
+	|| optionName == 'spectreHumanHealthMultiplier'
+	|| optionName == 'spectreAnimalHealthMultiplier'
+	|| optionName == 'spectreDamageMultiplier'
+	|| optionName == 'spectreBossHealthMultiplier'
+	|| optionName == 'spectreBossDamageMultiplier'
+	);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -179,7 +146,7 @@ function spectreTestCastSignHold() : bool
 
 	if( theInput.GetActionValue( 'CastSignHold' ) > 0.f )
 		return true;
-	if( theGame.params.GetInstantCasting() )
+	if( spectreSignInstantCastOn() )
 	{
 		if( theInput.IsActionPressed( 'SelectAard' ) ||
 			theInput.IsActionPressed( 'SelectIgni' ) ||
@@ -849,7 +816,6 @@ exec function spectreResetMutation()
 	((W3PlayerAbilityManager)thePlayer.abilityManager).ResetMutationsDev();
 }
 
-
 function spectreFixQuestItems_internal()
 {
 	var journalManager : CWitcherJournalManager;
@@ -1214,9 +1180,14 @@ function spectreArmorFix( npc : CNewNPC )
 
 function spectreHasArmorAbility( npc : CNewNPC ) : bool
 {
-	return (npc.HasAbility('NPC Leather Armor') || npc.HasAbility('NPC Heavy Leather Armor') ||
-			npc.HasAbility('NPC Chainmail Armor') || npc.HasAbility('NPC Partial Plate Armor') ||
-			npc.HasAbility('NPC Full Plate Armor') || npc.HasAbility('NPC_Wild_Hunt_Armor'));
+	return (
+	npc.HasAbility('NPC Leather Armor') 
+	|| npc.HasAbility('NPC Heavy Leather Armor') 
+	|| npc.HasAbility('NPC Chainmail Armor') 
+	|| npc.HasAbility('NPC Partial Plate Armor') 
+	|| npc.HasAbility('NPC Full Plate Armor') 
+	|| npc.HasAbility('NPC_Wild_Hunt_Armor')
+	);
 }
 
 function spectreGetArmorAbilityFromPath( path : string ) : name
@@ -1238,10 +1209,10 @@ function spectreIsAtLWGR13( actor : CActor ) : bool
 	
 	mapManager = theGame.GetCommonMapManager();
 	
-	if( mapManager.GetCurrentArea() != AN_NMLandNovigrad )
+	if( mapManager.GetCurrentArea() != 'AN_NMLandNovigrad' )
 		return false;
 	
-	entityMapPins = mapManager.GetEntityMapPins( mapManager.GetWorldPathFromAreaType( AN_NMLandNovigrad ) );
+	entityMapPins = mapManager.GetEntityMapPins( mapManager.GetWorldPathFromAreaType( 'AN_NMLandNovigrad' ) );
 	
 	for( i = 0; i < entityMapPins.Size(); i += 1 )
 	{
@@ -1262,7 +1233,7 @@ function spectreResetLevels_internal(optional level : int)
 	lm = GetWitcherPlayer().levelManager;
 	if(level > 0)
 	{
-		lm.AddPoints(EExperiencePoint, lm.GetTotalExpForGivenLevel(level), false, true);
+		lm.spectreAddPoints(EExperiencePoint, lm.GetTotalExpForGivenLevel(level), false, true);
 	}
 }
 
@@ -1289,12 +1260,12 @@ function spectreAddAutogenEquipment_internal()
 	witcher.EquipItem(iID[0]);
 }
 
-@replaceMethod function addset( set : EItemSetType, optional equip : bool, optional addExp : bool, optional clearGeralt : bool )
+@replaceMethod function addset( itemSet : EItemSetType, optional equip : bool, optional addExp : bool, optional clearGeralt : bool )
 {
-	spectreAddset_internal( set, equip, addExp, clearGeralt );
+	spectreAddset_internal( itemSet, equip, addExp, clearGeralt );
 }
 
-function spectreAddset_internal( set : EItemSetType, optional equip : bool, optional addExp : bool, optional clearGeralt : bool )
+function spectreAddset_internal( itemSet : EItemSetType, optional equip : bool, optional addExp : bool, optional clearGeralt : bool )
 {
 	var witcher : W3PlayerWitcher;
 	
@@ -1311,7 +1282,7 @@ function spectreAddset_internal( set : EItemSetType, optional equip : bool, opti
 		witcher.AddPoints( EExperiencePoint, 85000, false );
 	}
 	
-	switch( set )
+	switch( itemSet )
 	{
 		case EIST_Lynx:
 		if(equip)
@@ -1680,8 +1651,12 @@ class spectreAoELoot
 		for (idx = idx - (int)(bool)idx; idx >= 0; idx -= 1)
 		{	
 			_containers[idx].TakeAllItems();
-			_containers[idx].OnContainerClosed();
-			_containers[idx].Enable(false);
+
+			if (_containers[idx].IsEmpty())
+			{
+				_containers[idx].OnContainerClosed();
+				_containers[idx].Enable(false);
+			}
 		}
 
 		if (idx == -1)
@@ -1761,7 +1736,7 @@ class spectreAoELoot
 		return (item_count);
 	}
 	
-	private function obtainContainers ()
+	private function obtainContainers()
 	{	
 		var idx : int;
 
@@ -1929,7 +1904,7 @@ class spectreAoELoot
 	}
 }
 
-state AlchemyBrewingPostState in W3PlayerWitcher extends Exploration
+state spectreAlchemyBrewingPostState in W3PlayerWitcher extends Exploration
 {
 	event OnEnterState(state_name : name)
 	{	
@@ -1951,7 +1926,7 @@ state AlchemyBrewingPostState in W3PlayerWitcher extends Exploration
 	
 }
 
-state AlchemyBrewing in W3PlayerWitcher extends MeditationBase
+state spectreAlchemyBrewing in W3PlayerWitcher extends MeditationBase
 {
 	private var save_lock					: int;
 	private var default_hrs_per_minute 		: float;
@@ -1982,6 +1957,11 @@ state AlchemyBrewing in W3PlayerWitcher extends MeditationBase
 	private const var TIME_LAPSE			: float;	default TIME_LAPSE = 3.0f;
 
 
+
+	public function StopRequested(optional closeUI : bool)
+	{
+		end_session = true;
+	}
 
 	event OnEnterState(state_name : name)
 	{
@@ -2030,6 +2010,7 @@ state AlchemyBrewing in W3PlayerWitcher extends MeditationBase
 			StopTimeAcceleration();
 		theInput.UnregisterListener(this, 'MoveTimeFoward');
 		theInput.UnregisterListener(this, 'ExitMedState');
+		super.OnLeaveState(nextStateName);
 	}
 	
 	event OnPlayerTickTimer(time : float)
@@ -2133,7 +2114,7 @@ state AlchemyBrewing in W3PlayerWitcher extends MeditationBase
 		{	Sleep(EXTINGUISH_DELAY);
 			firesrc.SetLight(false);
 		}
-		parent.GotoState('AlchemyBrewingPostState');
+		parent.GotoState('spectreAlchemyBrewingPostState');
 	}
 
 	private latent function StartBrewing() : void
@@ -2360,9 +2341,7 @@ abstract class SpectreAlchemyExtensionsConfig
 	public var mod_mutagens					: bool;		default mod_mutagens = true;
 	public var bottle_recycling				: bool;		default bottle_recycling = true;
 	public var mod_icons					: bool;		default mod_icons = true;
-	public var hide_herbs					: bool;		default hide_herbs = true;
-	public var ignore_spawns				: bool;		default ignore_spawns = false;
-	public var herbs : S_HerbSpawnSettings;
+	public var herbs 						: S_spectreHerbSpawnSettings;
 	public var skill_toxicity_modifier		: float;	default skill_toxicity_modifier = 1.f;
 	public var toxicity_degen_modifier		: float;	default toxicity_degen_modifier = 1.f;
 	public var toxicity_dmg_modifier		: float;	default toxicity_dmg_modifier = 1.f;
@@ -2378,7 +2357,7 @@ abstract class SpectreAlchemyExtensionsConfig
 	{	
 		var config	: CInGameConfigWrapper = theGame.GetInGameConfigWrapper();
 		var alcohol	: int = alcohol_uses;
-		var herbs_s	: S_HerbSpawnSettings;
+		var herbs_s	: S_spectreHerbSpawnSettings;
 
 		if (!change)
 			return ;
@@ -2415,16 +2394,10 @@ abstract class SpectreAlchemyExtensionsConfig
 		potion_toxicity_mult = StringToFloat(config.GetVarValue('spectreAlchemyToxicitySettings', 'spectreToxicityMultiplier') );
 		cam_rotation_speed = StringToFloat(config.GetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreCameraRotationSpeed') );
 		mod_icons = config.GetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreModIcons');
-		hide_herbs = config.GetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreHerbsOnMap');
-		ignore_spawns = config.GetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreIgnoreHerbSpawns');
+
 		herbs_s = herbs;
-		if (!ignore_spawns)
-		{	herbs.min_s = StringToInt(config.GetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreHerbsSpawnMin') );
-			herbs.max_s = StringToInt(config.GetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreHerbsSpawnMax') );
-			herbs.min_y = StringToInt(config.GetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreHerbsHarvestMin') );
-			herbs.max_y = StringToInt(config.GetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreHerbsHarvestMax') );
-			herbs.chance = StringToInt(config.GetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreHerbsSpawnChance') );
-		}
+		herbs.min_y = StringToInt(config.GetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreHerbsHarvestMin') );
+		herbs.max_y = StringToInt(config.GetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreHerbsHarvestMax') );
 		OnMenuSettingsChanged(alcohol != alcohol_uses, herbs != herbs_s);
 	}
 
@@ -2465,13 +2438,8 @@ abstract class SpectreAlchemyExtensionsConfig
 		config.SetVarValue('spectreAlchemyToxicitySettings', 'spectreToxicityMultiplier', FloatToString(potion_toxicity_mult) );
 		config.SetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreCameraRotationSpeed', FloatToString(cam_rotation_speed) );
 		config.SetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreModIcons', mod_icons);
-		config.SetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreHerbsOnMap', hide_herbs);
-		config.SetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreHerbsSpawnMin', herbs.min_s);
-		config.SetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreHerbsSpawnMax', herbs.max_s);
 		config.SetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreHerbsHarvestMin', herbs.min_y);
 		config.SetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreHerbsHarvestMax', herbs.max_y);
-		config.SetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreHerbsSpawnChance', herbs.chance);
-		config.SetVarValue('spectreAlchemyMiscellaneousSettings', 'spectreIgnoreHerbSpawns', ignore_spawns);
 	}
 
 	event OnMenuSettingsChanged(a, b : bool) : void {}
@@ -2482,21 +2450,21 @@ class SpectreAlchemyExtensions extends SpectreAlchemyExtensionsConfig
 {
 	private var substance_recipes	: array<SAlchemyRecipe>;
 	private var mutagen_recipes		: array<SAlchemyRecipe>;
-	private var reusables			: array<S_ReusableIngredient>;
+	private var reusables			: array<S_spectreReusableIngredient>;
 	private var player				: W3PlayerWitcher;
 	private var initialized			: bool;
 	private var force_init			: bool;
 	public var using_alchemy_table	: bool;
 	public var abltymgr				: spectreAbilityManager;
-	public var ing_mngr				: IngredientManager;
+	public var ing_mngr				: spectreIngredientManager;
 	public var herbctrl				: spectreHerbController;
 
 	public function Initialize() : void
 	{
 		herbctrl = new spectreHerbController in this;
-		ing_mngr = new ProgrammingHorrors in this;
+		ing_mngr = new spectreProgrammingHorrors in this;
 		if (ing_mngr.ListsFailedToInitialize() )
-			((ProgrammingHorrors)ing_mngr).BringFrankensteinToLife();
+			((spectreProgrammingHorrors)ing_mngr).BringFrankensteinToLife();
 		ReadMenuSettings(true);
 		ModMutagenRecipes();
 		ModPrimarySubstancesRecipes();
@@ -2549,31 +2517,46 @@ class SpectreAlchemyExtensions extends SpectreAlchemyExtensionsConfig
 	private var activation_time : float;
 	event OnMeditationRequest(action : SInputAction) : void
 	{
+		if (theGame.GetDLCManager().IsDLCAvailable('dlc_eh') 
+		&& theGame.GetDLCManager().IsDLCEnabled('dlc_eh') 
+		)
+		{
+			return false;	
+		}
+
 		if (IsReleased(action) && theInput.IsActionPressed('ModifierKeyPressed') && player.IsPCModeEnabled() )
 		{	player.GetInputHandler().PushAlchemyScreen();
-			return (false);
+			return false;
 		}
+
 		if (IsPressed(action) )
+		{
 			activation_time = theGame.GetEngineTimeAsSeconds();
+		}
 		else if (IsReleased(action) )
-		{	activation_time = theGame.GetEngineTimeAsSeconds() - activation_time;
+		{	
+			activation_time = theGame.GetEngineTimeAsSeconds() - activation_time;
+
 			switch (player.GetCurrentStateName() )
-			{	case 'ExplorationMeditation':
+			{	
+				case 'ExplorationMeditation':
 				case 'MeditationWaiting':
 				case 'Meditation':
 					player.GetInputHandler().PushAlchemyScreen();
 				break ;
-				case 'AlchemyBrewing':
+				case 'spectreAlchemyBrewing':
 					if (activation_time < 0.2f)
-						((W3PlayerWitcherStateAlchemyBrewing)player.GetCurrentState() ).OpenAlchemyMenu();
+						((W3PlayerWitcherStatespectreAlchemyBrewing)player.GetCurrentState() ).OpenAlchemyMenu();
 				break ;
-				case 'AlchemyBrewingPostState':
+				case 'spectreAlchemyBrewingPostState':
 				case 'Swimming':
 				break ;
 				case 'Exploration':
 					if (player.IsPCModeEnabled() || theInput.IsActionPressed('ModifierKeyPressed') )
-					{	player.GotoState('AlchemyBrewing');
-						((W3PlayerWitcherStateAlchemyBrewing)player.GetCurrentState() ).DeclareSessionType
+					{	
+						player.GotoState('spectreAlchemyBrewing');
+						
+						((W3PlayerWitcherStatespectreAlchemyBrewing)player.GetCurrentState() ).DeclareSessionType
 							(activation_time >= 0.36f);
 					}
 				break ;
@@ -2582,7 +2565,8 @@ class SpectreAlchemyExtensions extends SpectreAlchemyExtensionsConfig
 				break ;
 			}
 		}
-		return (false);
+
+		return false;
 	}
 	
 	
@@ -2705,11 +2689,11 @@ class SpectreAlchemyExtensions extends SpectreAlchemyExtensionsConfig
 
 	public function IsValidAlchemyState(statename : name) : bool
 	{
-		if (using_alchemy_table || casual_alchemy || FactsQuerySum("ACS_In_Meditation") > 0 ||
+		if (using_alchemy_table || casual_alchemy || fire_src == 0 || FactsQuerySum("ACS_In_Meditation") > 0 ||
 			theGame.GetTutorialSystem().uiHandler.GetCurrentStateName() == 'Alchemy')
 				return (true);
 		switch (statename)
-		{	case 'AlchemyBrewing':
+		{	case 'spectreAlchemyBrewing':
 			case 'Meditation':
 			case 'W3EEMeditation':
 			case 'PlayerDialogScene':
@@ -2853,17 +2837,15 @@ class SpectreAlchemyExtensions extends SpectreAlchemyExtensionsConfig
 				}
 				left -= 1;
 			}
-			reusables[idx[0]] = S_ReusableIngredient(alcohol_uses, alcohol_uses, 'Alcohest');
-			reusables[idx[1]] = S_ReusableIngredient(alcohol_uses + 1, alcohol_uses + 1, 'White Gull 1');
+			reusables[idx[0]] = S_spectreReusableIngredient(alcohol_uses, alcohol_uses, 'Alcohest');
+			reusables[idx[1]] = S_spectreReusableIngredient(alcohol_uses + 1, alcohol_uses + 1, 'White Gull 1');
 		}
 		if (mutagen)
 		{	ing_mngr.GetMutagens(mutagens);
 			for (i = reusables.Size() - 1; i >= 0; i -= 1)
 			{	if (mutagens.Contains(reusables[i].id) )
-				{	left = reusables[i].left;
-					if (left != reusables[i].uses && left < mutagen_uses)
-						reusables[i].left = mutagen_uses - left;
-					else reusables[i].left = mutagen_uses;
+				{	left = mutagen_uses - (reusables[i].uses - reusables[i].left);
+					reusables[i].left = Max(1, left);
 					reusables[i].uses = mutagen_uses;
 				}
 			}
@@ -2910,6 +2892,12 @@ class SpectreAlchemyExtensions extends SpectreAlchemyExtensionsConfig
 		duration = duration * (int)!((bool)_override) + _override;
 		duration += increment * (int)!((bool)_override);
 		duration *= (1 + multiplier - (int)(bool)multiplier);
+
+		if (FactsQuerySum("ACS_In_Meditation") > 0 )
+		{
+			duration += 120;
+		}
+
 		return (duration * internal_duration_multiplier);
 	}
 
@@ -2949,13 +2937,13 @@ class SpectreAlchemyExtensions extends SpectreAlchemyExtensionsConfig
 	public function GetTotalToxicity(potion : SItemUniqueId) : int
 	{
 		var effects			: array<CBaseGameplayEffect> = player.GetBuffs(EET_PotionDigestion);
-		var metab			: W3Effect_PotionDigestion;
+		var metab			: W3Effect_spectrePotionDigestion;
 		var idx				: int = effects.Size();
 		var unprocessed_tox	: float;
 
 		while (idx)
 		{	idx -= 1;
-			metab = (W3Effect_PotionDigestion)effects[idx];
+			metab = (W3Effect_spectrePotionDigestion)effects[idx];
 			if (metab)
 				unprocessed_tox += metab.adjusted_toxicity * metab.GetDurationLeft();
 		}
@@ -2968,8 +2956,10 @@ class SpectreAlchemyExtensions extends SpectreAlchemyExtensionsConfig
 		var i : int;
 
 		for (; i < att.Size(); i += 1)
-		{	switch (att[i].originName)
-			{	case 'duration':
+		{	
+			switch (att[i].originName)
+			{	
+				case 'duration':
 					att[i].value = CalculatePotionDuration(potion, player.inv.ItemHasTag(potion, 'Mutagen') );
 				break;
 				case 'toxicity':
@@ -2978,6 +2968,7 @@ class SpectreAlchemyExtensions extends SpectreAlchemyExtensionsConfig
 				break;
 			}
 		}
+		
 		if (StrFindFirst(player.inv.GetItemName(potion), "white honey") > -1)
 			GetWhiteHoneyModedStats(att,, potion);
 	}
@@ -3312,11 +3303,11 @@ class SpectreAlchemyExtensions extends SpectreAlchemyExtensionsConfig
 		ing_mngr.GetMutagens(mutagens);
 		for (i = mutagens.Size() - 1; i >= 0; i -= 1)
 		{	if (!ing_mngr.IsPlainMutagen(mutagens[i]) )
-				reusables.PushBack(S_ReusableIngredient(mutagen_uses, mutagen_uses, mutagens[i]) );
+				reusables.PushBack(S_spectreReusableIngredient(mutagen_uses, mutagen_uses, mutagens[i]) );
 		}
-		reusables.PushBack(S_ReusableIngredient(alcohol_uses, alcohol_uses, 'Alcohest') );
-		reusables.PushBack(S_ReusableIngredient(alcohol_uses + 1, alcohol_uses + 1, 'White Gull 1') );
-		reusables.PushBack(S_ReusableIngredient(2147483647, 2147483647, 'Soltis Vodka') );
+		reusables.PushBack(S_spectreReusableIngredient(alcohol_uses, alcohol_uses, 'Alcohest') );
+		reusables.PushBack(S_spectreReusableIngredient(alcohol_uses + 1, alcohol_uses + 1, 'White Gull 1') );
+		reusables.PushBack(S_spectreReusableIngredient(2147483647, 2147483647, 'Soltis Vodka') );
 	}
 }
 
@@ -3326,10 +3317,11 @@ function SpectreAlchemyInitialize(game : CR4Game) : void
 	{	game.alchexts = new SpectreAlchemyExtensions in game; //access through 'theGame' is restricted.
 		game.alchexts.Initialize();
 	}
-	game.alchexts.herbctrl.OnGameLoading(game.alchexts.herbs, game.alchexts.ignore_spawns);
+
+	game.alchexts.herbctrl.OnGameLoading(game.alchexts.herbs);
 }
 
-function NonZeroRound(val : float) : float
+function spectreNonZeroRound(val : float) : float
 {
 	var half	: float = (0.5f * (int)(val > 0) ) + (-0.5f * (int)(val < 0) );
 	var tmp		: float = (int)(val + half);
@@ -3343,8 +3335,9 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 {
 	public saved var manticore_bonus	: bool;
 	private saved var skills_initd		: bool;
-	private var passive_skills			: array<ESkill>; //Alchemy skills the behavior of which has been changed by the mod.
-	private var active_skills			: array<ESkill>; //Other skills that are affected by the mod in some manner but aren't alchemy skills, and retain their vanilla 'equip to use' behavior.
+	private var spectreLoadedExistingCharacter : bool;
+	private var passive_skills			: array<ESkill>; 
+	private var active_skills			: array<ESkill>;
 	private var player					: W3PlayerWitcher;
 	private var	alchexts				: SpectreAlchemyExtensions;
 
@@ -3355,6 +3348,7 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 		super.Init(ownr, cStats, isFromLoad, diff);
 		player = (W3PlayerWitcher)ownr;
 		alchexts = theGame.alchexts;
+		spectreLoadedExistingCharacter = isFromLoad;
 		if (skills_initd)
 		{	VerifySkills();
 			RefreshSkillsEffects();
@@ -3366,13 +3360,18 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 	public final function PostInit()
 	{
 		super.PostInit();
-		if (!skills_initd)
+		if (!skills_initd && spectreLoadedExistingCharacter)
+		{
+			FactsAdd("NGE_SkillPointsCheck");
+			FactsAdd("RemasterSkillResetAndRefund");
+		}
+		else if (!skills_initd)
 		{	player.ForceSetStat(BCS_Toxicity, 0);
 			player.RemoveAllPotionEffects();
 			RefreshSkillList();
-			RevertSkills();
 			ModSkills();
 			skills_initd = true;
+			RefreshSkillsEffects();
 		}
 		if (GetStat(BCS_Toxicity) && !owner.HasBuff(EET_Toxicity) )
 			owner.AddEffectDefault(EET_Toxicity, owner, 'toxicity_change');
@@ -3430,8 +3429,7 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 				if (unlocked >= 4)
 					theGame.GetGamerProfile().AddAchievement(EA_Dendrology);
 			}
-			if (!active_skills.Contains(skill) )
-				UpdateSkillEffects(skill, skills[skill].level);
+			UpdateSkillEffects(skill, skills[skill].level);
 			if (ShouldProcessTutorial('TutorialCharDevBuySkill') )
 			{	uiStateCharDev = (W3TutorialManagerUIHandlerStateCharacterDevelopment)
 				theGame.GetTutorialSystem().uiHandler.GetCurrentState();
@@ -3450,16 +3448,18 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 		
 		if (!IsSkillUsedByMod(skill) )
 			return (super.EquipSkill(skill, slotID) );
+		if (!SpectreSkillFitsSlot(skill, slotID) )
+			return (false);
 		idx = GetSkillSlotIndex(slotID, true);		
 		if (idx > -1)
 		{	prevColor = GetSkillGroupColor(skillSlots[idx].groupID);
 			UnequipSkill(slotID);
 			skillSlots[idx].socketedSkill = skill;
 			LinkUpdate(GetSkillGroupColor(skillSlots[idx].groupID), prevColor);
-			if (CanUseSkill(S_Alchemy_s19) )
-				MutagensSyngergyBonusUpdate(skillSlots[idx].groupID, skills[S_Alchemy_s19].level);
+			if (SpectreSynergyLevel() > 0)
+				MutagensSyngergyBonusUpdate(skillSlots[idx].groupID, SpectreSynergyLevel());
 			theGame.GetGamerProfile().CheckTrialOfGrasses();
-			if (active_skills.Contains(skill) )
+			if (active_skills.Contains(skill) || SpectreAlchemyNeedsSlot(skill) )
 				UpdateSkillEffects(skill);
 			if (ShouldProcessTutorial('TutorialCharDevEquipSkill') )
 			{	((W3TutorialManagerUIHandlerStateCharacterDevelopment)
@@ -3476,20 +3476,113 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 		var idx			: int;
 		var skill		: ESkill;
 		var prevColor	: ESkillColor;
+		var i			: int;
 	
-		idx = GetSkillSlotIndex(slotID, true);
-		skill = skillSlots[idx].socketedSkill;
-		if (idx < 0 || skill == S_SUndefined)
+		// A slot that has just been locked must still give its skill back, as in the base game.
+		idx = GetSkillSlotIndex(slotID, false);
+		if (idx < 0)
 			return (false);
+
+		skill = skillSlots[idx].socketedSkill;
+		if (skill == S_SUndefined)
+		{
+			return (false);
+		}
+			
 		if (!IsSkillUsedByMod(skill) )
+		{
 			return (super.UnequipSkill(slotID) );
+		}
+			
 		skillSlots[idx].socketedSkill = S_SUndefined;
-		if (active_skills.Contains(skill) )
+
+		if(  active_skills.Contains(skill) && (((W3PlayerAbilityManager)GetWitcherPlayer().abilityManager ).spectreResetSkill))
+ 		{
 			UpdateSkillEffects(skill);
+
+			for(i=0; i<skills.Size(); i+=1)
+			{			
+				if(skills[i].skillType == skill)
+				{
+					theSound.SoundEvent( "gui_character_synergy_effect_lose" );
+
+					pathPointsSpent[skills[i].skillPath] -= (skills[i].level - 1);
+					GetWitcherPlayer().levelManager.UnspendPoints(ESkillPoint, (skills[i].level - 1));
+					skills[i].level = 1;
+
+					/*
+					if (skills[i].skillType == S_Perk_01
+					|| skills[i].skillType == S_Perk_02
+					|| skills[i].skillType == S_Perk_03
+					|| skills[i].skillType == S_Perk_04
+					|| skills[i].skillType == S_Perk_05
+					|| skills[i].skillType == S_Perk_06
+					|| skills[i].skillType == S_Perk_07
+					|| skills[i].skillType == S_Perk_08
+					|| skills[i].skillType == S_Perk_09
+					|| skills[i].skillType == S_Perk_10
+					|| skills[i].skillType == S_Perk_11
+					|| skills[i].skillType == S_Perk_12
+					|| skills[i].skillType == S_Perk_13
+					|| skills[i].skillType == S_Perk_14
+					|| skills[i].skillType == S_Perk_15
+					|| skills[i].skillType == S_Perk_16
+					|| skills[i].skillType == S_Perk_17
+					|| skills[i].skillType == S_Perk_18
+					|| skills[i].skillType == S_Perk_19
+					|| skills[i].skillType == S_Perk_20
+					|| skills[i].skillType == S_Perk_21
+					|| skills[i].skillType == S_Perk_22
+					)
+					{
+						pathPointsSpent[skills[i].skillPath] -= 1;
+						GetWitcherPlayer().levelManager.UnspendPoints(ESkillPoint, 1);
+						skills[i].level = 0;
+					}
+					else
+					{
+						pathPointsSpent[skills[i].skillPath] -= (skills[i].level - 1);
+						GetWitcherPlayer().levelManager.UnspendPoints(ESkillPoint, (skills[i].level - 1));
+						skills[i].level = 1;
+					}
+					*/
+
+				}
+			}
+			( (CR4CharacterMenu) ((CR4MenuBase)theGame.GetGuiManager().GetRootMenu()).GetLastChild() ).UpdateData(true);
+
+			return (true);
+		}
+
+		if (active_skills.Contains(skill) || SpectreAlchemyNeedsSlot(skill) )
+		{
+			UpdateSkillEffects(skill);
+		}
+			
 		prevColor = GetSkillGroupColor(skillSlots[idx].groupID);
+
 		LinkUpdate(GetSkillGroupColor(skillSlots[idx].groupID), prevColor);
-		if (CanUseSkill(S_Alchemy_s19) )
-			MutagensSyngergyBonusUpdate(skillSlots[idx].groupID, skills[S_Alchemy_s19].level);
+
+		if (SpectreSynergyLevel() > 0)
+		{
+			MutagensSyngergyBonusUpdate(skillSlots[idx].groupID, SpectreSynergyLevel());
+		}
+
+		if((((W3PlayerAbilityManager)GetWitcherPlayer().abilityManager ).spectreResetSkill))
+		{
+			for(i=0; i<skills.Size(); i+=1)
+			{			
+				if(skills[i].skillType == skill)
+				{
+					pathPointsSpent[skills[i].skillPath] -= skills[i].level;
+					theSound.SoundEvent( "gui_character_synergy_effect_lose" );
+					GetWitcherPlayer().levelManager.UnspendPoints(ESkillPoint, skills[i].level);
+					skills[i].level = 0;
+				}
+			}
+			( (CR4CharacterMenu) ((CR4MenuBase)theGame.GetGuiManager().GetRootMenu()).GetLastChild() ).UpdateData(true);
+		}
+			
 		return (true);
 	}
 	
@@ -3510,8 +3603,8 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 		mutagenSlots[i].item = GetInvalidUniqueId();
 		newColor = GetSkillGroupColor(mutagenSlots[i].skillGroupID);
 		LinkUpdate(newColor, prevColor);
-		if (CanUseSkill(S_Alchemy_s19) )
-			MutagensSyngergyBonusUpdate(mutagenSlots[i].skillGroupID, GetSkillLevel(S_Alchemy_s19) );
+		if (SpectreSynergyLevel() > 0)
+			MutagensSyngergyBonusUpdate(mutagenSlots[i].skillGroupID, SpectreSynergyLevel());
 		theGame.GetGuiManager().IgnoreNewItemNotifications(true);
 		itemName = thePlayer.inv.GetItemName(item);
 		thePlayer.inv.RemoveItem(item);
@@ -3528,15 +3621,183 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 
 	public function IsSkillEquipped(skill : ESkill) : bool
 	{
-		if (passive_skills.Contains(skill) )
+		if (IsSkillUsedByMod(skill) && passive_skills.Contains(skill) && !SpectreAlchemyNeedsSlot(skill) )
 			return (skills[skill].level > 0);
 		return (super.IsSkillEquipped(skill) );
 	}
 
 	
+	public function RemasterCheckAndFixSkillStatsOnLoadedSave()
+	{
+		if (!skills_initd)
+			return;
+		super.RemasterCheckAndFixSkillStatsOnLoadedSave();
+		ApplySpectreSkillLayout();
+	}
+
+
+	public function RestoreSpectreSkillLocKeys()
+	{
+		var i : int;
+
+		if (!skills_initd)
+			return;
+		if (!passive_skills.Size())
+			RefreshSkillList();
+		for (i = passive_skills.Size() - 1; i >= 0; i -= 1)
+			ChangeSkillData(passive_skills[i]);
+	}
+
+
+	// First load of a character that was not made with Spectre: refunds every point and builds the skills
+	// from the definitions, in the tree picked by "Use Spectre's skill tree".
+	public function RebuildSkillTree(optional silent : bool)
+	{
+		var used, free, mutationPoints, refund : int;
+		var note : string;
+
+		used = player.levelManager.GetPointsUsed(ESkillPoint);
+		free = player.levelManager.GetPointsFree(ESkillPoint);
+		mutationPoints = GetMutationsUsedSkillPoints();
+		refund = free + used - mutationPoints;
+		if (refund < 0)
+			refund = 0;
+
+		player.UnequipItemFromSlot(EES_SkillMutagen1);
+		player.UnequipItemFromSlot(EES_SkillMutagen2);
+		player.UnequipItemFromSlot(EES_SkillMutagen3);
+		player.UnequipItemFromSlot(EES_SkillMutagen4);
+		ClearSocketedSkills();
+		super.ResetCharacterDev();
+		tempSkills.Clear();
+		temporaryTutorialSkills.Clear();
+
+		RebuildSkillsFromDefinitions();
+		RefreshSkillList();
+		ModSkills();
+		skills_initd = true;
+		RefreshSkillsEffects();
+
+		if (refund > 0)
+			player.levelManager.AddPoints(ESkillPoint, refund, true);
+		player.levelManager.NGE_SetUsedPoints(used - Abs(refund - free));
+		player.levelManager.NGE_SetFreePoints(refund);
+
+		note = GetLocStringByKeyExt("spectre_skill_tree_updated");
+		if (!silent)
+			theGame.GetGuiManager().ShowNotification(note);
+		ApplySpectreSkillLayout();
+	}
+
+
+	public function ClearSocketedSkills()
+	{
+		var i : int;
+		var skill : ESkill;
+		var wasUnlocked : bool;
+
+		for (i = 0; i < skillSlots.Size(); i += 1)
+		{
+			skill = skillSlots[i].socketedSkill;
+			if (skill == S_SUndefined)
+				continue;
+			wasUnlocked = skillSlots[i].unlocked;
+			skillSlots[i].unlocked = true;
+			UnequipSkill(skillSlots[i].id);
+			skillSlots[i].unlocked = wasUnlocked;
+			owner.RemoveAbilityAll(SkillEnumToName(skill));
+		}
+		owner.RemoveAbilityAll('sword_s1');
+		owner.RemoveAbilityAll('sword_s35');
+	}
+
+
+	// Cells, links and maximum ranks of every skill as the definitions give them, then the tree in use
+	// (spectreSkillTree_AN.ws) and the skill options. Runs when a save loads and when the tree changes.
+	public function ApplySpectreSkillLayout()
+	{
+		var i : int;
+		var s : ESkill;
+		var newSkills : array<SSkill>;
+		var skillDefs : array<name>;
+		var changing : bool;
+
+		// Effects come off as the old tree applied them, before any definition changes.
+		changing = SpectreSkillTreeChanged();
+		if (changing)
+			SpectreSuspendSkillEffects();
+
+		charStats.GetAbilitiesWithTag('SkillDefinitionName', skillDefs);
+		for (i = 0; i < skillDefs.Size(); i += 1)
+			CacheSkills(skillDefs[i], newSkills);
+
+		// CacheSkills puts each skill at its own index, as in skills.
+		for (i = 0; i < newSkills.Size(); i += 1)
+		{
+			s = newSkills[i].skillType;
+			if (s == S_SUndefined)
+				continue;
+			skills[s].maxLevel = newSkills[i].maxLevel;
+			skills[s].isReworked = newSkills[i].isReworked;
+			skills[s].isUnchangedLegacy = newSkills[i].isUnchangedLegacy;
+			skills[s].skillSubPath = newSkills[i].skillSubPath;
+			skills[s].gridRow = newSkills[i].gridRow;
+			skills[s].gridColumn = newSkills[i].gridColumn;
+			skills[s].requiredPointsSpent = newSkills[i].requiredPointsSpent;
+			skills[s].requiredSkills = newSkills[i].requiredSkills;
+			skills[s].requiredSkillsIsAlternative = newSkills[i].requiredSkillsIsAlternative;
+			skills[s].abilityName = newSkills[i].abilityName;
+			if (!SpectreUsesSkill(s))
+			{
+				skills[s].localisationDescriptionKey = newSkills[i].localisationDescriptionKey;
+				skills[s].localisationDescriptionLevel2Key = newSkills[i].localisationDescriptionLevel2Key;
+				skills[s].localisationDescriptionLevel3Key = newSkills[i].localisationDescriptionLevel3Key;
+			}
+		}
+		SpectreFillActiveSkills();
+		SpectreApplySkillTree();
+		RestoreSpectreSkillLocKeys();
+		if (changing)
+			SpectreResumeSkillEffects();
+		RefreshSkillsEffects();
+		DropUnsocketedSkillAbilities();
+		SpectreApplySkillOptions();
+
+		// General Synergy works without a slot in Spectre: a loaded save gets its bonus without equipping it.
+		if (!SpectreUsesVanillaSkills() && GetSkillLevel(S_Perk_43) > 0)
+			MutagensSyngergyBonusUpdate(-1, SpectreSynergyLevel());
+	}
+
+
+	// These combat and sign skills used to work without a slot. They need one now, so a loaded
+	// save drops the abilities of the ones that are learned but not socketed. The starter skills
+	// keep working without a slot while that option is on (SpectreApplySkillOptions).
+	public function DropUnsocketedSkillAbilities()
+	{
+		var list : array<ESkill>;
+		var i : int;
+
+		list.PushBack(S_Sword_s01);	list.PushBack(S_Sword_s02);	list.PushBack(S_Sword_s10);
+		list.PushBack(S_Sword_s15);	list.PushBack(S_Sword_s20);
+		list.PushBack(S_Magic_s01);	list.PushBack(S_Magic_s02);	list.PushBack(S_Magic_s03);
+		list.PushBack(S_Magic_s04);	list.PushBack(S_Magic_s05);	list.PushBack(S_Magic_s17);
+		list.PushBack(S_Magic_s07);	list.PushBack(S_Magic_s12);	list.PushBack(S_Magic_s15);
+		list.PushBack(S_Magic_s16);	list.PushBack(S_Magic_s18);
+
+		for (i = 0; i < list.Size(); i += 1)
+		{
+			if (skills[list[i]].level <= 0 || GetSkillSlotID(list[i]) >= 0 || spectreActiveSkills.Contains(list[i]))
+				continue;
+			SpectreDropSkillAbilities(list[i]);
+		}
+	}
+
+
 	public function ReplaceSkillTooltip(tooltip, description : string, skill : ESkill, lvl : int) : string
 	{
 		var args : array<int>;
+		var text : string;
+		var i, idxI, idxS : int;
 		
 		if (!IsSkillUsedByMod(skill) )
 			skill = S_SUndefined;
@@ -3556,25 +3817,22 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 				args.PushBack((int)(100.f * ALEMBIC_MOD2) * lvl);
 			break ;
 			case S_Alchemy_s13:	//Mitogenesis
-				args.PushBack(MITOGENESIS_BASE * lvl);
+				args.PushBack(SpectreAbilityPercent('Mitogenesis', 'attack_power') * lvl);
 			break ;
 			case S_Alchemy_s14: //Proficiency
-				args.PushBack((int)PowF(PROFICIENCY_MOD, lvl) );
+				args.PushBack(Max(1, PROFICIENCY_MOD * lvl) );
 			break ;
 			case S_Alchemy_s15:	//Metastasis
-				args.PushBack(METASTASIS_BASE * lvl);
+				args.PushBack(SpectreAbilityPercent('Metastasis', 'toxicity') * lvl);
 			break ;
 			case S_Alchemy_s17:	//Autophagy
 				args.PushBack((int)(100.f * AUTOPHAGY_MOD) * lvl);
 			break ;
 			case S_Alchemy_s18:	//Angiogenesis
-				args.PushBack(ANGIOGENESIS_BASE * lvl);
+				args.PushBack(SpectreAbilityPercent('Angiogenesis', 'vitality') * lvl);
 			break ;
 			case S_Alchemy_s20:	//Adaptation
 				args.PushBack((int)(100.f * ADAPTATION_MOD) * lvl);
-			break ;
-			case S_Perk_12:
-				args.PushBack(PERK12_BASE);
 			break ;
 			case S_Perk_13:
 				args.PushBack((int)(PERK13_MOD * 100.f) );
@@ -3582,7 +3840,21 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 			default:
 				return (tooltip);
 		}
-		return (GetLocStringByKeyExtWithParams(description, args) );
+		text = GetLocStringByKeyExtWithParams(description, args);
+		i = 0;
+		while (i < args.Size())
+		{
+			idxI = StrFindFirst(text, "$I$");
+			idxS = StrFindFirst(text, "$S$");
+			if (idxI < 0 && idxS < 0)
+				break;
+			if (idxI >= 0 && (idxS < 0 || idxI <= idxS))
+				text = StrLeft(text, idxI) + IntToString(args[i]) + StrRight(text, StrLen(text) - idxI - 3);
+			else
+				text = StrLeft(text, idxS) + IntToString(args[i]) + StrRight(text, StrLen(text) - idxS - 3);
+			i += 1;
+		}
+		return text;
 	}
 
 
@@ -3591,7 +3863,7 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 		var player : W3PlayerWitcher = GetWitcherPlayer();
 
 		if (player && (player.IsActionAllowed(EIAB_Dodge) || player.IsActionAllowed(EIAB_Roll) )
-		&& skills[S_Alchemy_s16].level && attacker.GetTarget() == player)
+		&& SpectreEffectiveLevel(S_Alchemy_s16) && attacker.GetTarget() == player)
 		{	player.StartFrenzy();
 			return (true);
 		}
@@ -3599,9 +3871,9 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 	}
 
 
-	public function UpdateManticoreBonus(set : EItemSetType, enable : bool) : void
+	public function UpdateManticoreBonus(itemSet : EItemSetType, enable : bool) : void
 	{
-		if (set == EIST_RedWolf)
+		if (itemSet == EIST_RedWolf)
 		{	if (enable)
 				alchexts.toxicity_dmg_modifier -= 0.1f * (int)!manticore_bonus;
 			else alchexts.toxicity_dmg_modifier += 0.1f * (int)manticore_bonus;
@@ -3656,15 +3928,31 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 	}
 
 
+	public function SpectreSkillsReady() : bool
+	{
+		return skills_initd;
+	}
+
+
 	public function NGEFixSkillPoints() : void
 	{
+		if (!skills_initd)
+			return;
 		super.NGEFixSkillPoints(); //version-diff
 		ModSkills();
 	}
 
+
+	public function RemasterSkillResetAndRefund()
+	{
+		if (!skills_initd)
+			return;
+		super.RemasterSkillResetAndRefund();
+	}
+
 	public function GetMutagenDiscoveryChance() : int
 	{
-		return ((int)(skills[S_Alchemy_s04].level * ALEMBIC_MOD2 * 100.f) );
+		return ((int)(SpectreEffectiveLevel(S_Alchemy_s04) * ALEMBIC_MOD2 * 100.f) );
 	}
 
 
@@ -3698,8 +3986,57 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 	}
 
 
+	public function SpectreUsesSkill(skill : ESkill) : bool
+	{
+		if (!passive_skills.Size())
+			RefreshSkillList();
+		return IsSkillUsedByMod(skill);
+	}
+
+
+	// The skills in spectreActiveSkills work without a slot.
+	public function SpectreSkillWorksUnslotted(skill : ESkill) : bool
+	{
+		if (!passive_skills.Size())
+			RefreshSkillList();
+		if (IsSkillUsedByMod(skill) && passive_skills.Contains(skill))
+			return !SpectreAlchemyNeedsSlot(skill);
+		if (!spectreActiveSkills.Size())
+			SpectreFillActiveSkills();
+		return spectreActiveSkills.Contains(skill);
+	}
+
+
+	// Spectre's alchemy skills work without a slot only if spectreActiveSkills lists them
+	// (SpectreFillActiveSkills in PlayerAbilityManager_AN.ws). The rest need one.
+	private function SpectreAlchemyNeedsSlot(skill : ESkill) : bool
+	{
+		if (!passive_skills.Size())
+			RefreshSkillList();
+		if (!spectreActiveSkills.Size())
+			SpectreFillActiveSkills();
+		return (passive_skills.Contains(skill) && !spectreActiveSkills.Contains(skill));
+	}
+
+
+	// Rank that counts for Spectre's alchemy effects: 0 with the 5.01 tree, or while a skill that needs a
+	// slot is out of it.
+	private function SpectreEffectiveLevel(skill : ESkill) : int
+	{
+		if (!IsSkillUsedByMod(skill))
+			return 0;
+		if (SpectreAlchemyNeedsSlot(skill) && GetIsSkillInSocket(skill) < 0)
+			return 0;
+		return skills[skill].level;
+	}
+
+
+	// Spectre's own alchemy skills (and Metabolism Boost). With the 5.01 tree those ids
+	// are the 5.01 skills, so none is Spectre's.
 	private function IsSkillUsedByMod(skill : ESkill) : bool
 	{
+		if (SpectreUsesVanillaSkills())
+			return false;
 		return (passive_skills.Contains(skill) || active_skills.Contains(skill) );
 	}
 
@@ -3719,7 +4056,6 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 		passive_skills.PushBack(S_Alchemy_s18);
 		passive_skills.PushBack(S_Alchemy_s20);
 		active_skills.Clear();
-		active_skills.PushBack(S_Perk_12);
 		active_skills.PushBack(S_Perk_13);
 	}
 
@@ -3729,6 +4065,8 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 		var ability	: name;
 		var i		: int;
 
+		if (SpectreUsesVanillaSkills())
+			return;
 		if (!passive_skills.Size() )
 			RefreshSkillList();
 		for (i = passive_skills.Size() - 1; i >= 0; i -= 1)
@@ -3744,6 +4082,8 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 
 	private function ChangeSkillData(skill : ESkill)
 	{
+		if (SpectreUsesVanillaSkills())
+			return;
 		switch (skill)
 		{	case S_Alchemy_s01:
 				skills[skill].localisationNameKey = "spectre_skill_alchemy1";
@@ -3839,6 +4179,16 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 	}
 
 
+	// Percent per rank of one of Spectre's alchemy abilities, read from geralt_skills.xml.
+	private function SpectreAbilityPercent(abilityName : name, attributeName : name) : int
+	{
+		var min, max : SAbilityAttributeValue;
+
+		theGame.GetDefinitionsManager().GetAbilityAttributeValue(abilityName, attributeName, min, max);
+		return RoundMath(min.valueMultiplicative * 100);
+	}
+
+
 	private function RefreshSkillsEffects() : void
 	{
 		var i : int;
@@ -3852,29 +4202,34 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 
 	private function VerifySkills() : void
 	{
-		if (StrCmp(skills[S_Alchemy_s01].localisationNameKey, "spectre_skill_alchemy1") )
+		if (!SpectreUsesVanillaSkills() && StrCmp(skills[S_Alchemy_s01].localisationNameKey, "spectre_skill_alchemy1") )
 			ModSkills();
 	}
 	
 
-	private const var HALF_LIFE_MOD			: float; default HALF_LIFE_MOD = 0.33f;
-	private const var EQUILIBRIUM_DUR_MOD	: float; default EQUILIBRIUM_DUR_MOD = 0.25f;
-	private const var EQUILIBRIUM_TOX_MOD	: float; default EQUILIBRIUM_TOX_MOD = 0.10f;
-	private const var CATALYSIS_MOD			: float; default CATALYSIS_MOD = 0.25f;
+	private const var HALF_LIFE_MOD			: float; default HALF_LIFE_MOD = 0.10f;
+	private const var EQUILIBRIUM_DUR_MOD	: float; default EQUILIBRIUM_DUR_MOD = 0.05f;
+	private const var EQUILIBRIUM_TOX_MOD	: float; default EQUILIBRIUM_TOX_MOD = 0.09f;
+	private const var CATALYSIS_MOD			: float; default CATALYSIS_MOD = 0.09f;
 	private const var ALEMBIC_MOD			: float; default ALEMBIC_MOD = 0.25f;
 	private const var ALEMBIC_MOD2			: float; default ALEMBIC_MOD2 = 0.05f;
-	private const var AUTOPHAGY_MOD			: float; default AUTOPHAGY_MOD = 0.5f;
-	private const var ADAPTATION_MOD		: float; default ADAPTATION_MOD = 0.18f;
+	private const var AUTOPHAGY_MOD			: float; default AUTOPHAGY_MOD = 0.1f;
+	private const var ADAPTATION_MOD		: float; default ADAPTATION_MOD = 0.10f;
 	private const var PERK13_MOD			: float; default PERK13_MOD = 0.33f;
-	private const var METASTASIS_BASE		: int; default METASTASIS_BASE = 10;
-	private const var ANGIOGENESIS_BASE		: int; default ANGIOGENESIS_BASE = 5;
-	private const var MITOGENESIS_BASE		: int; default MITOGENESIS_BASE = 4;
 	private const var PROFICIENCY_MOD		: int; default PROFICIENCY_MOD = 2;
-	private const var PERK12_BASE			: int; default PERK12_BASE = 15;
-	private const var ROUNDING_MOD			: float; default ROUNDING_MOD = 0.002f;
+	private const var ROUNDING_MOD			: float; default ROUNDING_MOD = 0.0f;
 
 	private function UpdateSkillEffects(skill : ESkill, optional lvl : int)
 	{
+		if (!IsSkillUsedByMod(skill))
+		{
+			// Only the neutral value of Spectre's alchemy effects; Metabolic Control's ability is 5.01's own.
+			if (!passive_skills.Contains(skill))
+				return;
+			lvl = 0;
+		}
+		else if (SpectreAlchemyNeedsSlot(skill) )
+			lvl = SpectreEffectiveLevel(skill);
 		switch (skill)
 		{	case S_Alchemy_s01:
 				alchexts.internal_duration_multiplier = CalcPotionDurationMultiplier();
@@ -3891,15 +4246,15 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 			break ;
 			case S_Alchemy_s13:
 		 		charStats.RemoveAbilityAll('Mitogenesis');
-		 		charStats.AddAbilityMultiple('Mitogenesis', MITOGENESIS_BASE * lvl);
+		 		charStats.AddAbilityMultiple('Mitogenesis', lvl);
 			break ;
 			case S_Alchemy_s14:
-				alchexts.mutagen_uses = (int)PowF(PROFICIENCY_MOD, lvl);
+				alchexts.mutagen_uses = Max(1, PROFICIENCY_MOD * lvl);
 				alchexts.UpdateReusableIngredients(, true);
 			break ;
 			case S_Alchemy_s15:
 		 		charStats.RemoveAbilityAll('Metastasis');
-				charStats.AddAbilityMultiple('Metastasis', METASTASIS_BASE * lvl);
+				charStats.AddAbilityMultiple('Metastasis', lvl);
 			break ;
  			case S_Alchemy_s16: //implementation remains in playerwitcher.ws. TODO: move here.
 			break ;
@@ -3908,14 +4263,10 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 			break ;
 			case S_Alchemy_s18:
 		 		charStats.RemoveAbilityAll('Angiogenesis');
-				charStats.AddAbilityMultiple('Angiogenesis', ANGIOGENESIS_BASE * lvl);
+				charStats.AddAbilityMultiple('Angiogenesis', lvl);
 			break ;
 			case S_Alchemy_s20:
 				alchexts.toxicity_dmg_modifier = 1.f - ADAPTATION_MOD * lvl;
-			break ;
-			case S_Perk_12:
-				charStats.RemoveAbilityAll('alchemy_s18');
-				charStats.AddAbilityMultiple('alchemy_s18', PERK12_BASE * 2); //HACK! version-diff
 			break ;
 			case S_Perk_13:
 				alchexts.digestion_modifier = CalcPotionDigestionModifier();
@@ -3930,26 +4281,26 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 	private function CalcPotionDurationMultiplier() : float
 	{
 		return (MaxF(0.1f, 1.f + 
-			((HALF_LIFE_MOD + skills[S_Alchemy_s01].level * ROUNDING_MOD) * skills[S_Alchemy_s01].level) -
-			(EQUILIBRIUM_DUR_MOD * skills[S_Alchemy_s03].level) -
-			((float)(GetIsSkillInSocket(S_Perk_13) > -1) * PERK13_MOD) ) );
+			((HALF_LIFE_MOD + SpectreEffectiveLevel(S_Alchemy_s01) * ROUNDING_MOD) * SpectreEffectiveLevel(S_Alchemy_s01)) -
+			(EQUILIBRIUM_DUR_MOD * SpectreEffectiveLevel(S_Alchemy_s03)) -
+			((float)(skills[S_Perk_13].level > 0) * PERK13_MOD) ) );
 	}
 
 	private function CalcPotionDigestionModifier() : float
 	{
 		return (MaxF(0.1f, 1.f - 
-			(CATALYSIS_MOD * skills[S_Alchemy_s02].level + (float)(GetIsSkillInSocket(S_Perk_13) > -1) * PERK13_MOD) ) );
+			(CATALYSIS_MOD * SpectreEffectiveLevel(S_Alchemy_s02) + (float)(skills[S_Perk_13].level > 0) * PERK13_MOD) ) );
 	}
 
 	private function CalcToxDegenModifier() : float
 	{
-		return (1.f + (AUTOPHAGY_MOD * skills[S_Alchemy_s17].level) +
-			((float)(GetIsSkillInSocket(S_Perk_13) > -1) * PERK13_MOD) );
+		return (1.f + (AUTOPHAGY_MOD * SpectreEffectiveLevel(S_Alchemy_s17)) +
+			((float)(skills[S_Perk_13].level > 0) * PERK13_MOD) );
 	}
 
 }
 
-class ProgrammingHorrors extends IngredientManager
+class spectreProgrammingHorrors extends spectreIngredientManager
 {
 	public function BringFrankensteinToLife()
 	{
@@ -4379,180 +4730,28 @@ class ProgrammingHorrors extends IngredientManager
 
 class spectreHerbController
 {
-	private var spawned			: array<S_SpawnData>;
-	private var signature		: array<int>;
-	private var areaname		: EAreaName;
-	private var area_procd		: bool;
-	private var removed			: int;
-	private var minspawns		: int;
-	private var maxspawns	 	: int;
 	private var yield_min		: int;
 	private var yield_max		: int;
-	private var spawnchance		: float;
-	private var spawns_disabled : bool;
 
-	
-
-	event OnGameLoading(settings : S_HerbSpawnSettings, optional ignore_spawns : bool) : void
+	event OnGameLoading(settings : S_spectreHerbSpawnSettings) : void
 	{
-		minspawns = settings.min_s;
-		maxspawns = settings.max_s;
 		yield_min = settings.min_y;
 		yield_max = settings.max_y;
-		spawnchance = settings.chance * 0.01f;
-		spawns_disabled = ignore_spawns;
-		signature.Clear();
-		spawned.Clear();
-		area_procd = false;
-		removed = 0;
-	}
-
-	event OnGameAreaLoaded(area : EAreaName)
-	{
-		var idx		: int;
-		var game	: CR4Game = theGame;
-
-		if (spawns_disabled)
-			return (false);
-		areaname = area;
-		if (IsKnownArea(area,, idx) )
-			return (false);
-		game.spawnareas.PushBack(S_SpawnArea(signature, area, (int)(removed * .5f + 0.5f) ) );
-		FactsAdd("spectre_" + area + "_processed", 1, -1);
-	}
-
-	event OnRespawnTimerElapsed(herb : W3Herb) : void
-	{
-		var inv		: CInventoryComponent = herb.GetInventory();
-		var game	: CR4Game = theGame;
-		var idx 	: int;
-
-		if (!inv.IsReadyToRenew() || RandRange(100) < 25)
-			return (false);
-		inv.UpdateLoot();
-		if (inv.IsEmpty() )
-			return (false);
-		herb.RemoveTimer('respawn_herb');
-		herb.growing = false;
-		herb.Enable(true, false, true);
-		if (!spawns_disabled && IsKnownArea(areaname,, idx) )
-		{	game.spawnareas[idx].resetcount -= 1;
-			if (game.spawnareas[idx].resetcount <= 0)
-			{	game.spawnareas.Erase(idx);
-				FactsRemove("spectre_" + areaname + "_processed");
-			}
-		}
-	}
-
-	event OnHerbSpawnRequest(herb : W3Herb)
-	{
-		var items	: array<name>;
-		var inv		: CInventoryComponent = herb.GetInventory();
-		var hash	: int = herb.GetGuidHash();
-		var id		: SItemUniqueId;
-		var pos		: int;
-
-		if (spawns_disabled || IsAreaProcessed(herb, inv, hash) )
-			return (false);
-		items = inv.GetItemsNames();
-		id = inv.GetItemId(items[0]);
-		if (inv.ItemHasTag(id, 'Quest') )
-			return (false);
-		if (CanSpawnHerb(items[0], pos) )
-		{	if (pos >= 0)
-				spawned[pos].count += 1;
-			else spawned.PushBack(S_SpawnData(items[0], 1) );
-			return (false);
-		}
-		removed += 1;
-		inv.NotifyItemLooted(id);
-		inv.RemoveAllItems();
-		herb.growing = true;
-		herb.Enable(false);
 	}
 
 	public function GetHerbYield() : int
 	{
-		return (RandRange(yield_max + 1, yield_min) ); //yield_max is not inclusive.
+		return (RandRange(yield_max + 1, yield_min) ); 
 	}
 
-	private var seed : int;
-	public function GetSeededRand(max : float, optional min : float) : float
-	{
-		seed += 1;
-		return (RandNoiseF(seed, max, min) );
-	}
-
-	public function UpdateHerbYield(settings : S_HerbSpawnSettings) : void
+	public function UpdateHerbYield(settings : S_spectreHerbSpawnSettings) : void
 	{
 		yield_min = settings.min_y;
 		yield_max = settings.max_y;
 	}
-
-	private function CanSpawnHerb(herb : name, out idx : int) : bool
-	{
-		var chance : float;
-
-		for (idx = spawned.Size() - 1; idx >= 0; idx -= 1)
-		{	if (spawned[idx].herb != herb)
-				continue ;
-			return (spawned[idx].count < minspawns ||
-				(spawned[idx].count < maxspawns && 
-				spawnchance > GetSeededRand((float)spawned[idx].count / (float)maxspawns) ) );
-		}
-		return (true);
-	}
-
-	private function IsKnownArea(optional area : EAreaName, optional signature : int, out idx : int) : bool
-	{
-		var area_data	: S_SpawnArea;
-		var i			: int;	
-
-		for (i = theGame.spawnareas.Size() - 1; i >= 0; i -= 1)
-		{	area_data = theGame.spawnareas[i];
-			if ((area != AN_Undefined && area_data.area == area) || area_data.signature.Contains(signature) )
-			{	idx = i;
-				return (true);
-			}
-		}
-		return (false);
-	}
-
-	private function IsAreaProcessed(herb : W3Herb, inv : CInventoryComponent, hash : int) : bool
-	{
-		var idx		: int;
-		var game	: CR4Game = theGame;
-
-		if (area_procd)
-			return (true);
-		if (IsKnownArea(, hash, idx) )
-		{	area_procd = FactsQuerySum("spectre_" + game.spawnareas[idx].area + "_processed");
-			if (!area_procd)
-				game.spawnareas.Erase(idx);
-		}
-		switch (signature.Size() )
-		{	case 0:
-				herb.AddTimer('get_area_name', 2);
-			//[[fallthrough]]
-			case 1:
-			case 2:
-			case 3:
-				signature.PushBack(hash);
-			default:
-			break ;
-		}
-		return (inv.IsEmpty() || area_procd);
-	}
-
 }
 
-struct S_SpawnData
-{
-	var herb	: name;
-	var count	: int;
-}
-
-class IngredientManager
+class spectreIngredientManager
 {	
 	protected const var primary		: array<name>;
 	protected const var rich		: array<name>;
@@ -4683,7 +4882,7 @@ class IngredientManager
 	}
 
 
-	public function GetIngredientCategory(ingredient : name, type : E_IngNomenclature) : name
+	public function GetIngredientCategory(ingredient : name, type : E_spectreIngNomenclature) : name
 	{
 		switch (type)
 		{	case cat_archetype:
@@ -4781,8 +4980,10 @@ class IngredientManager
 			if (GetIngredientCategory(item, cat_archetype) != data.category)
 				continue ;
 			for (j = data.filterForbiddenTagsList.Size() - 1; j >= 0 && !invalid; j -= 1)
-			{	switch (data.filterForbiddenTagsList[j])	//blacklist
-				{	case 'spectre_top':		invalid = top.Contains(item);		break ;
+			{	
+				switch (data.filterForbiddenTagsList[j])	//blacklist
+				{	
+					case 'spectre_top':		invalid = top.Contains(item);		break ;
 					case 'spectre_high':		invalid = high.Contains(item);		break ;
 					case 'spectre_standard': invalid = standard.Contains(item);	break ;
 					case 'spectre_primary':	invalid = primary.Contains(item);	break ;
@@ -4792,22 +4993,27 @@ class IngredientManager
 					default: //invalid = theGame.GetDefinitionsManager().ItemHasTag(item, data.filterForbiddenTagsList[j]);
 					break ;
 				}
+
 				invalid = (invalid || item == data.filterForbiddenTagsList[j]);
 			}
 			for (j = (data.filterTagsList.Size() - 1) * (int)!invalid - (int)invalid; j >= 0; j -= 1)
-			{	switch(data.filterTagsList[j])				//whitelist
-				{	case 'spectre_albedo':	invalid = !albedo.Contains(item);	break ;
+			{	
+				switch(data.filterTagsList[j])				//whitelist
+				{	
+					case 'spectre_albedo':	invalid = !albedo.Contains(item);	break ;
 					case 'spectre_rubedo':	invalid = !rubedo.Contains(item);	break ;
 					case 'spectre_nigredo':	invalid = !nigredo.Contains(item);	break ;
 					case 'spectre_primary':	invalid = !primary.Contains(item);	break ;
 					case 'plain_mutagen':	invalid = !plain.Contains(item);	break ;
 					default: invalid = true; break ;
 				}
+
 				if (!invalid)
 					break ;
 			}
 			if (!invalid)
-			{	flsh_object = flashobj.CreateFlashObject("red.game.witcher3.menus.common.ItemDataStub");
+			{	
+				flsh_object = flashobj.CreateFlashObject("red.game.witcher3.menus.common.ItemDataStub");
 				inventory.SetInventoryFlashObjectForItem(items[i], flsh_object );
 				flashArray.PushBackFlashObject(flsh_object);
 			}
@@ -4966,10 +5172,10 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 	private var f_SetRecipePin			: CScriptedFlashFunction;
 	private var recipe_list				: array<SAlchemyRecipe>;
 	private var guiIngList				: array<name>;
-	private var ing_mngr				: IngredientManager;
+	private var ing_mngr				: spectreIngredientManager;
 	private var alchexts				: SpectreAlchemyExtensions;
-	private var original_ingredients	: IngredientList;
-	private var filters					: S_IngredientFilter;
+	private var original_ingredients	: spectreIngredientList;
+	private var filters					: S_spectreIngredientFilter;
 	private var selected_recipe			: SAlchemyRecipe;
 	private var	force_show_rec_item		: bool;
 	private var in_selection_menu		: bool;
@@ -5010,7 +5216,7 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 		player_inv = thePlayer.GetInventory();
 		player_inv_cmpnt.Initialize(player_inv);
 		ing_mngr = alchexts.ing_mngr;
-		original_ingredients = new IngredientList in this;
+		original_ingredients = new spectreIngredientList in this;
 		m_initialSelectionsToIgnore = 2;
 		using_controller = !thePlayer.IsPCModeEnabled();
 		alchexts.GetRecipes(recipe_list);
@@ -5235,9 +5441,12 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 		var forbidden	: bool;
 
 		if (IsReleased(action) && ing_panel_active && !in_selection_menu && (!alchemist || !ing_buy_modifier) )
-		{	ing_category = ing_mngr.GetIngredientCategory(ingredient, cat_archetype);
+		{	
+			ing_category = ing_mngr.GetIngredientCategory(ingredient, cat_archetype);
+			
 			switch (selected_recipe.cookedItemType)
-			{	case EACIT_MutagenPotion:
+			{	
+				case EACIT_MutagenPotion:
 					forbidden = (ing_mngr.IsMonsterMutagen(ingredient) );
 				break ;
 				case EACIT_MutagenFused:
@@ -5255,9 +5464,15 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 						StrContains(ingredient, "Bear") );
 				break ;
 			}
+			
 			if ((bool)ing_category && !forbidden)
+			{
 				OpenSelectionMenu();
-			else showNotification(GetLocStringByKeyExt('spectre_noingredient') );
+			}
+			else 
+			{
+				showNotification(GetLocStringByKeyExt('spectre_noingredient') );
+			}
 		}
 	}
 
@@ -5297,10 +5512,15 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 		var itemName	: name;
 
 		if (alchemist_inv && ing_buy_modifier)
-		{	itemName = guiIngList[item - 1];
+		{	
+			itemName = guiIngList[item - 1];
+
 			vendorItems = alchemist_inv.GetItemsByName(itemName);
+
 			if(vendorItems.Size() > 0)
-			{	BuyIngredient(vendorItems[0], 1, isLastItem);
+			{	
+				BuyIngredient(vendorItems[0], 1, isLastItem);
+
 				OnPlaySoundEvent("gui_inventory_buy");
 			}
 		}
@@ -5309,7 +5529,7 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 
 	private function BuyIngredient(itemId : SItemUniqueId, quantity : int, isLastItem : bool) : void
 	{
-		var dummy		: SItemUniqueId; //beware of optional out, it will cause memory corruption if omitted.
+		var dummy		: SItemUniqueId;
 		var commonMenu 	: CR4CommonMenu;
 		var notifText	: string;
 
@@ -5832,8 +6052,8 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 				}
 				tooltip_obj = flashobj.CreateFlashObject();
 				if (attributes[idx].percentageValue)
-					tooltip_obj.SetMemberFlashString("value", NoTrailZeros(NonZeroRound(value * 100) ) + "%");
-				else tooltip_obj.SetMemberFlashString("value", NoTrailZeros(NonZeroRound(value) ) + description);
+					tooltip_obj.SetMemberFlashString("value", NoTrailZeros(spectreNonZeroRound(value * 100) ) + "%");
+				else tooltip_obj.SetMemberFlashString("value", NoTrailZeros(spectreNonZeroRound(value) ) + description);
 				tooltip_obj.SetMemberFlashString("id", attributes[idx].originName);
 				tooltip_obj.SetMemberFlashString("name", attributes[idx].attributeName);
 				tooltip_obj.SetMemberFlashString("color", attributes[idx].attributeColor);
@@ -5892,7 +6112,9 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 		quantity = config.cooked_quantity + (int)config.using_alchemy_table;
 		switch(recipe.cookedItemType)
 		{	case EACIT_Bomb:
-				quantity += player.GetSkillLevel(S_Alchemy_s08);
+				// Efficiency adds bombs per brew. The 5.01 one only works from a slot.
+				if (!spectreVanillaSkills() || player.CanUseSkill(S_Alchemy_s08))
+					quantity += player.GetSkillLevel(S_Alchemy_s08);
 			break ;
 			case EACIT_Substance:
 				if (config.GetIsPrimarySubsRecipe(recipe.recipeName) > -1)
@@ -5910,8 +6132,8 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 			default:
 			break ;
 		}
-		if (config.time_based_alchemy && player.GetCurrentStateName() == 'AlchemyBrewing')
-			((W3PlayerWitcherStateAlchemyBrewing)player.GetCurrentState() ).AddBrewTime(
+		if (config.time_based_alchemy && player.GetCurrentStateName() == 'spectreAlchemyBrewing')
+			((W3PlayerWitcherStatespectreAlchemyBrewing)player.GetCurrentState() ).AddBrewTime(
 				(config.distillation_time * (int)is_distilling + (int)!is_distilling * config.alchemy_time_cost) );
 		for (i = recipe.requiredIngredients.Size() - 1; i >= 0 ; i -= 1)
 		{	ingredient = recipe.requiredIngredients[i].itemName;
@@ -5989,7 +6211,7 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 
 
 	private function BypassTutorial(recipe : SAlchemyRecipe, created : int) : void
-	{	//TODO: create a proper tutorial explaining the mod mechanics, ingredient swaping, etc.
+	{	
 		var tutorial : CScriptableState = theGame.GetTutorialSystem().uiHandler.GetCurrentState();
 
 		if (tutorial)
@@ -6273,12 +6495,12 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 	}
 }
 
-struct S_Ingredient
+struct S_spectreIngredient
 {
 	var ingredients		: array<SItemParts>;
 }
 
-struct S_IngredientFilter
+struct S_spectreIngredientFilter
 {
 	var idx				: int;
 	var albedo			: bool; default albedo = true;
@@ -6290,9 +6512,9 @@ struct S_IngredientFilter
 	const var substance	: array<name>; default substance = {'composite', 'albedo', 'rubedo', 'nigredo'};
 }
 
-class IngredientList
+class spectreIngredientList
 {
-	private var recipes	: array<S_Ingredient>;
+	private var recipes	: array<S_spectreIngredient>;
 
 	public function GetIngCount(recipe, ingredient : int) : int
 	{
@@ -6324,7 +6546,7 @@ class IngredientList
 	}
 }
 
-enum E_IngNomenclature
+enum E_spectreIngNomenclature
 {	cat_phenotype,
 	cat_substance,
 	cat_composite,
@@ -6332,42 +6554,39 @@ enum E_IngNomenclature
 	cat_archetype
 }
 
-struct S_ToxicityData
+struct S_spectreToxicityData
 {
 	var duration		: float;
 	var degeneration	: float;
 }
 
-struct S_ReusableIngredient
+struct S_spectreReusableIngredient
 {
 	var left	: int;
 	var uses	: int;
 	var id		: name;
 }
 
-struct S_SpawnArea
+struct S_spectreSpawnArea
 {
 	var signature	: array<int>;
-	var area		: EAreaName;
+	var area		: name;
 	var resetcount	: int;
 }
 
 struct S_spectrePersistenData
 {
-	var reusables	: array<S_ReusableIngredient>;
-	var areas		: array<S_SpawnArea>;
+	var reusables	: array<S_spectreReusableIngredient>;
+	var areas		: array<S_spectreSpawnArea>;
 }
 
-struct S_HerbSpawnSettings
+struct S_spectreHerbSpawnSettings
 {
-	var min_s	: int; default min_s = 4;
-	var max_s	: int; default max_s = 16;
 	var min_y	: int; default min_y = 3;
 	var max_y	: int; default max_y = 7;
-	var chance	: int; default chance = 8;
 }
 
-class ExtendedPotionData extends W3BuffCustomParams
+class spectreExtendedPotionData extends W3BuffCustomParams
 {
 	var effectType 				: EEffectType;
 	var buffSpecificParams		: W3PotionParams;
@@ -6381,7 +6600,7 @@ class ExtendedPotionData extends W3BuffCustomParams
 	var toxicity				: float;
 }
 
-class W3Effect_AlbedoDominance extends CBaseGameplayEffect
+class W3Effect_spectreAlbedoDominance extends CBaseGameplayEffect
 {
 	default effectType = EET_AlbedoDominance;
 	default isPositive = true;
@@ -6389,7 +6608,7 @@ class W3Effect_AlbedoDominance extends CBaseGameplayEffect
 	default isNegative = false;
 }
 
-class W3Effect_NigredoDominance extends CBaseGameplayEffect
+class W3Effect_spectreNigredoDominance extends CBaseGameplayEffect
 {
 	default effectType = EET_NigredoDominance;	
 	default isPositive = true;
@@ -6404,13 +6623,13 @@ class W3Effect_NigredoDominance extends CBaseGameplayEffect
 	}
 }
 
-class W3Effect_PotionDigestion extends CBaseGameplayEffect
+class W3Effect_spectrePotionDigestion extends CBaseGameplayEffect
 {
 	default effectType = EET_PotionDigestion;
 	default isPositive = false;
 	default isNeutral = true;
 	default isNegative = false;
-	private var potion						: ExtendedPotionData;
+	private var potion						: spectreExtendedPotionData;
 	private var time_active					: float;
 	public var adjusted_toxicity			: float;
 	private const var MIN_DIGESTION_TIME	: float; default MIN_DIGESTION_TIME = 0.5f;
@@ -6421,7 +6640,7 @@ class W3Effect_PotionDigestion extends CBaseGameplayEffect
 		var tox_modifier	: float = theGame.alchexts.whoney_tox_base;
 		var player			: W3PlayerWitcher = GetWitcherPlayer();
 
-		potion = (ExtendedPotionData)customParams;
+		potion = (spectreExtendedPotionData)customParams;
 		switch (potion.effectType)
 		{	case EET_WhiteHoney:
 				tox_modifier *= (1 + StringToInt(StrRight(potion.itemName, 1) ) );
@@ -6478,13 +6697,97 @@ class W3Effect_PotionDigestion extends CBaseGameplayEffect
 
 }
 
+// Percent a potion lasts longer than its own duration (or shorter, below 0), shown in the character stats:
+// the duration multiplier of the Potions menu, Half-Life, Equilibrium and Metabolism Boost, and with the 5.01
+// tree each alchemy rank (W3PlayerWitcher.CalculatePotionDuration). Fixed seconds of the menu are left out.
+function spectrePotionDurationBonus() : float
+{
+	var alchext : SpectreAlchemyExtensions;
+	var witcher : W3PlayerWitcher;
+	var mult : float;
+
+	alchext = theGame.alchexts;
+	witcher = GetWitcherPlayer();
+	if (!alchext || !witcher)
+		return 0;
+	mult = 1;
+	if (alchext.potion_duration_mult)
+		mult = alchext.potion_duration_mult;
+	mult *= alchext.internal_duration_multiplier;
+	if (spectreVanillaSkills())
+		mult *= 1 + CalculateAttributeValue(witcher.GetAttributeValue('potion_duration'));
+	return mult - 1;
+}
+
+// Percent more damage a bomb deals now, as W3DamageManagerProcessor.ProcessDamageIncrease adds it: Heavy
+// Artillery, Manticore School, the toxicity bonus of alchemy_s25, and with the 5.01 tree each alchemy rank.
+// Set bonuses that depend on the target are left out.
+function spectreBombDamageBonus() : float
+{
+	var witcher : W3PlayerWitcher;
+	var attr : SAbilityAttributeValue;
+	var bonus, rankBonus : float;
+
+	witcher = GetWitcherPlayer();
+	if (!witcher)
+		return 0;
+	if (witcher.CanUseSkill(S_Perk_20))
+	{
+		attr = witcher.GetSkillAttributeValue(S_Perk_20, 'dmg_multiplier', false, false);
+		bonus += attr.valueMultiplicative;
+	}
+	if (witcher.CanUseSkill(S_Perk_27))
+	{
+		attr = witcher.GetAttributeValue('bomb_dmg_multiplier');
+		bonus += attr.valueMultiplicative;
+	}
+	if (witcher.CanUseSkill(S_Alchemy_s25))
+		bonus += witcher.GetStat(BCS_Toxicity) * CalculateAttributeValue(witcher.GetSkillAttributeValue(S_Alchemy_s25, 'bomb_damage_bonus', false, false) * witcher.GetSkillLevel(S_Alchemy_s25));
+	if (spectreVanillaSkills())
+		rankBonus = CalculateAttributeValue(witcher.GetAttributeValue('potion_duration'));
+	return (1 + rankBonus) * (1 + bonus) - 1;
+}
+
+// Spectre's part of the toxicity lost per second (spectreToxicityEffect.OnUpdate): with potions working off
+// their toxicity (potions = their toxicity per second), the rate of the Toxicity menu that applies now; with
+// none, the residual rate while nothing is digesting. Metabolism Boost and Autophagy multiply both.
+function spectreToxicityDegenRate(potions : float) : float
+{
+	var alchext : SpectreAlchemyExtensions;
+	var witcher : W3PlayerWitcher;
+	var rate : float;
+
+	alchext = theGame.alchexts;
+	witcher = GetWitcherPlayer();
+	if (!alchext || !witcher)
+		return 0;
+
+	if (potions > 0)
+	{
+		if (witcher.GetCurrentStateName() == 'Meditation' || witcher.GetCurrentStateName() == 'MeditationWaiting'
+			|| witcher.GetCurrentStateName() == 'W3EEMeditation' || witcher.GetCurrentStateName() == 'spectreAlchemyBrewing'
+			|| theGame.GetGameCamera().HasTag('co_meditation'))
+			potions *= 3.14159f;
+		if (alchext.combat_degeneration && witcher.IsInCombat())
+			rate = potions * alchext.combat_degen_rate;
+		else if (witcher.GetStat(BCS_Toxicity) / witcher.GetStatMax(BCS_Toxicity) > alchext.alt_degen_threshold)
+			rate = potions * alchext.alt_degen_rate;
+		else
+			rate = potions * alchext.degeneration_rate;
+	}
+	else if (!witcher.HasBuff(EET_PotionDigestion))
+		rate = 0.1f * witcher.GetStatMax(BCS_Toxicity) * alchext.residual_degen_rate;
+
+	return rate * alchext.toxicity_degen_modifier;
+}
+
 class spectreToxicityEffect extends W3Effect_Toxicity
 {
 	private var lvl1, lvl2, lvl3	: float;
 	private var fx_update_time		: float;
 	private var elapsed 			: float;
 	private var cached				: float;
-	private var toxdata				: array<S_ToxicityData>;
+	private var toxdata				: array<S_spectreToxicityData>;
 	private var player				: W3PlayerWitcher;
 	private var alchext				: SpectreAlchemyExtensions;
 	private var fxplaying			: int;
@@ -6544,7 +6847,7 @@ class spectreToxicityEffect extends W3Effect_Toxicity
 				(toxicity < alchext.alt_degen_threshold && isPlayingCameraEffect);
 		}
 		else fx_update_time -= elapsed;
-		dmg = PowF(toxicity, 3) * 0.0384f * target.GetStatMax(BCS_Vitality) * alchext.toxicity_dmg_modifier * elapsed;
+		dmg = PowF(toxicity, 3) * 0.0384f * target.GetStatMax(BCS_Vitality) * MaxF(0, alchext.toxicity_dmg_modifier) * elapsed;
 		switch (thePlayer.GetCurrentStateName() )
 		{	default:
 				if (!theGame.GetGameCamera().HasTag('co_meditation') )
@@ -6552,7 +6855,7 @@ class spectreToxicityEffect extends W3Effect_Toxicity
 			case 'Meditation':
 			case 'MeditationWaiting':
 			case 'W3EEMeditation':
-			case 'AlchemyBrewing':
+			case 'spectreAlchemyBrewing':
 				dmg *= 0.75f;
 				degenrate *= 3.14159f;
 			break ;
@@ -6583,7 +6886,25 @@ class spectreToxicityEffect extends W3Effect_Toxicity
 
 	public function SetEffectData(amount, duration : float) : void
 	{
-		toxdata.PushBack(S_ToxicityData(duration, amount / duration) );
+		toxdata.PushBack(S_spectreToxicityData(duration, amount / duration) );
+	}
+
+	// Toxicity lost per second right now, as OnUpdate takes it: the base game drain (super.OnUpdate) plus
+	// Spectre's. Shown in the character stats.
+	public function SpectreDegenPerSecond() : float
+	{
+		var vanillaRate, potions : float;
+		var i : int;
+
+		vanillaRate = -1 * (effectValue.valueAdditive + effectValue.valueMultiplicative * (effectValue.valueBase + target.GetStatMax(BCS_Toxicity)));
+		if (!target.IsInCombat())
+			vanillaRate *= 1.1;
+		for (i = 0; i < toxdata.Size(); i += 1)
+		{
+			if (toxdata[i].duration >= 0)
+				potions += toxdata[i].degeneration;
+		}
+		return vanillaRate + spectreToxicityDegenRate(potions);
 	}
 
 	private function UpdateEffectDuration(elapsed_time : float, out degeneration : float) : bool
@@ -6602,7 +6923,7 @@ class spectreToxicityEffect extends W3Effect_Toxicity
 	}
 }
 
-class W3Effect_RubedoDominance extends CBaseGameplayEffect
+class W3Effect_spectreRubedoDominance extends CBaseGameplayEffect
 {
 	private const var healpercent : float;
 	
@@ -6641,4 +6962,431 @@ function spectreGetCustomAardAttackRangeEnt() : W3AardEntity
     }
 
     return aardEnt;
+}
+
+enum spectre_EChTabInterests
+{
+	spectre_ECTI_Not_Interesting_Item,
+	spectre_ECTI_Mutagen_Green,
+	spectre_ECTI_Mutagen_Red,
+	spectre_ECTI_Mutagen_Blue,
+	spectre_ECTI_Mutagen_Yellow,
+	spectre_ECTI_Clearing_Potion
+}
+
+class spectre_GuiCharacterTabInventoryComponent extends W3GuiPlayerInventoryComponent
+{
+	function SetInventoryFlashObjectForItem( item : SItemUniqueId, out flashObject : CScriptedFlashObject) : void
+	{
+		var neededItem : spectre_EChTabInterests = NeededItemNameToEnum(GetItemName(item));
+		super.SetInventoryFlashObjectForItem(item, flashObject);
+		
+		if (neededItem != spectre_ECTI_Not_Interesting_Item)
+		{
+			// that makes the flash component into allowing to drag&drop item onto a skill slot
+			flashObject.SetMemberFlashString('skillType', S_SUndefined);
+			
+			// prevent dropping onto mutation slots
+			flashObject.SetMemberFlashString('skillPath', ESP_Perks);
+			flashObject.SetMemberFlashString('color', SC_Yellow);
+			
+			// This slot is what gets to OnEquipSkill method. Place id from the index to find item
+			flashObject.SetMemberFlashInt('skillTypeId', ECTIConvertToESkill(neededItem));
+		}
+	}
+	
+	public function ECTIConvertToESkill(value: spectre_EChTabInterests) : ESkill
+	{
+		return ((ESkill)((int)S_Perk_MAX + (int)value));
+	}
+	
+	public function ECTIConvertFromESkill(value: ESkill) : spectre_EChTabInterests
+	{
+		var tryConvert: int;
+		tryConvert = (int)value - (int)S_Perk_MAX;
+		
+		if (tryConvert > 0)
+			return (spectre_EChTabInterests) tryConvert;
+		
+		return spectre_ECTI_Not_Interesting_Item;
+	}
+	
+	public function NeededItemNameToEnum(item: name) : spectre_EChTabInterests
+	{
+		switch(item)
+		{
+			case 'Greater mutagen green':	return spectre_ECTI_Mutagen_Green;
+			case 'Greater mutagen red':	return spectre_ECTI_Mutagen_Red;
+			case 'Greater mutagen blue':	return spectre_ECTI_Mutagen_Blue;
+			case 'Greater mutagen yellow':	return spectre_ECTI_Mutagen_Yellow;
+			case 'Clearing Potion':		return spectre_ECTI_Clearing_Potion;
+			default:			return spectre_ECTI_Not_Interesting_Item;
+		}
+	}
+	
+	public function NeededItemEnumToName(item: spectre_EChTabInterests) : name
+	{
+		switch(item)
+		{
+			case spectre_ECTI_Mutagen_Green:		return 'Greater mutagen green';
+			case spectre_ECTI_Mutagen_Red:		return 'Greater mutagen red';
+			case spectre_ECTI_Mutagen_Blue:		return 'Greater mutagen blue';
+			case spectre_ECTI_Mutagen_Yellow:	return 'Greater mutagen yellow';
+			case spectre_ECTI_Clearing_Potion:	return 'Clearing Potion';
+			default:				return '';
+		}
+	}
+	
+	public function NeededItemEnumToColor(item: spectre_EChTabInterests) : ESkillColor
+	{
+		switch(item)
+		{
+			case spectre_ECTI_Mutagen_Green:		return SC_Green;
+			case spectre_ECTI_Mutagen_Red:		return SC_Red;
+			case spectre_ECTI_Mutagen_Blue:		return SC_Blue;
+			case spectre_ECTI_Mutagen_Yellow:	return SC_Yellow;
+			default:				return SC_None;
+		}
+	}
+	
+	public function IsInterestItem(item: name) : bool
+	{
+		return NeededItemNameToEnum(item) != spectre_ECTI_Not_Interesting_Item;
+	}
+	
+	public function ShouldShowItem(item: SItemUniqueId) : bool
+	{
+		return NeededItemNameToEnum(GetItemName(item)) == spectre_ECTI_Clearing_Potion || super.ShouldShowItem(item);
+	}
+}
+
+struct spectreSSkillRecolor
+{
+	var id : int;
+
+	saved var skill : ESkill;		
+	saved var color : ESkillColor;
+}
+
+class spectrePlayerAbilityRecolorManager
+{
+	private var pam : W3PlayerAbilityManager;
+	private var indexColors : array<int>;
+	private saved var setColors : array<spectreSSkillRecolor>;
+	
+	public function Init(abilityManager : W3PlayerAbilityManager)
+	{
+		pam = abilityManager;
+		ReIndexColors();
+	}
+	
+	public function GetSkillColor(skill : ESkill): ESkillColor
+	{
+		var i : int = indexColors[skill];
+
+		if (setColors[i].color != SC_None)
+			return setColors[i].color;
+
+		return GetSkillOriginalColor(skill);
+	}
+
+	public function GetSkillOriginalColor(skill : ESkill): ESkillColor
+	{
+		var skillData : SSkill = pam.GetPlayerSkill(skill);
+		
+		switch(skillData.skillPath)
+		{
+			case ESP_Sword 	:	return SC_Red;
+			case ESP_Signs 	:	return SC_Blue;
+			case ESP_Alchemy:	return SC_Green;
+			case ESP_Perks 	:       return SC_Yellow;
+			default 	:	return SC_None;
+		}
+	}
+	
+	public function EstimateRecolorCost(skill : ESkill, color : ESkillColor) : int
+	{
+		if (GetSkillColor(skill) == color || color == SC_None)
+			return 0;
+		
+		return GetSkillRecolorCost(skill);
+	}
+	
+	public function EstimateRecolorRefund(skill : ESkill) : int
+	{
+		var i : int = indexColors[skill];
+		
+		if (setColors[i].color == SC_None)
+			return 0;
+		
+		return GetSkillRecolorCost(skill);
+	}
+	
+	private function GetSkillRecolorCost(skill: ESkill): int
+	{
+		var skillData : SSkill = pam.GetPlayerSkill(skill);
+		return skillData.cost * skillData.maxLevel;
+	}
+	
+	public function SetColor(skill : ESkill, color : ESkillColor): bool
+	{
+		if (GetSkillColor(skill) == color || color == SC_None)
+			return false;
+		
+		SetColorIn(skill, color);
+		return true;
+	}
+	
+	private function SetColorIn(skill : ESkill, color : ESkillColor)
+	{
+		var recolor : spectreSSkillRecolor;
+		var i : int = setColors.Size();
+		recolor.id = i;
+		recolor.skill = skill;
+		recolor.color = color;
+
+		setColors.PushBack(recolor);
+		indexColors[skill] = i;
+	}
+	
+	public function ResetColor(skill : ESkill) : bool
+	{
+		var i : int = indexColors[skill];
+		
+		if (setColors[i].color == SC_None)
+			return false;
+		
+		setColors[i].color = SC_None;
+		setColors.Erase(i);
+		ReIndexColors();
+		return true;
+	}
+	
+	public function ResetColors() : void
+	{
+		setColors.Clear();
+		setColors.Resize(1);
+		indexColors.Clear();
+		indexColors.Resize( S_Perk_MAX );
+	}
+	
+	protected function ReIndexColors(): void
+	{
+		var i : int;
+		
+		indexColors.Clear();
+		indexColors.Resize( S_Perk_MAX );
+		
+		if (setColors.Size() == 0)
+			setColors.Resize(1);
+		
+		for (i = 1; i < setColors.Size(); i += 1)
+			indexColors[setColors[i].skill] = i;
+	}
+}
+
+function spectreStrongAlcoholToxValue() : float
+{
+	var min, max : SAbilityAttributeValue;
+	
+	theGame.GetDefinitionsManager().GetAbilityAttributeValue('alco_toxicity_strong', 'toxicity', min, max);
+	if(min.valueAdditive > 0)
+	{
+		if(GetWitcherPlayer().CanUseSkill(S_Perk_15))
+			return min.valueAdditive;
+		
+		return min.valueAdditive + 5;
+	}
+	
+	theGame.GetDefinitionsManager().GetAbilityAttributeValue('alco_toxicity', 'toxicity', min, max);
+	if(min.valueAdditive > 0)
+		return min.valueAdditive + 5;
+	
+	return 10;
+}
+
+function spectreManageStrongAlcoholData(inv : CInventoryComponent)
+{
+	var strAlc : array<SItemUniqueId>;
+	var i : int;
+	
+	strAlc = inv.GetItemsByTag('StrongAlcohol'); strAlc.PushBack(inv.GetItemId('Soltis Vodka'));
+	for(i=0; i<strAlc.Size(); i+=1)
+	{
+		inv.RemoveItemCraftedAbility(strAlc[i], 'BeverageQuality_1');
+		inv.RemoveItemCraftedAbility(strAlc[i], 'BeverageQuality_2');
+		inv.RemoveItemCraftedAbility(strAlc[i], 'BeverageQuality_3');
+		
+		if(inv.GetItemName(strAlc[i]) == 'White Gull 1')
+			inv.AddItemCraftedAbility(strAlc[i], 'BeverageQuality_3');
+		else if(inv.ItemHasTag(strAlc[i], 'InfiniteUse'))
+			inv.AddItemCraftedAbility(strAlc[i], 'BeverageQuality_1');
+		else
+			inv.AddItemCraftedAbility(strAlc[i], 'BeverageQuality_2');
+		
+		inv.RemoveItemTag(strAlc[i], 'AlchemyIngredient');
+		inv.AddItemTag(strAlc[i], 'Edibles');
+		inv.AddItemTag(strAlc[i], 'Drinks');
+		inv.AddItemTag(strAlc[i], 'Alcohol');
+		inv.AddItemTag(strAlc[i], 'spectreStrongAlcoholTag');
+		
+		if(inv.ItemHasTag(strAlc[i], 'InfiniteUse'))
+			inv.RemoveItemTag(strAlc[i], 'StrongAlcohol');
+	}
+}
+
+function spectreAddStrongAlcoholToxStat(out itemStats : array<SAttributeTooltip>, item : SItemUniqueId, inv : CInventoryComponent)
+{
+	var stat : SAttributeTooltip;
+	
+	if(!inv.ItemHasTag(item, 'spectreStrongAlcoholTag')) return;
+	
+	stat.percentageValue = false;
+	stat.primaryStat = false;
+	stat.value = spectreStrongAlcoholToxValue();
+	stat.originName = 'toxicity';
+	stat.attributeName = GetAttributeNameLocStr('toxicity', false);
+	itemStats.PushBack(stat);
+}
+
+
+class spectre_RecolorSkillConfirmation extends W3BuySkillConfirmation
+{
+	public var appliedValue : spectre_EChTabInterests;
+	public var component : spectre_GuiCharacterTabInventoryComponent;
+
+	protected var cost : int;
+	protected var itemNameLocKey : string;
+	protected var _inv : CInventoryComponent;
+	protected var _levelManager : W3LevelManager;
+	
+	public function Setup(skill: ESkill, applied: spectre_EChTabInterests): void
+	{
+		_inv = ((W3PlayerWitcher)thePlayer).GetInventory();
+		_levelManager = ((W3PlayerWitcher)thePlayer).levelManager;
+
+		targetSkill = skill;
+		appliedValue = applied;
+
+		HideTutorial = true;
+		BlurBackground = true;
+		
+		SetEstimate();
+		ShowConfirmation();
+	}
+	
+	public function ShowConfirmation()
+	{
+		if (!cost)
+		{
+			theSound.SoundEvent("gui_global_panel_close");
+		}
+		else if (_levelManager.GetPointsFree(ESkillPoint) < cost)
+		{
+			theSound.SoundEvent("gui_global_denied");
+			characterMenuRef.showNotification(GetLocStringByKeyExt("message_common_not_enough_skill_points") + " (" + cost + ")");
+		}
+		else
+		{
+			SetMessageTitle(GetLocStringByKeyExt("panel_character_popup_title_upgrade_skill"));
+			SetMessageText(GetMessageTextString());
+
+			characterMenuRef.RequestSubMenu('PopupMenu', this);
+		}
+	}
+	
+	public function SetEstimate()
+	{
+		var pam : W3PlayerAbilityManager;
+		var itemName : name;
+		var targetColor: ESkillColor;
+
+		pam = (W3PlayerAbilityManager)thePlayer.abilityManager;
+
+		itemName = component.NeededItemEnumToName(appliedValue);
+		itemNameLocKey = _inv.GetItemLocalizedNameByName(itemName);
+		targetColor = component.NeededItemEnumToColor(appliedValue);
+		cost = pam.EstimateRecolorCost(targetSkill, targetColor);
+	}
+	
+	protected function GetMessageTextString(): string
+	{
+		return GetLocStringByKeyExt('panel_character_popup_title_upgrade_skill_text')
+			 + "<br>" + GetLocStringByKeyExt('panel_character_availablepoints') + " (" + cost + ")"
+			 + "<br>" + GetLocStringByKeyExt(itemNameLocKey) + " (1)";
+	}
+	
+	protected function OnUserAccept() : void
+	{
+		characterMenuRef.spectreHandleRecolorSkillConfirmation(targetSkill, appliedValue);
+	}
+}
+
+function spectre_Settings_Main_Int( groupName, entryName : name, defaultValue : int ) : int 
+{
+	var configValue :int;
+	var configValueString : string;
+	
+	configValueString = spectreSettingsGetConfigValue(groupName,entryName);
+	configValue =(int) configValueString;
+
+	if(configValueString=="" || configValue<0)
+	{
+		return defaultValue;
+	}
+	
+	else return configValue;
+}
+
+function spectre_Settings_Main_IntSigned( groupName, entryName : name, defaultValue : int ) : int
+{
+	var configValueString : string;
+
+	configValueString = spectreSettingsGetConfigValue(groupName, entryName);
+	if(configValueString == "")
+		return defaultValue;
+	return StringToInt(configValueString);
+}
+
+function spectre_Settings_Main_Float( groupName, entryName : name, defaultValue : float, optional forceDefaultValue : bool ): float 
+{
+	var configValue :float;
+	var configValueString : string;
+	
+	configValueString = spectreSettingsGetConfigValue(groupName,entryName);
+	configValue =(float) configValueString;
+
+	if(configValueString=="")
+	{
+		return defaultValue;
+	}
+
+	if(forceDefaultValue && configValue<0)
+	{
+		return defaultValue;
+	}
+	
+	else return configValue;
+}
+
+function spectre_Settings_Main_Bool( groupName, entryName : name, defaultValue : bool ) : bool 
+{
+	var configValue :int;
+	var configValueString : string;
+	
+	configValueString = spectreSettingsGetConfigValue(groupName,entryName);
+	configValue =(int) configValueString;
+	
+	if(configValueString=="" || configValue<0)
+	{
+		return defaultValue;
+	}
+
+	else return (bool)configValueString;
+}
+
+class spectreFoodBuffIcon_CustomParams extends W3BuffCustomParams 
+{
+    var spectreFoodBuffCustomIcon: string;
+    var spectreFoodBuffCustomName: string;
 }

@@ -1,0 +1,759 @@
+;meta[language=en]
+;meta[version=164]
+; id      |key(hex)|key(str)| text
+2119657363|25cb5429||Mastercrafted Kaer Morhen armor
+2119657362|25cb5428||Superior Kaer Morhen armor
+2119657361|25cb5427||Enhanced Kaer Morhen armor
+2119657360|917ce1b5||Kaer Morhen armor
+2119657367|2256cb86||Mastercrafted Kaer Morhen trousers
+2119657366|2256cb85||Superior Kaer Morhen trousers
+2119657365|2256cb84||Enhanced Kaer Morhen trousers
+2119657364|92488c52||Kaer Morhen trousers
+2119657371|55b17e2b||Mastercrafted Kaer Morhen boots
+2119657370|55b17e2a||Superior Kaer Morhen boots
+2119657369|55b17e29||Enhanced Kaer Morhen boots
+2119657368|9189a437||Kaer Morhen boots
+2119657375|c9479838||Mastercrafted Kaer Morhen gauntlets
+2119657374|c9479837||Superior Kaer Morhen gauntlets
+2119657373|c9479836||Enhanced Kaer Morhen gauntlets
+2119657372|a808dd84||Kaer Morhen gauntlets
+2119657347|db81c2af||Armor piercing
+2119657346|63cd93a5||Releases a cloud of dimeritium slivers that block primitive magic and monsters' magic abilities. Weakens Armor of magic creatures. Weakens mages, reducing their damage. Lasts longer.
+2119657345|63cd93a4||Releases a cloud of dimeritium slivers that block primitive magic and monsters' magic abilities. Weakens Armor of magic creatures. Weakens mages, reducing their damage. Lasts longer.
+2119657344|63cd93a3||Releases a cloud of dimeritium slivers that block primitive magic and monsters' magic abilities. Weakens Armor of magic creatures. Weakens mages, reducing their damage.
+2119657351|1517ddd0||Every known level 1, 2 and 3 potion, bomb and oil formula, alchemy substance and mutagen decoction formula increases maximum Toxicity by 1 point, up to +$I$ points max. Current bonus is $I$ points.
+2119657350|1517ddcf||Every known level 1, 2 and 3 potion, bomb and oil formula, alchemy substance and mutagen decoction formula increases maximum Toxicity by 1 point, up to +$I$ points max. Current bonus is $I$ points.
+2119657349|15dda91c||Every known level 1, 2 and 3 potion, bomb and oil formula, alchemy substance and mutagen decoction formula increases maximum Toxicity by 1 point, up to +$I$ points max. Current bonus is $I$ points.
+2119657348|ec4dca6f||Cloud duration
+2119657355|15dda919||Toxicity drops $S$ points per second faster.
+2119657354|8d17aa9f||Extends potion duration time by $S$%.
+2119657353|0083ce65||Prolonged Effects
+2119657352|f5503350||Stamina
+2119657359|0083ce64||Expert brewer
+2119657358|8d17aa9e||Decreases potion toxicity by $S$ point(s).
+2119657395|5ff1f310||Melee Action Cost modifier
+2119657394|ab3313e1||Out of Combat vitality Regen (Additional)
+2119657393|713e74d6||Combat Vitality Regen (Additional)
+2119657392|ab31b6c4||Out of Combat Stamina Regen (Additional)
+2119657399|754d18b0||Killing an enemy restores $I$% of your Stamina (no cooldown).<br>Critical hits and successful counters restore $I$% of your Stamina ($S$ sec cooldown).
+2119657398|dd7afaaa||Attack is the Best Defense
+2119657397|dd701ac5||Stamina Regen Delay (Additional, Seconds)
+2119657396|6a2f06ca||Sign Action Cost modifier
+2119657403|3b779b63||Igni cooldown
+2119657402|27591c8a||Aard cooldown
+2119657401|c9405593||Rend cooldown
+2119657400|cf56fd86||Whirl cooldown
+2119657407|393c311b||Melee Special Cooldown (Seconds)
+2119657406|61b3e4e5||Axii cooldown
+2119657405|a4abc76f||Quen cooldown
+2119657404|16ae6564||Yrden cooldown
+2119657379|289dc9de||Worn Kaer Morhen gauntlets
+2119657378|3e928cd7||Worn Kaer Morhen boots
+2119657377|492129f2||Worn Kaer Morhen trousers
+2119657376|e3a76c55||Worn Kaer Morhen armor
+2119657383|5ff29900||Fast attack Adrenaline Gain
+2119657382|6d6ddbc5||Toxicity offset reserves an amount of your maximum Toxicity for the duration of the decoction effect.
+2119657381|44aa9fca||Toxicity offset
+2119657380|41dddfc6||Stamina regeneration rate increases by $S$ for each additional enemy in combat (max. $S$).
+2119657387|f098e2d3||Igni's basic attack strikes all opponents in a 360-degree radius and deals $I$ more damage.<br>Burning chance is decreased by $I$%.<br>Damage scales with Sign Intensity.
+2119657386|d02fd0a4||Once they reach their maximum level, Adrenaline Points steadily decline until they reach zero at a rate of $S$ points per sec. During this time Vitality regenerates faster by $S$%/sec, Stamina regenerates faster by $S$%/sec, and Toxicity declines faster by $S$ points/sec.
+2119657384|5fb854b1||Strong attack Adrenaline Gain
+2119657391|713d17b9||Combat Stamina Regen (Additional)
+2119657390|fc92152c||Damage dealt to enemies in spectral form is increased from $I$% to $I$% of normal damage. Damage taken from enemies in spectral form is reduced by $I$%.
+2119657389|e71d7c8c||When enemies damage you in melee combat, they get an Acid effect that reduces their Damage Resistance by $I$% (max $I$%).
+2119657388|fc92152b||Getting hit more than once within $S$ sec makes you immune to damage for the next $S$ sec.
+2119657427|320650a7||Medium gear. Offers optimal protection.
+2119657426|736e017e||Light gear. Offers minimal protection. Combat actions require less stamina.
+2119657425|1050a15c||Available Toxicity
+2119657424|1f5ba9f0||Toxicity Decay Rate
+2119657431|e61ba3ba||Alternate Sign Cooldown (Seconds)
+2119657430|4080bc95||Dealing damage in combat heals $S$% of maximum Vitality for each piece of the set (currently $S$%).
+2119657429|6d1ad461||Light Armor does not provide much protection, but your combat actions require less stamina when it is equipped. Medium Armor and Heavy Armor absorb more damage, but while in Heavy Armor your combat actions require more stamina.
+2119657428|942892ef||Heavy gear. Offers the best protection. Combat actions and sign casting require more stamina.
+2119657435|9ec8a226||Restores Vitality immediately and fully and stops bleeding. Grants immunity to damage for a short duration.
+2119657434|9ec8a225||Immediately restores a large portion of Vitality and stops bleeding.
+2119657433|9ec8a224||Immediately restores a portion of Vitality and stops bleeding.
+2119657432|8b4d38d1||Instant Sign Casting With Sign Select Key
+2119657439|492006da||Rend stamina cost
+2119657438|db289661||Whirl stamina cost
+2119657436|fc921529||Each Lesser Red Mutagen equipped decreases melee action stamina cost by $S$%. Red Mutagen increases the bonus to $S$% and Greater Red Mutagen - to $S$%.
+2119657411|dac2e517||Parry stamina cost
+2119657410|da53bb36||Strong attack stamina cost
+2119657409|da8dff85||Fast attack stamina cost
+2119657408|b2d6cb21||Sign Cooldown (Seconds)
+2119657415|838b858b||Sprint stamina cost
+2119657414|49202c2e||Roll stamina cost
+2119657413|da1ff246||Dodge stamina cost
+2119657412|9df940ab||Counter stamina cost
+2119657419|491bf70a||Igni stamina cost
+2119657418|49183e03||Aard stamina cost
+2119657417|491c26c4||Use item stamina cost
+2119657416|491c9fdf||Jump stamina cost
+2119657423|fe37faf4||Overdose Vitality drain
+2119657422|49189348||Axii stamina cost
+2119657421|491fcd7e||Quen stamina cost
+2119657420|db493cc3||Yrden stamina cost
+2119657459|e5ea882a||Vanilla(ish)
+2119657458|0daf9021||Enable stamina regen penalty for armors
+2119657457|fc92150b||Hit Reaction Severity is reduced to zero, if damage received is less than $I$% of your maximum Health.
+2119657456|0391a988||Damage reduction
+2119657463|754d1895||Reduces alcohol and toxic food toxicity to zero.<br>Removes drunken effect from alcohol.<br>After drinking an alcoholic beverage, its bonuses last longer by $S$%.
+2119657462|dd7afa8f||Connoisseur
+2119657461|9c4c8383||Magic Trap Range
+2119657460|40851a26||Magic Trap duration increases by $I$%. Can now place an additional Magic Trap.
+2119657464|a1370329||Increases breath supply while underwater and improves vision while diving.
+2119657471|1b06cd09||Whenever you slay an enemy, time slows for a short period.
+2119657443|1077eef5||Low Stamina SFX volume
+2119657442|0d538f61||Low Stamina SFX Threshold (Percents)
+2119657441|b1b97aff||QoL
+2119657440|6fd9d47c||Dismember chance
+2119657447|3b19f4d9||QoL Presets
+2119657446|7d7f33fb||Use Dynamic Low Stamina SFX rate
+2119657445|fe83eafe||Low Stamina SFX rate
+2119657444|56a11258||Use Dynamic Low Stamina SFX volume
+2119657451|943124e0||Default
+2119657450|ebc2f999||Gameplay Presets
+2119657449|d3915bee||Off
+2119657448|8b3bc57a||Recommended
+2119657455|e71d7c8b||Non-critical damage dealt with a sword increases Critical hit chance for subsequent attacks by $I$% (max $I$%). When at max bonus, receive additional $I$% to Critical hit power. Bonus resets on successful critical hit and at the end of the combat.
+2119657454|15dda917||When consumed, mutagen decoction increases maximum Vitality by $I$ points per each toxicity offset point for decoction's effective duration.
+2119657453|ca1c1b52||Scaling Presets
+2119657452|280849e8||Experience Presets
+2119657235|874e9f88||Grants sight in total darkness and immunity to hypnosis. Extended duration.
+2119657234|f8b46c38||Increases attack effectiveness against relicts.
+2119657233|de026197||Clears Toxicity and cancels all active potion effects.
+2119657232|de026196||Clears Toxicity and cancels all active potion effects.
+2119657239|3ed03538||Duration out of cloud
+2119657237|fe608837||Inflicts shrapnel damage to foes within its explosion radius. Deals fire damage. Enhanced effect. Destroys enemy shield. Destroys monster nests.
+2119657243|e71d7c93||Each Lesser Blue Mutagen equipped increases base damage dealt with signs by $S$ points. Blue Mutagen increases the bonus to $S$ and Greater Blue Mutagen - to $S$.
+2119657242|fc921527||Each Lesser Green Mutagen equipped increases your Vitality regeneration rate by $S$/sec. Green Mutagen increases the bonus to $S$/sec and Greater Green Mutagen - to $S$/sec.
+2119657241|e71d7c8e||All your melee attacks cost $S$% more Stamina. Successful melee attack additionally reduces victim's health by $S$% of its current value per each Stamina point spent on the attack.
+2119657240|874e9f87||Grants sight in total darkness. Extended duration.
+2119657247|fc921505||Casting a sign increases your melee Attack Power by $I$% (max $I$%). Resets after dealing melee damage and at the end of the combat.
+2119657246|e71d7c91||Regenerates Vitality by $S$% of the damage dealt to an enemy.
+2119657245|fc921525||Regenerates Vitality by $S$% for each point of Stamina spent. Works only while in combat.
+2119657244|fc921524||Increases the witcher's resistance to bleeding, burning, poison effects as well as to fire and poison damage by $I$%.
+2119657219|f8b46c36||Increases attack effectiveness against relicts. Effectiveness decreases with oil rubbing off the blade.
+2119657218|ef649d00||Increases attack effectiveness against draconids. Effectiveness decreases with oil rubbing off the blade.
+2119657217|ef649cff||Increases attack effectiveness against draconids. Effectiveness decreases with oil rubbing off the blade.
+2119657216|ef649cfe||Increases attack effectiveness against draconids. Effectiveness decreases with oil rubbing off the blade.
+2119657223|77533940||Increases attack effectiveness against ogroids. Effectiveness decreases with oil rubbing off the blade.
+2119657222|7753393f||Increases attack effectiveness against ogroids. Effectiveness decreases with oil rubbing off the blade.
+2119657221|1ff07bf8||Increases attack effectiveness against relicts. Effectiveness decreases with oil rubbing off the blade.
+2119657220|f8b46c37||Increases attack effectiveness against relicts. Effectiveness decreases with oil rubbing off the blade.
+2119657227|c0218f14||Increases attack effectiveness against ogroids. Effectiveness decreases with oil rubbing off the blade.
+2119657226|c0218f13||Increases attack effectiveness against ogroids. Effectiveness decreases with oil rubbing off the blade.
+2119657225|c0218f12||Increases attack effectiveness against ogroids. Effectiveness decreases with oil rubbing off the blade.
+2119657224|77533941||Increases attack effectiveness against ogroids. Effectiveness decreases with oil rubbing off the blade.
+2119657231|de026195||Clears Toxicity and cancels all active potion effects.
+2119657230|dd8e2b24||Increases attack effectiveness against beasts. Effectiveness decreases with oil rubbing off the blade.
+2119657229|dd8e2b23||Increases attack effectiveness against beasts. Effectiveness decreases with oil rubbing off the blade.
+2119657228|dd8e2b22||Increases attack effectiveness against beasts. Effectiveness decreases with oil rubbing off the blade.
+2119657267|29e78e8a||Smithing tools used by master blacksmith. Permanently increase weapon damage.
+2119657266|cb404984||Master weaponsmith tools
+2119657265|2eaeb09b||Chance to bounce an arrow
+2119657264|2d9ff292||Chance to keep balance when hit
+2119657271|7164b7e5||Combat Experience Modifier
+2119657270|92c0151d||Quest Experience Modifier
+2119657269|ad70e65b||Smithing tools used by master armorer. Permanently increase armor value.
+2119657268|fcf7e421||Master armorsmith tools
+2119657275|b1173fc6||Adds $I$ points to Magic Turret damage.<br>Scales with Sign Intensity.
+2119657274|163a8e76||Adds $I$ points to Fire damage and $I$ points to Firestream damage per sec.<br>Scales with Sign Intensity.
+2119657273|b1173fc2||Increases base heavy knockdown chance by $I$%.
+2119657272|7641d6c5||Knockdown chance
+2119657279|163a8e70||Alternate Sign Mode:<br>Aard strikes all opponents in range.<br>Sign Intensity is $I$% lower for this mode.
+2119657278|f8854c0b||Control duration
+2119657277|d4aab734||Confusion duration
+2119657276|b1173fc5||Adds $I$ points to shield damage absorption.<br>Scales with Sign Intensity.
+2119657251|e2a0a268||Random Scaling: Upper Bound (Relative to Player Level)
+2119657250|75f859ba||Random Scaling: Lower Bound (Relative to Player Level)
+2119657249|fc921526||Casting a Sign in combat increases your Sign Intensity by $S$% (max $S$%). Getting hit decreases the bonus proportional to damage received: $S$% per 1% of health lost. Resets at the end of the combat.
+2119657248|fc921509||Enemies controlled by Axii Puppet deal $I$% more damage.
+2119657255|a3b6dc74||Random No Downscaling
+2119657254|1fd21de9||Do Not Upscale Animals
+2119657253|f31f3ea6||Disable Quest Levels
+2119657252|38adf853||Random
+2119657259|b91d9859||Can be sold to merchants.
+2119657258|25691b0a||Can be sold to merchants or dismantled.
+2119657257|0437b23e||Crafting components
+2119657256|256ad6b4||Contains useless information.
+2119657263|80038142||Stamina regeneration modifier
+2119657262|cbb62004||Undying cooldown
+2119657261|4e7c5cf1||Stash menu
+2119657260|7fd2ce90||Can be sold for a significant sum or dismantled.
+2119657299|f2e69faf||Dealing damage with attacks charges the sword with energy. When attacking with the fully charged sword, weapon damage is increased by $I$% of the player's Vitality (if the attack is successful, player's Vitality is drained). A strong attack with the fully charged sword spawns a phantom copy of the sword that deals additional damage, which goes through shields, blocks and Armor and ignores damage resistances.<br><br>Hits to fully charge the sword: $I$. Charges decay over time (one per $I$ sec.) and reset when Geralt takes damage. Fully charged sword discharges in $I$ sec. or after a strong attack.<br><br>Current charges: $I$/$I$. Current damage bonus for the fully charged sword: $I$ points.
+2119657296|ed2f3195||Damage dealt by Quen Discharge and Exploding Shield is increased by $I$%.
+2119657303|ec4bd3a7||Total
+2119657302|e496c742||Wild Hunt warriors
+2119657301|8905d8e3||Humanoids
+2119657300|b499e3b3||Fixed Experience for Quests and Combat
+2119657307|1c3d3e6b||Kill count
+2119657306|6066c5c5||Kills by type
+2119657305|88c5b25b||Monsters
+2119657304|c3cdc05f||Animals
+2119657310|1f70c026||Increases crossbow critical hit chance by $I$% and crossbow critical hit power by $I$%.
+2119657309|9835711d||Unique creatures
+2119657308|c41da0e8||Humanoids
+2119657283|71d0d0e9||Aard now deals $I$ damage.<br>Damage scales with Sign Intensity (current damage: $I$).
+2119657282|71d0d0e8||Aard now deals $I$ damage.<br>Damage scales with Sign Intensity (current damage: $I$).
+2119657281|71d0be24||Alternate Sign Mode:<br>Aard strikes all opponents in range.<br>Sign Intensity is no longer lowered for this mode.
+2119657280|71d0be23||Alternate Sign Mode:<br>Aard strikes all opponents in range.<br>Sign Intensity is $I$% lower for this mode.
+2119657287|b1173fc8||Axii effects duration is increased by $I$%.
+2119657286|cf2b2da3||Charms an opponent's mind, confusing them and temporarily eliminating them from combat.<br>Failed Axii attempts stagger the opponent.<br>Grants a $S$% chance to critically hit confused enemy.<br>Can trigger a finisher or dismemberment on a confused enemy with $S$% chance (also depends on damage severity).<br>Finisher chance and confusion duration scale with Sign Intensity (current duration: $S$ seconds).
+2119657284|cf2b2d9f||A directed blast of telekinetic energy that staggers opponents and has $I$% knockdown chance.<br>Heavy knockdown chance is $I$%.<br>Chances scale with Sign Intensity and increase if enemy is low on Stamina.<br>Heavy knockdown activates finisher move.
+2119657291|483c9092||While in combat, weapon damage increases by $I$ points per enemy. Each successful hit charges the sword. Fully charged sword discharges on successful hit, dealing critical damage with $I$% Attack Power bonus and ignoring Armor and damage resistances. Sword discharge also damages and staggers all the surrounding enemies.<br><br>Hits to fully charge the sword: $I$. Charges decay over time (one per $I$ sec.) and reset when Geralt takes damage.
+2119657290|71d0cd28||Alternate Sign Mode:<br>Targeted enemy becomes an ally for $I$s and gains $I$% attack power bonus.<br>Effect duration scales with Sign Intensity (current duration: $I$s).
+2119657289|71d0cd27||Alternate Sign Mode:<br>Targeted enemy becomes an ally for $I$s and gains $I$% attack power bonus.<br>Effect duration scales with Sign Intensity (current duration: $I$s).
+2119657288|163a8e74||Alternate Sign Mode:<br>Targeted enemy becomes an ally for $I$s and gains $I$% attack power bonus.<br>Effect duration scales with Sign Intensity (current duration: $I$s).
+2119657295|fad8f82b||Killing an enemy gives $F$ Adrenaline Points.
+2119657294|f76f46ed||Killing an enemy heals $I$% of maximum Vitality.
+2119657293|e7f11d6f||Heavy knockdown chance
+2119657292|1f5adb4f||<br><br>Current charges: $I$/$I$. Current damage bonus: $I$ points.
+2119657331|54df196a||Allows to dismantle junk items and crafting components.
+2119657330|de9dbdb0||Item dismantle kit
+2119657329|aabf5b33||Gameplay
+2119657328|9ea7d00e||Experience
+2119657334|0544643a||Dismantle
+2119657333|4d09bbea||Allows to dismantle alchemy components.
+2119657332|cd3869e4||Alchemy dismantle kit
+2119657339|e810a7b8||All melee actions (except for special attacks) cost $I$% less Stamina, but all Signs cost $I$% more Stamina.
+2119657338|eb7a58f6||All damaging melee actions (except for special attacks) cost $I$% more Stamina, but deal $I$% more damage.
+2119657337|e9c58057||Casting a Sign costs $I$% less Stamina, but all melee actions (except for special attacks) cost $I$% more Stamina.
+2119657336|d23efdb0||Damage dealt with a strong attack restores $S$% Stamina spent on that attack.
+2119657343|b616490f||Dimeritium
+2119657342|cea7442f||You always enter combat with at least $S$ Adrenaline Point(s).<br>The generation of Adrenaline Points is increased by $I$%.
+2119657315|329005f1||Wolf School defensive techniques: parry, counter, dodge.<br>Successful parry, counter and dodge reduce damage taken to zero and prevent all negative effects.<br>Successful countering grants additional $I$% chance to critical hit.<br>Partial parry reduces damage taken by $I$% and prevents bleeding.<br>Rolling grants immunity to all knockdown and stagger effects and allows to dodge arrows.<br>Some of the attacks cannot be dodged.<br>Arrows can be parried.
+2119657314|74cddaff||No Additional Levels for Guards
+2119657313|da7e5ba8||If you have at least one Adrenaline Point, it will be used to cast a Sign instead of Stamina.
+2119657312|6b3997f1||Use Synchronized Stash Mode by Default
+2119657319|754d1890||Increases Adrenaline gain by $I$%.<br>In addition to usual Battle Trance effect, each Adrenaline Point also decreases melee action Stamina cost by $I$%.
+2119657318|5f63dbf4||Enables the creation of oils that can be applied to swords.<br>Effectiveness decreases with oil rubbing off the blade (down to $I$% of the original value).
+2119657317|8d17aaa0||Reduces the damage taken from the enemy type the oil targets by $I$%.<br>Enhanced oil additionally reduces the damage by $I$% and Superior - by $I$%.<br>Effectiveness decreases with oil rubbing off the blade (down to $I$% of the original value).
+2119657316|1f70c028||Decreases the graze damage taken while dodging by $I$%.
+2119657323|90f6cc99||Grants poison immunity. Poisons heal by $S$% of poison damage for each set piece equipped (current healing rate is: $S$%).
+2119657322|31637b56||Light armor set bonus: +$I$ degrees to the safe angle distance while dodging.
+2119657321|2b2a501b||Medium armor set bonus: +$S$/sec to Toxicity Decay Rate.
+2119657320|ff9b0dc7||Heavy armor set bonus: +$I$% to all damage resistances.
+2119657327|3ba01e78||Enemy scaling
+2119657326|85e8fbd2||Each Adrenaline Point increases the possible number of Bleeding effects that can be applied to a single enemy.<br/>Additionally, Up to three different oils can be applied to a sword at a time.<br>Each oil applied to a sword increases critical hit chance by $S$% and critical hit power by $S$%.
+2119657325|d23efdaf||Taking damage increases your Adrenaline by $S$ points per set piece equipped (current bonus: $S$ points).<br>Each Adrenaline point additionally increases your Attack Power by $S$% per set piece equipped (current bonus: $S$%).
+2119657324|8139cb66||Attack Power bonus
+2119657107|8ed43e3e||Casting a sign reduces stamina cost of all the subsequent actions taken by $S$% for each piece of the set. Current bonus: $S$%.<br>Lasts for $S$ sec.
+2119657106|739e1e2c||Chained fast hits add +$S$% to Attack Power for each piece of the set (currently +$S$%), up to +$S$% max.<br>Finishing a chain of fast hits with a strong hit discharges the sword doubling the current Attack Power bonus.<br>The bonus resets when the chain of hits stops and at the end of the combat.
+2119657105|b69c23a9||Adrenaline Gain
+2119657104|064143d3||Spinning attack that strikes all foes in the surrounding area.<br>Maintaining the attack consumes $S$ Stamina per second.<br>During the attack Adrenaline is drained at a speed of $S$ pts/sec.<br>While performing the attack at non-zero Adrenaline, Attack Power is increased by $S$% per additional attacker (max. $S$%) and damage received is decreased by $S$%.
+2119657111|c3f538a3||Crossbow bolts deal $S$% more base damage and will pierce and either stun or knock down opponents.<br>Opponents at full health lose $S$% of their health when shot.<br>If at non-zero toxicity, time slows down by additional $S$% when aiming with a crossbow.
+2119657110|328ae462||Knockdown chance
+2119657109|739e1e2d||Critical hits with a sword double Adrenaline gained.
+2119657108|8ed43e3f||The size of Yrden traps is increased by $S$%.<br>While you are within an Yrden trap, Sign Intensity is increased by $S$% and damage resistance is increased by $S$%.
+2119657115|cea74418||When Vitality reaches zero, Adrenaline Points will be consumed to prevent death and grant invulnerability and increased Vitality regeneration for $S$s.<br>Restores $S$% of Vitality per Adrenaline Point (max $S$%).<br>Cannot be triggered more than once every $S$s.
+2119657114|c1e6a9cb||When Vitality reaches zero, Adrenaline Points will be consumed to prevent death and grant invulnerability and increased Vitality regeneration for $S$s.<br>Restores $S$% of Vitality per Adrenaline Point (max $S$%).<br>Cannot be triggered more than once every $S$s.
+2119657113|c1e6a9cc||When Vitality reaches zero, Adrenaline Points will be consumed to prevent death and grant invulnerability and increased Vitality regeneration for $S$s.<br>Restores $S$% of Vitality per Adrenaline Point (max $S$%).<br>Cannot be triggered more than once every $S$s.
+2119657112|925f2058||Undying
+2119657119|1f70c027||Increases strong attack critical hit chance by $I$% and strong attack critical hit power by $I$%.
+2119657118|cea74417||Increases fast attack critical hit chance by $I$% and fast attack critical hit power by $I$%.
+2119657117|1f70c023||Attack Power for strong attacks is increased by $S$%.<br>Adrenaline gain for strong attacks is increased by $S$%.
+2119657116|cea74430||Attack Power for fast attacks is increased by $S$%.<br>Adrenaline gain for fast attacks is increased by $S$%.
+2119657091|85e8fbd1||Each instance of Bleeding applied to enemies increases sword damage by 1% for each piece of the set (Current bonus: $S$%).<br/>Additionally, Each set piece increases the effectiveness of an oil applied to a sword by $S$% (Current bonus: $S$%).
+2119657090|6c1d3ba3||Bombs are thrown without any delay and can deal critical damage.<br>Each set piece increases bomb critical hit chance by $S$% (current bonus is: $S$%) and bomb critical hit power by $S$% (current bonus is: $S$%).
+2119657095|163a8e72||Alternate Sign Mode:<br>Deals $I$ points of damage to enemies within a $I$ yard radius, ignores enemy Armor and destroys projectiles passing through this area.<br>Lasts for $I$s.<br>Turret charges: $I$.<br>Damage scales with Sign Intensity (current damage: $I$).
+2119657094|71d0c5a5||Alternate Sign Mode:<br>Deals $I$ points of damage to enemies within a $I$ yard radius, ignores enemy Armor and destroys projectiles passing through this area.<br>Lasts for $I$s.<br>Turret charges: $I$.<br>Damage scales with Sign Intensity (current damage: $I$).
+2119657093|71d0c5a6||Alternate Sign Mode:<br>Deals $I$ points of damage to enemies within a $I$ yard radius, ignores enemy Armor and destroys projectiles passing through this area.<br>Lasts for $I$s.<br>Turret charges: $I$.<br>Damage scales with Sign Intensity (current damage: $I$).
+2119657092|1f70c024||Fast attacks have $S$% chance to apply Bleeding effect.<br>The final damage dealt by fast attacks to bleeding enemies is increased by $S$%.
+2119657099|1f70c022||Each Adrenaline Point adds $I$% to the chance of killing an opponent instantly when countering (up to $I$% max).
+2119657098|c8467d3d||Two opponents can be influenced by Axii at the same time.<br>Effect duration is no longer lowered.
+2119657097|c8467d3c||Two opponents can be influenced by Axii at the same time.<br>Effect duration is lowered by $I$%.
+2119657096|b1173fc9||Two opponents can be influenced by Axii at the same time.<br>Effect duration is lowered by $I$%.
+2119657103|1f70c020||Spinning attack that strikes all foes in the surrounding area.<br>Maintaining the attack consumes $S$ Stamina per second.<br>During the attack Adrenaline is drained at a speed of $S$ pts/sec.<br>While performing the attack at non-zero Adrenaline, Attack Power is increased by $S$% per additional attacker (max. $S$%) and damage received is decreased by $S$%.
+2119657102|1f70c021||Strong attack that goes through blocks, armor and shields and can knock down enemies.<br>With $S$ Adrenaline Points available, it creates a powerful shock wave that damages all enemies within $S$ meters and staggers or knocks them down.<br>This attack deals $S$% more damage, plus $S$% for each Stamina point and $S$% for each Adrenaline Point spent (up to $S$% max).<br>Its critical hit chance is increased by $S$%.
+2119657139|71d0c967||Alternate Sign Mode:<br>An active shield that absorbs up to 100% of damage dealt by enemy's weapon.<br>Base damage absorption is $I$% bigger.<br>Maintaining it no longer drains Stamina.<br>Blocked attacks drain Stamina proportional to damage absorbed.<br>Restores Vitality by $I$% of damage absorbed.<br>Prevents stagger, burning, poison and bleeding effects.<br>Prevents knockdown (and then breaks).
+2119657138|71d0c966||Alternate Sign Mode:<br>An active shield that absorbs up to 100% of damage dealt by enemy's weapon.<br>Base damage absorption is $I$% bigger.<br>Maintaining it drains $I$ Stamina Points per second.<br>Blocked attacks drain Stamina proportional to damage absorbed.<br>Restores Vitality by $I$% of damage absorbed.<br>Prevents stagger, burning, poison and bleeding effects.<br>Prevents knockdown (and then breaks).
+2119657137|163a8e73||Alternate Sign Mode:<br>An active shield that absorbs up to 100% of damage dealt by enemy's weapon.<br>Base damage absorption is $I$% bigger.<br>Maintaining it drains $I$ Stamina Points per second.<br>Blocked attacks drain Stamina proportional to damage absorbed.<br>Restores Vitality by $I$% of damage absorbed.<br>Prevents stagger, burning, poison and bleeding effects.<br>Prevents knockdown (and then breaks).
+2119657136|c84666b7||Returns $I$% of the damage absorbed by Quen to the attacker.<br>When it breaks, it pushes opponents back with a chance for knock-down and deals $I$ points of damage.<br>Damage scales with Sign Intensity (current damage: $I$).
+2119657143|1517d64e||If Toxicity is above zero, time automatically slows by $S$% for $S$ sec when an enemy is about to perform a counterattack.<br>Increases Attack Power and Sign Intensity by $S$% when Toxicity exceeds the safe threshold.
+2119657142|1517d64d||If Toxicity is above zero, time automatically slows by $S$% for $S$ sec when an enemy is about to perform a counterattack.<br>Increases Attack Power and Sign Intensity by $S$% when Toxicity exceeds the safe threshold.
+2119657141|15dda91a||If Toxicity is above zero, time automatically slows by $S$% for $S$ sec when an enemy is about to perform a counterattack.<br>Increases Attack Power and Sign Intensity by $S$% when Toxicity exceeds the safe threshold.
+2119657140|15dda916||Appropriate oil applied to blades gives a $I$% chance of poisoning the target on each hit.<br>Enhanced oil increases this chance by $I$% and Superior - by $I$%.<br>Effectiveness decreases with oil rubbing off the blade (down to $I$% of the original value).
+2119657145|329005f0||Allows you to perform strong melee attacks which add +$I$% to weapon damage and +$I$ to Armor Penetration.
+2119657151|cf2b2da1||Magic trap that slows enemies down by $S$% inside its area of effect (max slowdown is limited by $S$%).<br>Trap duration: $S$s.<br>The longer the trap persists, the less efficient it becomes.<br>Slowdown scales with Sign Intensity.
+2119657150|c3f538a0||When the Aard Sign is cast, it additionally has a $S$% chance of freezing opponents.<br>Opponents knocked down and frozen simultaneously die immediately.<br>Opponents who are not frozen are dealt an additional $S$ damage.<br>Damage scales with Sign Intensity (current damage: $S$).
+2119657149|c3f5389c||Signs can deal critical hits.<br>Their critical hit chance and power are determined by Sign Intensity (current critical hit chance -  $S$%, critical hit power bonus - $S$%).<br>Opponents killed by critical hits from Signs explode.
+2119657148|bab1daf5||Increases Vitality drain on overdosing by $S$% for every 1 point in your Toxicity level (current Vitality drain value: $S$ pts; max value: $S$ pts).<br>The amount of Vitality you lose when overdosing is added to your base weapon and Sign damage.
+2119657123|cea74411||Increases counterattack power by $I$%.
+2119657122|c1e68f85||Increases counterattack power by $I$% and critical hit chance by $I$%.<br>Each Adrenaline Point grants $I$% knockdown chance when countering (up to $I$% max).
+2119657121|c1e68f84||Increases counterattack power by $I$% and critical hit chance by $I$%.
+2119657120|c1e68bc4||Damage taken from partial parries and counters is reduced by additional $I$% (down to $I$% total).<br>Perfectly timed parries reflect back arrows, damage on reflected arrows is increased by $I$%.<br>When multiple enemies are around, parry cost is decreased by $I$%.
+2119657127|163a8e71||Alternate Sign Mode:<br>Emits a continuous focused stream of fire that causes burning and deals $I$ points of damage per second.<br>Drains $I$ points of Stamina per second.<br>Damage scales with Sign Intensity (current damage: $I$).
+2119657126|cf2b2da0||Fiery blast that deals $I$ points of damage with $I$% chance to set enemies on fire.<br>Damage scales with Sign Intensity (current damage: $I$).
+2119657125|163a8e77||Igni hit now also decreases enemy Armor by $S$ point(s) and enemy Damage Resistances by $S$% for $S$ sec.<br>Subsequently applied effects do not cumulate.<br>The reduction scales with Sign Intensity.
+2119657124|cf2b2da2||Protective shield that absorbs up to $I$% of damage dealt by enemy's weapon.<br>Prevents stagger, burning, poison and bleeding effects (and then breaks).<br>Shield duration: $I$s.<br>Base damage absorption: $I$.<br>Absorption scales with Sign Intensity (current absorption: $I$).
+2119657131|b3c8ebb8||Magic turret
+2119657130|163a8e75||Aard now deals $I$ damage.<br>Damage scales with Sign Intensity (current damage: $I$).
+2119657129|71d0c1e5||Alternate Sign Mode:<br>Emits a continuous focused stream of fire that causes burning and deals $I$ points of damage per second.<br>Drains $I$ points of Stamina per second.<br>Damage scales with Sign Intensity (current damage: $I$).
+2119657128|71d0c1e4||Alternate Sign Mode:<br>Emits a continuous focused stream of fire that causes burning and deals $I$ points of damage per second.<br>Drains $I$ points of Stamina per second.<br>Damage scales with Sign Intensity (current damage: $I$).
+2119657135|c84666b6||Returns $I$% of the damage absorbed by Quen to the attacker.<br>When it breaks, it pushes opponents back and deals $I$ points of damage.<br>Damage scales with Sign Intensity (current damage: $I$).
+2119657134|b1173fc1||Increases the final damage taken for all the enemies inside Yrden Trap by $S$%.
+2119657133|40851a25||Magic Trap duration increases by $I$%. Magic Trap radius increases by $I$%.
+2119657132|b1173fc0||Magic Trap duration increases by $I$%.
+2119657171|5f63dbf5||Enables the creation of handheld bombs that can be thrown at enemies.<br>Non-aimed throws deal 50% less damage.
+2119657170|329005f2||Allows you to wield a light hand-held crossbow.<br>Non-aimed shots deal 50% less damage.
+2119657169|2f1e7623||Geralt is now clean-shaven
+2119657168|6b871343||Strong attack critical hit power
+2119657175|b1173fc7||Time is slowed down by additional $I$% while casting Axii.<br>A chance to critically hit a confused opponent is increased by $I$%.<br>Increases the effectiveness of Axii in dialogues.
+2119657174|da7e5ba5||Each piece of medium armor increases Sign Intensity by $S$% and decreases sign casting stamina cost by $S$%.
+2119657173|04bda90f||Used for shaving.
+2119657172|754d1891||In addition to usual Battle Trance effect, each Adrenaline Point also increases Sign Intensity by $I$%.<br>Using Signs now generates the same amount of Adrenaline Points as when using swords.
+2119657179|fd180405||Your over encumbrance is too high
+2119657178|56747c57||Accelerates Vitality regeneration. Vitality regeneration does not pause upon receiving damage.
+2119657177|c84675bb||Time is slowed down by additional $I$% while casting Axii.<br>A chance to critically hit a confused opponent is increased by $I$%.<br>Increases the effectiveness of Axii in dialogues.
+2119657176|c84675ba||Time is slowed down by additional $I$% while casting Axii.<br>A chance to critically hit a confused opponent is increased by $I$%.<br>Increases the effectiveness of Axii in dialogues.
+2119657183|2618d4ec||Reduce Item Encumbrance (%)
+2119657182|a5ae27a9||Switch mode
+2119657181|91a76571||Over Encumbrance Threshold to Sink the Boat (%)
+2119657180|9385a7e4||Sink Boat If Over Encumbered
+2119657155|f35fcb73||Armor penetration
+2119657154|28838f82||Armor penetration
+2119657153|c32e766a||Critical hit power bonus
+2119657152|c3f538a1||While in combat you alternate between two states: Rush state that doubles your Adrenaline gain for $S$ sec and gives additional +$S$% to Attack Power and Sign Intensity per Adrenaline Point and Recovery state that halves your Adrenaline gain for $S$ sec and gives -$S$% to the same characteristics for each Adrenaline point gained during the Rush state.
+2119657159|ccc61f66||Any edible consumed lasts longer by $I$%, but tastes like pierogi.
+2119657158|c95c6e28||When at maximum Vitality, additional Vitality regeneration increases your weapon damage by $I$% per 1% of excess Vitality gained (up to +$I$%). Works only in combat. Resets on damage taken and damage dealt.
+2119657157|a83467f6||Vitality regeneration during combat
+2119657156|0147942a||Vitality regeneration outside of combat
+2119657163|7968d6e0||Freezes foes. Blows landed on frozen foes deal additional damage. Extended duration.
+2119657162|4f424deb||Weapon damage
+2119657161|4a0f3f56||Sign damage
+2119657160|22156cd6||When Yrden Magic Turret hits an enemy, an Yrden Magic Trap is placed at that position. Size, duration and slowdown for such a trap are unaffected by Yrden Intensity and upgrades and limited to $S$ yards, $S$ sec and $S$% respectively.
+2119657167|db4da3c8||Fast attack critical hit power
+2119657166|329005f3||Damage dealt during melee combat generates Adrenaline Points.<br>Each Adrenaline Point increases Attack Power by $I$%.
+2119657165|9e58d1f5||Increases Sign Intensity. Extended duration. Special effects from signs are one-third longer.
+2119657164|b02a28c2||Damage increase
+2119657203|7b1c29c5||Increases attack effectiveness against hybrids. Effectiveness decreases with oil rubbing off the blade.
+2119657202|7b1c29c4||Increases attack effectiveness against hybrids. Effectiveness decreases with oil rubbing off the blade.
+2119657201|7b1c29c3||Increases attack effectiveness against hybrids. Effectiveness decreases with oil rubbing off the blade.
+2119657200|65067e27||Increases attack effectiveness against necrophages. Effectiveness decreases with oil rubbing off the blade.
+2119657207|aed490e2||Increases attack effectiveness against elementa. Effectiveness decreases with oil rubbing off the blade.
+2119657206|88e86913||Increases attack effectiveness against vampires. Effectiveness decreases with oil rubbing off the blade.
+2119657205|88e86912||Increases attack effectiveness against vampires. Effectiveness decreases with oil rubbing off the blade.
+2119657204|88e86911||Increases attack effectiveness against vampires. Effectiveness decreases with oil rubbing off the blade.
+2119657211|d11afcdf||Increases attack effectiveness against humans, elves, dwarves and halflings. Effectiveness decreases with oil rubbing off the blade.
+2119657210|d11afcde||Increases attack effectiveness against humans, elves, dwarves and halflings. Effectiveness decreases with oil rubbing off the blade.
+2119657209|aed490e4||Increases attack effectiveness against elementa. Effectiveness decreases with oil rubbing off the blade.
+2119657208|aed490e3||Increases attack effectiveness against elementa. Effectiveness decreases with oil rubbing off the blade.
+2119657215|ea1a318b||Increases attack effectiveness against specters. Effectiveness decreases with oil rubbing off the blade.
+2119657214|ea1a318a||Increases attack effectiveness against specters. Effectiveness decreases with oil rubbing off the blade.
+2119657213|ea1a3189||Increases attack effectiveness against specters. Effectiveness decreases with oil rubbing off the blade.
+2119657212|d11afce0||Increases attack effectiveness against humans, elves, dwarves and halflings. Effectiveness decreases with oil rubbing off the blade.
+2119657187|2528a809||Synchronized mode
+2119657186|21488188||Mixed inventory mode
+2119657185|f0ce324e||Stash mode
+2119657184|a992db56||Player inventory mode
+2119657191|d3510d13||Contains silver splinters that temporarily block or weaken monsters' transformation and regeneration abilities. Extended duration.
+2119657190|d3510d12||Contains silver splinters that temporarily block or weaken monsters' transformation and regeneration abilities. Extended duration.
+2119657189|d3510d11||Contains silver splinters that temporarily block or weaken monsters' transformation and regeneration abilities.
+2119657188|e71d7c90||Increases Geralt's base Vitality by $S$ points with each foe killed.
+2119657195|3a67f159||Increases attack effectiveness against cursed foes. Effectiveness decreases with oil rubbing off the blade.
+2119657194|08eace67||Increases attack effectiveness against insectoids. Effectiveness decreases with oil rubbing off the blade.
+2119657193|08eace66||Increases attack effectiveness against insectoids. Effectiveness decreases with oil rubbing off the blade.
+2119657192|08eace65||Increases attack effectiveness against insectoids. Effectiveness decreases with oil rubbing off the blade.
+2119657199|65067e26||Increases attack effectiveness against necrophages. Effectiveness decreases with oil rubbing off the blade.
+2119657198|65067e25||Increases attack effectiveness against necrophages. Effectiveness decreases with oil rubbing off the blade.
+2119657197|3a67f15b||Increases attack effectiveness against cursed foes. Effectiveness decreases with oil rubbing off the blade.
+2119657196|3a67f15a||Increases attack effectiveness against cursed foes. Effectiveness decreases with oil rubbing off the blade.
+2119657009|d2b8bedc||Additional Damage Modifier For Bosses
+2119657008|4da2a1cf||Additional Health Modifier For Bosses
+2119657015|c4ea0ecf||Potion Duration
+2119657014|99a2fd83||Enemy Damage Resistance Reduction
+2119657013|cdb77880||Frost Resistance
+2119657019|2f489bd0||Firestream Damage Per Second
+2119657018|a5d2ae76||Damage Per Hit (steel)
+2119657017|91e67f56||Damage Per Hit (silver)
+2119657016|e0a0abba||Soft Upscaling
+2119657023|1b3d746f||Magic Turret Charges
+2119657022|801c1364||Magic Turret Duration
+2119657021|d55f89e9||Magic Trap Damage
+2119657020|9c703d2c||Magic Traps
+2119657003|6b720fd4||Enemy Damage Modifier
+2119657002|5e6daea2||Monster Health Modifier
+2119657001|4098d8d1||Spectre
+2119657000|4d5f8b0c||Mods
+2119657007|331a1435||Match
+2119657006|95a241ff||Upscale
+2119657005|e09e66c8||None
+2119657004|078fe271||Enemy Scaling
+2119657043|c3702fb9||Critical Hit Chance Versus Specters
+2119657042|9c73a4a6||Critical Hit Chance Versus Relicts
+2119657041|016d02ed||Critical Hit Chance Versus Necrophages
+2119657040|4bfdf9ea||Critical Hit Chance Versus Elementa
+2119657047|df4cf77c||Critical Hit Power Versus Cursed Ones
+2119657046|4fa6c42d||Critical Hit Power Versus Beasts
+2119657045|42229941||Critical Hit Chance Versus Vampires
+2119657044|cd868a1a||Critical Hit Chance Versus Ogroids
+2119657051|6adf0df0||Critical Hit Power Versus Insectoids
+2119657050|6b0ad6e6||Critical Hit Power Versus Hybrids
+2119657049|810bfc7b||Critical Hit Power Versus Humans
+2119657048|f7d09609||Critical Hit Power Versus Draconids
+2119657055|17546414||Critical Hit Power Versus Specters
+2119657054|2e15b341||Critical Hit Power Versus Relicts
+2119657053|69eb0048||Critical Hit Power Versus Necrophages
+2119657052|0cf40585||Critical Hit Power Versus Elementa
+2119657027|0a0286b7||Axii Chance
+2119657026|25de403d||Active Shield Damage Absorption
+2119657025|f88251f2||Returned Damage
+2119657024|96dd853f||Magic Turret Damage
+2119657030|71578853||Damage Absorption
+2119657029|bb92c99e||Strong Attack Power
+2119657028|52db39f9||Fast Attack Power
+2119657035|c8957121||Critical Hit Chance Versus Cursed Ones
+2119657034|40aed692||Critical Hit Chance Versus Beasts
+2119657039|97466e95||Critical Hit Chance Versus Insectoids
+2119657038|f261a80b||Critical Hit Chance Versus Hybrids
+2119657037|d33fe160||Critical Hit Chance Versus Humans
+2119657036|79a23d6e||Critical Hit Chance Versus Draconids
+2119657075|5806ca6e||Strong Attack Critical Damage
+2119657074|3c4a6af2||Strong Attack Damage
+2119657073|163a8e78||Increases burning chance by $I$%.
+2119657072|da7e5ba6||Each piece of heavy armor increases maximum Vitality by $S$%, damage dealt by melee attacks grants additional $S$ Adrenaline Points per each heavy armor piece.
+2119657079|d23992f7||Fast Attack Damage
+2119657078|bc4297c4||Strong Attack Critical Hit Chance
+2119657077|89dfeac9||Fast Attack Critical Hit Chance
+2119657076|69d8dd89||Fast Attack Critical Damage
+2119657083|b08bd7d2||Strong Attack Damage
+2119657082|73d42fa9||Fast Attack Critical Hit Chance
+2119657081|3375c4a9||Fast Attack Critical Damage
+2119657080|2e06698e||Strong Attack Critical Damage
+2119657085|fa3924a4||Strong Attack Critical Hit Chance
+2119657084|c7b0b7d7||Fast Attack Damage
+2119657059|4b1b4cdd||Damage Resistance Reduction Versus Cursed Ones
+2119657058|c8d4450c||Damage Resistance Reduction Versus Beasts
+2119657057|d123879c||Critical Hit Power Versus Vampires
+2119657056|b4fbb1b5||Critical Hit Power Versus Ogroids
+2119657063|ca4463e9||Damage Resistance Reduction Versus Insectoids
+2119657062|5da28e33||Damage Resistance Reduction Versus Hybrids
+2119657061|83b5dcfe||Damage Resistance Reduction Versus Humans
+2119657060|da69abb0||Damage Resistance Reduction Versus Draconids
+2119657067|64e2d545||Damage Resistance Reduction Versus Specters
+2119657066|0ecc4f78||Damage Resistance Reduction Versus Relicts
+2119657065|8b85ee91||Damage Resistance Reduction Versus Necrophages
+2119657064|d14fa0b4||Damage Resistance Reduction Versus Elementa
+2119657071|da7e5ba4||Each piece of light armor increases critical hit chance by $S$% and critical hit power by $S$%.
+2119657070|d25344ee||Attack Power Versus Humans
+2119657069|5a3c18bd||Damage Resistance Reduction Versus Vampires
+2119657068|111c7e84||Damage Resistance Reduction Versus Ogroids
+2119657619|ba4c79a2||Item limit reached.
+2119657618|8145ca67||No useful alchemical properties.
+2119657617|719bf3a5||Ingredient cannot be interchanged.
+2119657616|7fe92788||spectre has been updated to version:
+2119657623|6f73baae||Unsuitable location to build a fire.
+2119657622|61614b72||Fires are disabled in the mod settings.
+2119657621|9d9508dc||No fire source available.
+2119657620|8ebccad2||There's another fire in proximity.
+2119657627|9b6270ce||Primary
+2119657626|4afd3a14||Composite
+2119657625|26ad3130||Error: Composite substances are disabled!
+2119657624|f750ded5||Not enough kindling to build a fire.
+2119657631|6dced3d8||Aether
+2119657630|b1e57406||Rebis
+2119657629|a9c680c2||Vitriol
+2119657628|a2a5e01f||Uses
+2119657603|a2a38c75||Modest Source of
+2119657602|a2a45d2f||Rich source of
+2119657601|7b1f54cf||Pure
+2119657600|d3398743||Dominant
+2119657607|31335d4c||catalyst
+2119657606|14e1e912||base
+2119657605|8d1c3784||alcohol
+2119657604|5b0b069d||Source of
+2119657611|85ed140e||Used to brew potions and elixirs.
+2119657610|7ca3b190||Standard
+2119657609|a29fd1f5||High quality
+2119657608|2e8976a2||Top quality
+2119657615|ac6d6133||spectre has been initialized
+2119657614|65df4f89||Obtained
+2119657613|64303ee4||Need a place to setup all alchemical apparatuses...
+2119657612|fddad034||Metabolizing Potion
+2119657651|e325b63a||Allow Build Interior Campfires
+2119657650|e10e040a||Allow Build Campfires
+2119657649|8a050380||Miscellaneous
+2119657648|b320995d||Toxicity
+2119657655|f91c624b||Any Interactive Fire
+2119657654|a53939cd||Campfires
+2119657653|329a3bad||No Fire Whatsoever
+2119657652|9a5487c7||Alchemy Requires
+2119657659|e32c9990||Bombs Limit
+2119657658|0df10cec||Potions Limit
+2119657657|ff9a0bca||Disable Meditation Requirements
+2119657656|6b5b4d94||Timber Required
+2119657663|636e1c95||Mutagen Duration Override
+2119657662|3202c8d9||Potion Duration Added
+2119657661|aa2932c3||Potion Duration Override
+2119657660|170e1d51||Oils Limit
+2119657635|6e293e4c||Albedo
+2119657634|404e98a8||Vermilion
+2119657633|4f189e59||Hydragenum
+2119657632|e7f856ff||Quebrith
+2119657639|b84a5c32|| ••   Substances: Mutagen Fusion
+2119657638|2ae13e82|| •     Substances: Primary
+2119657637|8baa7464||Rubedo
+2119657636|01dd64d7||Nigredo
+2119657643|dcf60e01||Recipes brewed in the laboratory provide additional yield.
+2119657642|6c1d3ba4||Toxicity damage is reduced by $S$%.
+2119657641|a3575122||†  Substances: Other
+2119657640|99e9fd63|| ••• Substances: Mutagen Transmutation
+2119657647|2f87b016||Potions, Oils, and Bombs
+2119657646|111d5af4||Brewing
+2119657645|be31c5f2||Alchemy
+2119657644|754d1893||Consumed alchemical items are metabolized, their toxicity eliminated and expire $I$% faster.
+2119657683|30c9fb1a||Disable Plants Adjustments
+2119657682|cd5d5dc4||Recycle Empty Bottles
+2119657681|c3871661||Standardize Mutagen Recipes
+2119657680|ff510dfd||Standardize Substance Recipes
+2119657687|e9df3b26||Min Herbs Per Plant
+2119657686|5427abca||Maximum Delay For Plant Spawn
+2119657685|5427acb8||Minimum Delay For Plant Spawn
+2119657684|aa6f6212||Hide Plants On Minimap
+2119657691|0fdf3e94||Vanilla Meditation Drains Effect's Duration
+2119657690|e2795263||Camera Rotation Speed
+2119657689|23d9ab0e||Plants Spawning Chance
+2119657688|e9df3a38||Max Herbs Per Plant
+2119657695|e859e84e||Potions, Oils, and Bombs
+2119657694|e5873bbc||Brewing
+2119657693|135c0f25||Uninstall spectre
+2119657692|b66d79e0||Mod Primary Substances Icons
+2119657667|b05d8049||Toxicity Degeneration Rate
+2119657666|cfd6c8b1||Mutagens Duration Multiplier
+2119657665|320025df||Potion Duration Multiplier
+2119657664|cfd96bab||Mutagen Duration Added
+2119657671|3ad2ad5e||Combat Degeneration Rate
+2119657670|7cacd101||Combat Degeneration
+2119657669|95ce7f5e||Alternate Degeneration Threshold
+2119657668|d50f869b||Alternate Degeneration Rate
+2119657675|8fcfb53a||Top Alcohol Reuses
+2119657674|7f9bdf50||Yield Per Recipe
+2119657673|f57cb346||Potion Toxicity Multiplier
+2119657672|0db575d2||Residual Degeneration Rate
+2119657679|db51ac26||Minutes Per Distillation
+2119657678|c24ef006||Minutes Per Concoction
+2119657677|cfab0e3d||Alchemy Takes Time
+2119657676|a8a8c127||Potion Metablization Time
+2119657699|44eb6df5||Human Health Modifier
+2119657698|da7e5ba3||Increases maximum Vitality by $I$.
+2119657697|129479b8||Miscellaneous
+2119657696|14956825||Toxicity
+2119657703|00000000||Reset Skill Toggle
+2119657702|00000000||The reset skill toggle has been enabled.<br/><br/>You may now reset individual skills and refund their skill points by unequipping the skill from the skill tree.<br/><br/>Core skills are reduced to level 1.
+2119657701|00000000||Reset Skill Toggle Enabled
+2119657700|1a88db5e||Animal Health Modifier
+2119657704|00000000||Pressing the camera lock input will allow you to reset your skills.
+2119657491|754d1896||You ignore bomb and special bolt effects.<br>Damage from own bombs and bolts is halved.
+2119657490|fc921508||When you kill a foe, gain +$I$ to combat Stamina regeneration per each alive enemy nearby. Max bonus cannot exceed +$I$. Resets at the end of the combat.
+2119657489|fc92150d||When you kill a foe, gain +$I$ to Vitality regeneration per each alive enemy nearby. Max bonus cannot exceed +$I$. Resets at the end of the combat.
+2119657488|fc921507||Gain +$I$ to non-combat Vitality regeneration and +$I$ to combat Vitality regeneration. When your Stamina is at $I$% and below, gain another +$I$ to combat Vitality regeneration.
+2119657495|1b20b17e||Use Progressive Level Bonuses
+2119657494|4b77cb9c||Sprint/Jump Action Cost Modifier
+2119657493|1d8e4094||Melt Armor Timer
+2119657492|8d17aaa2||Critical hit power against the targeted enemy type is increased by $S$% for each Adrenaline Point available (up to $S$% max).
+2119657499|eee40a34||Hitting enemies with Aard reduces their Stamina by $I$%, which also increases knockdown and heavy knockdown chances.
+2119657498|d27b884b||Hardcore
+2119657497|b77c3e7f||Abilities Per Level Delta
+2119657496|2b2d2e2d||Level Delta
+2119657502|c43de44b||After you cast a Sign, an Adrenaline Point is consumed and your next sword attack is charged with the power of that Sign. Aard: knockdown (chances depend on Attack Power). Igni: $S$% of your weapon damage is added as Fire damage (scales with Attack Power). Yrden: slowdown effect is applied for $S$ sec. Quen: heals Geralt for $S$% of damage dealt. Axii: confusion effect is applied for $S$ sec.
+2119657501|257f1e14||When you enter combat, you will automatically get a Quen shield without using any Stamina and with $I$% bonus to Sign Power.
+2119657500|c5f2bcea||Increases the range of Whirl by $S$ yards and Rend by $S$ yards. Final damage dealt by these attacks is decreased by $S$%.
+2119657475|5a519178||Restores Vitality proportional to damage dealt.
+2119657474|545f0d8e||Bonus for gear type:
+2119657479|fc92152a||$I$% of the damage taken by the witcher is reflected back on the attacker.
+2119657478|fc921506||Increases critical hit power by $I$% when attacking from behind.
+2119657477|e71d7c8d||All bombs and potions (but not decoctions) can be used one additional time.
+2119657476|2ae9db22||Vitality drain
+2119657483|d400b4dd||Damage resistances
+2119657482|6ac22a47||Damage bonus
+2119657481|fc92150e||When the witcher is attacked from behind, normal Quen gets activated and reduces the damage. When hostile specters are around, Quen Power is increased by $S$%.
+2119657480|9691af88||Damage resistance reduction
+2119657487|fc921528||Gain +$I$% to Attack Power, +$I$% to Sign Intensity, +$I$/s to Stamina regeneration and +$I$% to Adrenaline gain while your health is at $I$% or lower. Resets when you regain your health and at the end of the combat. $I$ sec cooldown.
+2119657486|fc92150a||Dealing melee damage to enemies increases your Adrenaline Gain by $S$% (max $S$%). Getting hit decreases the bonus proportional to damage received: $S$% per 1% of health lost. Resets at the end of the combat.
+2119657485|e71d7c8f||Dealing melee damage to enemies increases your Attack Power by $S$% (max $S$%). Getting hit decreases the bonus proportional to damage received: $S$% per 1% of health lost. Resets at the end of the combat.
+2119657484|fc92150c||Damage dealt with a melee weapon increases Sign Intensity by $I$% (max $I$%). Resets after casting a sign and at the end of the combat.
+2119657523|6d1ad427||Strike an opponent while riding towards him at high speed for an increased damage.
+2119657522|6d1ad3a6||Sharpening your blade on a grindstone will enhance its combat capabilities.
+2119657521|6d1ad3cb||Pay attention to the color of your enemies' level numbers. Green means they are close to your level. Red means they are a challenge, and a skull icon means they are deadly.
+2119657520|b93269f0||Your opponents have limited Stamina. When their Stamina is exhausted, they won't be able to fight as effectively.
+2119657527|363f99af||You can use Quen to protect from critical effects such as Burning, Bleeding, etc.
+2119657526|6d1ad447||You can deflect incoming bolts and arrows with your sword.
+2119657525|6d1ad3e4||When throwing a bomb or shooting a bolt from your crossbow, you can either take advantage of auto-aiming for a quick attack, or aim manually for better damage.
+2119657524|b93269e9||Striking from behind increases you critical hit chances.
+2119657531|3a84c329||Increases poison resistance, neutralizes the effects of poisons already in bloodstream. Extended duration.
+2119657530|3a84c328||Increases poison resistance, neutralizes the effects of poisons already in bloodstream.
+2119657529|c3f5389e||Turns the blood of the witcher into a highly caustic acid.<br>Toxicity Decay Rate is decreased by $S$%.<br>Whenever you take melee damage, your blood causes the attacker to lose $S$ point(s) of their health for every 1 point in your Toxicity level per second (current value: $S$ pts; max value: $S$ pts).<br>The effect lasts $S$ sec.<br>Slows down the attacker's stamina regeneration by $S$%.
+2119657528|6d1ad3cc||Dodging is usually the best tactic when fighting huge monsters. When fighting humans and smaller monsters, try to parry and counter their attacks with your sword.
+2119657535|437e276b||Accelerates Stamina regeneration.
+2119657534|437e276a||Accelerates Stamina regeneration.
+2119657533|2e268281||Poison immunity duration
+2119657532|3a84c32a||Increases poison resistance, neutralizes the effects of poisons already in bloodstream. Extended duration. Grants temporary immunity to poison effects.
+2119657507|f9241f8c||Excess Adrenaline generated slows down potion expiration timer by $S$% per 1% of excess Adrenaline (3 points = 100%). Max bonus cannot exceed $S$%. The bonus resets when you lose Adrenaline and at the end of the combat.
+2119657506|8d17aa9c||Each potion dose imbibed restores $I$% of maximum Stamina.
+2119657505|0083ce62||Refreshment
+2119657504|0083ce63||Restoration
+2119657511|c1e6ad8c||When casting a Sign, 3 Adrenaline Points (if available) will be consumed to upgrade the Sign to the highest level (unlocking all bonuses) and increase Sign intensity by $I$%.<br>If Rage Management is active, Adrenaline Points are not consumed immediately, but sign casting cost is tripled instead.
+2119657510|cea74419||When casting a Sign, 3 Adrenaline Points (if available) will be consumed to upgrade the Sign to the highest level (unlocking all bonuses) and increase Sign intensity by $I$%.<br>If Rage Management is active, Adrenaline Points are not consumed immediately, but sign casting cost is tripled instead.
+2119657508|fa56c289||Fire damage on explosion
+2119657515|c1e68bc3||Damage taken from partial parries and counters is reduced by additional $I$% (to $I$% total).<br>Perfectly timed parries reflect back arrows, damage on reflected arrows is increased by $I$%.
+2119657514|cea74410||Damage taken from partial parries and counters is reduced by additional $I$% (to $I$% total).<br>Perfectly timed parries reflect arrows back at the attacker.
+2119657513|e2e48f8a||Deflection
+2119657512|c1e6ad8d||When casting a Sign, 3 Adrenaline Points (if available) will be consumed to upgrade the Sign to the highest level (unlocking all bonuses) and increase Sign intensity by $I$%.<br>If Rage Management is active, Adrenaline Points are not consumed immediately, but sign casting cost is tripled instead.
+2119657519|1dc1cde4||Overdose threshold
+2119657518|20609437||Each enemy affected by Axii Confusion adds $I$% to your critical hit chance and critical hit power (up to $I$%).
+2119657517|198d31bb||Each enemy controlled by Axii Puppet adds $I$% to your Attack Power and Sign Intensity (up to $I$%).
+2119657516|4e736cfc||Foes killed by Igni (burning or fire) explode dealing $I$ damage to other enemies within a $I$-yard radius and igniting them.<br>Damage scales with Sign Intensity.
+2119657555|5c1f96c6||Main Settings
+2119657554|a369ce2f||Boosts Stats For a Short Duration.
+2119657553|15dda918||Decreases decoction toxicity by $S$%.
+2119657552|bab1daf7||Allows to imbibe up to $S$ decoction(s) with no toxicity cost.<br>Each free decoction imbibed increases your chances to apply critical effects with both swords and Signs by $S$% (effect chance increases by $S$ times max).
+2119657559|24368cd9||Segregate Containers
+2119657558|047eca96||Line Of Sight Scan
+2119657557|a5bd302b||Loot
+2119657556|c580b8f9||Version (Slide to 0 to Reset Settings)
+2119657563|d3b93baf||Herbs Scan Range
+2119657562|a176c11b||Global Scan Range
+2119657561|39c88630||Disable Guards Reactions
+2119657560|e063e2c5||Allow Theft
+2119657567|34392d05||Loot Presets
+2119657566|725f6561||Container Limit
+2119657565|ed746e4b||Remains Scan Range
+2119657564|755b839d||Clutter Scan Range
+2119657539|56747c57||Stops bleeding and increases bleeding resistance. Accelerates Vitality regeneration. Taking damage does not interrupt Vitality regeneration.
+2119657538|56747c56||Stops bleeding and increases bleeding resistance. Accelerates Vitality regeneration. Vitality regeneration pauses for 2 seconds upon receiving damage.
+2119657537|56747c55||Stops bleeding and increases bleeding resistance. Accelerates Vitality regeneration. Vitality regeneration pauses for 2 seconds upon receiving damage.
+2119657536|437e276c||Accelerates Stamina regeneration. Never expires at night.
+2119657543|c3f5389d||Each fatal blow of your sword triggers a finisher or dismemberment.<br>Upon entering combat you immediately get a bonus to your Attack Power for each skill equipped: +$S$% for a combat skill, +$S$% for any other skill.<br>Getting hit decreases the bonus by $S$% per 1% of health lost.<br>Killing an enemy fully restores the bonus and adds +$S$% more on top of it.<br>Max bonus: $S$%.<br>Resets at the end of the combat.
+2119657542|363f9a0c||Deadly Precision is activated only when performing a counterattack.
+2119657541|c3f538a2||Countering an enemy when their health is at $S$% or less kills them and triggers a finisher or dismemberment.<br>Each Adrenaline Point increases the damage dealt when countering by $S$% (up to +$S$% max).
+2119657540|c3f5389f||When you are about to take damage your skin absorbs and redistributes that damage over time instead: $S$ sec per each Adrenaline Point you have (up to $S$ sec max, at least 1 point is required to trigger the mutation).<br>During this period your Adrenaline is drained at a speed of 1 pt per $S$ sec.<br>If your Adrenaline reaches zero before the effect ends, all the remaining damage will be dealt at once.
+2119657547|b4ca2ff0||Life Leech
+2119657546|bab1daf6||Requires Mutation Catalyst potion to activate.<br>Drains the life out of up to three surrounding enemies healing the witcher in the process.<br>Drain rate is a sum of your weapon damage, Attack Power and Sign Intensity multiplied by Adrenaline Points and divided by the number of enemies.<br>The effect lasts for $S$ sec and can only be activated once per $S$ sec.<br>Current max drain rate: $S$/sec.
+2119657545|8e6fe9e4||This potion serves as a catalyst to activate Life Leech mutation.
+2119657544|2507a12a||Mutation Catalyst
+2119657551|c3f5389b||When drawn, magic, relic and witcher swords increase Sign base damage by $S$% of their own base damage.
+2119657550|754d1898||Damage dealt by a bomb's explosion generates $F$ Adrenaline Points.<br>This value is not affected by any Adrenaline gain bonuses.
+2119657549|cea74415||Each bolt that hits its target now generates the same amount of Adrenaline Points as when using swords.
+2119657548|da7e5ba1||Crossbow bolts deal $F$ pts more base damage.
+2119657587|741731f6||Toxicity is eliminated $I$% faster.
+2119657586|79e98446||Autophagy
+2119657585|cb129469||Combat reflexes are heightened based on toxicity levels (Greatest effect).<br>
+2119657584|cb129468||Combat reflexes are heightened based on toxicity levels (Greater effect).<br>
+2119657591|7417320e||Toxicity damage is decreased by $I$%.
+2119657590|79e9845e||Adaptation
+2119657589|741731f7||Vitality is permanently increased by $I$%.
+2119657588|79e98447||Angiogenesis
+2119657595|05de73cb||reduce the toxicity of subsequently imbibed potions by 20%,
+2119657594|412e7618||Albedo Dominance
+2119657593|0004ba30||Rubedo Dominance
+2119657592|6746614d||Nigredo Dominance
+2119657599|0811677b||in addition to their standard effect.
+2119657598|0811677a||Potions in which all ingredients contain this secondary substance
+2119657597|05de73cd||increase damage dealt by 20%,
+2119657596|05de73cc||increase vitality regeneration,
+2119657571|b96c1a62||Potions take $I$% less time before they begin to have an effect.
+2119657570|c1de3e12||Catalysis
+2119657569|b96c1a61||Potions last $I$% longer.
+2119657568|c1de3e11||Half-Life
+2119657575|b96c1a64||Primary substance distillatation produces $I$% greater yield. $I$% chance of obtaining lesser mutagens in the process.
+2119657574|c1de3e14||Alembic
+2119657573|b96c1a63||Potions are $I$% less toxic but last $I$% less time.
+2119657572|c1de3e13||Equilibrium
+2119657579|741731f3||Monster mutagens can be used $I$ time(s) before being consumed in alchemy.
+2119657578|79e98443||Proficiency
+2119657577|741731f2||Power is permanently increased by $I$%.
+2119657576|79e98442||Mitogenesis
+2119657583|cb129467||Combat reflexes are heightened based on toxicity levels.
+2119657582|79e98445||Frenzy
+2119657581|741731f4||Maximum toxicity is increased by $I$%.
+2119657580|79e98444||Metastasis
+2119657801||spectre_tip_version|Slide this to 0 to restore every Spectre group to its Recommended preset. Experience uses its Default preset. The game applies the reset on its own and then moves the slider back to the current version number.<br/>Any other value does not change your settings.<br/>Example: if potion duration feels wrong after trying several sliders, set this to 0 and leave the menu. The Recommended values come back.
+2119657802||spectre_tip_scaling|Chooses how enemy levels follow you. Enemies already in the world keep their level: the change applies when they appear again.<br/>None leaves each enemy at its own level. Upscale raises anyone below you up to your level and leaves stronger enemies alone. Match sets every enemy to your level. Soft upscale only lifts enemies who are more than 6 levels below you, up to your level minus 6.<br/>Random rolls between your level plus the lower bound and your level plus the upper bound. At level 32, -4 and +4 roll from 28 to 36. If the upper bound is below the lower one, every enemy is set to your level. Random, no downscaling never rolls below the enemy's own level.<br/>Example: at level 20, Soft upscale turns a level 10 drowner into level 14 and leaves a level 18 one at 18.
+2119657803||spectre_tip_nonlinear|On: an enemy above the level delta gains extra per-level bonuses. With the recommended level delta of 10 and ability delta of 5, a level 30 enemy receives about 10 bonuses more than one per level.<br/>Off: each level adds exactly one bonus.<br/>Example: a level 8 wolf is at or below the delta, so it stays on the normal curve either way.
+2119657804||spectre_tip_monster_health|Extra health for monsters. 1 is the recommended bonus. Each whole point above that adds the same bonus again, so 2 is twice the recommended bonus and 4 (the Hardcore preset) is four times.<br/>0 adds no extra health. A negative value reduces health instead.<br/>Example: set this to 0 if drowners and wolves should keep their normal health.
+2119657805||spectre_tip_human_health|Same scale as the monster health modifier, but only for human enemies. 1 is the recommended bonus, 0 adds nothing, and a negative value reduces their health.<br/>Example: set monsters to 1 and humans to 0 if you want tougher beasts but bandits at their normal health.
+2119657806||spectre_tip_damage|Extra damage dealt by enemies. 1 is the recommended bonus, 0 adds none, and a negative value reduces their damage. Bosses add the boss damage slider on top of this.<br/>Example: 0 keeps a drowner's hits at their normal strength; 2 makes ordinary enemies hit about twice as hard as the recommended bonus.
+2119657807||spectre_tip_boss_health|Added on top of the health modifier of that enemy's type. It applies to enemies that hide their health bar, which is how bosses are marked.<br/>Example: with monster health at 1 and this at 2, a normal griffin uses only the monster bonus, while a boss griffin uses both.
+2119657808||spectre_tip_quest_levels|On: quests no longer use their recommended level. Experience is not raised or cut according to how far you are from that level, and the quest level lists are not loaded.<br/>Example: finishing a level 30 quest at level 10 pays the base experience, not the reduced amount for being underleveled.
+2119657809||spectre_tip_fixed_exp|On: quest and combat experience ignore the level gap and pay a fixed amount.<br/>Off: experience grows when the source is above your level and shrinks when it is below, within the game's usual limits.<br/>Example: with it on, a level 5 nekker and a level 25 one of the same kind give the same base experience.
+2119657810||spectre_tip_quest_exp|Multiplies quest experience after the other rules. 0 means no change. 1 doubles it, and -0.5 cuts it in half.<br/>Example: a quest that would give 100 experience gives 200 at 1, and 50 at -0.5.
+2119657811||spectre_tip_instant_sign|On: tapping the key of a sign starts the cast, after a brief hold of about 0.2 seconds, without keeping the cast button down.<br/>Off: signs use the normal cast button.<br/>Example: with it on, press the Igni key and the sign starts; with it off, you still need the cast button.
+2119657812||spectre_tip_boat|On: the boat sinks once your encumbrance passes the percent set on the next slider.<br/>Off: extra weight never sinks it.<br/>Example: with the threshold at 20, crossing 20% over your carry limit while sailing sinks the boat.
+2119657813||spectre_tip_armor_regen|On: armor applies its stamina regeneration penalty while your stamina recovers.<br/>Off, which is the recommended value: that penalty is ignored, so heavy armor does not slow recovery.<br/>Example: with it off, a full ursine set does not cut your stamina regeneration.
+2119657814||spectre_tip_stamina_regen|Adds a flat amount to stamina regeneration during combat. 0 leaves it unchanged. A positive number recovers stamina faster while you fight, and a negative number slows it.<br/>Example: 10 adds that amount on top of your normal regeneration; -10 subtracts the same amount.
+2119657815||spectre_tip_special_cd|Seconds before Whirl or Rend can be used again. The recommended value is 7.5. 0 removes the wait.<br/>Example: at 7.5, after a Whirl you wait 7.5 seconds before the next Whirl or Rend.
+2119657816||spectre_tip_loot_los|On: area loot skips containers you cannot see, such as a chest behind a wall.<br/>Off: distance alone decides, so a container in the next room can be included.<br/>Example: with it on, opening a sack takes the herbs in front of you and ignores a chest on the other side of the house.
+2119657817||spectre_tip_loot_theft|Off: area loot skips containers that would count as stealing, such as a merchant's stock.<br/>On: those containers are included too.<br/>Example: with it off, opening your own sack does not pull from the shop chest behind the counter.
+2119657818||spectre_tip_alchemy_time|On: brewing and distillation advance the clock by the minutes set on the time sliders.<br/>Off: they finish without spending that time.<br/>Example: with 10 minutes per concoction, brewing Swallow moves the clock forward 10 minutes.
+2119657819||spectre_tip_casual|On: you can brew without a meditation or an alchemy table.<br/>Off: brewing is limited to those situations, a valid fire, or the alchemy screen.<br/>Example: with it on, you can prepare a potion while exploring a road; with it off, you need to meditate or use a table.
+2119657820||spectre_tip_substances|On: primary substance recipes use Spectre's standard ingredient list instead of each recipe's original one. Albedo, Rubedo and Nigredo are left as they are.<br/>Example: with it on, two different primary substances that Spectre treats as the same step ask for the same ingredients.
+2119657821||spectre_tip_potion_override|Seconds that replace a potion's own duration. 0 keeps the potion's duration and allows the added-duration slider to apply.<br/>Any other value replaces the duration, and the added seconds are ignored. The multiplier still applies.<br/>Example: set this to 60 and a Swallow lasts 60 seconds no matter what its formula says.
+2119657822||spectre_tip_potion_added|Extra seconds added to a potion's own duration. This only applies while the duration override is 0. The recommended value is 240, which is 4 minutes.<br/>Example: a potion whose formula lasts 30 seconds lasts 270 seconds with 240 added.
+2119657823||spectre_tip_potion_mult|Multiplies the duration after the override and the added seconds. 0 leaves the duration as it is. 2 doubles it.<br/>Example: with the override at 0, 240 seconds added, and this at 2, a 30 second potion becomes (30 + 240) x 2 = 540 seconds.
+2119657824||spectre_tip_digestion|Seconds a potion spends metabolizing. The recommended value is 30. While it metabolizes, that potion occupies the digestion timer.<br/>Example: at 30, after drinking Swallow you wait 30 seconds before that digestion finishes.
+2119657825||spectre_tip_toxicity|Multiplies potion toxicity. Enhanced potions add 0.5 to the multiplier and superior ones 1.<br/>Example at 1.25, a potion with 20 toxicity: normal 20 x 1.25 = 25, enhanced 20 x 1.75 = 35, superior 20 x 2.25 = 45.
+2119657826||spectre_tip_degen|While a potion is in effect, its toxicity falls at this rate. At 1 it is all gone when the potion ends; at 0.24 (recommended), about a quarter. The rest falls later at the residual rate.
+2119657827||spectre_tip_herbs|Percent chance that a plant spot grows herbs. The recommended value is 30, about one spot in three.<br/>Example: 100 grows herbs on every spot; 30 leaves roughly two out of three spots empty.
+2119657828||spectre_tip_yield|How many items one brewing of a recipe produces. The recommended value is 1.<br/>Example: at 1, one brew of Swallow gives one Swallow; at 3, the same brew gives three.
+2119657829||spectre_tip_boat_threshold|How far past your carry limit the boat sinks, as a percent of that limit. It only matters while Sink Boat If Over Encumbered is on, and only after you are already overencumbered.<br/>The recommended value is 20: more than 20% over the limit sinks the boat. 0 sinks it as soon as you are over the limit. 100 waits until you are carrying twice the limit.<br/>Example: at 20, a load 10% over the limit still floats; a load 25% over sinks.
+2119657830||spectre_tip_encumbrance|Lowers the weight of items that count toward your carry limit, as a percent.<br/>0 leaves every item at its normal weight. The recommended value is 20, so those items weigh 20% less. 100 makes them weigh nothing.<br/>Example: a sword of weight 10 weighs 8 at 20, and 5 at 50.
+2119657831||spectre_tip_stamina_regen_idle|Flat amount added to stamina regeneration while you are out of combat. 0 leaves it unchanged.<br/>This slider only goes down, so it can slow that regeneration or leave it alone; it cannot speed it up. Combat regeneration uses the other slider.<br/>Example: -10 subtracts 10 from the out-of-combat regeneration rate.
+2119657832||spectre_tip_vitality_combat|Flat amount added to vitality regeneration while you are in combat. 0 leaves it unchanged. It does not change regeneration outside combat.<br/>Example: 5 adds 5 to the combat vitality regeneration rate, so you heal a little faster only while fighting.
+2119657833||spectre_tip_vitality_idle|Flat amount added to vitality regeneration while you are out of combat. 0 leaves it unchanged. Combat healing uses the other slider.<br/>Example: 10 adds 10 to the out-of-combat vitality regeneration rate.
+2119657834||spectre_tip_agility_cost|Changes the stamina cost of sprinting and jumping. The cost is multiplied by 1 plus this number.<br/>0 leaves those costs as they are. 1 doubles them, 0.5 adds half, and -1 removes the cost. Attacks, dodges and signs use the other cost sliders.<br/>Example: a sprint that costs 10 stamina costs 15 at 0.5, and 0 at -1.
+2119657835||spectre_tip_melee_cost|Changes the stamina cost of melee actions other than sprinting and jumping: attacks, dodges, rolls, parries and counters. The cost is multiplied by 1 plus this number.<br/>0 leaves those costs as they are. 1 doubles them and -1 removes them. Armor penalties and skill reductions still apply afterwards.<br/>Example: a fast attack that costs 20 stamina costs 10 at -0.5, and 40 at 1.
+2119657836||spectre_tip_sign_cost|Changes the stamina cost of casting a sign. The cost is multiplied by 1 plus this number, before armor and skill modifiers.<br/>0 leaves the cost as it is. 1 doubles it and -1 removes it, so later modifiers have nothing left to change. The slider stops at 3, which is four times the cost.<br/>Example: a sign that costs 15 stamina costs 30 at 1, and 0 at -1.
+2119657837||spectre_tip_stamina_delay|Extra seconds before stamina starts regenerating after you spend it. 0 leaves the pause as it is.<br/>A positive number makes you wait longer. A negative number shortens the pause, but it never goes below 0 seconds.<br/>Example: if the pause is 1 second, 1 makes it 2 seconds, and -1 makes it 0.
+2119657838||spectre_tip_sign_cd|Seconds you must wait before casting the same sign again after a normal cast.<br/>The recommended value is 5. 0 removes the wait. Alternate sign mode uses the other slider.<br/>Example: at 5, after casting Igni you wait 5 seconds before Igni is ready again. Aard, Quen, Yrden and Axii each keep their own wait.
+2119657839||spectre_tip_alt_sign_cd|Seconds you must wait before using that sign's alternate mode again.<br/>The recommended value is 7.5. 0 removes the wait. A normal cast uses the sign cooldown slider instead.<br/>Example: at 7.5, after holding Igni for the fire stream you wait 7.5 seconds before that alternate cast is ready again.
+2119657840||panel_spectre_skill_tree|Skills
+2119657841||option_spectre_use_spectre_tree|Use Spectre's skill tree
+2119657842||spectre_tip_spectre_tree|On: customized Spectre's skill tree.<br/>Off: base game skill tree.<br/>Switching keeps your spent points: each skill passes its ranks to the one that takes its place, up to that skill's maximum, and any ranks left over come back as unspent points.
+2119657843||spectre_skill_tree_updated|Skill tree updated.
+2119657851||spectre_desc_sustained_glyphs|Standard mode Yrden traps last $I$% longer and are $S$% larger.<br>From level 5, two standard mode traps can be active at the same time.
+2119657852||spectre_skill_sign_intensity|Sign Intensity: +$S$%
+2119657853||skill_name_magic_s20|Aard: Far-Reaching
+2119657854||skill_name_magic_s8|Igni: Melt Armor
+2119657855||skill_name_magic_s10|Yrden: Sustained Glyphs
+2119657856||skill_name_magic_s13|Quen: Exploding Shield
+2119657857||skill_name_magic_s17|Axii: Delusion
+2119657858||skill_desc_magic_s13|Returns $I$% of the damage absorbed by Quen to the attacker.<br>When it breaks, it pushes opponents back.
+2119657859||spectre_desc_fixative|Oils on your blade last $I$% more hits.<br>From level 5 your sword can hold 2 different oils at once, and 3 at level 10.
+2119657860||spectre_buy_max_rank|Acquire up to max rank
+2119657861||spectre_skill_passive|Passive (does not need to be equipped)
+2119657862||spectre_skill_needs_slot|Needs to be equipped
+2119657863||spectre_desc_wolf_school|Each piece of Medium Armor increases weapon damage by $I$% and Sign Intensity by $I$%.
+2119657864||spectre_desc_manticore_school|Each piece of Medium Armor increases sword damage by $I$% and bomb damage by $I$%.
+2119657865||spectre_desc_viper_school|Each piece of Medium Armor increases poison damage by $I$% and Fast Attack damage by $I$%.
+2119657866||option_spectre_free_starter_skills|Starter skills: free first rank
+2119657867||spectre_tip_free_starter_skills|On: Whirl, Rend, Arrow Deflection, Cold Blood, Razor Focus, Delusion, the five alternate sign modes and the first skill of each sign start at rank 1 without spending a skill point. Those that are not at the start of their branch work from the beginning, but you cannot rank them up and they do not open the next skills until you reach them through the tree. Resets and refunds keep the free rank.<br/>Off: they are bought like any other skill. Turning it off takes the free rank back and refunds the skills that could only be reached through it.
+2119657868||option_spectre_starter_skills_unslotted|Starter skills: work without a slot
+2119657869||spectre_tip_starter_skills_unslotted|On: the starter skills (see the option above) work without being equipped in a skill slot.<br/>Off: they need a slot.
+2119657870||option_spectre_all_slots_unlocked|Use Spectre's skill progression
+2119657871||spectre_tip_all_slots_unlocked|On: every skill slot, including the four mutation slots, is open from the start.<br/>Off: slots open as in the base game, with skill points and researched mutations.
+2119657874||preset_mods_spectre_spectre_skill_tree|Skills Presets
+2119657875||panel_spectre_equipment|Equipment
+2119657876||preset_mods_spectre_spectre_equipment|Equipment Presets
+2119657877||option_spectre_equip_any_level|Equip gear of any level
+2119657878||spectre_tip_equip_any_level|On: any weapon or armor can be equipped, whatever its level.<br/>Off: as in the base game, gear above your level cannot be equipped and its tooltip shows the level it needs. Turning it off unequips the gear above your level.
+2119657879||option_spectre_level_up_equipped|Gear rises to your level
+2119657880||spectre_tip_level_up_equipped|On: weapons and armor rise to your level when you equip them and when you level up.<br/>Off: they keep their own level. Gear that already rose does not go back down.
+2119657881||panel_spectre_combat|Combat
+2119657882||preset_mods_spectre_spectre_combat|Combat Presets
+2119657883||option_spectre_use_spectre_combat|Use Spectre's combat system
+2119657884||spectre_tip_spectre_combat|On: attacks, dodges, rolls and parries cost stamina, stamina recovers at Spectre's pace, armor and overloading change those costs, hits take more Adrenaline, Whirl, Rend and signs have cooldowns, and Geralt resists poison and bleeding less.<br/>Off: all of that as in the base game. The options below do nothing and cannot be changed.
+2119657885||spectre_tip_alt_degen|Replaces the degeneration rate while toxicity is above the alternate threshold. Recommended: 0.16.
+2119657886||spectre_tip_degen_threshold|Share of maximum toxicity above which the alternate rate applies. Recommended: 0.72 (72%).
+2119657887||spectre_tip_combat_degen|On: in combat, potion toxicity falls at the combat rate. Off (recommended): it falls as out of combat.
+2119657888||spectre_tip_combat_degen_rate|Degeneration rate in combat while Combat Degeneration is on. At 0 (recommended), potion toxicity does not fall during a fight.
+2119657889||spectre_tip_residual_degen|With no potion in effect and nothing digesting, toxicity falls each second by this value times 10% of maximum toxicity. Recommended: 0.05 (0.5% per second).
+2119657890||spectre_stat_potion_duration_bonus|Potion duration bonus
+2119657891||spectre_stat_bomb_damage_bonus|Bomb damage bonus
+2119657892||panel_spectre_uninstall|Uninstall
+2119657893||option_spectre_uninstall_toggle|Remove Spectre from this save
+2119657894||spectre_tip_uninstall|Do this before uninstalling Spectre, or the save loses Geralt's skills and stats. Turn it on and close the menu: Spectre resets the skills, takes off its effects and makes a new manual save. Then close the game, uninstall Spectre and load that save: the game gives back the skill points.<br/>Only in a loaded game, as Geralt and out of combat.
+2119657895||spectre_uninstall_blocked|Spectre can't be removed now. Try again out of combat, where the game can be saved.
+2119657896||spectre_uninstall_done_title|Spectre removed from this save
+2119657897||spectre_uninstall_done_text|A new manual save was made. Close the game, uninstall Spectre and load that save: the game will give back the skill points.<br/>Don't keep playing before that. If you load the save with Spectre still installed, Spectre comes back.
+2119657898||spectre_tip_uninstall_unavailable|<b>Only for a specific save.</b> Load the save you want to free of Spectre and use this option there, as Geralt.<br/><br/>

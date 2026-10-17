@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UserConfig>
+
+	<Group id="spectreMainOptions" displayName="Mods.spectre.spectre_main_options">
+		<VisibleVars>
+		
+			<Var id="spectreVersionControl" displayName="spectre_version_control" displayType="SLIDER;0;100;10001" />
+			
+			<Var id="spectreInit" displayName="spectre_init" displayType="TOGGLE" visibilityCondition="hideAlways" />
+		
+		</VisibleVars>
+		
+    </Group>
+
+	<Group id="spectreSkillTreeOptions" displayName="Mods.spectre.spectre_skill_tree">
+		<PresetsArray>
+			<Preset id="0" displayName="spectre_recommended">
+				<Entry varId="spectreUseSpectreTree" value="true"/>
+				<Entry varId="spectreFreeStarterSkills" value="true"/>
+				<Entry varId="spectreStarterSkillsUnslotted" value="true"/>
+				<Entry varId="spectreAllSlotsUnlocked" value="false"/>
+			</Preset>
+			<Preset id="1" displayName="spectre_turn_off">
+				<Entry varId="spectreUseSpectreTree" value="false"/>
+				<Entry varId="spectreFreeStarterSkills" value="false"/>
+				<Entry varId="spectreStarterSkillsUnslotted" value="false"/>
+				<Entry varId="spectreAllSlotsUnlocked" value="false"/>
+			</Preset>
+		</PresetsArray>
+		<VisibleVars>
+			<Var id="spectreUseSpectreTree" displayName="spectre_use_spectre_tree" displayType="TOGGLE"/>
+			<Var id="spectreFreeStarterSkills" displayName="spectre_free_starter_skills" displayType="TOGGLE"/>
+			<Var id="spectreStarterSkillsUnslotted" displayName="spectre_starter_skills_unslotted" displayType="TOGGLE"/>
+			<Var id="spectreAllSlotsUnlocked" displayName="spectre_all_slots_unlocked" displayType="TOGGLE"/>
+		</VisibleVars>
+	</Group>
+
+	<Group id="spectreEquipmentOptions" displayName="Mods.spectre.spectre_equipment">
+		<PresetsArray>
+			<Preset id="0" displayName="spectre_recommended">
+				<Entry varId="spectreEquipAnyLevel" value="true"/>
+				<Entry varId="spectreLevelUpEquipped" value="true"/>
+			</Preset>
+			<Preset id="1" displayName="spectre_turn_off">
+				<Entry varId="spectreEquipAnyLevel" value="false"/>
+				<Entry varId="spectreLevelUpEquipped" value="false"/>
+			</Preset>
+		</PresetsArray>
+		<VisibleVars>
+			<Var id="spectreEquipAnyLevel" displayName="spectre_equip_any_level" displayType="TOGGLE"/>
+			<Var id="spectreLevelUpEquipped" displayName="spectre_level_up_equipped" displayType="TOGGLE"/>
+		</VisibleVars>
+	</Group>
+
+	<Group id="spectreCombatOptions" displayName="Mods.spectre.spectre_combat">
+		<PresetsArray>
+			<Preset id="0" displayName="spectre_recommended">
+				<Entry varId="spectreUseSpectreCombat" value="true"/>
+				<Entry varId="spectreSignInstantCast" value="true"/>
+				<Entry varId="spectreArmorRegenPenalty" value="false"/>
+				<Entry varId="spectreCombatStaminaRegen" value="0"/>
+				<Entry varId="spectreOutOfCombatStaminaRegen" value="0"/>
+				<Entry varId="spectreCombatVitalityRegen" value="0"/>
+				<Entry varId="spectreOutOfCombatVitalityRegen" value="0"/>
+				<Entry varId="spectreAgilityStaminaCostMultiplier" value="0"/>
+				<Entry varId="spectreMeleeStaminaCostMultiplier" value="0"/>
+				<Entry varId="spectreSignStaminaCostMultiplier" value="0"/>
+				<Entry varId="spectreStaminaDelay" value="0"/>
+				<Entry varId="spectreMeleeSpecialCooldown" value="7.5"/>
+				<Entry varId="spectreSignCooldown" value="5"/>
+				<Entry varId="spectreAltSignCooldown" value="7.5"/>
+			</Preset>
+			<Preset id="1" displayName="spectre_old_ver">
+				<Entry varId="spectreUseSpectreCombat" value="true"/>
+				<Entry varId="spectreSignInstantCast" value="false"/>
+				<Entry varId="spectreArmorRegenPenalty" value="true"/>
+				<Entry varId="spectreCombatStaminaRegen" value="-5"/>
+				<Entry varId="spectreOutOfCombatStaminaRegen" value="0"/>
+				<Entry varId="spectreCombatVitalityRegen" value="1"/>
+				<Entry varId="spectreOutOfCombatVitalityRegen" value="1"/>
+				<Entry varId="spectreAgilityStaminaCostMultiplier" value="0"/>
+				<Entry varId="spectreMeleeStaminaCostMultiplier" value="-1"/>
+				<Entry varId="spectreSignStaminaCostMultiplier" value="1.5"/>
+				<Entry varId="spectreStaminaDelay" value="0"/>
+				<Entry varId="spectreMeleeSpecialCooldown" value="0"/>
+				<Entry varId="spectreSignCooldown" value="0"/>
+				<Entry varId="spectreAltSignCooldown" value="0"/>
+			</Preset>
+			<Preset id="2" displayName="spectre_turn_off">
+				<Entry varId="spectreUseSpectreCombat" value="false"/>
+				<Entry varId="spectreSignInstantCast" value="false"/>
+				<Entry varId="spectreArmorRegenPenalty" value="false"/>
+				<Entry varId="spectreCombatStaminaRegen" value="0"/>
+				<Entry varId="spectreOutOfCombatStaminaRegen" value="0"/>
+				<Entry varId="spectreCombatVitalityRegen" value="0"/>
+				<Entry varId="spectreOutOfCombatVitalityRegen" value="0"/>
+				<Entry varId="spectreAgilityStaminaCostMultiplier" value="0"/>
+				<Entry varId="spectreMeleeStaminaCostMultiplier" value="0"/>
+				<Entry varId="spectreSignStaminaCostMultiplier" value="0"/>
+				<Entry varId="spectreStaminaDelay" value="0"/>
+				<Entry varId="spectreMeleeSpecialCooldown" value="0"/>
+				<Entry varId="spectreSignCooldown" value="0"/>
+				<Entry varId="spectreAltSignCooldown" value="0"/>
+			</Preset>
+		</PresetsArray>
+		<VisibleVars>
+			<Var id="spectreUseSpectreCombat" displayName="spectre_use_spectre_combat" displayType="TOGGLE"/>
+			<Var id="spectreSignInstantCast" displayName="spectre_sign_instant_cast_toggle" displayType="TOGGLE"/>
+			<Var id="spectreArmorRegenPenalty" displayName="spectre_armor_reg_penalty" displayType="TOGGLE"/>
+			<Var id="spectreCombatStaminaRegen" displayName="spectre_cbtsreg" displayType="SLIDER;-15;85;100"/>
+			<Var id="spectreOutOfCombatStaminaRegen" displayName="spectre_ocbtsreg" displayType="SLIDER;-100;0;100"/>
+			<Var id="spectreCombatVitalityRegen" displayName="spectre_cbtvreg" displayType="SLIDER;0;1000;1000"/>
+			<Var id="spectreOutOfCombatVitalityRegen" displayName="spectre_ocbtvreg" displayType="SLIDER;0;1000;1000"/>
+			<Var id="spectreAgilityStaminaCostMultiplier" displayName="spectre_ascost" displayType="SLIDER;-1;5;60"/>
+			<Var id="spectreMeleeStaminaCostMultiplier" displayName="spectre_mscost" displayType="SLIDER;-1;5;60"/>
+			<Var id="spectreSignStaminaCostMultiplier" displayName="spectre_sscost" displayType="SLIDER;-1;3;40"/>
+			<Var id="spectreStaminaDelay" displayName="spectre_stdelay" displayType="SLIDER;-1;5;60"/>
+			<Var id="spectreMeleeSpecialCooldown" displayName="spectre_mcooldown" displayType="SLIDER;0;30;60"/>
+			<Var id="spectreSignCooldown" displayName="spectre_scooldown" displayType="SLIDER;0;30;60"/>
+			<Var id="spectreAltSignCooldown" displayName="spectre_ascooldown" displayType="SLIDER;0;30;60"/>
+		</VisibleVars>
+	</Group>
+   
+    <Group id="spectreScalingOptions" displayName="Mods.spectre.spectre_scaling_options">
+		<PresetsArray>
+			<Preset id="0" displayName="spectre_recommended">
+				<Entry varId="spectreScaling" value="1"/>
+				<Entry varId="spectreRandomScalingMinLevel" value="0"/>
+				<Entry varId="spectreRandomScalingMaxLevel" value="0"/>
+				<Entry varId="spectreNonlinearLevelup" value="true"/>
+				<Entry varId="spectreNonlinearLevelDelta" value="10"/>
+				<Entry varId="spectreNonlinearAbilitiesDelta" value="5"/>
+				<Entry varId="spectreNoAnimalUpscaling" value="false"/>
+				<Entry varId="spectreNoAddLevelsGuards" value="false"/>
+				<Entry varId="spectreMonsterHealthMultiplier" value="1"/>
+				<Entry varId="spectreHumanHealthMultiplier" value="1"/>
+				<Entry varId="spectreAnimalHealthMultiplier" value="1"/>
+				<Entry varId="spectreDamageMultiplier" value="1"/>
+				<Entry varId="spectreBossHealthMultiplier" value="1"/>
+				<Entry varId="spectreBossDamageMultiplier" value="1"/>
+			</Preset>
+			<Preset id="1" displayName="spectre_hardcore">
+				<Entry varId="spectreScaling" value="1"/>
+				<Entry varId="spectreRandomScalingMinLevel" value="0"/>
+				<Entry varId="spectreRandomScalingMaxLevel" value="0"/>
+				<Entry varId="spectreNonlinearLevelup" value="true"/>
+				<Entry varId="spectreNonlinearLevelDelta" value="10"/>
+				<Entry varId="spectreNonlinearAbilitiesDelta" value="5"/>
+				<Entry varId="spectreNoAnimalUpscaling" value="false"/>
+				<Entry varId="spectreNoAddLevelsGuards" value="false"/>
+				<Entry varId="spectreMonsterHealthMultiplier" value="4"/>
+				<Entry varId="spectreHumanHealthMultiplier" value="4"/>
+				<Entry varId="spectreAnimalHealthMultiplier" value="4"/>
+				<Entry varId="spectreDamageMultiplier" value="4"/>
+				<Entry varId="spectreBossHealthMultiplier" value="4"/>
+				<Entry varId="spectreBossDamageMultiplier" value="4"/>
+			</Preset>
+			<Preset id="2" displayName="spectre_turn_off">
+				<Entry varId="spectreScaling" value="0"/>
+				<Entry varId="spectreRandomScalingMinLevel" value="0"/>
+				<Entry varId="spectreRandomScalingMaxLevel" value="0"/>
+				<Entry varId="spectreNonlinearLevelup" value="false"/>
+				<Entry varId="spectreNonlinearLevelDelta" value="0"/>
+				<Entry varId="spectreNonlinearAbilitiesDelta" value="0"/>
+				<Entry varId="spectreNoAnimalUpscaling" value="false"/>
+				<Entry varId="spectreNoAddLevelsGuards" value="false"/>
+				<Entry varId="spectreMonsterHealthMultiplier" value="0"/>
+				<Entry varId="spectreHumanHealthMultiplier" value="0"/>
+				<Entry varId="spectreAnimalHealthMultiplier" value="0"/>
+				<Entry varId="spectreDamageMultiplier" value="0"/>
+				<Entry varId="spectreBossHealthMultiplier" value="0"/>
+				<Entry varId="spectreBossDamageMultiplier" value="0"/>
+			</Preset>
+		</PresetsArray>
+        <VisibleVars>
+            <Var id="Virtual_spectreScaling" displayName="spectre_enemies_scaling" displayType="OPTIONS">
+				<OptionsArray>
+					<Option id="0" displayName="spectre_es_none">
+						<Entry varId="spectreScaling" value="0"/>
+					</Option>
+					<Option id="1" displayName="spectre_es_upscale">
+						<Entry varId="spectreScaling" value="1"/>
+					</Option>
+					<Option id="2" displayName="spectre_es_match">
+						<Entry varId="spectreScaling" value="2"/>
+					</Option>
+					<Option id="3" displayName="spectre_es_soft">
+						<Entry varId="spectreScaling" value="3"/>
+					</Option>
+					<Option id="4" displayName="spectre_es_random">
+						<Entry varId="spectreScaling" value="4"/>
+					</Option>
+					<Option id="5" displayName="spectre_es_random_no_down">
+						<Entry varId="spectreScaling" value="5"/>
+					</Option>
+				</OptionsArray>
+			</Var>
+            <Var id="spectreRandomScalingMinLevel" displayName="spectre_rnd_scaling_min_slider" displayType="SLIDER;-12;12;24"/>
+            <Var id="spectreRandomScalingMaxLevel" displayName="spectre_rnd_scaling_max_slider" displayType="SLIDER;-12;12;24"/>
+            <Var id="spectreNonlinearLevelup" displayName="spectre_nonlinear_levelup_toggle" displayType="TOGGLE"/>
+            <Var id="spectreNonlinearLevelDelta" displayName="spectre_nonlinear_level_delta_slider" displayType="SLIDER;0;20;20"/>
+            <Var id="spectreNonlinearAbilitiesDelta" displayName="spectre_nonlinear_abs_delta_slider" displayType="SLIDER;0;20;20"/>
+            <Var id="spectreNoAddLevelsGuards" displayName="spectre_no_add_levels_guards" displayType="TOGGLE"/>
+            <Var id="spectreNoAnimalUpscaling" displayName="spectre_no_animal_upscaling_toggle" displayType="TOGGLE"/>
+            <Var id="spectreMonsterHealthMultiplier" displayName="spectre_monster_health_multiplier" displayType="SLIDER;-1;5;60"/>
+			<Var id="spectreHumanHealthMultiplier" displayName="spectre_human_health_multiplier" displayType="SLIDER;-1;5;60"/>
+			<Var id="spectreAnimalHealthMultiplier" displayName="spectre_animal_health_multiplier" displayType="SLIDER;-1;5;60"/>
+            <Var id="spectreDamageMultiplier" displayName="spectre_damage_multiplier" displayType="SLIDER;-1;5;60"/>
+            <Var id="spectreBossHealthMultiplier" displayName="spectre_boss_health_multiplier" displayType="SLIDER;-1;5;60"/>
+            <Var id="spectreBossDamageMultiplier" displayName="spectre_boss_damage_multiplier" displayType="SLIDER;-1;5;60"/>
+        </VisibleVars>
+    </Group>
+	
+    <Group id="spectreExpOptions" displayName="Mods.spectre.spectre_exp_options">
+		<PresetsArray>
+			<Preset id="0" displayName="spectre_recommended">
+				<Entry varId="spectreNoQuestLevels" value="false"/>
+				<Entry varId="spectreUseXMLExp" value="false"/>
+				<Entry varId="spectreQuestExpModifier" value="0"/>
+				<Entry varId="spectreMonsterExpModifier" value="0"/>
+			</Preset>
+		</PresetsArray>
+        <VisibleVars>
+            <Var id="spectreNoQuestLevels" displayName="spectre_no_quest_levels_toggle" displayType="TOGGLE"/>
+            <Var id="spectreUseXMLExp" displayName="spectre_use_xml_exp_toggle" displayType="TOGGLE" />
+            <Var id="spectreQuestExpModifier" displayName="spectre_quest_exp_slider" displayType="SLIDER;-1;1;200"/>
+            <Var id="spectreMonsterExpModifier" displayName="spectre_monster_exp_slider" displayType="SLIDER;-1;1;200"/>
+        </VisibleVars>
+    </Group>
+	
+    <Group id="spectreGameplayOptions" displayName="Mods.spectre.spectre_gameplay_options">
+		<PresetsArray>
+			<Preset id="0" displayName="spectre_recommended">
+				<Entry varId="spectreSinkBoat" value="true"/>
+				<Entry varId="spectreSinkBoatOverEnc" value="20"/>
+				<Entry varId="spectreEncumbranceMultiplier" value="0"/>
+			</Preset>
+			<Preset id="1" displayName="spectre_turn_off">
+				<Entry varId="spectreSinkBoat" value="false"/>
+				<Entry varId="spectreSinkBoatOverEnc" value="0"/>
+				<Entry varId="spectreEncumbranceMultiplier" value="0"/>
+			</Preset>
+		</PresetsArray>
+		<VisibleVars>
+			<Var id="spectreSinkBoat" displayName="spectre_sink_boat_toggle" displayType="TOGGLE"/>
+			<Var id="spectreSinkBoatOverEnc" displayName="spectre_sink_boat_slider" displayType="SLIDER;0;100;100"/>
+			<Var id="spectreEncumbranceMultiplier" displayName="spectre_encumbrance_slider" displayType="SLIDER;0;100;100"/>
+		</VisibleVars>
+	</Group>
+	
+	<Group id="spectreLootingOptions" displayName="Mods.spectre.spectre_looting_options">
+		<PresetsArray>
+			<Preset id="0" displayName="spectre_recommended">
+				<Entry varId="spectreLootLos"								value="true"/>
+				<Entry varId="spectreLootTheft"								value="true"/>
+				<Entry varId="spectreLootReactions"							value="false"/>
+				<Entry varId="spectreLootGlobalRange"						value="10"/>
+				<Entry varId="spectreLootPlantRange"						value="14"/>
+				<Entry varId="spectreLootClutterRange"						value="8"/>
+				<Entry varId="spectreLootRemainsRange"						value="10"/>
+				<Entry varId="spectreLootMaxResults"						value="16"/>
+			</Preset>
+			<Preset id="1" displayName="spectre_turn_off">
+				<Entry varId="spectreLootLos" value="false"/>
+				<Entry varId="spectreLootTheft" value="false"/>
+				<Entry varId="spectreLootReactions" value="false"/>
+				<Entry varId="spectreLootGlobalRange" value="0"/>
+				<Entry varId="spectreLootPlantRange" value="0"/>
+				<Entry varId="spectreLootClutterRange" value="0"/>
+				<Entry varId="spectreLootRemainsRange" value="0"/>
+				<Entry varId="spectreLootMaxResults" value="0"/>
+			</Preset>
+		</PresetsArray>
+    	<VisibleVars>
+    		<Var id="spectreLootLos"				displayName="spectre_loot_los" 									displayType="TOGGLE" 			/>
+    		<Var id="spectreLootTheft"				displayName="spectre_loot_theft"								displayType="TOGGLE"			/>
+			<Var id="spectreLootReactions"			displayName="spectre_loot_reactions" 							displayType="TOGGLE" 			/>
+			<Var id="spectreLootGlobalRange" 		displayName="spectre_loot_global_range"					 		displayType="SLIDER;0;64;64" 	/>
+			<Var id="spectreLootPlantRange" 		displayName="spectre_loot_plant_range"					 		displayType="SLIDER;0;64;64" 	/>
+			<Var id="spectreLootClutterRange" 		displayName="spectre_loot_clutter_range"					 	displayType="SLIDER;0;64;64" 	/>
+			<Var id="spectreLootRemainsRange" 		displayName="spectre_loot_remains_range"					 	displayType="SLIDER;0;64;64" 	/>
+			<Var id="spectreLootMaxResults" 		displayName="spectre_loot_max_results"						 	displayType="SLIDER;0;32;32"	/>
+		</VisibleVars>
+	</Group>
+	
+	<Group id="spectreAlchemyOptions" displayName="Mods.spectre.spectre_alchemy_options" >
+		
+	</Group>
+	
+	<Group id="spectreAlchemyBrewing" displayName="Mods.spectre.spectre_alchemy_options.spectre_alchemy_brewing">
+		<PresetsArray>
+			<Preset id="0" displayName="spectre_recommended" >
+				<Entry varId="spectreCookedQuantity"				value="1"/>
+				<Entry varId="spectreAlcoholUses"					value="2"/>
+				<Entry varId="spectrePrimarySubstances"				value="true"/>
+				<Entry varId="spectreMutagens"						value="true"/>
+				<Entry varId="spectreBottleRecycling"				value="true"/>
+				<Entry varId="spectreTimeBasedAlchemy"				value="true"/>
+				<Entry varId="spectreAlchemyTimeCost"				value="10"/>
+				<Entry varId="spectreDistillationTime"				value="20"/>
+				<Entry varId="spectreFireType"						value="2"/>
+				<Entry varId="spectreCampfire"						value="true"/>
+				<Entry varId="spectreCampfiresInterior"				value="true"/>
+				<Entry varId="spectreRequiredKindling"				value="3"/>
+				<Entry varId="spectreCasualAlchemy"					value="false"/>
+			</Preset>
+		</PresetsArray>
+		<VisibleVars>
+			<Var id="spectreCookedQuantity" displayName="spectre_yield" displayType="SLIDER;1;8;7"/>
+			<Var id="spectreAlcoholUses" displayName="spectre_alcohol_uses" displayType="SLIDER;1;4;3"/>
+			<Var id="spectreBottleRecycling" displayName="spectre_recycle_bottles" displayType="TOGGLE" />
+			<Var id="spectreMutagens" displayName="spectre_mod_mutagen" displayType="TOGGLE" />
+			<Var id="spectrePrimarySubstances" displayName="spectre_mod_substances" displayType="TOGGLE"/>
+			<Var id="spectreFireType" displayName="spectre_fire_source" displayType="OPTIONS">
+				<OptionsArray>
+					<Option id="0" displayName="spectre_everywhere">
+						<Entry varId="spectreFireType" value="0"/>
+					</Option>
+					<Option id="1" displayName="spectre_near_campfire">
+						<Entry varId="spectreFireType" value="1"/>
+					</Option>
+					<Option id="2" displayName="spectre_near_all">
+						<Entry varId="spectreFireType" value="2"/>
+					</Option>
+				</OptionsArray>
+			</var>
+			<Var id="spectreCampfire" displayName="spectre_allow_campfire" displayType="TOGGLE"/>
+			<Var id="spectreCampfiresInterior" displayName="spectre_allow_campfire_int" displayType="TOGGLE"/>
+			<Var id="spectreRequiredKindling" displayName="spectre_timber" displayType="SLIDER;0;16;16"/>
+			<Var id="spectreTimeBasedAlchemy" displayName="spectre_real_alchemy" displayType="TOGGLE"/>
+			<Var id="spectreAlchemyTimeCost" displayName="spectre_concoction_time" displayType="SLIDER;0;100;100"/>
+			<Var id="spectreDistillationTime" displayName="spectre_distill_time" displayType="SLIDER;0;100;100"/>
+			<Var id="spectreCasualAlchemy" displayName="spectre_casual_alchemy" displayType="TOGGLE"/>
+		</VisibleVars>
+	</Group>
+
+	<Group id="spectreAlchemyPotionsAndOils" displayName="Mods.spectre.spectre_alchemy_options.spectre_potions_and_oils">
+		<PresetsArray>
+			<Preset id="0" displayName="spectre_recommended">
+				<Entry varId="spectreMaxPotions"							value="0"/>
+				<Entry varId="spectreMaxBombs"								value="0"/>
+				<Entry varId="spectreMaxOils"								value="0"/>
+				<Entry varId="spectrePotionDuration"						value="0"/>
+				<Entry varId="spectrePotionDurationAdded"					value="240"/>
+				<Entry varId="spectreDecoctionDuration"						value="0"/>
+				<Entry varId="spectreDecoctionDurationAdded"				value="0"/>
+				<Entry varId="spectrePotionDurationMult"					value="0"/>
+				<Entry varId="spectreDecoctionDurationMult"					value="0"/>
+				<Entry varId="spectreDigestionTime"							value="30"/>
+			</Preset>
+		</PresetsArray>
+		<VisibleVars>
+			<Var id="spectreDigestionTime" displayName="spectre_metabolization" displayType="SLIDER;2;64;62"/>
+			<Var id="spectreMaxPotions" displayName="spectre_potion_limit" displayType="SLIDER;0;256;256"/>
+			<Var id="spectreMaxBombs" displayName="spectre_bombs_limit" displayType="SLIDER;0;256;256"/>
+			<Var id="spectreMaxOils" displayName="spectre_oil_limit" displayType="SLIDER;0;256;256"/>
+			<Var id="spectrePotionDuration" displayName="spectre_potion_duration" displayType="SLIDER;0;1080;1080"/>
+			<Var id="spectrePotionDurationAdded" displayName="spectre_potion_soft" displayType="SLIDER;0;1080;1080"/>
+			<Var id="spectreDecoctionDuration" displayName="spectre_mutagen_duration" displayType="SLIDER;0;1080;1080"/>
+			<Var id="spectreDecoctionDurationAdded" displayName="spectre_mutagen_soft" displayType="SLIDER;0;1080;1080"/>
+			<Var id="spectrePotionDurationMult" displayName="spectre_potion_mult" displayType="SLIDER;0;10;1000" />
+			<Var id="spectreDecoctionDurationMult" displayName="spectre_mutagen_mult" displayType="SLIDER;0;10;1000"/>
+		</VisibleVars>
+	</Group>
+
+	<Group id="spectreAlchemyToxicitySettings" displayName="Mods.spectre.spectre_alchemy_options.spectre_toxicity_settings">
+		<PresetsArray>
+			<Preset id="0" displayName="spectre_recommended" >
+				<Entry varId="spectreDegenerationRate"					value="0.24"/>
+				<Entry varId="spectreAltDegenRate"						value="0.16"/>
+				<Entry varId="spectreAltDegenThreshold"					value="0.72"/>
+				<Entry varId="spectreCombatDegeneration"				value="false"/>
+				<Entry varId="spectreCombatDegenRate"					value="0"/>
+				<Entry varId="spectreResidualDegenRate"					value="0.05"/>
+				<Entry varId="spectreToxicityMultiplier"				value="1.25"/>
+			</Preset>
+		</PresetsArray>
+		<VisibleVars>
+			<Var id="spectreDegenerationRate" displayName="spectre_degeneration_rate" displayType="SLIDER;0;10;1000"/>
+			<Var id="spectreAltDegenRate" displayName="spectre_accel_degen" displayType="SLIDER;0;10;1000"/>
+			<Var id="spectreAltDegenThreshold" displayName="spectre_degen_threshold" displayType="SLIDER;0;1;100"/>
+			<Var id="spectreCombatDegeneration" displayName="spectre_combat_degen" displayType="TOGGLE"/>
+			<Var id="spectreCombatDegenRate" displayName="spectre_combat_degen_rate" displayType="SLIDER;0;1;1000"/>
+			<Var id="spectreResidualDegenRate" displayName="spectre_residual_degen" displayType="SLIDER;0;1;100"/>
+			<Var id="spectreToxicityMultiplier" displayName="spectre_potion_toxicity" displayType="SLIDER;0.5;4;350"/>
+		</VisibleVars>
+	</Group>
+
+	<Group id="spectreAlchemyMiscellaneousSettings" displayName="Mods.spectre.spectre_alchemy_options.spectre_alchemy_miscellaneous_settings">
+		<PresetsArray>
+			<Preset id="0" displayName="spectre_recommended" >
+				<Entry varId="spectreCameraRotationSpeed"				value="1"/>
+				<Entry varId="spectreHerbsSpawnMin"						value="10"/>
+				<Entry varId="spectreHerbsSpawnMax"						value="20"/>
+				<Entry varId="spectreHerbsHarvestMin"					value="3"/>
+				<Entry varId="spectreHerbsHarvestMax"					value="6"/>
+				<Entry varId="spectreHerbsSpawnChance"					value="30"/>
+				<Entry varId="spectreIgnoreHerbSpawns"					value="false"/>
+				<Entry varId="spectreModIcons"							value="true"/>
+			</Preset>
+		</PresetsArray>
+		<VisibleVars>
+			<Var id="spectreModIcons" displayName="spectre_mod_icons" displayType="TOGGLE"/>
+			<Var id="spectreCameraRotationSpeed" displayName="spectre_camera_rotation_speed" displayType="SLIDER;0;2;200"/>
+			<Var id="spectreHerbsSpawnMin" displayName="spectre_herbs_spawn_min" displayType="SLIDER;1;10000;10001"/>
+			<Var id="spectreHerbsSpawnMax" displayName="spectre_herbs_spawn_max" displayType="SLIDER;1;10000;10001"/>
+			<Var id="spectreHerbsHarvestMin" displayName="spectre_herbs_harvest_min" displayType="SLIDER;1;8;7"/>
+			<Var id="spectreHerbsHarvestMax" displayName="spectre_herbs_harvest_max" displayType="SLIDER;1;16;15"/>
+			<Var id="spectreHerbsSpawnChance" displayName="spectre_herbs_spawn_chance" displayType="SLIDER;1;100;99"/>
+			<Var id="spectreIgnoreHerbSpawns" displayName="spectre_ignore_herb_spawns" displayType="TOGGLE" />
+		</VisibleVars>
+	</Group>
+
+	<Group id="spectreUninstallOptions" displayName="Mods.spectre.spectre_uninstall">
+		<VisibleVars>
+			<Var id="spectreUninstall" displayName="spectre_uninstall_toggle" displayType="TOGGLE"/>
+		</VisibleVars>
+	</Group>
+
+	
+</UserConfig>

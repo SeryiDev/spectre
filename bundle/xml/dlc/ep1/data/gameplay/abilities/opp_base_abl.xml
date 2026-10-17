@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+	<definitions>
+		<abilities>
+			
+			<ability name="PersistentCameraLock">
+				<tags> "PersistentCameraLock" </tags>
+			</ability>
+			<ability name="WeakenedState">
+				<tags> "WeakenedState" </tags>
+				<hits_to_raise_guard type="add" min="3" max="3" />
+				<fire_resistance_perc type="add" min="-1.0" max="-1.0" />
+				<burning_DoT_damage_resistance_perc type="add" min="-1.0" max="-1.0" />
+				<burning_resistance_perc type="base" min="-1.0" max="-1.0" />
+				<!-- modSigns -->
+				<physical_resistance_perc type="base" min="-0.15" max="-0.15" />
+				<slashing_resistance_perc type="base" min="-0.15" max="-0.15" />
+				<piercing_resistance_perc type="base" min="-0.15" max="-0.15" />
+				<bludgeoning_resistance_perc type="base" min="-0.15" max="-0.15" />
+				<rending_resistance_perc type="base" min="-0.15" max="-0.15" />
+			</ability>
+			<ability name="EtherealActivating">
+				<tags> "EtherealActivating" </tags>
+			</ability>
+			<ability name="EtherealActive">
+				<tags> "EtherealActive" </tags>
+			</ability>
+			<ability name="EtherealMashingFix">
+				<tags> "EtherealMashingFix" </tags>
+				<hits_to_raise_guard type="add" min="-3" max="-3" />
+			</ability>
+			<ability name="EtherealMashingFixBeforeSkill4">
+				<tags> "EtherealMashingFixBeforeSkill4" </tags>
+				<hits_to_raise_guard type="add" min="-3" max="-3" />
+			</ability>
+			<ability name="EtherealBuff">
+				<tags> "EtherealBuff" </tags>
+			</ability>
+			<ability name="EtherealSkill_1">
+				<tags> "EtherealSkill_1" </tags>
+			</ability>
+			<ability name="EtherealSkill_2">
+				<tags> "EtherealSkill_2" </tags>
+			</ability>
+			<ability name="EtherealSkill_3">
+				<tags> "EtherealSkill_3" </tags>
+			</ability>
+			<ability name="EtherealSkill_4">
+				<tags> "EtherealSkill_4" </tags>
+			</ability>
+			<ability name="EtherealSkill_5">
+				<tags> "EtherealSkill_5" </tags>
+			</ability>
+			<ability name="SandAttack">
+				<tags> "SandAttack" </tags>
+			</ability>
+			
+			<!-- Also has ConAthletic -->
+			<ability name="HaklandMage">
+				<tags> "HaklandMage" </tags>
+				<vitality type="base" always_random="false" min="1000" max="1000" />
+				<!-- guard -->
+				<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+				<hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+				<raise_guard_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- base raise guard chance -->
+				<raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+				<lower_guard_chance type="add" always_random="false" min="0.6" max="0.6" /> <!-- chance to lower guard if already guarded -->
+				<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+				<hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+				<counter_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- base counter on defence chance -->
+				<counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+				<!-- Resistances group -->
+				<physical_resistance_perc type="base" min="0.2" max="0.2" />
+				<slashing_resistance_perc type="base" always_random="false" min="0.2" max="0.2" />
+				<piercing_resistance_perc type="base" always_random="false" min="0.2" max="0.2" />
+				<bludgeoning_resistance_perc type="base" always_random="false" min="0.2" max="0.2" />
+				<rending_resistance_perc type="base" always_random="false" min="0.2" max="0.2" />
+				<elemental_resistance_perc type="base" always_random="false" min="0.2" max="0.2" />
+				<will_resistance_perc type="base" min="0.8" max="0.8" />
+				<burning_resistance_perc type="base" min="0.5" max="0.5" />
+				<critical_hit_damage_reduction type="mult" min="0.5" max="0.5"/>	
+			</ability>
+			
+			<ability name="HaklandMagePhase1">
+				<tags> "HaklandMage" </tags>
+				<!-- Resistances group -->
+				<physical_resistance_perc type="base" min="0.5" max="0.5" />
+				<slashing_resistance_perc type="base" always_random="false" min="0.5" max="0.5" />
+				<piercing_resistance_perc type="base" always_random="false" min="0.5" max="0.5" />
+				<bludgeoning_resistance_perc type="base" always_random="false" min="0.5" max="0.5" />
+				<rending_resistance_perc type="base" always_random="false" min="0.5" max="0.5" />
+				<elemental_resistance_perc type="base" always_random="false" min="0.5" max="0.5" />
+				<fire_resistance_perc type="base" min="0.5" max="0.5" />
+				<force_resistance_perc type="base" min="0.5" max="0.5" />
+				<shock_resistance_perc type="base" min="0.5" max="0.5" />
+				<will_resistance_perc type="base" min="0.8" max="0.8" />
+				<burning_resistance_perc type="base" min="0.5" max="0.5" />
+				<bleeding_resistance_perc type="base" min="0.5" max="0.5" />
+				<poison_resistance_perc type="base" min="0.5" max="0.5" />
+			</ability>
+			
+			<ability name="HaklandSoldier">
+				<tags> "HaklandSoldier" </tags>
+				<vitality type="base" always_random="false" min="200" max="200" />
+			</ability>
+			
+			<ability name="olgierd_default_stats">
+				<tags> "base", "Boss"  </tags>
+				<!-- Base stats -->
+				<level type="add" min="1" max="1" />
+				<experience type="add" min="0" max="0" />
+				<threat_level type="add" min="5" max="5" />
+				<humanoid type="add" min="1.0" max="1.0" />
+				<vitality type="base" min="2000" max="2000" />
+				<stamina type="base" min="100" max="100" />
+				<morale type="base" min="100" max="100" />
+				<vitalityRegen type="mult" min="0" max="0" />
+				<staminaRegen type="mult" min="0.25" max="0.25" />
+				<!-- Combat action params -->
+				<!-- guard -->
+				<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+				<hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+				<raise_guard_chance type="add" always_random="false" min="0.8" max="0.8" /> <!-- base raise guard chance -->
+				<raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+				<lower_guard_chance type="add" always_random="false" min="0.1" max="0.1" /> <!-- chance to lower guard if already guarded -->
+				<!-- counter -->
+				<hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+				<counter_chance type="add" always_random="false" min="0.6" max="0.6" /> <!-- base counter on defence chance -->
+				<counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+				<!-- resistances -->
+				<physical_resistance_perc type="base" min="0.8" max="0.8" />
+				<slashing_resistance_perc type="base" min="0.8" max="0.8" />
+				<piercing_resistance_perc type="base" min="0.8" max="0.8" />
+				<bludgeoning_resistance_perc type="base" min="0.5" max="0.5" />
+				<rending_resistance_perc type="base" min="0.5" max="0.5" />
+				<fire_resistance_perc type="add" min="0.5" max="0.5" />
+				<force_resistance_perc type="base" min="0.5" max="0.5" />
+				<shock_resistance_perc type="base" min="0.5" max="0.5" />
+				<will_resistance_perc type="base" min="1.0" max="1.0" />
+				<burning_resistance_perc type="base" min="1.0" max="1.0" />
+				<burning_DoT_damage_resistance_perc type="base" min="1.0" max="1.0" />
+				<critical_hit_damage_reduction type="mult" min="0.5" max="0.5"/>	
+				<!-- abilities -->
+				<mon_olgierdeasy_ep1 is_ability="true" />
+				<mon_olgierdmedium_ep1 is_ability="true" />			
+				<mon_olgierdhard_ep1 is_ability="true" />
+				<mon_olgierhardcore_ep1 is_ability="true" />
+				<!-- Skills -->
+				<attack_light is_ability="true" />
+				<attack_heavy is_ability="true" />
+			</ability>
+			
+			<ability name="mon_olgierdeasy_ep1">
+			<tags>DifficultyModeAbility, Easy</tags>	
+			</ability>	
+			
+			<ability name="mon_olgierdmedium_ep1">
+			<tags>DifficultyModeAbility, Medium</tags>	
+			</ability>	
+			
+			<ability name="mon_olgierdhard_ep1">
+			<tags>DifficultyModeAbility, Hard</tags>
+			</ability>	
+			
+			<ability name="mon_olgierhardcore_ep1">
+			<tags>DifficultyModeAbility, Hardcore</tags>
+			</ability>	
+			
+			<ability name="mon_ethereal_ep1">
+				<tags> "base" </tags>
+			</ability>
+		
+			<ability name="ethereal_default_stats">
+				<tags> "base", "Boss" </tags>
+				<!-- Base stats -->
+				<level type="add" min="1" max="1" />
+				<experience type="add" min="0" max="0" />
+				<threat_level type="add" min="5" max="5" />
+				<humanoid type="add" min="1.0" max="1.0" />
+				<essence type="base" min="2000" max="2000" />
+				<stamina type="base" min="100" max="100" />
+				<morale type="base" min="100" max="100" />
+				<vitalityRegen type="mult" min="0" max="0" />
+				<staminaRegen type="mult" min="0.25" max="0.25" />
+				<!-- Combat action params -->
+				<!-- guard -->
+				<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+				<hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+				<raise_guard_chance type="add" always_random="false" min="0.8" max="0.8" /> <!-- base raise guard chance -->
+				<raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+				<lower_guard_chance type="add" always_random="false" min="0.1" max="0.1" /> <!-- chance to lower guard if already guarded -->
+				<!-- counter -->
+				<hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+				<counter_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- base counter on defence chance -->
+				<counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+				<!-- Resistances -->
+				<physical_resistance_perc type="base" min="0.25" max="0.25" />
+				<slashing_resistance_perc type="base" min="0.25" max="0.25" />
+				<piercing_resistance_perc type="base" min="0.25" max="0.25" />
+				<bludgeoning_resistance_perc type="base" min="0.25" max="0.25" />
+				<rending_resistance_perc type="base" min="0.25" max="0.25" />
+				<elemental_resistance_perc type="base" min="0.5" max="0.5" />	
+				<fire_resistance_perc type="add" min="0.5" max="0.5" />
+				<force_resistance_perc type="base" min="0.5" max="0.5" />
+				<shock_resistance_perc type="base" min="0.5" max="0.5" />
+				<will_resistance_perc type="base" min="1.0" max="1.0" />
+				<burning_resistance_perc type="base" min="0.8" max="0.8" />
+				<burning_DoT_damage_resistance_perc type="add" min="0.5" max="0.5" />
+				<!-- Skills -->
+				<attack_light is_ability="true" />
+				<attack_heavy is_ability="true" />
+			</ability>
+		</abilities>
+	</definitions>
+</redxml>

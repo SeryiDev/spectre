@@ -1,0 +1,11 @@
+__pycache__/
+
+.gitignore
+*.bak
+
+/docs
+/tools
+/dist
+/build
+
+AGENTS.md
