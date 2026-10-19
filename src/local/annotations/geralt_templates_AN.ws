@@ -1,4 +1,4 @@
-@replaceMethod function fb2(optional level : int)
+@replaceMethod function fb2(level : int, optional path : name)
 {
     spectreResetLevels_internal(level);
 	spectreAddAutogenEquipment_internal();

@@ -1,0 +1,62 @@
+{
+ "note": "5.01 copies of the alchemy files, by SHA-256. build_bundle.py --alchemy501 takes them from the game: the XML in files get what only Spectre has added; the files in other replace Spectre's copy (r4alchemy.menu with its ops, so the menu opens CR4VanillaAlchemyMenu with the 5.01 panel).",
+ "files": {
+  "dlc/bob/data/gameplay/items/def_item_alchemy_potion.xml": "b05b692f85a77463c628534627278665951a325cd73d5628a16d8a5e1020c5fc",
+  "dlc/bob/data/gameplay/items/def_item_alchemy_recipes_dye.xml": "299141209587681f2adaeb873257c5731d05bb0b558c36262d5076d7c70ec965",
+  "dlc/bob/data/gameplay/items/def_item_alchemy_recipes_mutagens.xml": "fadfd0eb455a2a45aaf21f915a8e00ef36eb64f86e188915f4bbc45cadb4ff6f",
+  "dlc/bob/data/gameplay/items/def_item_alchemy_recipes_potions.xml": "b8b475c4b27cca5aaff6dec0ff4cec190cdfcf7790b7a0390311fcf8a8ce4e56",
+  "dlc/bob/data/gameplay/items_plus/def_item_alchemy_potion.xml": "b05b692f85a77463c628534627278665951a325cd73d5628a16d8a5e1020c5fc",
+  "dlc/bob/data/gameplay/items_plus/def_item_alchemy_recipes_dye.xml": "299141209587681f2adaeb873257c5731d05bb0b558c36262d5076d7c70ec965",
+  "dlc/bob/data/gameplay/items_plus/def_item_alchemy_recipes_mutagens.xml": "fadfd0eb455a2a45aaf21f915a8e00ef36eb64f86e188915f4bbc45cadb4ff6f",
+  "dlc/bob/data/gameplay/items_plus/def_item_alchemy_recipes_potions.xml": "b8b475c4b27cca5aaff6dec0ff4cec190cdfcf7790b7a0390311fcf8a8ce4e56",
+  "dlc/ep1/data/gameplay/items/def_item_alchemy_recipes_potions.xml": "9cdc23e97dc7c3906cd50f54224e7eb5a492d2bef89ac8b4859787f0b4b9ec5d",
+  "dlc/ep1/data/gameplay/items_plus/def_item_alchemy_recipes_potions.xml": "9cdc23e97dc7c3906cd50f54224e7eb5a492d2bef89ac8b4859787f0b4b9ec5d",
+  "gameplay/abilities/effects_mutagens.xml": "eee24ae06ef8826bffff8c3900b2db8248e4769631cf374480497c317bf77bab",
+  "gameplay/abilities/effects_potions.xml": "36257876e70cca4b51a55b592c31846873ca29d6d2e97cf566f8962f7fe03855",
+  "gameplay/abilities_plus/effects_mutagens.xml": "eee24ae06ef8826bffff8c3900b2db8248e4769631cf374480497c317bf77bab",
+  "gameplay/abilities_plus/effects_potions.xml": "6f646e6ec59cbfe6e095eb1e84be0f5ff61b0eb759d9046c485510350893036a",
+  "gameplay/items/def_item_alchemy_mutagens.xml": "67b1b2468c183ac2b5c495614e86331f3e2a1596045da31736c307b575063109",
+  "gameplay/items/def_item_alchemy_oils.xml": "62d6c83b90e319427d8aae517219452640a30e6fb3f53c5047a53c15b2d38018",
+  "gameplay/items/def_item_alchemy_petards.xml": "7967c9b0d0636ded432b574c51044025cc4366cc6f555bc489ea8b75d75f72b8",
+  "gameplay/items/def_item_alchemy_potion.xml": "925634fc2c5bd0afc7f20998100182c06e24965aa8a44bc65ffbde680a53e2c4",
+  "gameplay/items/def_item_alchemy_recipes_alcohol.xml": "8648331c800a499f05c6cae7d730b3f1d4d9368ac3f151fa2198ddc6537587d9",
+  "gameplay/items/def_item_alchemy_recipes_mutagens.xml": "16b28df3aa16af4f5d414fe6b3acf625ab5cd11c43061b2d9a81b3c3cca4eedd",
+  "gameplay/items/def_item_alchemy_recipes_oils.xml": "b1d5b4014e16580d198d38cf5eaf36fac78c913e9a38b91f969608343c998702",
+  "gameplay/items/def_item_alchemy_recipes_petards.xml": "b8515ecd446400d9a8e775394ca39d21729e2a57c3606f4bcfec113226f843e5",
+  "gameplay/items/def_item_alchemy_recipes_potions.xml": "652fe5c735b62be023900544a99e854f21a6c7df2826b2cba354db1d9cc5b1ff",
+  "gameplay/items_plus/def_item_alchemy_mutagens.xml": "67b1b2468c183ac2b5c495614e86331f3e2a1596045da31736c307b575063109",
+  "gameplay/items_plus/def_item_alchemy_oils.xml": "62d6c83b90e319427d8aae517219452640a30e6fb3f53c5047a53c15b2d38018",
+  "gameplay/items_plus/def_item_alchemy_petards.xml": "8638efbcfaf8545ab3c3cc0c5c5139519060a63925b2b62fe789502ef0f0ca7f",
+  "gameplay/items_plus/def_item_alchemy_potion.xml": "925634fc2c5bd0afc7f20998100182c06e24965aa8a44bc65ffbde680a53e2c4",
+  "gameplay/items_plus/def_item_alchemy_recipes_alcohol.xml": "8648331c800a499f05c6cae7d730b3f1d4d9368ac3f151fa2198ddc6537587d9",
+  "gameplay/items_plus/def_item_alchemy_recipes_mutagens.xml": "16b28df3aa16af4f5d414fe6b3acf625ab5cd11c43061b2d9a81b3c3cca4eedd",
+  "gameplay/items_plus/def_item_alchemy_recipes_oils.xml": "b1d5b4014e16580d198d38cf5eaf36fac78c913e9a38b91f969608343c998702",
+  "gameplay/items_plus/def_item_alchemy_recipes_petards.xml": "b8515ecd446400d9a8e775394ca39d21729e2a57c3606f4bcfec113226f843e5",
+  "gameplay/items_plus/def_item_alchemy_recipes_potions.xml": "652fe5c735b62be023900544a99e854f21a6c7df2826b2cba354db1d9cc5b1ff"
+ },
+ "other": {
+  "gameplay/gui_new/guirsrc/r4alchemy.menu": {
+   "sha256": "757e22e15b1735a1a94ebe1f63ebf3abb99af2608b3ec588696446662bb784c0",
+   "ops": {
+    "outer": {
+     "names": [
+      "CR4VanillaAlchemyMenu"
+     ],
+     "imports": [],
+     "chunks": [],
+     "sets": [
+      [
+       0,
+       "menuClass",
+       "CName",
+       "1b00"
+      ]
+     ]
+    }
+   }
+  },
+  "gameplay/gui_new/swf/alchemy/panel_alchemy.redswf": {
+   "sha256": "5301cb789da4a61a1e79db08bfb3e4448fe6cb4a7cf5cddbe634310013752caa"
+  }
+ }
+}

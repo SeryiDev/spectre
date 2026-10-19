@@ -1,0 +1,6 @@
+*.w3strings binary
+*.bundle binary
+*.cache binary
+metadata.store binary
+*.redswf binary
+bundle/xml/** -text

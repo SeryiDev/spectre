@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+  <definitions>
+    <abilities>
+	
+	  <!-- modSpectre: add health abilities -->
+      <ability name="modSpectreAdditionalHealth">
+        <health_final_multiplier type="add" min="0.1" />
+      </ability>
+      <ability name="modSpectreAdditionalHealthNegative">
+        <health_final_multiplier type="add" min="-0.1" />
+      </ability>
+      <ability name="modSpectreMaxHealthNegative">
+        <health_final_multiplier type="add" min="-0.99" />
+      </ability>
+	  <!-- modSpectre: add dmg abilities -->
+      <ability name="modSpectreAdditionalDamage">
+        <damage_final_multiplier type="add" min="0.1" />
+      </ability>
+      <ability name="modSpectreAdditionalDamageNegative">
+        <damage_final_multiplier type="add" min="-0.1" />
+      </ability>
+	  
+	  <!-- modSpectre: displayed level as a separate ability -->
+      <ability name="DisplayedLevelAbl">
+        <tags> "base" </tags>
+        <level type="add" always_random="false" min="1" max="1" />
+      </ability>
+	  
+	  <!-- modSpectre: the player can gain +11 armor and +10 silver damage per level -->
+	
+	  <!-- modSpectre: animal level bonus -->
+      <ability name="AnimalLevelBonus">
+        <tags> "base" </tags>
+		<experience type="base" always_random="false" min="1" max="1" />
+        <vitality type="base" always_random="false" min="8" max="8" />
+        <vitality type="mult" always_random="false" min="0.15" max="0.15" />
+        <attack_power type="add" always_random="false" min="1" max="1" />
+        <spell_power type="add" always_random="false" min="1" max="1" />
+		<attack_power type="base" always_random="false" min="11" max="11" />
+        <spell_power type="base" always_random="false" min="11" max="11" />
+		<!-- backward compatibility -->
+		<gm_lvlup_damage_bonus type="base" always_random="false" min="0" max="0" />
+        <level type="add" always_random="false" min="0" max="0" />
+		<physical_resistance type="add" always_random="false" min="0" max="0" />
+		<slashing_resistance type="add" always_random="false" min="0" max="0" />
+		<piercing_resistance type="add" always_random="false" min="0" max="0" />
+		<bludgeoning_resistance type="add" always_random="false" min="0" max="0" />
+		<rending_resistance type="add" always_random="false" min="0" max="0" />
+		<elemental_resistance type="add" always_random="false" min="0" max="0" />
+		<force_resistance type="add" always_random="false" min="0" max="0" />
+		<shock_resistance type="add" always_random="false" min="0" max="0" />
+		<will_resistance type="add" always_random="false" min="0" max="0" />
+		<fire_resistance type="add" always_random="false" min="0" max="0" />
+		<frost_resistance type="add" always_random="false" min="0" max="0" />
+      </ability>
+	  
+      <ability name="MonsterLevelBonus">
+        <tags> "base" </tags>	
+        <experience type="base" always_random="false" min="4" max="4" />
+        <essence type="base" always_random="false" min="20" max="20" />
+        <essence type="mult" always_random="false" min="0.15" max="0.15" />
+        <attack_power type="add" always_random="false" min="1" max="1" /> 
+        <attack_power type="mult" always_random="false" min="0.01" max="0.01" /> 
+        <spell_power type="add" always_random="false" min="1" max="1" /> 
+        <spell_power type="mult" always_random="false" min="0.01" max="0.01" /> 
+		<swarm_attack_damage_vitality type="add" always_random="false" min="1" max="1" /> 
+        <swarm_attack_damage_essence type="add" always_random="false" min="1" max="1" /> 
+		<attack_power type="base" always_random="false" min="11" max="11" />
+        <spell_power type="base" always_random="false" min="11" max="11" />
+		<!-- backward compatibility -->
+		<gm_lvlup_damage_bonus type="base" always_random="false" min="0" max="0" />
+        <level type="add" always_random="false" min="0" max="0" />
+		<physical_resistance type="add" always_random="false" min="0" max="0" />
+		<slashing_resistance type="add" always_random="false" min="0" max="0" />
+		<piercing_resistance type="add" always_random="false" min="0" max="0" />
+		<bludgeoning_resistance type="add" always_random="false" min="0" max="0" />
+		<rending_resistance type="add" always_random="false" min="0" max="0" />
+		<elemental_resistance type="add" always_random="false" min="0" max="0" />
+		<force_resistance type="add" always_random="false" min="0" max="0" />
+		<shock_resistance type="add" always_random="false" min="0" max="0" />
+		<will_resistance type="add" always_random="false" min="0" max="0" />
+		<fire_resistance type="add" always_random="false" min="0" max="0" />
+		<frost_resistance type="add" always_random="false" min="0" max="0" />
+      </ability>
+	  
+      <ability name="MonsterLevelBonusGroup">
+        <tags> "base" </tags>
+        <experience type="base" always_random="false" min="2" max="2" />
+        <essence type="base" always_random="false" min="10" max="10" />
+        <essence type="mult" always_random="false" min="0.15" max="0.15" />
+        <attack_power type="add" always_random="false" min="1" max="1" /> 
+        <attack_power type="mult" always_random="false" min="0.005" max="0.005" /> 
+        <spell_power type="add" always_random="false" min="1" max="1" /> 
+        <spell_power type="mult" always_random="false" min="0.005" max="0.005" /> 
+		<swarm_attack_damage_vitality type="add" always_random="false" min="1" max="1" /> 
+        <swarm_attack_damage_essence type="add" always_random="false" min="1" max="1" /> 
+		<attack_power type="base" always_random="false" min="11" max="11" />
+        <spell_power type="base" always_random="false" min="11" max="11" />
+		<!-- backward compatibility -->
+		<gm_lvlup_damage_bonus type="base" always_random="false" min="0" max="0" />
+        <level type="add" always_random="false" min="0" max="0" />
+		<physical_resistance type="add" always_random="false" min="0" max="0" />
+		<slashing_resistance type="add" always_random="false" min="0" max="0" />
+		<piercing_resistance type="add" always_random="false" min="0" max="0" />
+		<bludgeoning_resistance type="add" always_random="false" min="0" max="0" />
+		<rending_resistance type="add" always_random="false" min="0" max="0" />
+		<elemental_resistance type="add" always_random="false" min="0" max="0" />
+		<force_resistance type="add" always_random="false" min="0" max="0" />
+		<shock_resistance type="add" always_random="false" min="0" max="0" />
+		<will_resistance type="add" always_random="false" min="0" max="0" />
+		<fire_resistance type="add" always_random="false" min="0" max="0" />
+		<frost_resistance type="add" always_random="false" min="0" max="0" />
+      </ability>
+	  
+      <ability name="MonsterLevelBonusArmored">
+        <tags> "base" </tags>
+        <experience type="base" always_random="false" min="4" max="4" />
+        <essence type="base" always_random="false" min="20" max="20" />
+        <essence type="mult" always_random="false" min="0.15" max="0.15" />
+        <attack_power type="add" always_random="false" min="1" max="1" /> 
+        <attack_power type="mult" always_random="false" min="0.01" max="0.01" /> 
+        <spell_power type="add" always_random="false" min="1" max="1" /> 
+        <spell_power type="mult" always_random="false" min="0.01" max="0.01" /> 
+		<swarm_attack_damage_vitality type="add" always_random="false" min="1" max="1" /> 
+        <swarm_attack_damage_essence type="add" always_random="false" min="1" max="1" /> 
+		<attack_power type="base" always_random="false" min="11" max="11" />
+        <spell_power type="base" always_random="false" min="11" max="11" />
+		<!-- backward compatibility -->
+		<gm_lvlup_damage_bonus type="base" always_random="false" min="0" max="0" />
+        <level type="add" always_random="false" min="0" max="0" />
+		<physical_resistance type="add" always_random="false" min="0" max="0" />
+		<slashing_resistance type="add" always_random="false" min="0" max="0" />
+		<piercing_resistance type="add" always_random="false" min="0" max="0" />
+		<bludgeoning_resistance type="add" always_random="false" min="0" max="0" />
+		<rending_resistance type="add" always_random="false" min="0" max="0" />
+		<elemental_resistance type="add" always_random="false" min="0" max="0" />
+		<force_resistance type="add" always_random="false" min="0" max="0" />
+		<shock_resistance type="add" always_random="false" min="0" max="0" />
+		<will_resistance type="add" always_random="false" min="0" max="0" />
+		<fire_resistance type="add" always_random="false" min="0" max="0" />
+		<frost_resistance type="add" always_random="false" min="0" max="0" />
+      </ability>
+	  
+      <ability name="MonsterLevelBonusGroupArmored">
+        <tags> "base" </tags>
+        <experience type="base" always_random="false" min="2" max="2" />
+        <essence type="base" always_random="false" min="10" max="10" />
+        <essence type="mult" always_random="false" min="0.15" max="0.15" />
+        <attack_power type="add" always_random="false" min="1" max="1" /> 
+        <attack_power type="mult" always_random="false" min="0.005" max="0.005" /> 
+        <spell_power type="add" always_random="false" min="1" max="1" /> 
+        <spell_power type="mult" always_random="false" min="0.005" max="0.005" /> 
+		<swarm_attack_damage_vitality type="add" always_random="false" min="1" max="1" /> 
+        <swarm_attack_damage_essence type="add" always_random="false" min="1" max="1" /> 
+		<attack_power type="base" always_random="false" min="11" max="11" />
+        <spell_power type="base" always_random="false" min="11" max="11" />
+		<!-- backward compatibility -->
+		<gm_lvlup_damage_bonus type="base" always_random="false" min="0" max="0" />
+        <level type="add" always_random="false" min="0" max="0" />
+		<physical_resistance type="add" always_random="false" min="0" max="0" />
+		<slashing_resistance type="add" always_random="false" min="0" max="0" />
+		<piercing_resistance type="add" always_random="false" min="0" max="0" />
+		<bludgeoning_resistance type="add" always_random="false" min="0" max="0" />
+		<rending_resistance type="add" always_random="false" min="0" max="0" />
+		<elemental_resistance type="add" always_random="false" min="0" max="0" />
+		<force_resistance type="add" always_random="false" min="0" max="0" />
+		<shock_resistance type="add" always_random="false" min="0" max="0" />
+		<will_resistance type="add" always_random="false" min="0" max="0" />
+		<fire_resistance type="add" always_random="false" min="0" max="0" />
+		<frost_resistance type="add" always_random="false" min="0" max="0" />
+      </ability>
+	
+      <ability name="MonsterMHBoss"> <!-- czart in Velen, he also has MiniBoss and qmh210_lamia abilities - modSpectre: removed -->
+        <tags> "base", "InstantKillImmune" </tags>	
+      </ability>	  
+	  
+      <ability name="MonsterLevelBonusLow">
+        <tags> "base" </tags>
+      </ability>	  	  
+
+      <ability name="MonsterLevelBonusHigh">
+        <tags> "base", "InstantKillImmune" </tags>
+		<burning_DoT_damage_resistance_perc type="add" always_random="false" min="0.33" max="0.33" />
+		<poison_DoT_damage_resistance_perc type="add" always_random="false" min="0.33" max="0.33" />
+		<bleeding_DoT_damage_resistance_perc type="add" always_random="false" min="0.33" max="0.33" />
+      </ability>	  	  
+	  
+      <ability name="MonsterLevelBonusDeadly">
+        <tags> "base", "InstantKillImmune" </tags>
+		<burning_DoT_damage_resistance_perc type="add" always_random="false" min="0.5" max="0.5" />
+		<poison_DoT_damage_resistance_perc type="add" always_random="false" min="0.5" max="0.5" />
+		<bleeding_DoT_damage_resistance_perc type="add" always_random="false" min="0.5" max="0.5" />
+      </ability>	  	  
+	  
+      <ability name="BossNGPLevelBonus"> <!-- not used in modSpectre, bosses scale properly -->
+        <tags> "base", "InstantKillImmune" </tags>
+      </ability>		  
+	  
+      <ability name="_Monster_group_base"> <!-- unused? -->
+      </ability>
+	  
+      <ability name="_Monster_solo_base"> <!-- unused? -->
+      </ability>
+	  
+   	  <ability name="_Monster_group_base _Stats"> <!-- unused? -->
+	  </ability>
+		
+   	  <ability name="_Monster_solo_base _Stats"> <!-- unused? -->
+	  </ability>
+
+	  <ability name="PrologModifier"> <!-- modSpectre: removed -->
+      </ability>
+	  
+
+<ability name="Q502_Scarab">
+      </ability>
+<ability name="ChainHitImmune">
+      </ability>
+    </abilities>
+	
+	<items>
+	
+			<item name="_Monster_group_base" 
+				category="monster_weapon"
+				ability_slots="0"
+				equip_template="mon_ghoul_weapon"
+				equip_slot="r_weapon" 
+				hold_slot="r_weapon"
+				hand="right"
+				weapon="true"
+				lethal="true"
+				draw_event="draw_steel_sword_side"
+				holster_event="holster_steel_sword_side"
+				ability_mode="OnHold">
+				<tags>NoShow,NoDrop,NoUse,Weapon</tags>
+				<base_abilities>
+					<a>Default weapon _Stats</a>
+					<a>_Monster_group_base _Stats</a>
+				</base_abilities>
+				<anim_actions>
+					<action 
+						name="draw" 
+						event="draw_steel_sword_side" 
+						act="draw_steel_sword_side_act" 
+						deact="draw_steel_sword_side_deact">
+					</action>
+					<action 
+						name="holster" 
+						event="holster_steel_sword_side" 
+						act="holster_steel_sword_side_act" 
+						deact="holster_steel_sword_side_deact">
+					</action>
+					<action 
+						name="attack" 
+						event="attack_steel_sword_side" 
+						act="attack_steel_sword_side_act" 
+						deact="attack_steel_sword_side_deact">
+					</action>
+				</anim_actions>
+			</item>
+
+			<item name="_Monster_solo_base" 
+				category="monster_weapon"
+				ability_slots="0"
+				equip_template="mon_ghoul_weapon"
+				equip_slot="r_weapon" 
+				hold_slot="r_weapon"
+				hand="right"
+				weapon="true"
+				lethal="true"
+				draw_event="draw_steel_sword_side"
+				holster_event="holster_steel_sword_side"
+				ability_mode="OnHold">
+				<tags>NoShow,NoDrop,NoUse,Weapon</tags>
+				<base_abilities>
+					<a>Default weapon _Stats</a>
+					<a>_Monster_solo_base _Stats</a>
+				</base_abilities>
+				<anim_actions>
+					<action 
+						name="draw" 
+						event="draw_steel_sword_side" 
+						act="draw_steel_sword_side_act" 
+						deact="draw_steel_sword_side_deact">
+					</action>
+					<action 
+						name="holster" 
+						event="holster_steel_sword_side" 
+						act="holster_steel_sword_side_act" 
+						deact="holster_steel_sword_side_deact">
+					</action>
+					<action 
+						name="attack" 
+						event="attack_steel_sword_side" 
+						act="attack_steel_sword_side_act" 
+						deact="attack_steel_sword_side_deact">
+					</action>
+				</anim_actions>
+			</item>
+
+			
+	</items>
+	
+  </definitions>
+</redxml>

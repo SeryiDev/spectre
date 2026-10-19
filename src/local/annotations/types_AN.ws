@@ -32,27 +32,6 @@ function ModifyHitSeverityReactionFromDamage( out damageData : W3DamageAction )
 		return;
 	}
 
-	if(actorVictim.UsesEssence() && damageData.processedDmg.essenceDamage < 1)
-	{
-		damageData.processedDmg.essenceDamage = 0;
-		damageData.SetHitAnimationPlayType(EAHA_ForceNo);
-		return;
-	}
-	
-	if(actorVictim.UsesVitality() && damageData.processedDmg.vitalityDamage < 1)
-	{
-		damageData.processedDmg.vitalityDamage = 0;
-		damageData.SetHitAnimationPlayType(EAHA_ForceNo);
-		return;
-	}
-
-	if(actorVictim.HasAbility('mon_golem_base'))
-	{
-		damageData.SetHitReactionType(EHRT_None);
-		damageData.SetHitAnimationPlayType(EAHA_ForceNo);
-		return;
-	}
-	
 	capsuleHeight = actorVictim.GetCapsuleHeight();
 
 	if(damageData.IsActionMelee() && capsuleHeight <= 2.0f)
@@ -77,9 +56,9 @@ function ModifyHitSeverityReactionFromDamage( out damageData : W3DamageAction )
 	type = ModifySeverity( type, severityReduction );
 
 	if(type != damageData.GetHitReactionType())
+	{
 		damageData.SetHitReactionType(type);
-	if(type == EHRT_None)
-		damageData.SetHitAnimationPlayType(EAHA_ForceNo);
+	}
 }
 
 function ModifySeverity(type : EHitReactionType, severityReduction : int) : EHitReactionType
@@ -87,23 +66,29 @@ function ModifySeverity(type : EHitReactionType, severityReduction : int) : EHit
 	var severity : int;
 
 	if(severityReduction == 0)
+	{
 		return type;
+	}
 		
 	switch(type)
 	{
 		case EHRT_Reflect :
 			return type;
+		break;
+
 		case EHRT_Igni :
 		case EHRT_Heavy :
 			severity = 2;
-			break;
+		break;
+
 		case EHRT_Light :
 		case EHRT_LightClose :
 			severity = 1; 
-			break;
+		break;
+
 		default :
 			severity = 0;
-			break;
+		break;
 	}
 	
  
@@ -114,7 +99,7 @@ function ModifySeverity(type : EHitReactionType, severityReduction : int) : EHit
 	{
 		case 2:		return EHRT_Heavy;
 		case 1:		return EHRT_Light;
-		default :	return EHRT_None;
+		default :	return EHRT_Light;
 	}
 }
 

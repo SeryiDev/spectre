@@ -1,20 +1,18 @@
 ![spectre](https://github.com/user-attachments/assets/f348e704-7525-457a-8164-e32809758585)
-Next gen overhaul built upon concepts and design choices of Ghost Mode and Alchemy. 
+Next gen overhaul built upon concepts and design choices of Ghost Mode and Alchemy.
+
+This version is for The Witcher 3 Remastered 5.01. It starts from the v0.93 scripts. What changed is in `CHANGELOG-5.01.md`, and the full technical list for modders in `CHANGELOG-FOR-AUTHOR.md`.
 
 ## Installation
 ### Manual Installation
-- Click on this [link (CLICK ME)](https://github.com/apokryphus/spectre/releases/latest).
-- Download the zip file. 
-- First link under `Assets`. 
+- Open the [releases page](https://github.com/apokryphus/spectre/releases/latest).
+- Download the Remastered 5.01 zip. The name looks like `spectre_release_vX.zip`.
 - Do not download the source code.
-- Drag and drop all 3 folders in the zip file (dlc, mods, and bin) into your Witcher 3 installation folder.
-- Check the files ```bin\config\r4game\user_config_matrix\pc\dx11filelist.txt``` and ```bin\config\r4game\user_config_matrix\pc\dx12filelist.txt```
-- Add `000Spectre.xml;` to the very bottom of both files if it does not exist. 
+- Drag and drop all 3 folders in the zip (`bin`, `mods`, and `dlc`) into the Witcher 3 installation folder.
+- `000Spectre.xml` is already inside `bin`. Remastered 5.01 has no `dx11filelist.txt` or `dx12filelist.txt`. The game loads every xml in `bin\config\r4game\user_config_matrix\pc`.
 
 ### Post-Installation
-- Remove `mod_EH_Shared_Imports` if `modSharedImports` already exists.
-- Merge any unmerged scripts with script merger. Ignore xml conflicts.
-- Use [this (CLICK ME)](https://www.nexusmods.com/witcher3/mods/7171) for the mod menu.
+- Merge unmerged `.ws` scripts with Script Merger.
 - Copy the following keybinds configuration and paste them at the beginning of the `input.settings` file, located in your
 `Documents\The Witcher 3` folder:
 
@@ -37,7 +35,7 @@ IK_Comma=(Action=SubstanceFilterDecrement)
 IK_Pad_RightTrigger=(Action=SubstanceFilterIncrement)
 IK_Pad_LeftTrigger=(Action=SubstanceFilterDecrement)
 IK_RightMouse=(Action=IngredientChangeRequest)
-IK_Pad_DigitUp=(Action=IngredientChangeRequest)
+IK_Pad_Y_TRIANGLE=(Action=IngredientChangeRequest)
 IK_LeftMouse=(Action=IngredientSelectionRequest)
 
 [Horse]
@@ -195,20 +193,67 @@ from overwriting the changes made.
 
 The above keybinds will correlate to these buttons/actions in-game:
 
-```(M & Keyboard)    |   (Controller)```
-
-	L				L2 + R3		-> Tap to enter meditation position.
-	L				L2 + R3		-> Hold ~0.5 seconds and release to enter the meditation position AND build a fire.
-	L				R3			-> while on the meditation position, tap to enter the alchemy menu.
-	L				R3			-> while on the meditation position, hold to stand up.
-	Space				R2			-> while on the meditation position, hold to accelerate time.
-	R mouse			Digit Up	       	-> while in the alchemy menu, opens the menu to choose another ingredient.
-	L mouse					     	-> while in the alchemy menu, click on an ingredient to display its information.
-	Shift							-> Hold while using the R Mouse/Y button when at an alchemist to buy an ingredient.
-	Dot				R2			-> Tap inside the alchemy menu to only show ingredients of a particular secondary substance.
-	Comma			L2			-> Same as above, but goes to the previous substance.
+| Mouse & keyboard | Controller | Action |
+|---|---|---|
+| L | L2 + R3 | Tap to enter the meditation position. |
+| L | L2 + R3 | Hold ~0.5 seconds and release to enter the meditation position AND build a fire. |
+| L | R3 | While in the meditation position, tap to enter the alchemy menu. |
+| L | R3 | While in the meditation position, hold to stand up. |
+| Space | R2 | While in the meditation position, hold to accelerate time. |
+| Right mouse | Y | In the alchemy menu, opens the menu to choose another ingredient. |
+| Left mouse | | In the alchemy menu, click an ingredient to display its information. |
+| Shift | | Hold while using right mouse / Y at an alchemist to buy an ingredient. |
+| Period | R2 | In the alchemy menu, only show ingredients of a particular secondary substance. |
+| Comma | L2 | Same as above, but goes to the previous substance. |
 
 Note:
 
 - If using Steam with a controller, it may be necessary to disable Steam's controller emulation when running the game.
 - These controls are just suggestions, you can always change them if you know the key/button codes.
+
+## Uninstallation
+
+**Remove Spectre from the save first.** A save that was played with Spectre and is loaded without it loses Geralt's skill tree, skills, mutations and stats (0 damage and armor, -1 values, a broken maximum weight). Spectre always worked this way; other mods do not cause it.
+
+1. Load the save you want to keep playing, as Geralt and out of combat.
+2. In the game menu, go to Spectre > Uninstall, turn on "Remove Spectre from this save" and close the menu.
+3. Spectre resets the skills, takes off its effects and makes a new manual save. Do not keep playing.
+4. Close the game and delete `mods\mod000Spectre`, `dlc\dlc000Spectre` and `bin\config\r4game\user_config_matrix\pc\000Spectre.xml`.
+5. Load the new save. The game shows its skill reset message and gives back every skill point. The skill tree is the base game one.
+
+Do it once for each save you want to keep. The option is greyed out in the main menu: it only works inside a save. Loading the new save with Spectre still installed brings Spectre back, with every skill point free.
+
+## Building the zip
+
+The finished gameplay bundle (`blob0.bundle` and `metadata.store`) is published with each release as `Spectre-bundle-v1.0.zip`. It is not in git because it is 62 MB. To pack a release with it, no Python needed:
+
+```
+.\pack-release.ps1 -Version 1.0 -Bundle "C:\path\to\Spectre-bundle-v1.0.zip"
+```
+
+`-Bundle` also takes the unzipped folder or an https link to the zip. The files are checked against `bundle\bundle.sha256`.
+
+To rebuild the bundle from source instead, it is built from the published v0.93 release, the files in `bundle`, and your The Witcher 3 5.01 install. Download `Spectre.-.Release.-.v0.93.zip` from the [v0.93 release](https://github.com/apokryphus/spectre/releases/tag/v0.93). Python needs `lz4` (`pip install lz4`).
+
+From the repo root:
+
+```
+.\pack-release.ps1 -Version 1.0 -Base "C:\path\to\Spectre.-.Release.-.v0.93.zip"
+```
+
+The script finds the game in the Steam libraries; pass `-Game "C:\path\to\The Witcher 3"` if it is somewhere else. That builds `build\mod000Spectre\content` and writes `dist\spectre_release_v1.0.zip`. Without `-Base` the script packs the bundle already in `build`. To build only the bundle:
+
+```
+python bundle\build_bundle.py --base "C:\path\to\Spectre.-.Release.-.v0.93.zip" --game "C:\path\to\The Witcher 3"
+```
+
+- `src` is the scripts.
+- `bundle\xml` is the gameplay XML rebased onto 5.01. Edit these to change skills, effects, or items. They replace the v0.93 copies.
+- `bundle\files` is the files v0.93 does not have, such as the 5.01 character panel, and non-XML files that replace the v0.93 copy (the loot window, `popup_loot.redswf`).
+- `bundle\entities501.json` lists the entities, scenes and quest files taken from the 5.01 game instead of v0.93, with Spectre's edits (levels, loot, damage, prices, abilities...) put back: value patches in place, then the structural edits that `bundle\cr2w_ops.py` replays. The v0.93 copies came from old game versions and lacked the 4.0 and 5.0 changes. The originals and the results are checked by SHA-256.
+- `bundle\metadata.store` is the bundle index. The build only rewrites sizes and offsets. A new file in `bundle\files` needs a record here first, made with [w3edit](https://github.com/Systemcluster/w3edit).
+- `tools\panel` patches the ActionScript of the two Flash panels in `bundle\files` (the 5.01 skill menu and the loot window); the changed classes are in it. See `tools\panel\README.md`.
+- `tools\entities` makes `bundle\entities501.json` again, from the 1.32, v0.93 and 5.01 files, after a game patch or to change an edit. See `tools\entities\README.md`.
+- `strings\*.w3strings` are the 17 language files. `strings\en.csv` is the source for the lines added in this port. `es.w3strings` carries that English text, so a game set to Spanish still shows it. The other languages keep the v0.93 text, plus the English text of the new lines.
+- `bin\config\r4game\user_config_matrix\pc\000Spectre.xml` is the options menu.
+- `dlc\dlc000Spectre` is the DLC bundle, metadata, and texture cache.
