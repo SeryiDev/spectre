@@ -423,34 +423,6 @@
 
 @wrapMethod( W3GuiBaseInventoryComponent ) function GetInventoryFlashArray( out flashArray : CScriptedFlashArray, flashObject : CScriptedFlashObject ) : void
 {
-	var i : int;
-	var item : SItemUniqueId;
-	var rawItems : array< SItemUniqueId >;
-	var l_flashObject : CScriptedFlashObject;
-	var itemCount : int; 
-
-	if (false)
-	{
-		wrappedMethod(flashArray, flashObject);
-	}
-	
-	_inv.GetAllItems( rawItems );
-	
 	spectreManageStrongAlcoholData(_inv);
-	
-	
-	for ( i = 0; i < rawItems.Size(); i += 1 )
-	{		
-		item = rawItems[i];
-		
-		if ( ShouldShowItem( item ) && itemCount < maxItemLimit ) 
-		{
-			
-			l_flashObject = flashObject.CreateFlashObject("red.game.witcher3.menus.common.ItemDataStub");
-			SetInventoryFlashObjectForItem( item, l_flashObject );
-			flashArray.PushBackFlashObject(l_flashObject);
-			
-			itemCount += 1; 
-		}
-	}
+	wrappedMethod(flashArray, flashObject);
 }	

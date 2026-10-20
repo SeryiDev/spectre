@@ -1,6 +1,6 @@
 function spectreGetVersion() : float
 {
-	return 1.03;
+	return 1.04;
 }
 
 function spectreSettingsGetConfigValue(menuName, menuItemName : name) : string
@@ -5259,6 +5259,7 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 	private var alchemist_inv			: CInventoryComponent;
 	private var m_npc					: CNewNPC;
 	private var m_npcInventory			: CInventoryComponent;
+	private var m_recipeList			: array<SAlchemyRecipe>;
 	private var alchemist_inv_cmpnt		: W3GuiShopInventoryComponent;
 	private var player_inv				: CInventoryComponent;
 	private var player_inv_cmpnt		: W3GuiPlayerInventoryComponent;
@@ -5268,7 +5269,6 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 	private var f_HideContent	 		: CScriptedFlashFunction;
 	private var f_SetFilters			: CScriptedFlashFunction;
 	private var f_SetRecipePin			: CScriptedFlashFunction;
-	private var recipe_list				: array<SAlchemyRecipe>;
 	private var guiIngList				: array<name>;
 	private var ing_mngr				: spectreIngredientManager;
 	private var alchexts				: SpectreAlchemyExtensions;
@@ -5317,7 +5317,7 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 		original_ingredients = new spectreIngredientList in this;
 		m_initialSelectionsToIgnore = 2;
 		using_controller = !thePlayer.IsPCModeEnabled();
-		alchexts.GetRecipes(recipe_list);
+		alchexts.GetRecipes(m_recipeList);
 		ExpandRecipeLevels();
 		BackupIngrList();
 		AdjustInitialIngrQuantity();
@@ -5327,7 +5327,7 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 		filters.primary = FactsQuerySum("spectre_alchemy_hide_enhanced") <= 0;
 		filters.composite = FactsQuerySum("spectre_alchemy_hide_superior") <= 0;
 		DrawFiltersLabel();
-		DrawRecipesList();
+		PopulateData();
 		f_SetRecipePin.InvokeSelfOneArg(FlashArgUInt(NameToFlashUInt(GetPinnedEntryKey() ) ) );
 		InitializeAlchemist();
 		SelectFirstModule();
@@ -5402,7 +5402,7 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 			FactsSet("spectre_alchemy_hide_normal", (int)!standard);
 			FactsSet("spectre_alchemy_hide_enhanced", (int)!primary);
 			FactsSet("spectre_alchemy_hide_superior", (int)!composite);
-			DrawRecipesList();
+			PopulateData();
 		}
 		return true;
 		filters.standard = standard;
@@ -5475,7 +5475,7 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 		{	showNotification(GetLocStringByKeyExt("panel_shop_pinned_recipe_action") );
 			idx = GetRecipeIdx(tag);
 			if (idx >= 0)
-				tag = recipe_list[idx].recipeName;
+				tag = m_recipeList[idx].recipeName;
 		}
 		theGame.GetGuiManager().SetPinnedCraftingRecipe(tag);
 	}
@@ -5505,12 +5505,7 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 		if ((bool)tag && tag == selected_recipe.spectreKey)
 			return (false);
 		if (tag)
-		{	f_HideContent.InvokeSelfOneArg(FlashArgBool(true) );
-			selected_recipe = recipe_list[GetRecipeIdx(tag)];
-			CreateUIRecipeData(selected_recipe);
-			DrawGridIngredientData();
-			ShowResultingItemDescription(selected_recipe.status == EAE_NoException);
-		}
+			ShowSelectedItemInfo(tag);
 		else
 		{	selected_recipe.recipeName = '';
 			selected_recipe.spectreKey = '';
@@ -5521,6 +5516,16 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 			if (uiState)
 				uiState.SelectedRecipe(selected_recipe.recipeName, true);
 		}
+	}
+
+
+	protected function ShowSelectedItemInfo(tag : name) : void
+	{
+		f_HideContent.InvokeSelfOneArg(FlashArgBool(true) );
+		selected_recipe = m_recipeList[GetRecipeIdx(tag)];
+		CreateUIRecipeData(selected_recipe);
+		DrawGridIngredientData();
+		ShowResultingItemDescription(selected_recipe.status == EAE_NoException);
 	}
 
 
@@ -5632,8 +5637,8 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 			if (status != selected_recipe.status || level != selected_recipe.level
 			|| substance != selected_recipe.cookedItemSubstance)
 			{	selected_recipe.status = status;
-				recipe_list[GetRecipeIdx(selected_recipe.spectreKey)] = selected_recipe;
-				DrawRecipesList();
+				m_recipeList[GetRecipeIdx(selected_recipe.spectreKey)] = selected_recipe;
+				PopulateData();
 			}
 		}
 		in_selection_menu = false;
@@ -5672,7 +5677,7 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 				GetLocStringByKeyExt(alchemist_inv.GetItemLocalizedNameByUniqueID(itemId) ) + " x " + quantity;
 			if (isLastItem)
 			{	DrawRecipesList(true);
-				selected_recipe.status = recipe_list[GetRecipeIdx(selected_recipe.spectreKey)].status;
+				selected_recipe.status = m_recipeList[GetRecipeIdx(selected_recipe.spectreKey)].status;
 			}
 		}
 		else notifText = GetLocStringByKeyExt("panel_shop_notification_not_enough_money");
@@ -5700,8 +5705,8 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 		var i, lvl		: int;
 
 		level_items = df_mngr.GetItemsWithTag('SingletonItem');
-		for (i = 0; i < recipe_list.Size(); i += 1)
-		{	recipe = recipe_list[i];
+		for (i = 0; i < m_recipeList.Size(); i += 1)
+		{	recipe = m_recipeList[i];
 			recipe.spectreKey = recipe.recipeName;
 			recipe.spectreLevel = 0;
 			base = NameToString(recipe.cookedItemName);
@@ -5715,7 +5720,7 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 			{	target = FindLevelItem(base + IntToString(lvl) );
 				if (!IsNameValid(target))
 					continue ;
-				recipe = recipe_list[i];
+				recipe = m_recipeList[i];
 				recipe.cookedItemName = target;
 				recipe.spectreKey = target;
 				recipe.spectreLevel = lvl;
@@ -5724,7 +5729,7 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 					expanded.PushBack(recipe);
 			}
 		}
-		recipe_list = expanded;
+		m_recipeList = expanded;
 	}
 
 
@@ -5777,9 +5782,9 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 		var pinned	: name = theGame.GetGuiManager().PinnedCraftingRecipe;
 		var i		: int;
 
-		for (i = 0; i < recipe_list.Size(); i += 1)
-			if (recipe_list[i].recipeName == pinned && recipe_list[i].spectreLevel <= 1)
-				return (recipe_list[i].spectreKey);
+		for (i = 0; i < m_recipeList.Size(); i += 1)
+			if (m_recipeList[i].recipeName == pinned && m_recipeList[i].spectreLevel <= 1)
+				return (m_recipeList[i].spectreKey);
 		return (pinned);
 	}
 
@@ -5788,8 +5793,8 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 	{
 		var idx, recipes : int;
 
-		for (recipes = recipe_list.Size(); idx < recipes; idx += 1)
-			original_ingredients.AddNew(idx, recipe_list[idx].requiredIngredients);
+		for (recipes = m_recipeList.Size(); idx < recipes; idx += 1)
+			original_ingredients.AddNew(idx, m_recipeList[idx].requiredIngredients);
 	}
 
 	
@@ -5798,13 +5803,13 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 		var ingredients			: array<SItemParts>;
 		var i, idx, quantity	: int;
 
-		for (idx = recipe_list.Size() - 1; idx >= 0; idx -= 1)
-		{	ingredients = recipe_list[idx].requiredIngredients;
+		for (idx = m_recipeList.Size() - 1; idx >= 0; idx -= 1)
+		{	ingredients = m_recipeList[idx].requiredIngredients;
 			for (i = ingredients.Size() - 1; i >= 0; i -= 1)
 			{	quantity = GetAdjustedIngrQuantity(ingredients[i].itemName, 0, 0, ingredients[i].quantity);
 				if (quantity == ingredients[i].quantity)
 					continue ;
-				recipe_list[idx].requiredIngredients[i].quantity = quantity;
+				m_recipeList[idx].requiredIngredients[i].quantity = quantity;
 			}
 		}
 	}
@@ -5843,12 +5848,12 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 		var i				: int;
 
 		if (gridpos >= 0)
-		{	for (i = recipe_list.Size() - 1; i >= 0; i -= 1)
-			{	if (recipe_list[i].spectreKey != selected_recipe.spectreKey)
+		{	for (i = m_recipeList.Size() - 1; i >= 0; i -= 1)
+			{	if (m_recipeList[i].spectreKey != selected_recipe.spectreKey)
 					continue ;
 				selected_recipe.requiredIngredients[gridpos].itemName = ingredient;
 				selected_recipe.requiredIngredients[gridpos].quantity = GetAdjustedIngrQuantity(ingredient, i, gridpos);
-				recipe_list[i].requiredIngredients = selected_recipe.requiredIngredients;
+				m_recipeList[i].requiredIngredients = selected_recipe.requiredIngredients;
 				break;
 			}
 			CreateUIRecipeData(selected_recipe);
@@ -5922,18 +5927,18 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 		var recipe	: SAlchemyRecipe;
 		var i		: int;
 		
-		for (;i < recipe_list.Size(); i += 1)
-		{	recipe = recipe_list[i];
+		for (;i < m_recipeList.Size(); i += 1)
+		{	recipe = m_recipeList[i];
 			recipe.cookedItemQuantity = GetRecipeItemsInInventory(recipe);
 			recipe.status = EvalRecipe(recipe);
 			recipe.typeName = recipe.cookedItemName;
 			CreateUIRecipeData(recipe);
 			PromoteResultingItem(recipe);
-			recipe_list[i] = recipe;
+			m_recipeList[i] = recipe;
 			if (recipe.cookedItemType != EACIT_Substance)
 				continue ;
 			if (alchexts.GetIsPrimarySubsRecipe(recipe.recipeName) > -1)
-			{	recipe_list[i].cookedItemIconPath = ResolveIconPath(recipe.cookedItemName);
+			{	m_recipeList[i].cookedItemIconPath = ResolveIconPath(recipe.cookedItemName);
 				continue ;
 			}
 			if (alchexts.GetIsMutagenRecipe(recipe.recipeName) > -1)
@@ -5941,8 +5946,13 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 			else if (StrContains(recipe.recipeName, "mutagen") )
 				recipe.cookedItemType = EACIT_MutagenTrans;
 			else recipe.cookedItemType = EACIT_Other;
-			recipe_list[i].cookedItemType = recipe.cookedItemType;
+			m_recipeList[i].cookedItemType = recipe.cookedItemType;
 		}
+	}
+
+	private function PopulateData()
+	{
+		DrawRecipesList();
 	}
 
 
@@ -5956,9 +5966,9 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 		var color		: string;
 		var i, recipes	: int;
 
-		recipes = recipe_list.Size();
+		recipes = m_recipeList.Size();
 		for (i = 0; i < recipes; i+= 1)
-		{	recipe = recipe_list[i];
+		{	recipe = m_recipeList[i];
 			if (!RecipeLevelShown(recipe) )
 				continue ;
 			player_inv.GetItemQualityFromName(recipe.cookedItemName, recipe.level, recipe.level);
@@ -5978,7 +5988,7 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 					{	header = GetLocStringByKeyExt(AlchemyCookedItemTypeToLocKey(recipe.cookedItemType) );
 						break ;
 					}
-					switch (recipe_list[i].level)
+					switch (m_recipeList[i].level)
 					{	default: title += color + " (Level 1) </font>"; break;
 						case 1: title += color + " (Level 1) </font>"; break;
 						case 2:	title += color + " (Level 2) </font>"; break;
@@ -5990,9 +6000,9 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 			}
 			if (update_stats)
 			{	recipe.cookedItemQuantity = GetRecipeItemsInInventory(recipe);
-				recipe_list[i].cookedItemQuantity = recipe.cookedItemQuantity;
+				m_recipeList[i].cookedItemQuantity = recipe.cookedItemQuantity;
 				recipe.status = EvalRecipe(recipe);
-				recipe_list[i].status = recipe.status;
+				m_recipeList[i].status = recipe.status;
 			}
 			if (recipe.cookedItemQuantity > 0)
 				title += "<font color='#4d4d4d'> | </font><font color='#a48539'>" + recipe.cookedItemQuantity + "</font>";
@@ -6069,11 +6079,11 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 
 	private function GetRecipeIdx(recipe : name) : int
 	{
-		var i : int = recipe_list.Size();
+		var i : int = m_recipeList.Size();
 
 		while (i)
 		{	i -= 1;
-			if (recipe_list[i].spectreKey != recipe)
+			if (m_recipeList[i].spectreKey != recipe)
 				continue ;
 			return (i);
 		}
@@ -6358,7 +6368,7 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 			bonus_item = " (" + created + ") " + bonus_item;
 			DrawRecipesList(true);
 			DrawGridIngredientData();
-			selected_recipe = recipe_list[GetRecipeIdx(selected_recipe.spectreKey)];
+			selected_recipe = m_recipeList[GetRecipeIdx(selected_recipe.spectreKey)];
 			ShowResultingItemDescription(selected_recipe.status == EAE_NoException);
 			item = GetLocStringByKeyExt(df_mngr.GetItemLocalisationKeyName(selected_recipe.cookedItemName) );
 			showNotification(GetLocStringByKeyExt("panel_crafting_successfully_crafted") + ": " + item + bonus_item);
