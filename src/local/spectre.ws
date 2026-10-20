@@ -3669,7 +3669,7 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 		player.levelManager.NGE_SetFreePoints(refund);
 
 		note = GetLocStringByKeyExt("spectre_skill_tree_updated");
-		if (!silent)
+		if (!silent && used > 0)
 			theGame.GetGuiManager().ShowNotification(note);
 		ApplySpectreSkillLayout();
 	}

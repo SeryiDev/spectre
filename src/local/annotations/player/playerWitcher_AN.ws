@@ -420,11 +420,15 @@ private var spectreGearTries : int;
 	var equipped, picked : SItemUniqueId;
 	var found : array<SItemUniqueId>;
 	var current : name;
-	var allowShirt : bool;
+	var hadGear : bool;
 
-	allowShirt = FactsQuerySum("spectre_starting_gear_ok") > 0;
-	if(spectreSlotHasRealGear(slot, allowShirt, equipped))
+	hadGear = FactsQuerySum("spectre_starting_gear_ok") > 0;
+	if(spectreSlotHasRealGear(slot, hadGear, equipped))
 		return true;
+	// A new game starts with Geralt naked in the bath and the prologue dresses him: only a character
+	// that has worn its gear gets it back.
+	if(!hadGear)
+		return false;
 
 	found = inv.GetItemsByCategory(category);
 	for(i = 0; i < found.Size(); i += 1)
