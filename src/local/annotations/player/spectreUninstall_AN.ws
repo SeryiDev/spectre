@@ -313,9 +313,12 @@ function spectreClearUninstallOption()
 	{
 		if (skills[i].skillType == S_SUndefined || skills[i].isCoreSkill)
 			continue;
+		skills[i].level = 0;
 		SpectreDropSkillAbilities(skills[i].skillType);
 		owner.RemoveAbilityAll(SkillEnumToName(skills[i].skillType));
 	}
+	for (i = 0; i < pathPointsSpent.Size(); i += 1)
+		pathPointsSpent[i] = 0;
 	for (i = 0; i < mutagenBonuses.Size(); i += 1)
 	{
 		if (IsNameValid(mutagenBonuses[i].abilityName) && mutagenBonuses[i].count > 0)
