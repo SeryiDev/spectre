@@ -96,7 +96,8 @@ Opening one container can pull others of the same kind into that loot window. A 
 
 ## Vanilla alchemy package
 
-- **Fail.** Going from the package back to Spectre's alchemy loses inventory items (Swallow, Grapeshot, Wolf Hour, bread, bottled water, the torch) and the equipped gear, which Spectre puts back as the starting gear. Left as experimental.
+- **Pass.** Switching between the package and Spectre's alchemy on the same save, several times both ways, loses no item. Potions researched with the package are still researched. An earlier test lost inventory items (Swallow, Grapeshot, Wolf Hour, bread, bottled water, the torch) and the equipped gear going back to Spectre's alchemy; it did not happen again.
+- **Pass.** Potions drunk and bombs destroyed with Spectre's alchemy, then the package installed: meditating refills the potions (they stay in the inventory with no charges). The destroyed bombs do not come back and their recipe shows again in the menu, as in the base game.
 - **Not tested.** With the package installed (`tools\install-release.ps1 -Alchemy501`), loading a save shows "Spectre's alchemy is off: the vanilla alchemy package is installed". Removing it shows "Spectre's alchemy is on".
 - **Not tested.** The alchemy menu is the 5.01 one and brews at once, with no fire, from the game menu and from meditation. 5.01 recipes (Swallow 1: Dwarven spirit, 5 Celandine, Drowner brain).
 - **Not tested.** Drinking a potion applies it at once, with 5.01 toxicity and duration. Meditating refills potions and bombs with alcohol, never lowering charges above the 5.01 maximum.
@@ -199,6 +200,9 @@ Check the tooltip and the effect at ranks 1, 5, and 10.
 
 ## Body, signs, the horse, and the boat
 
+- **Pass.** New game: in the intro and the bath scene Geralt gets no swords or armor and no "x1" notification with a name (the 4 without an icon are the body, as in the base game), and "Skill tree updated." does not show. After the prologue dresses him, save and load: the gear is still on.
+- **Not tested.** With Blood and Steel: hold block, side dodge and press a light attack during the dodge: the attack comes out when the dodge ends, with no delay. Without Blood and Steel: a light or heavy attack costs the same stamina as before (once, when it lands), and Flood of Anger still lasts the whole sign.
+
 - **Pass.** "Use Spectre's combat system" off: light and heavy attacks, dodges, rolls and parries cost no stamina; sprinting drains it as in the base game; it recovers faster with no long pause; Whirl, Rend and the signs can be used again at once. On again: Spectre's costs and cooldowns are back. Both survive saving and loading.
 - **Pass.** Switching "Use Spectre's combat system" keeps the current Adrenaline, stamina and vitality.
 - **Pass.** Options menu: Gameplay shows only the boat, sinking threshold and item weight options, with one preset, Recommended. Combat shows "Use Spectre's combat system" and below it quick sign casting, armor regen penalty, the regeneration and stamina cost sliders, stamina delay and the three cooldowns. Each Combat preset (Recommended, Old version, Turn off) sets them all.
@@ -238,6 +242,7 @@ Spectre v0.93 cannot be uninstalled from a save: loaded without Spectre, Geralt 
 - **Pass.** Out of combat, turning it on and closing the menu makes a new manual save and shows the message (close the game, uninstall Spectre, load that save).
 - **Pass.** After using it, the option is off again, also after loading another save.
 - **Pass.** That save loaded without Spectre (with Eternal Hunt): the 5.01 skill tree is there with every skill at rank 0, the base game message says the skills were reset, all the skill points are free, and the stats and maximum weight are right.
+- **Pass.** With "Starter skills: free first rank" on (Whirl, Rend, the first skill of each sign and the others at rank 1 without points), using the option and loading that save without Spectre: no skill has a rank, the starter skills included, and all the skill points are free.
 - **Pass.** That save loaded with Spectre and Eternal Hunt installed: Spectre's tree comes back with every skill point free.
 - **Pass.** Spectre and Eternal Hunt installed together: a save played with Spectre loads with Spectre's tree and the right stats.
 - **Pass.** With a Nigredo, Albedo or Rubedo potion in the inventory or the stash, using the option turns it into the base potion. Potions are single items with charges in the base game, so the save loaded without Spectre has one: Swallow 2 Rubedo x3 becomes one Swallow 2.

@@ -384,7 +384,7 @@ What changed in `mod000Spectre/content/blob0.bundle` from v0.93. The bundle has 
 ### Flash
 
 - `gameplay/gui_new/swf/character/panel_character_dupe.redswf` (new): the 5.01 skill menu, patched in eight classes.
-  - `SlotPointIndicator`: rank as a number in the bottom right corner of the cell.
+  - `SlotPointIndicator`: rank as a number in the bottom right corner of the cell. In 5.01 the cell draws one diamond per rank and fills each one in as that rank is bought. Spectre's skills go to 10, so a bought-out cell filled with diamonds. The diamonds are not drawn. The number is the rank.
   - `CharacterSkillsGridModule`: cell positions and links (`skill.tree.pos.override`, `skill.tree.line.override`), so the tree has the vanilla links and the General cells sit as in 5.01.
   - `SlotSkillGrid`: hold R to buy every rank and hold Z (gamepad R3) to reset, with a fill animation. Holding E / gamepad X past the first rank (1 s, as in 5.01) keeps buying: the next rank starts when the cell gets its new data, each hold 0.6 times the last, down to 0.2 s. It stops at the maximum rank, without points, when another cell is selected or when the key is released; a refused rank (links) sends no new data, so it stops there too.
   - `MenuCharacterDupe`: sends `OnUpgradeSkill` with the skill id + 1000 (R) or + 2000 (Z); `characterMenu_AN.ws` reads that.

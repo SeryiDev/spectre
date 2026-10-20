@@ -3,6 +3,7 @@ __pycache__/
 .gitignore
 *.bak
 
+/compat
 /docs
 /tools/*
 !/tools/panel/

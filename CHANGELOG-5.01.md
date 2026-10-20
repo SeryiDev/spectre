@@ -1,8 +1,14 @@
-# Spectre 1.0 for The Witcher 3 5.01
+# Spectre CHANGELOG for The Witcher 3 5.01
 
-Spectre now runs on The Witcher 3 Remastered 5.01. Combat, signs, alchemy, area loot and enemy scaling work as before, with the fixes and additions below.
+# 1.0.1
 
-The full technical list (every value, script and file) is in `CHANGELOG-FOR-AUTHOR.md`.
+## Fix
+
+- After "Remove Spectre from this save", the save loaded without Spectre has every skill at rank 0. The free starter skills kept a rank before.
+- A new game no longer hands Geralt the starting swords and armor during the intro, so he does not wear his swords in the bath scene. The prologue dresses him, as in the base game.
+- Switching between Spectre's alchemy and the vanilla alchemy package no longer removes items from the inventory.
+
+# 1.0
 
 ## New
 
@@ -13,7 +19,7 @@ The full technical list (every value, script and file) is in `CHANGELOG-FOR-AUTH
 - Hold Z on a skill to reset it and get its points back. The skills that depended on it are reset too.
 - Keep holding E (gamepad X) on a skill to keep buying ranks, each one faster.
 - With a gamepad, hold R3 on a skill to reset it.
-- A skill's rank shows as a number on its cell.
+- A skill's rank shows as a number on its cell. In 5.01 the tree draws one diamond per rank and fills it in as you buy that rank. At 10 ranks the cell was full of diamonds, so the diamonds are removed and the number is shown instead.
 - "Remove Spectre from this save": use it before uninstalling Spectre, and the save keeps working without the mod.
 - Optional package "Vanilla alchemy" (experimental): install it over Spectre to play with the base game alchemy (recipes, potions, toxicity, herbs and the alchemy menu) and keep the rest of Spectre. The alchemy branch of Spectre's tree then has the 5.01 alchemy skills. Reinstall Spectre to go back. Switching between the two alchemies can make some inventory items disappear.
 
