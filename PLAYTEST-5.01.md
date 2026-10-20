@@ -36,7 +36,7 @@ About 640 entities, scenes and quest files now come from the 5.01 game with Spec
 - **Not tested.** Item selection list (picking a potion or bomb for a quick slot): the same items as before, and strong alcohol shows as a drink. With Sort Everything 1.55 and its inventory sorting on: the list is sorted.
 - **Pass.** New character started directly in Hearts of Stone, and another in Blood and Wine, with Spectre's alchemy: the alchemy menu has the level 1 recipe of every potion, bomb and oil of the kit (Thunderbolt, Black Blood, Full Moon, Blizzard...). With the vanilla alchemy package nothing changes: they refill at meditation.
 - **Pass.** L enters the meditation pose. Holding L also builds a fire. L again opens the alchemy menu. Holding L stands up. Space passes time.
-- **Pass.** With "Alchemy Requires" set to no fire, the alchemy button in the menu opens a screen that can brew. With a fire required, that button stays closed and brewing stays on the meditation pose.
+- **Pass.** "Alchemy Requires" set to no fire, "Disable Meditation Requirements" off: the alchemy button in the menu opens the screen, but it cannot brew; meditating (L) and opening alchemy brews without a fire. With "Disable Meditation Requirements" on: the alchemy button brews at once. With a fire required, that button stays closed and brewing stays on the meditation pose.
 - **Pass.** Any interactive fire accepts a forge. The campfire-only option does not accept that forge.
 - **Not tested.** Brewing near a lit campfire, including indoors. Casual alchemy is off, so brewing from the road is refused.
 - **Not tested.** Building a campfire is allowed. Holding L in the meditation pose spends 3 timber and lights a fire. With campfires off, that hold does not light one.
@@ -51,6 +51,8 @@ About 640 entities, scenes and quest files now come from the 5.01 game with Spec
 
 ## Potions and toxicity
 
+- **Not tested.** Well Hydrated: with the effect of a better drink active, drink a weaker one: it is refused and the better effect stays (before 1.05 the weaker one replaced it). Drink the same or a better one: it adds to the effect.
+- **Not tested.** Well Hydrated with Healthy Food: after Script Merger, the scripts compile with no conflict blocks in `wellHydrated.ws`. Alcohol lasts longer with Perk 15.
 - **Pass.** After drinking, the potion metabolizes for about 30 seconds. Its real effect starts when that digestion ends.
 - **Pass.** Added duration. With the override at 0 and 240 seconds added, Swallow's timer reads 4:30 (its own duration plus 4 minutes).
 - **Pass.** Swallow's timer stays still while vitality is full, and is meant to run again once vitality is missing. Confirmed while standing at full health. Not rechecked after taking a hit.
@@ -68,7 +70,6 @@ About 640 entities, scenes and quest files now come from the 5.01 game with Spec
 
 - **Pass.** Opening a container shows only the loot window with its items. Before, for one frame, it showed the window's sample rows (red, with the quest icon and "Weapon").
 Opening one container can pull others of the same kind into that loot window. A normal herb gather does not. Ranges are in meters.
-
 - **Pass.** Clutter range at 0. Four chests standing together do not share one window. Each open shows only that chest.
 - **Pass.** Clutter range above 0. Open one sack, chest, or barrel and a second one in sight, inside the range, is in the same window. Taking everything empties the second one too.
 - **Pass.** Remains range. Looting one corpse includes another corpse in sight inside the range.
@@ -204,7 +205,6 @@ Check the tooltip and the effect at ranks 1, 5, and 10.
 
 - **Pass.** New game: in the intro and the bath scene Geralt gets no swords or armor and no "x1" notification with a name (the 4 without an icon are the body, as in the base game), and "Skill tree updated." does not show. After the prologue dresses him, save and load: the gear is still on.
 - **Not tested.** With Blood and Steel: hold block, side dodge and press a light attack during the dodge: the attack comes out when the dodge ends, with no delay. Without Blood and Steel: a light or heavy attack costs the same stamina as before (once, when it lands), and Flood of Anger still lasts the whole sign.
-
 - **Pass.** "Use Spectre's combat system" off: light and heavy attacks, dodges, rolls and parries cost no stamina; sprinting drains it as in the base game; it recovers faster with no long pause; Whirl, Rend and the signs can be used again at once. On again: Spectre's costs and cooldowns are back. Both survive saving and loading.
 - **Pass.** Switching "Use Spectre's combat system" keeps the current Adrenaline, stamina and vitality.
 - **Pass.** Options menu: Gameplay shows only the boat, sinking threshold and item weight options, with one preset, Recommended. Combat shows "Use Spectre's combat system" and below it quick sign casting, armor regen penalty, the regeneration and stamina cost sliders, stamina delay and the three cooldowns. Each Combat preset (Recommended, Old version, Turn off) sets them all.
@@ -222,6 +222,8 @@ Check the tooltip and the effect at ranks 1, 5, and 10.
 - **Pass.** With it off: sell a potion and a common sword to a merchant, close the shop, walk away and come back: both are still for sale.
 - **Pass.** "Equip gear of any level" off: at level 20, a level 33 sword cannot be equipped and its tooltip shows the required level. On: it equips and the tooltip shows no level.
 - **Pass.** "Equip gear of any level" off with gear above your level already equipped: closing the menu unequips it.
+- **Not tested.** Witcher set bonuses after 1.05: with 3 or more pieces of a school set on, save and load: the set bonus is still active and the count of pieces is right. With Minor Set Bonus installed (and merged with Script Merger): the scripts compile.
+- **Not tested.** Grindstone and workbench after 1.05: the weapon buff lasts 100 hits and the armor buff 25; the HUD shows the count going down. Using one again while active refills it. With Better Buffs installed: the scripts compile.
 - **Pass.** "Gear rises to your level" on: equipped swords and armor rise to your level when you level up (crossbows do not, as in the base game and Spectre v0.93). Off: they keep their level.
 - **Pass.** Tapping a sign key starts the cast. The button does not have to stay held for a normal cast.
 - **Pass.** Sign cooldown and alternate-sign cooldown. Changing the seconds changes how long that sign, and its alternate mode, must wait before they can be used again. Recommended values are 5 seconds and 7.5 seconds.

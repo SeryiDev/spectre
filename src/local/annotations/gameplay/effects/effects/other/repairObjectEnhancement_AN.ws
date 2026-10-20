@@ -1,10 +1,3 @@
-class W3spectreEnhancementBuffParams extends W3BuffCustomParams
-{
-	var currCount : int; 
-	
-	var maxCount : int;
-}
-
 @wrapMethod(W3RepairObjectEnhancement) function OnTimeUpdated(dt : float)
 {
 	if (false)

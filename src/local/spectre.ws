@@ -1,6 +1,6 @@
 function spectreGetVersion() : float
 {
-	return 1.04;
+	return 1.05;
 }
 
 function spectreSettingsGetConfigValue(menuName, menuItemName : name) : string
@@ -2700,7 +2700,7 @@ class SpectreAlchemyExtensions extends SpectreAlchemyExtensionsConfig
 
 	public function IsValidAlchemyState(statename : name) : bool
 	{
-		if (using_alchemy_table || casual_alchemy || fire_src == 0 || FactsQuerySum("ACS_In_Meditation") > 0 ||
+		if (using_alchemy_table || casual_alchemy || FactsQuerySum("ACS_In_Meditation") > 0 ||
 			theGame.GetTutorialSystem().uiHandler.GetCurrentStateName() == 'Alchemy')
 				return (true);
 		switch (statename)
@@ -5949,6 +5949,7 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 			m_recipeList[i].cookedItemType = recipe.cookedItemType;
 		}
 	}
+
 
 	private function PopulateData()
 	{

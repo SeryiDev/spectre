@@ -1,5 +1,13 @@
 # Spectre CHANGELOG for The Witcher 3 5.01
 
+# 1.05
+
+## Fixes
+- With "Alchemy Requires" set to "No Fire Whatsoever", brewing needs meditation again, unless "Disable Meditation Requirements" is on.
+- Minor Set Bonus no longer stops the scripts from compiling. Its set bonuses don't work with Spectre, which has its own.
+- Well Hydrated: a weaker drink no longer replaces the effect of a better one. An equal or better drink adds to it, as in the base game.
+- Better Buffs no longer stops the scripts from compiling. Its charges for the grindstone and workbench overlap with Spectre's own.
+
 # 1.04
 
 ## Fixes
@@ -12,6 +20,7 @@
 - Options added in 5.01 apply as soon as you change them in the menu again: combat style, target lock, camera, jump and landing, weightless items, auto-heal, accessibility, mods on or off, path tracing and frame generation, among others.
 - Other mods' options react in the menu again (presets, live previews), whatever their load order.
 - Sword FX Remaster compiles with Spectre.
+
 # 1.02
 
 ## Fixes

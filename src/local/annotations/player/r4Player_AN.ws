@@ -2579,11 +2579,8 @@ protected var parryingWithNotEnoughStamina : bool;
 	var i : int;
 	var ammo : float;
 	var buffParams : SCustomEffectParams;
-	var enhancementParams : W3spectreEnhancementBuffParams;	
 	var enhancements : array< CBaseGameplayEffect >;
 	var existingEnhancement : W3RepairObjectEnhancement;
-	
-	enhancementParams = new W3spectreEnhancementBuffParams in this;
 	
 	if(armor == true)
 	{	
@@ -2622,13 +2619,14 @@ protected var parryingWithNotEnoughStamina : bool;
 	else
 	{
 		buffParams.creator = this;
-		enhancementParams.maxCount = RoundMath( ammo );
-		enhancementParams.currCount = RoundMath( ammo );
-		buffParams.buffSpecificParams = enhancementParams;
 		
 		AddEffectCustom( buffParams );
 		
-		delete enhancementParams;
+		existingEnhancement = ( W3RepairObjectEnhancement ) GetBuff( buffParams.effectType );
+		if( existingEnhancement )
+		{
+			existingEnhancement.spectreReapplyBuff( RoundMath( ammo ) );
+		}
 	}
 	
 	return true;

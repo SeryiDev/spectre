@@ -1,14 +1,9 @@
 /***********************************************************************/
 /** 	© 2015 CD PROJEKT S.A. All rights reserved.
-/** 	THE WITCHER® is a trademark of CD PROJEKT S. A.
-/** 	The Witcher game is based on the prose of Andrzej Sapkowski.
+/** 	THE WITCHER© is a trademark of CD PROJEKT S. A.
+/** 	The Witcher game is based on the prose of Andrzej Sapkowski. 
 /***********************************************************************/
-
-
-
-
-
-class W3Effect_WellHydrated extends CBaseGameplayEffect
+class W3Effect_WellHydrated extends CBaseGameplayEffect //modSpectre
 {
 	private var level : int;
 
@@ -26,61 +21,68 @@ class W3Effect_WellHydrated extends CBaseGameplayEffect
 			iconPath = theGame.effectMgr.GetPathForEffectIconTypeName('icon_effect_Dumplings');
 		}
 	}
-
-	//modSpectre
-	event OnPerk15Unequipped()
-	{
-		var timeLeftPrc : float; //modSpectre
-		
-		timeLeftPrc = timeLeft / duration; //modSpectre
-		SetTimeLeft( initialDuration * timeLeftPrc ); //modSpectre
-		duration = initialDuration;
-	}
 	
-	//modSpectre
 	protected function CalculateDuration(optional setInitialDuration : bool)
 	{
-		var min, max : SAbilityAttributeValue;
+		var val : SAbilityAttributeValue;
 		
 		super.CalculateDuration(setInitialDuration);
 		
-		if( isOnPlayer && GetWitcherPlayer() )
-		{	
-			
-			//modSpectre
-			if( sourceName == "alcohol" && GetWitcherPlayer().CanUseSkill( S_Perk_15 ) )
-			{
-				min = GetWitcherPlayer().GetSkillAttributeValue( S_Perk_15, 'duration_bonus', false, false );
-				duration *= 1 + min.valueMultiplicative;
-			}
-			if( GetWitcherPlayer().HasRunewordActive( 'Runeword 6 _Stats' ) )
-			{
-				theGame.GetDefinitionsManager().GetAbilityAttributeValue('Runeword 6 _Stats', 'runeword6_duration_bonus', min, max);
-				duration *= 1 + min.valueMultiplicative;
-			}
+		
+		if(isOnPlayer && thePlayer == GetWitcherPlayer() && GetWitcherPlayer().HasRunewordActive('Runeword 6 _Stats'))
+		{
+			val = target.GetAttributeValue('runeword6_duration_bonus');
+			duration *= ( 1 + val.valueMultiplicative );
 		}
+		
 	}
 	
-	//modSpectre
 	protected function GetSelfInteraction( e : CBaseGameplayEffect) : EEffectInteract
 	{
-		var eff : W3Effect_WellFed;
-		var dm : CDefinitionsManagerAccessor;
-		var thisLevel, otherLevel : int;
-		var min, max : SAbilityAttributeValue;
+		var eff : W3Effect_WellHydrated;
+		var dm : CDefinitionsManagerAccessor; //modSpectre
+		var thisLevel, otherLevel : int; //modSpectre
+		var min, max : SAbilityAttributeValue; //modSpectre
 		
-		dm = theGame.GetDefinitionsManager();
-		eff = (W3Effect_WellFed)e;
+		eff = (W3Effect_WellHydrated)e;
+		dm = theGame.GetDefinitionsManager(); //modSpectre
 		dm.GetAbilityAttributeValue(abilityName, 'level', min, max);
 		thisLevel = RoundMath(CalculateAttributeValue(GetAttributeRandomizedValue(min, max)));
 		dm.GetAbilityAttributeValue(eff.abilityName, 'level', min, max);
 		otherLevel = RoundMath(CalculateAttributeValue(GetAttributeRandomizedValue(min, max)));
-		
-		if(otherLevel >= thisLevel)
+		if(otherLevel >= thisLevel) //modSpectre
 			return EI_Cumulate;		
 		else
 			return EI_Deny;
 	}
+	
+	public function CacheSettings()
+	{
+		var i : int;
+		var dm : CDefinitionsManagerAccessor;
+		var main : SCustomNode;
+		var tmpName, customAbilityName : name;
+		var type : EEffectType;		
+	
+		super.CacheSettings();
+		
+		dm = theGame.GetDefinitionsManager();
+		main = dm.GetCustomDefinition('effects');
+		
+		for(i=0; i<main.subNodes.Size(); i+=1)
+		{
+			dm.GetCustomNodeAttributeValueName(main.subNodes[i], 'name_name', tmpName);
+			EffectNameToType(tmpName, type, customAbilityName);
+			if(effectType == type)
+			{
+				if(!dm.GetCustomNodeAttributeValueInt(main.subNodes[i], 'level', level))
+					level = 0;
+					
+				break;
+			}
+		}
+	}
+	
 	
 	protected function SetEffectValue()
 	{

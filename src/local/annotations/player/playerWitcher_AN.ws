@@ -759,14 +759,14 @@ private var spectreGearTries : int;
 		{
 			pam = (W3PlayerAbilityManager)abilityManager;
 			pam.ManageSetArmorTypeBonus();
-			RecalcSetItemsEquipped();
+			SpectreRecalcSetItemsEquipped();
 			FactsAdd( "modSpectre_ArmorTypeSetsIntroduced" );
 		}
 		if( FactsQuerySum( "modSpectre_KMArmorTypeSetIntroduced" ) < 1 )
 		{
 			pam = (W3PlayerAbilityManager)abilityManager;
 			pam.ManageSetArmorTypeBonus();
-			RecalcSetItemsEquipped();
+			SpectreRecalcSetItemsEquipped();
 			FactsAdd( "modSpectre_KMArmorTypeSetIntroduced" );
 		}
 	}
@@ -5107,7 +5107,7 @@ var blockSprintTimestamp : float;
 	}	
 }
 
-@addMethod(W3PlayerWitcher) function RecalcSetItemsEquipped()
+@addMethod(W3PlayerWitcher) function SpectreRecalcSetItemsEquipped()
 {
 	var slotsToCheck : array<EEquipmentSlots>;
 	var setType : EItemSetType;
