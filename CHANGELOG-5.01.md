@@ -1,9 +1,14 @@
 # Spectre CHANGELOG for The Witcher 3 5.01
 
-# 1.0.1
+# 1.02
 
-## Fix
+## Fixes
+- Make Spectre's alchemy menu wrappable by other mods
+- Living Economy now compiles with Spectre. In Spectre's alchemy menu, buying a missing ingredient uses Living Economy's price; the ingredient's tooltip doesn't show it, and Spectre's vanilla alchemy package doesn't use Living Economy's prices.
 
+# 1.01
+
+## Fixes
 - After "Remove Spectre from this save", the save loaded without Spectre has every skill at rank 0. The free starter skills kept a rank before.
 - A new game no longer hands Geralt the starting swords and armor during the intro, so he does not wear his swords in the bath scene. The prologue dresses him, as in the base game.
 - Switching between Spectre's alchemy and the vanilla alchemy package no longer removes items from the inventory.
@@ -86,8 +91,10 @@ These belonged to the old 4.04 skill menu, which 5.01 replaced. They could come 
 ## Fixes
 
 - Removing Spectre no longer ruins the save, if you use "Remove Spectre from this save" first. Before, a save loaded without Spectre lost the skill tree, the skills and the stats.
+
 - Opening a container no longer flashes the loot window with sample items.
 - Starting directly in Hearts of Stone or Blood and Wine teaches the recipe of every potion, bomb and oil the starting kit gives (Thunderbolt, Black Blood, Full Moon and others). Spectre does not refill potions at meditation, so they could not be made again.
 - A new game started after loading another save no longer inherits that save's mutations (and the skill slots they opened).
 - Far-Reaching Aard shows its whole effect.
 - The Wolf Hour tooltip shows its real duration (1 hour), not 240 seconds.
+- Living Economy compiles with Spectre. Buying a missing ingredient in the alchemy menu pays its price.

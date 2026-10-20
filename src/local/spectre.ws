@@ -1,6 +1,6 @@
 function spectreGetVersion() : float
 {
-	return 1.01;
+	return 1.02;
 }
 
 function spectreSettingsGetConfigValue(menuName, menuItemName : name) : string
@@ -5257,6 +5257,8 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 {
 	private var alchemist				: CNewNPC;
 	private var alchemist_inv			: CInventoryComponent;
+	private var m_npc					: CNewNPC;
+	private var m_npcInventory			: CInventoryComponent;
 	private var alchemist_inv_cmpnt		: W3GuiShopInventoryComponent;
 	private var player_inv				: CInventoryComponent;
 	private var player_inv_cmpnt		: W3GuiPlayerInventoryComponent;
@@ -6758,6 +6760,8 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 				alchemist_inv_cmpnt.Initialize(alchemist_inv);
 			}
 		}
+		m_npc = alchemist;
+		m_npcInventory = alchemist_inv;
 	}
 
 
@@ -6768,6 +6772,11 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 		l_merchantData = m_flashValueStorage.CreateTempFlashObject();
 		GetNpcInfo((CGameplayEntity)targetNpc, l_merchantData);
 		m_flashValueStorage.SetFlashObject("crafting.merchant.info", l_merchantData);
+	}
+
+	protected function GetTooltipData(item : int, compareItemType : int, out resultData : CScriptedFlashObject) : void
+	{
+		super.GetTooltipData(item, compareItemType, resultData);
 	}
 
 
