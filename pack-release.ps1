@@ -36,8 +36,9 @@ param(
 
 $ErrorActionPreference = "Stop"
 $Version = $Version.Trim().TrimStart("v", "V")
-if ($Version -notmatch "^[0-9]") {
-    throw "Version must look like 1.0, not '$Version'."
+# Same number as spectreGetVersion(): a float (1.0, 1.01, 1.02). Not semver 1.0.2.
+if ($Version -notmatch '^\d+\.\d+$') {
+    throw "Version must look like 1.02 (a float for WitcherScript), not '$Version'."
 }
 
 $Root = $PSScriptRoot
