@@ -18,7 +18,8 @@ class W3Effect_Aerondight extends CBaseGameplayEffect
 	private var visualEffects				: array<name>;
 	var effectComponent						: W3AerondightFXComponent;
 
-	private var currCount					: int;
+	private var m_currCount					: int;
+	private var m_currChargingEffect		: name;
 	private var drainDelay					: float;
 	
 	private function InitXmlValues()
@@ -73,11 +74,11 @@ class W3Effect_Aerondight extends CBaseGameplayEffect
 	{
 		drainDelay = xml_stackDrainDelay;
 		
-		if(currCount <= 0)
+		if(m_currCount <= 0)
 			return;
 		
-		currCount -= 1;
-		if(currCount == 0)
+		m_currCount -= 1;
+		if(m_currCount == 0)
 			StopAerondightEffects();
 		UpdateAerondightFX();
 	}
@@ -89,30 +90,34 @@ class W3Effect_Aerondight extends CBaseGameplayEffect
 		if(IsFullyCharged())
 			return;
 		
-		currCount += 1;
+		m_currCount += 1;
 		UpdateAerondightFX();
 	}
 	
 	public function ResetCharges()
 	{
-		currCount = 0;
+		m_currCount = 0;
 		StopAerondightEffects();
 		UpdateAerondightFX();
 	}
 	
 	private function UpdateAerondightFX()
 	{
-		if(currCount > 0)
+		if(m_currCount > 0)
 		{
-			aerondightEnt.PlayEffect(visualEffects[Modded2Vanilla()]);
+			m_currChargingEffect = visualEffects[Modded2Vanilla()];
+			aerondightEnt.PlayEffect(m_currChargingEffect);
 		}
 		else
+		{
+			m_currChargingEffect = '';
 			aerondightEnt.PlayEffect(visualEffects[0]);
+		}
 	}
 	
 	private function Modded2Vanilla() : int
 	{
-		return RoundMath(1.0 * currCount / xml_hitsToCharge * visualEffects.Size()) - 1;
+		return RoundMath(1.0 * m_currCount / xml_hitsToCharge * visualEffects.Size()) - 1;
 	}
 	
 	public function StopAerondightEffects()
@@ -127,7 +132,7 @@ class W3Effect_Aerondight extends CBaseGameplayEffect
 			AddCharge();
 	}
 
-	public function DischargeAerondight(optional excludeEnt : CGameplayEntity) : bool
+	public function DischargeAerondight() : bool
 	{
 		var ents					: array<CGameplayEntity>;
 		var i						: int;
@@ -137,15 +142,6 @@ class W3Effect_Aerondight extends CBaseGameplayEffect
 		FindGameplayEntitiesInRange(ents, target, 3, 100, , FLAG_OnlyAliveActors + FLAG_Attitude_Hostile, target);
 		for(i = 0; i < ents.Size(); i += 1)
 		{
-			if(excludeEnt && ents[i] == excludeEnt)
-			{
-				
-			}
-			else
-			{
-				
-			}
-
 			action = new W3DamageAction in theGame;
 			action.Initialize(target, ents[i], this, "AerondightDischarge", EHRT_Heavy, CPS_AttackPower, false, false, false, false);
 			action.SetCannotReturnDamage(true);
@@ -237,12 +233,12 @@ class W3Effect_Aerondight extends CBaseGameplayEffect
 	
 	public function IsFullyCharged() : bool
 	{
-		return currCount == xml_hitsToCharge;
+		return m_currCount == xml_hitsToCharge;
 	}
 	
 	public function GetCurrentCount() : int
 	{
-		return currCount;
+		return m_currCount;
 	}
 	
 	public function GetMaxCount() : int

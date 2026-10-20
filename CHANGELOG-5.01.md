@@ -1,5 +1,12 @@
 # Spectre CHANGELOG for The Witcher 3 5.01
 
+# 1.03
+
+## Fixes
+- Options added in 5.01 apply as soon as you change them in the menu again: combat style, target lock, camera, jump and landing, weightless items, auto-heal, accessibility, mods on or off, path tracing and frame generation, among others.
+- Other mods' options react in the menu again (presets, live previews), whatever their load order.
+- Sword FX Remaster compiles with Spectre.
+
 # 1.02
 
 ## Fixes

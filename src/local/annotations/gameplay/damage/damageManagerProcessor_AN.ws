@@ -174,7 +174,7 @@ private var hasArmor					: bool;
 				if( aerondight.IsFullyCharged() )
 				{
 					aerondight.PlayTrailEffect( npc.GetBloodType() );
-					aerondight.DischargeAerondight( npc );																			 
+					aerondight.DischargeAerondight();																			 
 				}
 				else
 					aerondight.AddCharge();
