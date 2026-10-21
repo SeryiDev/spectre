@@ -1404,6 +1404,11 @@ protected var tempTransferredItems : array< SItemUniqueId >;
 			itemStats.PushBack(stat);
 		}
 	}
+
+	if(respectAttributeOrder)
+	{
+		SortItemStatsForAttributeOrder(attributes, itemStats);
+	}
 }
 
 @addMethod(CInventoryComponent) function ExcludeEnhancements(itemId : SItemUniqueId, attributeName : name, out attributeVal : SAbilityAttributeValue)

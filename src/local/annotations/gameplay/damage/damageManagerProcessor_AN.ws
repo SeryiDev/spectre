@@ -2535,6 +2535,11 @@ private var confusionInstakillTested : bool;
 		dismember = true;
 		dismemberExplosion = true;
 	}
+	else if( !actorVictim.IsAlive() && actorVictim.HasTag( 'q803_ScoloForceFinisher' ) && playerAttacker && attackAction && attackAction.IsActionMelee() )
+	{
+		dismember = true;
+		dismemberExplosion = false;
+	}
 	else
 	{
 		inv = actorAttacker.GetInventory();
@@ -2733,13 +2738,13 @@ private var confusionInstakillTested : bool;
 		areEnemiesAttacking = false;
 	}
 		
-	if ( thePlayer.forceFinisher )
+	if ( thePlayer.forceFinisher && !thePlayer.forceFinisherKeepConditions )
 	{
 		res = true;
 	}
 	else
 	{
-		res = ( RandRange(100) < finisherChance && actorVictim.GetAttitude( thePlayer ) == AIA_Hostile
+		res = ( ( RandRange(100) < finisherChance || thePlayer.forceFinisher ) && actorVictim.GetAttitude( thePlayer ) == AIA_Hostile
 				&& !areEnemiesAttacking && AbsF( victimToPlayerVector.Z ) < 0.4f
 				&& ( theGame.GetWorld().NavigationCircleTest( actorVictim.GetWorldPosition(), 2.f ) || actorVictim.HasTag('ForceFinisher') ) );
 	}

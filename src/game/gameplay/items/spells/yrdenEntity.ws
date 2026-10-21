@@ -1030,6 +1030,9 @@ state YrdenSlowdown in W3YrdenEntity extends Active
 	var polarAngle, yrdenRange, unitAngle : float;
 	var runePositionLocal, runePositionGlobal : Vector;
 	var entity : CEntity;
+	var j, count : int;
+	var traceResult : Vector;
+	var effectSettings : SYrdenEffectSettings;
 	
 
 	thePlayer.ResumeStaminaRegen( 'SignCast' );
@@ -1061,6 +1064,52 @@ state YrdenSlowdown in W3YrdenEntity extends Active
 		entity = theGame.CreateEntity( virtual_parent.runeTemplates[i], runePositionGlobal, worldRot );
 		virtual_parent.fxEntities.PushBack( entity );
 	}
+
+	// 5.01 trap art: radial effects and the center rune. The Gryphon range is already in baseModeRange.
+	size = virtual_parent.radialEffects.Size();
+	for( i=0; i<size; i+=1 )
+	{
+		effectSettings = virtual_parent.radialEffects[i];
+		if(effectSettings.calculateCountFromSpacing)
+		{
+			count = (int)((2.f * Pi() * yrdenRange) / effectSettings.desiredSpacing);
+		}
+		else
+		{
+			count = effectSettings.count;
+		}
+
+		unitAngle = 2 * Pi() / count;
+		for( j=0; j<count; j+=1 )
+		{
+			polarAngle = unitAngle * j;
+			if(effectSettings.randomAngleDeviation > 0)
+			{
+				polarAngle += RandRangeF(effectSettings.randomAngleDeviation, -effectSettings.randomAngleDeviation);
+			}
+
+			runePositionLocal.X = yrdenRange * effectSettings.rangeModifier * CosF( polarAngle );
+			runePositionLocal.Y = yrdenRange * effectSettings.rangeModifier * SinF( polarAngle );
+			runePositionLocal.Z = 0.f;
+
+			if(effectSettings.randomLocationDeviation > 0)
+			{
+				runePositionLocal.X += RandRangeF(effectSettings.randomLocationDeviation, -effectSettings.randomLocationDeviation);
+				runePositionLocal.Y += RandRangeF(effectSettings.randomLocationDeviation, -effectSettings.randomLocationDeviation);
+			}
+
+			runePositionGlobal = worldPos + runePositionLocal;
+			runePositionGlobal = TraceFloor( runePositionGlobal );
+			runePositionGlobal.Z += 0.05f;
+
+			entity = theGame.CreateEntity( virtual_parent.radialEffects[i].effectEntityTemplate, runePositionGlobal, worldRot );
+			virtual_parent.fxEntities.PushBack( entity );
+		}
+	}
+
+	traceResult = TraceFloor( worldPos );
+	entity = theGame.CreateEntity( virtual_parent.centerRuneTemplate, traceResult, worldRot );
+	virtual_parent.fxEntities.PushBack( entity );
 }
 	
 	entry function YrdenSlowdown_Loop()

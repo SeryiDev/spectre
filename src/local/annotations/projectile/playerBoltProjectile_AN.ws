@@ -94,6 +94,8 @@ protected  var boltItemName				: name;
 	var inv 					: CInventoryComponent;
 	var boneIndex				: int;
 	var npc						: CNewNPC;
+	var vcc						: SVirtualControllerData;
+	var boneName				: name;
 
 	if(false) 
 	{
@@ -112,18 +114,27 @@ protected  var boltItemName				: name;
 	
 	
 	boneIndex = -1;
-	if ( thePlayer.IsCombatMusicEnabled() && thePlayer.GetDisplayTarget()  && thePlayer.playerAiming.GetCurrentStateName() == 'Waiting' )
+	npc = (CNewNPC)(thePlayer.GetDisplayTarget());
+	if ( npc && thePlayer.IsCombatMusicEnabled() && thePlayer.playerAiming.GetCurrentStateName() == 'Waiting' )
 	{
-		npc = (CNewNPC)(thePlayer.GetDisplayTarget());
-		if ( npc )
-			boneIndex = npc.GetBoneIndex( 'torso2' );					
+		if ( thePlayer.HasVirtualControllerTarget() )
+		{
+			vcc = thePlayer.GetTargetableVirtualController();
+			boneName = vcc.boneName;
+			boneIndex = vcc.boneIndex;
+		}
+		else
+		{
+			boneName = 'torso2';
+			boneIndex = npc.GetBoneIndex( boneName );
+		}
 	}
 	if ( target.HasTag('AddRagdollCollision'))
 	{
 		collisionGroups.Remove('Character');
 	}
 	if ( boneIndex >= 0 )
-		projectiles[0].ShootProjectileAtBone( projAngle, projSpeed, npc, 'torso2', attackRange, collisionGroups );
+		projectiles[0].ShootProjectileAtBone( projAngle, projSpeed, npc, boneName, attackRange, collisionGroups );
 	else
 		projectiles[0].ShootProjectileAtPosition( projAngle, projSpeed, targetPos, attackRange, collisionGroups );
 		

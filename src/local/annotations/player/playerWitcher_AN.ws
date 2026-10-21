@@ -708,7 +708,7 @@ private var spectreGearTries : int;
 		pam = (W3PlayerAbilityManager)abilityManager;
 
 		skill.level = 0;
-		for(i = S_Magic_s01; i <= S_Magic_s20; i+=1)
+		for(i = S_Magic_s01; i <= S_Magic_s42; i+=1)
 		{
 			skill.skillType = i;				
 			pam.RemoveTemporarySkill(skill);
@@ -3023,6 +3023,7 @@ private var spectreGearTries : int;
 	var tutStateFood : W3TutorialManagerUIHandlerStateFood;
 	var tutStateSecondPotionEquip : W3TutorialManagerUIHandlerStateSecondPotionEquip;
 	var boltItem : SItemUniqueId;
+	var tutBolt : SUITutorial;
 	var aerondight : W3Effect_Aerondight;
 	var phantomWeapon : W3Effect_PhantomWeapon;
 	
@@ -3140,7 +3141,7 @@ private var spectreGearTries : int;
 		if(!rangedWeapon)
 			AddTimer('DelayedOnItemMount', 0.1, true);
 		
-		if ( IsSwimming() || IsDiving() )
+		if ( ( IsSwimming() || IsDiving() ) && inv.IsItemCrossbow(item) )
 		{
 			GetItemEquippedOnSlot(EES_Bolt, boltItem);
 			
@@ -3156,14 +3157,27 @@ private var spectreGearTries : int;
 				AddAndEquipInfiniteBolt(false, true);
 			}
 		}
-		
-		else if(!IsAnyItemEquippedOnSlot(EES_Bolt))
+		else if(!IsAnyItemEquippedOnSlot(EES_Bolt) && inv.IsItemCrossbow(item))
+		{
 			AddAndEquipInfiniteBolt();
+		}
+
+		if( ShouldProcessTutorial('TutorialRadialSelectBolts') )
+		{
+			tutBolt.menuName = 'RadialMenu';
+			tutBolt.tutorialStateName = 'Radial';
+			tutBolt.triggerCondition = EUITTC_OnMenuOpen;
+			tutBolt.priority = 10;
+			tutBolt.abortOnMenuClose = true;
+			theGame.GetTutorialSystem().uiHandler.RegisterUIHint(tutBolt);
+		}
 	}
 	else if(slot == EES_Bolt)
 	{
 		if(rangedWeapon)
-		{	if ( !IsSwimming() || !IsDiving() )
+		{
+			inv.UpdateEquippedBolt();
+			if ( !IsSwimming() || !IsDiving() )
 			{
 				rangedWeapon.OnReplaceAmmo();
 				rangedWeapon.OnWeaponReload();
@@ -3252,6 +3266,10 @@ private var spectreGearTries : int;
 			}
 			
 		}
+	}
+	else if (FactsQuerySum("tut_forced_preparation") > 0)
+	{
+		theGame.GetTutorialSystem().ForcedAlchemyCleanup();
 	}
 	
 	if(ShouldProcessTutorial('TutorialFoodSelectTab'))
@@ -6275,7 +6293,6 @@ var blockSprintTimestamp : float;
 	manager.ActivateEntryByScriptTag('TutorialFallingRoll', JS_Active);
 	manager.ActivateEntryByScriptTag('TutorialFocus', JS_Active);
 	manager.ActivateEntryByScriptTag('TutorialFocusClues', JS_Active);
-	manager.ActivateEntryByScriptTag('TutorialFocusClues', JS_Active);
 	manager.ActivateEntryByScriptTag('TutorialHorseRoad', JS_Active);
 	manager.ActivateEntryByScriptTag('TutorialHorseSpeed0', JS_Active);
 	manager.ActivateEntryByScriptTag('TutorialHorseSpeed0_pad', JS_Active);
@@ -6775,7 +6792,6 @@ var blockSprintTimestamp : float;
 	manager.ActivateEntryByScriptTag( 'TutorialDialogClose', JS_Active );
 	manager.ActivateEntryByScriptTag( 'TutorialFallingRoll', JS_Active );
 	manager.ActivateEntryByScriptTag( 'TutorialFocus', JS_Active );
-	manager.ActivateEntryByScriptTag( 'TutorialFocusClues', JS_Active );
 	manager.ActivateEntryByScriptTag( 'TutorialFocusClues', JS_Active );
 	manager.ActivateEntryByScriptTag( 'TutorialHorseRoad', JS_Active );
 	manager.ActivateEntryByScriptTag( 'TutorialHorseSpeed0', JS_Active );

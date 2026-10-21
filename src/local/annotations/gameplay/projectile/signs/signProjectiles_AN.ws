@@ -91,6 +91,8 @@
 
 	theGame.damageMgr.ProcessAction( action );
 	
+	CheckFrostEffect( collider );
+	
 	collider.OnAardHit( this );
 	
 	if( isMutation6 && victimNPC && victimNPC.IsAlive() )

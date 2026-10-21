@@ -54,6 +54,15 @@
 	}
 
 	
+	// 5.01 turns every hit reaction off at the start and turns them back on, except Igni, halfway through.
+	if(!this.IsOnPlayer() && duration * 0.5 <= duration - timeLeft)
+	{
+		for(i=0; i<allowedHits.Size(); i+=1)
+			allowedHits[i] = true;
+
+		allowedHits[EHRT_Igni] = false;
+	}
+
 	if(cachedMPAC && cachedMPAC.GetSubmergeDepth() <= -1)
 		target.RemoveAllBuffsOfType(effectType);
 	else

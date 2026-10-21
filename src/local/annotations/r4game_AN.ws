@@ -227,7 +227,7 @@ public saved var spawnareas : array<S_spectreSpawnArea>;
 				
 				if( itemsCount > 0 )
 				{
-					ids = inv.AddAnItem( rewrd.items[ i ].item, itemsCount );
+					ids = inv.AddAnItem( rewrd.items[ i ].item, itemsCount, true );
 					
 					for ( itemCount = 0; itemCount < ids.Size(); itemCount += 1 )
 					{

@@ -693,10 +693,10 @@ private var animSpeedMult						: int;
 	var damaveValue						: float;
 	var healthLossToForceLand_perc		: SAbilityAttributeValue;
 	var witcher							: W3PlayerWitcher;
-	var node							: CNode;
 	var boltCauser						: W3ArrowProjectile;
 	var yrdenCauser 					: W3YrdenEntityStateYrdenShock;
 	var burningCauser					: W3Effect_Burning;
+	var bombCauser						: W3Petard;
 	var attackAction					: W3Action_Attack;
 	
 	if(false) 
@@ -753,19 +753,13 @@ private var animSpeedMult						: int;
 		if( ret || damageAction.DealsAnyDamage() )
 			SignalGameplayDamageEvent('BeingHit', damageAction );
 	}
+
+	bombCauser = (W3Petard)( damageAction.causer );
+	if ( bombCauser )
+		SignalGameplayDamageEvent('BombHit', damageAction );
 	
 	if( damageAction.additiveHitReactionAnimRequested == true )
-	{
-		node = (CNode)damageAction.causer;
-		if (node)
-		{
-			SetHitReactionDirection(node);
-		}
-		else
-		{
-			SetHitReactionDirection(damageAction.attacker);
-		}
-	}
+		SetHitReaction( damageAction );
 	
 	if(((CPlayer)damageAction.attacker || !((CNewNPC)damageAction.attacker)) && damageAction.DealsAnyDamage())
 		theTelemetry.LogWithLabelAndValue( TE_FIGHT_ENEMY_GETS_HIT, damageAction.victim.ToString(), (int)damageAction.processedDmg.vitalityDamage + (int)damageAction.processedDmg.essenceDamage );

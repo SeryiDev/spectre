@@ -204,6 +204,8 @@
 		}
 		else if ( !isRolling )
 		{
+			thePlayer.SetIsDodgingProjectile( false );
+
 			if( actorVictim.IsAlive() )
 				ProcessDamageAction( actorVictim, pos, boneName );
 			
@@ -227,6 +229,9 @@
 		this.SoundEvent("cmb_arrow_impact_wood");
 		
 		AttachArrowToShield(actorVictim, pos);
+
+		if(caster == thePlayer)
+			GetWitcherPlayer().ResetCripplingShot();
 	}
 	else
 	{
@@ -234,6 +239,9 @@
 		{
 			if ( actorVictim.HasAbility( 'BounceBoltsWildhunt' ))
 			{
+				if(caster == thePlayer)
+					GetWitcherPlayer().ResetCripplingShot();
+
 				this.bounceOfVelocityPreserve = 0.1;
 				this.BounceOff(normal, pos);
 				this.Init(actorVictim);

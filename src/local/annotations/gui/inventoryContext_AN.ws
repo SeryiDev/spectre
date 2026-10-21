@@ -134,7 +134,7 @@
 	else
 	if (keyName == "enter-gamepad_A")
 	{
-		if (!theInput.LastUsedPCInput() || IsPadBindingExist(keyName)) 
+		if ( IsPadBindingExist(keyName) ) 
 		{
 			execurePrimaryAction();
 		}
@@ -296,6 +296,10 @@
 						AddInputBinding("panel_button_hud_interaction_useitem", "enter-gamepad_A", IK_E, true);
 					}
 				}
+				else if ( invComponentRef.ItemHasTag(currentItemId, 'Sharpstone') )
+				{
+					AddInputBinding("panel_button_hud_interaction_useitem", "enter-gamepad_A", IK_E, true);
+				}
 				else if ( invComponentRef.GetItemName(currentItemId) == 'Razor' )
 				{
 					AddInputBinding("panel_button_hud_interaction_useitem", "enter-gamepad_A", IK_E, true);
@@ -341,7 +345,7 @@
 		if (invComponentRef.CanBeCompared(currentItemId))
 		{
 			buttonLabel = GetHoldLabel() + " " + GetLocStringByKeyExt("panel_common_compare");
-			AddInputBinding(buttonLabel, "gamepad_L2", -1, true, true);
+			AddInputBinding(buttonLabel, "gamepad_L2", -1, true, true, true);
 		}
 	}
 	

@@ -504,13 +504,6 @@
 		addGFxItemStat(propsList, "weight", tmpStr, "attribute_name_weight");
 	}
 
-	transmogAppearance = itemInvComponent.GetItemTemplateOverride(item);
-	if(transmogAppearance)
-	{
-		tooltipData.SetMemberFlashString( "TransmogText", GetTransmogItemLabel(itemInvComponent.GetItemLocalizedNameByName(transmogAppearance)));
-		tooltipData.SetMemberFlashString("IconPath", itemInvComponent.GetItemIconPathByName(transmogAppearance) );
-	}
-	
 	durMult = 1;
 	if ( isArmorOrWeapon && !itemInvComponent.IsItemBolt( item ) )
 	{
@@ -610,6 +603,13 @@
 	tooltipData.SetMemberFlashNumber("PrimaryStatDurabilityPenalty", primaryStatDurabilityPenalty);
 	tooltipData.SetMemberFlashBool("CanBeCompared", canBeCompared);
 	tooltipData.SetMemberFlashBool("EnableFullScreenInfo", isArmorOrWeapon);
+
+	transmogAppearance = itemInvComponent.GetItemTemplateOverride(item);
+	if(transmogAppearance)
+	{
+		tooltipData.SetMemberFlashString( "TransmogText", GetTransmogItemLabel(itemInvComponent.GetItemLocalizedNameByName(transmogAppearance)));
+		tooltipData.SetMemberFlashString("IconPath", itemInvComponent.GetItemIconPathByName(transmogAppearance) );
+	}
 	
 	return tooltipData;
 }

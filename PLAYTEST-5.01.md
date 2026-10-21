@@ -4,6 +4,19 @@ Original Spectre behavior only. Things the base game already does are not on thi
 
 Status is `Pass`, `Fail` or `Not tested`. A pass matches the behavior described on that line.
 
+## Base game behavior brought in 1.07
+
+- **Not tested.** Burn an enemy: for the first half of the burn it does not react to hits, then it does again. Igni still causes no hit reaction.
+- **Not tested.** Yrden's trap shows the small effects around the circle and the rune in the middle. The Griffin set does not draw them farther out than the slowdown area.
+- **Not tested.** With the sixth mutation, Aard puts out a torch, freezes an insectoid swarm and breaks a destructible object.
+- **Not tested.** With Battle Trance running, equip Focus: its bonus applies at once. Take it off: the bonus goes away at once. Raise Synergy one rank while it is slotted: the mutagen bonus changes without reloading.
+- **Not tested.** An arrow that hits Geralt gives no projectile-dodge bonus. With the 5.01 tree, Crippling Shot turns off when a bolt hits a shield or bounces off a Wild Hunt shield.
+- **Not tested.** Against a large monster, a crossbow bolt hits the part the aim marker is on.
+- **Not tested.** Alternate focus on, controller: with focus already on, pressing a sign casts that sign.
+- **Not tested.** A rare mutagen in the character menu applies the left bonus to the first stat and the right bonus to the second. A transmogged item's tooltip shows the appearance icon. A whetstone shows Use, on keyboard and controller.
+- **Not tested.** Equip a crossbow: the bolt comes back when you switch crossbows, and the radial bolt tutorial can show. Equip anything while the prologue's forced alchemy tutorial is already finished: the locked panels unlock.
+- **Not tested.** A quest reward item appears once in the corner. The giant centipede (Blood and Wine) can be dismembered when it dies to a sword hit. Holding Igni does not vibrate the controller the whole time.
+
 ## Enemies, NPCs and quest files from 5.01 (important)
 
 About 640 entities, scenes and quest files now come from the 5.01 game with Spectre's edits put back (`bundle/entities501.json`). They affect every enemy and NPC, so test them before the release.

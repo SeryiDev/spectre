@@ -1,5 +1,26 @@
 # Spectre CHANGELOG for The Witcher 3 5.01
 
+# 1.07
+
+## Fixes
+- A burning enemy reacts to hits again once half the burn has passed.
+- Yrden's trap shows the extra effects and the center rune.
+- Aard with the sixth mutation puts out lights, freezes swarms and breaks destructible objects.
+- Focus updates Battle Trance as soon as it is equipped or removed. Synergy updates as soon as its rank changes.
+- A basic attack or a basic sign still works if that skill is at rank 0.
+- An arrow that hits you no longer counts as a dodge. With the 5.01 skill tree, Crippling Shot ends when a bolt hits a shield or bounces.
+- A crossbow bolt aims at the body part you are aiming at.
+- With alternate focus on and a controller, pressing a sign while focus is on casts the sign.
+- Enemies set to always dodge do dodge.
+- In the character menu, a rare mutagen's left and right bonuses go to the right stats.
+- A transmogged item's tooltip shows the appearance icon.
+- A whetstone shows a Use hint. The compare hint shows that the button is held.
+- Equipping a crossbow handles its bolts, and the bolt tutorial, as in the base game. Equipping an item ends the forced alchemy tutorial once that tutorial is over.
+- Quest item rewards are announced once.
+- The giant centipede in Blood and Wine can be dismembered on the killing blow.
+- Holding a sign no longer vibrates the controller on every moment. Critical effects use the base game's vibration.
+- The one-time Flood of Anger fix now covers every Signs skill, so it no longer refunds points for skills it left in place.
+
 # 1.06
 
 ## Fixes

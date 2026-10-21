@@ -1,6 +1,6 @@
 function spectreGetVersion() : float
 {
-	return 1.06;
+	return 1.07;
 }
 
 function spectreSettingsGetConfigValue(menuName, menuItemName : name) : string

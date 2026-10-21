@@ -937,7 +937,7 @@ var spectreActiveSkills : array<ESkill>;
 	
 	if(FactsDoesExist("debug_fact_stamina_boy"))
 		return 0;
-		
+
 	cost = super.DrainStamina(action, fixedCost, fixedDelay, abilityName, dt, costMult);
 	
 	if(cost > 0 && dt > 0)
@@ -1255,6 +1255,12 @@ var spectreActiveSkills : array<ESkill>;
 		if(battleTrance)
 			battleTrance.OnPerk11Equipped();
 	}
+	else if(skill == S_Magic_s38)
+	{
+		battleTrance = (W3Effect_BattleTrance)owner.GetBuff(EET_BattleTrance);
+		if(battleTrance)
+			battleTrance.OnMagic38Equipped();
+	}
 	else if( skill == S_Perk_14 )
 	{
 		highestShrineTime = 0.f;
@@ -1440,6 +1446,12 @@ var spectreActiveSkills : array<ESkill>;
 		battleTrance = (W3Effect_BattleTrance)owner.GetBuff(EET_BattleTrance);
 		if(battleTrance)
 			battleTrance.OnPerk11Unequipped();
+	}
+	else if(skill == S_Magic_s38)
+	{
+		battleTrance = (W3Effect_BattleTrance)owner.GetBuff(EET_BattleTrance);
+		if(battleTrance)
+			battleTrance.OnMagic38Unequipped();
 	}		
 	else if( skill == S_Perk_15 )
 	{
@@ -1565,8 +1577,13 @@ var spectreActiveSkills : array<ESkill>;
 		
 		if ( CanUseSkill(S_Alchemy_s19) )
 		{
-			MutagensSyngergyBonusUpdate( -1, currLevel );
+			MutagensSyngergyBonusUpdate( -1, SpectreSynergyLevel() );
 		}
+	}
+	else if(skill == S_Perk_43)
+	{
+		if ( CanUseSkill(S_Perk_43) )
+			MutagensSyngergyBonusUpdate( -1, SpectreSynergyLevel() );
 	}
 	else if(skill == S_Alchemy_s20)
 	{
@@ -2570,7 +2587,7 @@ private saved var spectreAllMutationsActive : bool;
 	if(!IsSkillEquipped(skill))
 		return false;
 		
-	if(skills[skill].level < 1)
+	if(skills[skill].level < 1 && !skills[skill].isCoreSkill)
 		return false;
 		
 	if(skills[skill].remainingBlockedTime != 0)

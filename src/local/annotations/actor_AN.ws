@@ -993,6 +993,19 @@ var cachedIsSpecter : int;
 		return;
 	}
 
+	if(damageData.IsActionMelee() && HasAbility( 'CannotBeAttackedFromFront' ) && IsAttackerInFront(damageData.attacker) )
+	{
+		if ( canLog )
+		{
+			LogDMHits("CActor.ReduceDamage: victim attacked from front and immune to this type of strike - no damage will be done", damageData );
+		}
+
+		damageData.SetAllProcessedDamageAs(0);
+		((CActor)damageData.attacker).ReactToReflectedAttack( this );
+		damageData.ClearEffects();
+		return;
+	}
+
 	if(this != thePlayer && IsCurrentlyDodging() && damageData.CanBeDodged() && ( VecDistanceSquared(this.GetWorldPosition(),damageData.attacker.GetWorldPosition()) > 1.7 
 		|| this.HasAbility( 'IgnoreDodgeMinimumDistance' ) ))
 	{

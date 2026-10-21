@@ -1074,11 +1074,6 @@ state Channeling in W3SignEntity extends BaseCast
 	}
 	else
 	{
-		if(player && !((W3QuenEntity)parent) )	
-		{
-			theGame.VibrateControllerLight();	
-		}
-		
 		reductionCounter = caster.GetSkillLevel(virtual_parent.skillEnum) - 1;
 		multiplier = 1;
 		if(reductionCounter > 0)

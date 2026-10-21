@@ -451,7 +451,7 @@
 	{
 		if(altSignCasting && !theInput.LastUsedPCInput() && theInput.IsActionPressed('CastSign'))
 		{
-			if(isFocusStart && !GetWitcherPlayer().IsCurrentSignChanneled())
+			if((isFocusStart || isAccessibilityFocusToggle) && !GetWitcherPlayer().IsCurrentSignChanneled())
 			{
 				theGame.GetFocusModeController().Deactivate();
 				mouserControllerScheme = theInput.GetMouserControllerScheme();

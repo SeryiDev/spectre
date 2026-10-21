@@ -299,7 +299,7 @@ private var counterStaminaCost : float;
 	npc.slideTarget = target;
 	
 	
-	if (RandRange(100) < dodgeChance)
+	if (RandRange(100) < dodgeChance || ignoreDodgeChanceStats)
 	{
 		if (dodgeType == EDT_Attack_Light || dodgeType == EDT_Attack_Heavy || dodgeType == EDT_Fear)
 		{

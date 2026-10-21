@@ -127,5 +127,5 @@
 	
 	
 	if(isOnPlayer)
-		theGame.VibrateControllerVeryHard();	
+		theGame.HapticStart( "classic_vibro_large_oneshot" );	
 }
