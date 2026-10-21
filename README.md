@@ -4,7 +4,9 @@ Next gen overhaul built upon concepts and design choices of Ghost Mode and Alche
 This version is for The Witcher 3 Remastered 5.01. It starts from the v0.93 scripts. What changed is in `CHANGELOG-5.01.md`, and the full technical list for modders in `CHANGELOG-FOR-AUTHOR.md`.
 
 ## Installation
+
 ### Manual Installation
+
 - Open the [releases page](https://github.com/apokryphus/spectre/releases/latest).
 - Download the Remastered 5.01 zip. The name looks like `spectre_release_vX.zip`.
 - Do not download the source code.
@@ -12,6 +14,7 @@ This version is for The Witcher 3 Remastered 5.01. It starts from the v0.93 scri
 - `000Spectre.xml` is already inside `bin`. Remastered 5.01 has no `dx11filelist.txt` or `dx12filelist.txt`. The game loads every xml in `bin\config\r4game\user_config_matrix\pc`.
 
 ### Post-Installation
+
 - Merge unmerged `.ws` scripts with Script Merger.
 - Copy the following keybinds configuration and paste them at the beginning of the `input.settings` file, located in your
 `Documents\The Witcher 3` folder:
@@ -187,6 +190,7 @@ IK_Pad_A_CROSS=(Action=PlaceOilLamp)
 IK_Pad_A_CROSS=(Action=PickOilLamp)
 IK_Pad_RightTrigger=(Action=Spare)
 ```
+
 - Failure to do this step will prevent you from correctly interacting with Alchemy and looting on horse.
 - Important: It may be necessary to set the "Read Only" attribute of the file after copying, to prevent the game
 from overwriting the changes made.
@@ -219,7 +223,8 @@ Note:
 2. In the game menu, go to Spectre > Uninstall, turn on "Remove Spectre from this save" and close the menu.
 3. Spectre resets the skills, takes off its effects and makes a new manual save. Do not keep playing.
 4. Close the game and delete `mods\mod000Spectre`, `dlc\dlc000Spectre` and `bin\config\r4game\user_config_matrix\pc\000Spectre.xml`.
-5. Load the new save. The game shows its skill reset message and gives back every skill point. The skill tree is the base game one.
+5. In `Documents\The Witcher 3\input.settings`, delete the lines you pasted for Spectre.
+6. Load the new save. The game shows its skill reset message and gives back every skill point. The skill tree is the base game one.
 
 Do it once for each save you want to keep. The option is greyed out in the main menu: it only works inside a save. Loading the new save with Spectre still installed brings Spectre back, with every skill point free.
 

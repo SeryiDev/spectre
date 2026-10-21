@@ -1,5 +1,11 @@
 # Spectre CHANGELOG for The Witcher 3 5.01
 
+# 1.06
+
+## Fixes
+- After "Remove Spectre from this save", the message also reminds you to remove Spectre's lines from input.settings.
+- True Aerondight Uncapped no longer stops the scripts from compiling. Its uncapped damage bonus still does nothing: Spectre's Aerondight has no permanent damage bonus. Spectre's Aerondight is unchanged.
+
 # 1.05
 
 ## Fixes

@@ -22,6 +22,11 @@ class W3Effect_Aerondight extends CBaseGameplayEffect
 	private var m_currChargingEffect		: name;
 	private var drainDelay					: float;
 	
+	private var m_maxCount					: int;
+	private var m_attribute					: SAbilityAttributeValue;
+	private var m_stacksPerLevel			: SAbilityAttributeValue;
+	private var m_aerondightDelay			: float;
+	
 	private function InitXmlValues()
 	{
 		var defMgr : CDefinitionsManagerAccessor = theGame.GetDefinitionsManager();
@@ -52,6 +57,33 @@ class W3Effect_Aerondight extends CBaseGameplayEffect
 		InitSword();
 		ResetCharges();
 		super.OnEffectAdded( customParams );
+	}
+	
+	event OnEffectAddedPost()
+	{
+		LoadParams();		
+	
+		super.OnEffectAddedPost();
+	}
+	
+	private function LoadParams()
+	{
+		var val : SAbilityAttributeValue;
+		
+		m_attribute = target.GetAbilityAttributeValue( 'AerondightEffect', 'perm_dmg_boost' );
+		m_stacksPerLevel = target.GetAbilityAttributeValue( 'AerondightEffect', 'stacks_per_level' );
+		
+		val = target.GetAbilityAttributeValue( 'AerondightEffect', 'maxStacks' );
+		m_maxCount = (int) val.valueAdditive;
+		val = target.GetAbilityAttributeValue( 'AerondightEffect', 'stackDrainDelay' );
+		m_aerondightDelay = val.valueAdditive;
+	}
+	
+	public function OnLoad( t : CActor, eff : W3EffectManager )
+	{
+		super.OnLoad( t, eff );
+		
+		LoadParams();
 	}
 	
 	event OnEffectRemoved()

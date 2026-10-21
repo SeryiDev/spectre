@@ -494,7 +494,7 @@
 2119657892|6a17eaf4||Uninstall
 2119657899|98f3ebae||Reset skill
 2119657898|bb0ef55c||<b>Only for a specific save.</b> Load the save you want to free of Spectre and use this option there, as Geralt.<br/><br/>
-2119657897|43f627fa||A new manual save was made. Close the game, uninstall Spectre and load that save: the game will give back the skill points.<br/>Don't keep playing before that. If you load the save with Spectre still installed, Spectre comes back.
+2119657897|43f627fa||A new manual save was made. Close the game, uninstall Spectre and load that save: the game will give back the skill points.<br/>Don't keep playing before that. If you load the save with Spectre still installed, Spectre comes back.<br/><font color="#3C8DC5"><b><u>Note</u></b>: also remove Spectre's lines from input.settings (Documents\The Witcher 3).</font>
 2119657896|3ad0992b||Spectre removed from this save
 2119657903|edbc8498||Several mutations at once
 2119657902|0001e604||<b><u>On</u></b>: once you close the shop, a merchant gets rid of what you sold, so it cannot be bought back.<br/><b><u>Off</u></b>: sold items stay for sale, as in the base game.<br/><font color="#3C8DC5"><b><u>Note</u></b>: this applies to everything except relic (orange) and witcher (green) weapons and armor, which stay for sale.</font>
