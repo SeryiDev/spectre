@@ -1,6 +1,6 @@
 # Spectre 1.0 on The Witcher 3 5.01: changes for the author
 
-Everything this port changed from Spectre v0.93 (for 4.04), for the author: logic, rebalance, new options, fixes, the bundle and how it is built. The player-facing summary is `CHANGELOG-5.01.md`. The in-game version is 1.0.
+Everything this port changed from Spectre v0.93 (for 4.04), for the author: logic, rebalance, new options, fixes, the bundle and how it is built. The player-facing summary is `CHANGELOG.md`. The in-game version is 1.0.
 
 What stays: Spectre's combat, signs, alchemy, enemy scaling, looting and its 10-rank skills. What is new: the 5.01 skills and effects Spectre never had, a choice between Spectre's skill tree and the 5.01 one, several menu options to turn Spectre's systems off one by one, a skill rebalance so every rank counts, and the fixes found while playtesting on 5.01.
 

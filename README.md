@@ -1,7 +1,7 @@
 ![spectre](https://github.com/user-attachments/assets/f348e704-7525-457a-8164-e32809758585)
 Next gen overhaul built upon concepts and design choices of Ghost Mode and Alchemy.
 
-This version is for The Witcher 3 Remastered 5.01. It starts from the v0.93 scripts. What changed is in `CHANGELOG-5.01.md`, and the full technical list for modders in `CHANGELOG-FOR-AUTHOR.md`.
+This version is for The Witcher 3 Remastered 5.01. It starts from the v0.93 scripts. What changed is in `CHANGELOG.md`, and the full technical list for modders in `CHANGELOG-FOR-AUTHOR.md`.
 
 ## Installation
 

@@ -410,7 +410,10 @@
 
 	if( IsReleased(action) )
 	{
-		if( theGame.alchexts.fire_src == 0 || theGame.alchexts.casual_alchemy
+		// Not fire_src == 0: L also fires MeditationRequest. Both opening the menu
+		// (or sit + open) flashes it shut. "No Fire Whatsoever" still meditates; the
+		// menu opens from OnMeditationRequest while seated. Casual alchemy uses PanelAlch.
+		if( theGame.alchexts.casual_alchemy
 			|| ent || FactsQuerySum("ACS_Meditation_Allow_Alchemy") > 0 )
 		{
 			PushAlchemyScreen();

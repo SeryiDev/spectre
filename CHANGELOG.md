@@ -1,8 +1,17 @@
 # Spectre CHANGELOG for The Witcher 3 5.01
 
+# 1.08
+
+## Fixes
+
+- With "Disable Meditation Requirements" on, L opens the alchemy menu at once, like the base game. It no longer sits Geralt down first, and the menu no longer flashes open and shut.
+- With "Alchemy Requires" set to "No Fire Whatsoever" and meditation still required, opening alchemy while meditating no longer flashes the menu shut.
+- Holding L to stand up from meditation no longer opens the alchemy menu when you release the key.
+
 # 1.07
 
 ## Fixes
+
 - A burning enemy reacts to hits again once half the burn has passed.
 - Yrden's trap shows the extra effects and the center rune.
 - Aard with the sixth mutation puts out lights, freezes swarms and breaks destructible objects.
@@ -24,12 +33,14 @@
 # 1.06
 
 ## Fixes
+
 - After "Remove Spectre from this save", the message also reminds you to remove Spectre's lines from input.settings.
 - True Aerondight Uncapped no longer stops the scripts from compiling. Its uncapped damage bonus still does nothing: Spectre's Aerondight has no permanent damage bonus. Spectre's Aerondight is unchanged.
 
 # 1.05
 
 ## Fixes
+
 - With "Alchemy Requires" set to "No Fire Whatsoever", brewing needs meditation again, unless "Disable Meditation Requirements" is on.
 - Minor Set Bonus no longer stops the scripts from compiling. Its set bonuses don't work with Spectre, which has its own.
 - Well Hydrated: a weaker drink no longer replaces the effect of a better one. An equal or better drink adds to it, as in the base game.
@@ -38,12 +49,14 @@
 # 1.04
 
 ## Fixes
+
 - Sort Everything compiles with Spectre. Spectre's alchemy menu works as before and keeps its own order.
 - Other mods can change the item selection list again (for example, Sort Everything's sorting when picking a quick slot item).
 
 # 1.03
 
 ## Fixes
+
 - Options added in 5.01 apply as soon as you change them in the menu again: combat style, target lock, camera, jump and landing, weightless items, auto-heal, accessibility, mods on or off, path tracing and frame generation, among others.
 - Other mods' options react in the menu again (presets, live previews), whatever their load order.
 - Sword FX Remaster compiles with Spectre.
@@ -51,12 +64,14 @@
 # 1.02
 
 ## Fixes
+
 - Make Spectre's alchemy menu wrappable by other mods
 - Living Economy now compiles with Spectre. In Spectre's alchemy menu, buying a missing ingredient uses Living Economy's price; the ingredient's tooltip doesn't show it, and Spectre's vanilla alchemy package doesn't use Living Economy's prices.
 
 # 1.01
 
 ## Fixes
+
 - After "Remove Spectre from this save", the save loaded without Spectre has every skill at rank 0. The free starter skills kept a rank before.
 - A new game no longer hands Geralt the starting swords and armor during the intro, so he does not wear his swords in the bath scene. The prologue dresses him, as in the base game.
 - Switching between Spectre's alchemy and the vanilla alchemy package no longer removes items from the inventory.
@@ -139,10 +154,8 @@ These belonged to the old 4.04 skill menu, which 5.01 replaced. They could come 
 ## Fixes
 
 - Removing Spectre no longer ruins the save, if you use "Remove Spectre from this save" first. Before, a save loaded without Spectre lost the skill tree, the skills and the stats.
-
 - Opening a container no longer flashes the loot window with sample items.
 - Starting directly in Hearts of Stone or Blood and Wine teaches the recipe of every potion, bomb and oil the starting kit gives (Thunderbolt, Black Blood, Full Moon and others). Spectre does not refill potions at meditation, so they could not be made again.
 - A new game started after loading another save no longer inherits that save's mutations (and the skill slots they opened).
 - Far-Reaching Aard shows its whole effect.
 - The Wolf Hour tooltip shows its real duration (1 hour), not 240 seconds.
-- Living Economy compiles with Spectre. Buying a missing ingredient in the alchemy menu pays its price.

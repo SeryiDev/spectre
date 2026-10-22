@@ -1,6 +1,6 @@
 function spectreGetVersion() : float
 {
-	return 1.07;
+	return 1.08;
 }
 
 function spectreSettingsGetConfigValue(menuName, menuItemName : name) : string
@@ -2062,11 +2062,16 @@ state spectreAlchemyBrewing in W3PlayerWitcher extends MeditationBase
 
 	public function OpenAlchemyMenu()
 	{	
-		if (!ready_for_alchemy)
+		if (!ready_for_alchemy || end_session)
 			return ;
 		if (parent.IsActionAllowed(EIAB_OpenAlchemy) )
 			theGame.RequestMenuWithBackground('AlchemyMenu', 'CommonMenu');
 		else thePlayer.DisplayActionDisallowedHudMessage(EIAB_OpenAlchemy);
+	}
+
+	public function IsEndingSession() : bool
+	{
+		return end_session;
 	}
 
 	private entry function BeginSession()
@@ -2524,8 +2529,9 @@ class SpectreAlchemyExtensions extends SpectreAlchemyExtensionsConfig
 	private var activation_time : float;
 	event OnMeditationRequest(action : SInputAction) : void
 	{
-		// Alchemy 5.01 variant: no brewing pose; alchemy opens from the menu, as in 5.01.
-		if (spectreAlchemy501())
+		var brewing : W3PlayerWitcherStatespectreAlchemyBrewing;
+
+		if (spectreAlchemy501() || casual_alchemy)
 			return false;
 
 		if (theGame.GetDLCManager().IsDLCAvailable('dlc_eh') 
@@ -2553,11 +2559,13 @@ class SpectreAlchemyExtensions extends SpectreAlchemyExtensionsConfig
 				case 'ExplorationMeditation':
 				case 'MeditationWaiting':
 				case 'Meditation':
-					player.GetInputHandler().PushAlchemyScreen();
+					if (activation_time < 0.2f)
+						player.GetInputHandler().PushAlchemyScreen();
 				break ;
 				case 'spectreAlchemyBrewing':
-					if (activation_time < 0.2f)
-						((W3PlayerWitcherStatespectreAlchemyBrewing)player.GetCurrentState() ).OpenAlchemyMenu();
+					brewing = (W3PlayerWitcherStatespectreAlchemyBrewing)player.GetCurrentState();
+					if (activation_time < 0.2f && brewing && !brewing.IsEndingSession())
+						brewing.OpenAlchemyMenu();
 				break ;
 				case 'spectreAlchemyBrewingPostState':
 				case 'Swimming':
