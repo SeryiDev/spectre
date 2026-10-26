@@ -1,0 +1,1189 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+<definitions>
+
+<!-- ######################## ABILITY DEFINITIONS ######################## -->
+
+<abilities>
+
+<!-- PANTS LIGHT -->
+	<ability name="Pants 01_crafted _Stats"> <!-- Hunting Trousers - q2, lvl 4 -->
+		<weight							type="base"	min="1.5"				/>
+		<quality						type="add"	min="2"					/>
+		<armor							type="base"	min="13"				/>
+		<slashing_resistance_perc		type="base"	min="0.04"				/>
+		<piercing_resistance_perc		type="base"	min="0.02"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.02"				/>
+		<rending_resistance_perc		type="base" min="0.04"				/>
+		<elemental_resistance_perc		type="base" min="0.04"				/>
+		<staminaRegen_armor_mod 		type="mult" min="0.01"				/>
+		<bleeding_resistance_perc		type="base" min="0.05"				/>
+	</ability>
+
+	<ability name="Pants 03_crafted _Stats"> <!-- Tracker's Trousers - q3, lvl 8, 1 slot -->
+		<weight							type="base"	min="1.5"				/>
+		<quality						type="add"	min="3"					/>
+		<armor							type="base"	min="21"				/>
+		<slashing_resistance_perc		type="base"	min="0.04"				/>
+		<piercing_resistance_perc		type="base"	min="0.02"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.02"				/>
+		<rending_resistance_perc		type="base" min="0.04"				/>
+		<elemental_resistance_perc		type="base" min="0.04"				/>
+		<staminaRegen_armor_mod 		type="mult" min="0.01"				/>
+		<poison_resistance_perc			type="base" min="0.05"				/>
+	</ability>
+	
+<!-- Relic -->
+	<ability name="Pants 04_crafted _Stats"> <!-- Assassin's Trousers - q4, lvl 15, 2 slots -->
+		<weight							type="base"	min="1.5"				/>
+		<quality						type="add"	min="4"					/>
+		<armor							type="base"	min="35"				/>
+		<slashing_resistance_perc		type="base"	min="0.05"				/>
+		<piercing_resistance_perc		type="base"	min="0.03"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+		<rending_resistance_perc		type="base" min="0.05"				/>
+		<elemental_resistance_perc		type="base" min="0.05"				/>
+		<staminaRegen_armor_mod 		type="mult" min="0.01"				/>
+		<focus_gain						type="add" min="0.06" max="0.06"	/>
+	</ability>
+
+<!-- Medium -->
+	<ability name="Pants 02_crafted _Stats"> <!-- Cavalry Trousers - q2, lvl 6 -->
+		<weight							type="base"	min="3.5"				/>
+		<quality						type="add"	min="2"					/>
+		<armor							type="base"	min="17"				/>
+		<slashing_resistance_perc		type="base"	min="0.06"				/>
+		<piercing_resistance_perc		type="base"	min="0.03"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+		<rending_resistance_perc		type="base" min="0.06"				/>
+		<elemental_resistance_perc		type="base" min="0.06"				/>
+		<vitality						type="base"	min="150"				/>
+	</ability>
+
+	<ability name="Heavy pants 02_crafted _Stats"> <!-- Sapper's Trousers - q3, lvl 10, 1 slot -->
+		<weight							type="base"	min="3.5"				/>
+		<quality						type="add"	min="3"					/>
+		<armor							type="base"	min="25"				/>
+		<slashing_resistance_perc		type="base"	min="0.06"				/>
+		<piercing_resistance_perc		type="base"	min="0.03"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+		<rending_resistance_perc		type="base" min="0.06"				/>
+		<elemental_resistance_perc		type="base" min="0.06"				/>
+		<burning_resistance_perc		type="base" min="0.05"				/>
+	</ability>
+	
+<!-- PANTS HEAVY -->	
+	<ability name="Heavy pants 01_crafted _Stats"> <!-- Axeman's Trousers - q2, lvl 5 -->
+		<weight							type="base"	min="6.0"				/>
+		<quality						type="add"	min="2"					/>
+		<armor							type="base"	min="15"				/>
+		<slashing_resistance_perc		type="base"	min="0.08"				/>
+		<piercing_resistance_perc		type="base"	min="0.08"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.08"				/>
+		<rending_resistance_perc		type="base" min="0.08"				/>
+		<elemental_resistance_perc		type="base" min="0.08"				/>
+		<staminaRegen_armor_mod 		type="mult" min="-0.05"				/>
+		<focus_gain						type="add"	min="0.04"				/>
+	</ability>
+	
+	<ability name="Heavy pants 03_crafted _Stats"> <!-- Lyrian Hardened Leather Trousers - q3, lvl 12, 1 slot -->
+		<weight							type="base"	min="7.0"				/>
+		<quality						type="add"	min="3"					/>
+		<armor							type="base"	min="29"				/>
+		<slashing_resistance_perc		type="base"	min="0.09"				/>
+		<piercing_resistance_perc		type="base"	min="0.09"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+		<rending_resistance_perc		type="base" min="0.09"				/>
+		<elemental_resistance_perc		type="base" min="0.09"				/>
+		<staminaRegen_armor_mod 		type="mult" min="-0.05"				/>
+		<spell_power_quen				type="mult"	min="0.05"				/>
+	</ability>
+	
+<!-- Relic -->
+	<ability name="Heavy pants 04_crafted _Stats"> <!-- Mahakaman Trousers - q4, lvl 16, 2 slots -->
+		<weight							type="base"	min="7.0"				/>
+		<quality						type="add"	min="4"					/>
+		<armor							type="base"	min="37"				/>
+		<slashing_resistance_perc		type="base"	min="0.09"				/>
+		<piercing_resistance_perc		type="base"	min="0.09"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+		<rending_resistance_perc		type="base" min="0.09"				/>
+		<elemental_resistance_perc		type="base" min="0.09"				/>
+		<staminaRegen_armor_mod 		type="mult" min="-0.025"			/>
+		<vitality 						type="base" min="200" max="200"		/>
+	</ability>
+
+<!-- PANTS WITCHER LYNX: 4% to attack power + 2% per level, up to 10% attack power bonus -->
+	<ability name="Lynx Pants 1 _Stats"> <!-- lvl 19 -> 17  -->
+		<weight 						type="base" min="1" 				/>
+		<quality 						type="add" 	min="5" 	max="5" 	/>
+		<armor 							type="base" min="39" 	max="39" 	/>
+		<slashing_resistance_perc		type="base"	min="0.05"				/>
+		<piercing_resistance_perc		type="base"	min="0.03"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+		<rending_resistance_perc		type="base" min="0.05"				/>
+		<elemental_resistance_perc		type="base" min="0.05"				/>
+		<attack_power					type="mult"	min="0.04"				/>
+		<staminaRegen_armor_mod			type="mult"	min="0.01"				/>
+	</ability>
+
+	<ability name="Lynx Pants 2 _Stats"> <!-- lvl 25 -> 23  -->
+		<weight 						type="base" min="1" 				/>
+		<quality 						type="add" 	min="5" 	max="5" 	/>
+		<armor 							type="base" min="51"	max="51" 	/>
+		<slashing_resistance_perc		type="base"	min="0.05"				/>
+		<piercing_resistance_perc		type="base"	min="0.03"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+		<rending_resistance_perc		type="base" min="0.05"				/>
+		<elemental_resistance_perc		type="base" min="0.05"				/>
+		<attack_power					type="mult"	min="0.06"				/>
+		<staminaRegen_armor_mod			type="mult"	min="0.01"				/>
+	</ability>
+	
+	<ability name="Lynx Pants 3 _Stats"> <!-- lvl 31 -> 29  -->
+		<weight 						type="base" min="1" 				/>
+		<quality 						type="add" 	min="5" 	max="5" 	/>
+		<armor 							type="base" min="63"	max="63" 	/>
+		<slashing_resistance_perc		type="base"	min="0.05"				/>
+		<piercing_resistance_perc		type="base"	min="0.03"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+		<rending_resistance_perc		type="base" min="0.05"				/>
+		<elemental_resistance_perc		type="base" min="0.05"				/>
+		<attack_power					type="mult"	min="0.08"				/>
+		<staminaRegen_armor_mod			type="mult"	min="0.01"				/>
+	</ability>
+	
+	<ability name="Lynx Pants 4 _Stats"> <!-- lvl 36 -> 34  -->
+		<weight 						type="base" min="1" 				/>
+		<quality 						type="add" 	min="5" 	max="5" 	/>
+		<armor 							type="base" min="73"	max="73" 	/>
+		<slashing_resistance_perc		type="base"	min="0.05"				/>
+		<piercing_resistance_perc		type="base"	min="0.03"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+		<rending_resistance_perc		type="base" min="0.05"				/>
+		<elemental_resistance_perc		type="base" min="0.05"				/>
+		<attack_power					type="mult"	min="0.10"				/>
+		<staminaRegen_armor_mod			type="mult"	min="0.01"				/>
+	</ability>
+
+<!-- PANTS WITCHER GRYPHON: 4% to spell power + 2% per level, up to 10% spell power bonus -->
+	<ability name="Gryphon Pants 1 _Stats"> <!-- lvl 13 -> 11  -->
+		<weight 						type="base" min="3" 				/>
+		<quality 						type="add" 	min="5" 	max="5" 	/>
+		<armor 							type="base" min="27" 	max="27" 	/>
+		<slashing_resistance_perc		type="base"	min="0.07"				/>
+		<piercing_resistance_perc		type="base"	min="0.04"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+		<rending_resistance_perc		type="base" min="0.07"				/>
+		<elemental_resistance_perc		type="base" min="0.07"				/>
+		<spell_power					type="mult"	min="0.04"				/>
+	</ability>
+
+	<ability name="Gryphon Pants 2 _Stats"> <!-- lvl 20 -> 18  -->
+		<weight 						type="base" min="3" 				/>
+		<quality 						type="add" 	min="5" 	max="5"		/>
+		<armor 							type="base"	min="41" 	max="41"	/>
+		<slashing_resistance_perc		type="base"	min="0.07"				/>
+		<piercing_resistance_perc		type="base"	min="0.04"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+		<rending_resistance_perc		type="base" min="0.07"				/>
+		<elemental_resistance_perc		type="base" min="0.07"				/>
+		<spell_power					type="mult"	min="0.06"				/>
+	</ability>
+	
+	<ability name="Gryphon Pants 3 _Stats"> <!-- lvl 28 -> 26  -->
+		<weight 						type="base" min="3" 				/>
+		<quality 						type="add" 	min="5" 	max="5"		/>
+		<armor 							type="base"	min="57" 	max="57"	/>
+		<slashing_resistance_perc		type="base"	min="0.07"				/>
+		<piercing_resistance_perc		type="base"	min="0.04"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+		<rending_resistance_perc		type="base" min="0.07"				/>
+		<elemental_resistance_perc		type="base" min="0.07"				/>
+		<spell_power					type="mult"	min="0.08"				/>
+	</ability>
+	
+	<ability name="Gryphon Pants 4 _Stats"> <!-- lvl 36 -> 34  -->
+		<weight 						type="base" min="3" 				/>
+		<quality 						type="add" 	min="5" 	max="5"		/>
+		<armor 							type="base"	min="73" 	max="73"	/>
+		<slashing_resistance_perc		type="base"	min="0.07"				/>
+		<piercing_resistance_perc		type="base"	min="0.04"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+		<rending_resistance_perc		type="base" min="0.07"				/>
+		<elemental_resistance_perc		type="base" min="0.07"				/>
+		<spell_power					type="mult"	min="0.10"				/>
+	</ability>
+
+<!-- PANTS WITCHER BEAR: 4% to focus gain + 2% per level, up to 10% focus gain bonus -->	
+	<ability name="Bear Pants 1 _Stats"> <!-- lvl 22 -> 20 -->
+		<weight 						type="base"	min="5" 				/>
+		<quality 						type="add"	min="5"		max="5"		/>
+		<armor 							type="base"	min="45" 	max="45" 	/>
+		<slashing_resistance_perc		type="base"	min="0.09"				/>
+		<piercing_resistance_perc		type="base"	min="0.09"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+		<rending_resistance_perc		type="base" min="0.09"				/>
+		<elemental_resistance_perc		type="base" min="0.09"				/>
+		<focus_gain 					type="base" min="0.04" 				/>
+		<staminaRegen_armor_mod 		type="mult"	min="-0.025" 			/>
+	</ability>
+
+	<ability name="Bear Pants 2 _Stats"> <!-- lvl 27 -> 25 -->
+		<weight 						type="base"	min="5" 				/>
+		<quality 						type="add" 	min="5" 	max="5" 	/>
+		<armor 							type="base" min="55" 	max="55"	/>
+		<slashing_resistance_perc		type="base"	min="0.09"				/>
+		<piercing_resistance_perc		type="base"	min="0.09"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+		<rending_resistance_perc		type="base" min="0.09"				/>
+		<elemental_resistance_perc		type="base" min="0.09"				/>
+		<focus_gain 					type="base" min="0.06" 				/>
+		<staminaRegen_armor_mod 		type="mult"	min="-0.025" 			/>
+	</ability>
+	
+	<ability name="Bear Pants 3 _Stats"> <!-- lvl 32 -> 30 -->
+		<weight 						type="base"	min="5" 				/>
+		<quality 						type="add" 	min="5" 	max="5" 	/>
+		<armor 							type="base" min="65" 	max="65"	/>
+		<slashing_resistance_perc		type="base"	min="0.09"				/>
+		<piercing_resistance_perc		type="base"	min="0.09"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+		<rending_resistance_perc		type="base" min="0.09"				/>
+		<elemental_resistance_perc		type="base" min="0.09"				/>
+		<focus_gain 					type="base" min="0.08" 				/>
+		<staminaRegen_armor_mod 		type="mult"	min="-0.025" 			/>
+	</ability>
+	
+	<ability name="Bear Pants 4 _Stats"> <!-- lvl 36 -> 34 -->
+		<weight 						type="base"	min="5" 				/>
+		<quality 						type="add" 	min="5" 	max="5" 	/>
+		<armor 							type="base" min="73" 	max="73"	/>
+		<slashing_resistance_perc		type="base"	min="0.09"				/>
+		<piercing_resistance_perc		type="base"	min="0.09"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+		<rending_resistance_perc		type="base" min="0.09"				/>
+		<elemental_resistance_perc		type="base" min="0.09"				/>
+		<focus_gain 					type="base" min="0.10" 				/>
+		<staminaRegen_armor_mod 		type="mult"	min="-0.025" 			/>
+	</ability>
+
+<!-- modSpectre: Kaer Morhen Pants -->
+	<ability name="Kaer Morhen Pants _Stats"> <!-- lvl 2  -->
+		<weight 						type="base" min="3" 				/>
+		<quality 						type="add" 	min="5" 	max="5" 	/>
+		<armor 							type="base" min="9" 	max="9" 	/>
+		<slashing_resistance_perc		type="base"	min="0.06"				/>
+		<piercing_resistance_perc		type="base"	min="0.03"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+		<rending_resistance_perc		type="base" min="0.06"				/>
+		<elemental_resistance_perc		type="base" min="0.06"				/>
+	</ability>
+
+	<ability name="Kaer Morhen Pants 1 _Stats"> <!-- lvl 9  -->
+		<weight 						type="base" min="3" 				/>
+		<quality 						type="add" 	min="5" 	max="5"		/>
+		<armor 							type="base"	min="23" 	max="23"	/>
+		<slashing_resistance_perc		type="base"	min="0.07"				/>
+		<piercing_resistance_perc		type="base"	min="0.04"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+		<rending_resistance_perc		type="base" min="0.07"				/>
+		<elemental_resistance_perc		type="base" min="0.07"				/>
+	</ability>
+	
+	<ability name="Kaer Morhen Pants 2 _Stats"> <!-- lvl 19  -->
+		<weight 						type="base" min="3" 				/>
+		<quality 						type="add" 	min="5" 	max="5"		/>
+		<armor 							type="base"	min="43" 	max="43"	/>
+		<slashing_resistance_perc		type="base"	min="0.08"				/>
+		<piercing_resistance_perc		type="base"	min="0.05"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.05"				/>
+		<rending_resistance_perc		type="base" min="0.08"				/>
+		<elemental_resistance_perc		type="base" min="0.08"				/>
+	</ability>
+	
+	<ability name="Kaer Morhen Pants 3 _Stats"> <!-- lvl 27  -->
+		<weight 						type="base" min="3" 				/>
+		<quality 						type="add" 	min="5" 	max="5"		/>
+		<armor 							type="base"	min="59" 	max="59"	/>
+		<slashing_resistance_perc		type="base"	min="0.09"				/>
+		<piercing_resistance_perc		type="base"	min="0.06"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.06"				/>
+		<rending_resistance_perc		type="base" min="0.09"				/>
+		<elemental_resistance_perc		type="base" min="0.09"				/>
+	</ability>
+
+</abilities>
+
+<items>
+<!-- ######################## Geralt pants definitions ######################## -->
+
+<!-- PANTS LIGHT -->
+	<item
+		name							="Pants 01_crafted"
+		category						="pants"
+		price							="70"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__common_light_lvl1"
+		localisation_key_name			="item_name_pants_01"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_pants_lvl1_64x128.png"
+	>
+		<tags>							Armor, LightArmor, mod_armor, DoNotEnhance
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Pants 01_crafted _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Silk</parts>
+										<parts count="1">Leather squares</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__common_light_lvl1" category="boots"></variant>
+		</variants>
+	</item>
+
+<!-- Pants 2-->
+	<item
+		name							="Pants 02_crafted"
+		category						="pants"
+		price							="126"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__common_light_lvl2"
+		localisation_key_name			="item_name_pants_02"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/skellige_casual_pants_01_64x128.png"
+	>
+		<tags>							Armor, MediumArmor, mod_armor, DoNotEnhance
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Pants 02_crafted _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Dark steel ingot</parts>
+										<parts count="2">Leather squares</parts>
+										<parts count="1">Linen</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__common_light_lvl2" category="boots"></variant>
+		</variants>
+	</item>
+	
+<!-- Pants 3-->
+	<item
+		name							="Pants 03_crafted"
+		category						="pants"
+		price							="165"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__common_light_lvl3"
+		localisation_key_name			="item_name_pants_03"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_pants_lvl3_64x128.png"
+	>
+		<tags>							Armor, LightArmor, mod_armor, DoNotEnhance
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Pants 03_crafted _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Silver ingot</parts>
+										<parts count="1">Silk</parts>
+										<parts count="1">Thread</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__common_light_lvl3" category="boots"></variant>
+		</variants>
+	</item>
+	
+<!-- Pants 4-->
+	<item
+		name							="Pants 04_crafted"
+		category						="pants"
+		price							="250"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="2"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__common_light_lvl4"
+		localisation_key_name			="item_name_pants_04"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_pants_lvl4_64x128.png"
+	>
+		<tags>							Armor, LightArmor, mod_armor, DoNotEnhance, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Pants 04_crafted _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+										<parts count="1">Leather squares</parts>
+										<parts count="1">Silk</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__common_light_lvl4" category="boots"></variant>
+		</variants>
+	</item>
+	
+<!-- PANTS HEAVY -->
+	<item
+		name							="Heavy pants 01_crafted"
+		category						="pants"
+		price							="189"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__common_heavy_lvl1"
+		localisation_key_name			="item_name_heavy_pants_01"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_pants_lvl1_64x128.png"
+	>
+		<tags>							Armor, HeavyArmor, mod_armor, DoNotEnhance
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Heavy pants 01_crafted _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Dark steel ingot</parts>
+										<parts count="2">Leather</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__common_heavy_lvl1" category="boots"></variant>
+		</variants>
+	</item>
+	
+<!-- Heavy pants 2-->
+	<item
+		name							="Heavy pants 02_crafted"
+		category						="pants"
+		price							="255"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__common_heavy_lvl2"
+		localisation_key_name			="item_name_heavy_pants_02"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_pants_lvl1_64x128.png"
+	>
+		<tags>							Armor, MediumArmor, mod_armor, DoNotEnhance
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Heavy pants 02_crafted _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+										<parts count="1">Leather</parts>
+										<parts count="1">Silk</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__common_heavy_lvl2" category="boots"></variant>
+		</variants>
+	</item>
+	
+<!-- Heavy pants 3-->
+	<item
+		name							="Heavy pants 03_crafted"
+		category						="pants"
+		price							="318"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__common_heavy_lvl3"
+		localisation_key_name			="item_name_heavy_pants_03"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_pants_lvl4_64x128.png"
+	>
+		<tags>							Armor, HeavyArmor, mod_armor, DoNotEnhance
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Heavy pants 03_crafted _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+										<parts count="1">Dark steel ingot</parts>
+										<parts count="2">Leather</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__common_heavy_lvl3" category="boots"></variant>
+		</variants>
+	</item>
+
+<!-- Heavy pants 4-->
+	<item
+		name							="Heavy pants 04_crafted"
+		category						="pants"
+		price							="475"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="2"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__common_heavy_lvl4"
+		localisation_key_name			="item_name_heavy_pants_04"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_pants_lvl4_64x128.png"
+	>
+		<tags>							Armor, HeavyArmor, mod_armor, DoNotEnhance, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Heavy pants 04_crafted _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="2">Glowing ingot</parts>
+										<parts count="1">Silver ingot</parts>
+										<parts count="2">Leather</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__common_heavy_lvl4" category="boots"></variant>
+		</variants>
+	</item>
+	
+<!-- PANTS WITCHER LYNX -->
+	<item
+		name							="Lynx Pants 1"
+		category						="pants"
+		price							="252"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__lynx_lvl1"
+		localisation_key_name			="item_name_lynx_pants_1"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/lynx_pants.png"
+	>
+		<tags>							Armor, LightArmor, LynxSetMinor, mod_armor, DoNotEnhance, mod_legendary, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Lynx Pants 1 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Silk</parts>
+										<parts count="1">Monstrous hide</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+										<item_cond name="Body torso wet" collapse="false"/>
+										<item_cond name="Body torso towel" collapse="false"/>
+										<item_cond name="Body torso 01" collapse="false"/>
+										<item_cond name="Geralt Shirt" collapse="false"/>
+										<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__lynx_lvl1" category="boots"></variant>
+		</variants>
+	</item>
+	
+<!-- Upgrade -->
+	<item
+		name							="Lynx Pants 2"
+		category						="pants"
+		price							="499"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__lynx_lvl1"
+		localisation_key_name			="item_name_lynx_pants_2"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/lynx_pants.png"
+	>
+		<tags>							Armor, LightArmor, LynxSetMinor, mod_armor, DoNotEnhance, mod_legendary, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Lynx Pants 2 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Silk</parts>
+										<parts count="1">Monstrous hide</parts>
+										<parts count="1">Chitin scale</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+										<item_cond name="Body torso wet" collapse="false"/>
+										<item_cond name="Body torso towel" collapse="false"/>
+										<item_cond name="Body torso 01" collapse="false"/>
+										<item_cond name="Geralt Shirt" collapse="false"/>
+										<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__lynx_lvl1" category="boots"></variant>
+		</variants>
+	</item>
+	
+<!-- Upgrade -->
+	<item
+		name							="Lynx Pants 3"
+		category						="pants"
+		price							="762"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="2"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__lynx_lvl2"
+		localisation_key_name			="item_name_lynx_pants_3"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/lynx_pants_1.png"
+	>
+		<tags>							Armor, LightArmor, LynxSetMinor, mod_armor, DoNotEnhance, mod_legendary, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Lynx Pants 3 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Silk</parts>
+										<parts count="1">Monstrous hide</parts>
+										<parts count="2">Chitin scale</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__lynx_lvl2" category="boots"></variant>
+		</variants>
+
+	</item>
+
+<!-- Upgrade -->
+	<item
+		name							="Lynx Pants 4"
+		category						="pants"
+		price							="1114"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="2"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__lynx_lvl2"
+		localisation_key_name			="item_name_lynx_pants_4"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/lynx_pants_1.png"
+	>
+		<tags>							Armor, LightArmor, LynxSetMinor, mod_armor, DoNotEnhance, mod_legendary, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Lynx Pants 4 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Silk</parts>
+										<parts count="1">Monstrous hide</parts>
+										<parts count="2">Chitin scale</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__lynx_lvl2" category="boots"></variant>
+		</variants>
+
+	</item>
+	
+<!-- PANTS WITCHER GRYPHON -->
+	<item
+		name							="Gryphon Pants 1"
+		category						="pants"
+		price							="273"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__gryphon_lvl1"
+		localisation_key_name			="item_name_gryphon_pants_1"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/gryphon_pants_lvl1_64x128.png"
+	>
+		<tags>							Armor, MediumArmor,GryphonSetMinor, mod_armor, DoNotEnhance, mod_legendary, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Gryphon Pants 1 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Leather</parts>
+										<parts count="1">Monstrous hide</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__gryphon_lvl1" category="boots"></variant>
+		</variants>
+	</item>
+
+<!-- Upgrade -->
+	<item
+		name							="Gryphon Pants 2"
+		category						="pants"
+		price							="610"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__gryphon_lvl1"
+		localisation_key_name			="item_name_gryphon_pants_2"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/gryphon_pants_lvl1_64x128.png"
+	>
+		<tags>							Armor, MediumArmor,GryphonSetMinor, mod_armor, DoNotEnhance, mod_legendary, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Gryphon Pants 2 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Leather</parts>
+										<parts count="1">Monstrous hide</parts>
+										<parts count="1">Chitin scale</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__gryphon_lvl1" category="boots"></variant>
+		</variants>
+	</item>
+	
+<!-- Upgrade -->
+	<item
+		name							="Gryphon Pants 3"
+		category						="pants"
+		price							="975"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="2"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__gryphon_lvl2"
+		localisation_key_name			="item_name_gryphon_pants_3"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/gryphon_pants_lvl2_64x128.png"
+	>
+		<tags>							Armor, MediumArmor, GryphonSetMinor, mod_armor, DoNotEnhance, mod_legendary, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Gryphon Pants 3 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Leather</parts>
+										<parts count="1">Monstrous hide</parts>
+										<parts count="2">Chitin scale</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__gryphon_lvl2" category="boots"></variant>
+		</variants>
+	</item>
+	
+<!-- Upgrade -->
+	<item
+		name							="Gryphon Pants 4"
+		category						="pants"
+		price							="1642"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="2"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__gryphon_lvl2"
+		localisation_key_name			="item_name_gryphon_pants_4"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/gryphon_pants_lvl2_64x128.png"
+	>
+		<tags>							Armor, MediumArmor, GryphonSetMinor, mod_armor, DoNotEnhance, mod_legendary, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Gryphon Pants 4 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Leather</parts>
+										<parts count="1">Monstrous hide</parts>
+										<parts count="2">Chitin scale</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__gryphon_lvl2" category="boots"></variant>
+		</variants>
+	</item>
+
+<!-- PANTS WITCHER BEAR -->
+	<item
+		name							="Bear Pants 1"
+		category						="pants"
+		price							="379"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__bear_lvl1"
+		localisation_key_name			="item_name_bear_pants_1"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/l_01_mg__bear_lvl1_64x128.png"
+	>
+		<tags>							Armor, HeavyArmor, BearSetMinor, mod_armor, DoNotEnhance, mod_legendary, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Bear Pants 1 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Leather</parts>
+										<parts count="1">Silver ingot</parts>
+										<parts count="1">Chitin scale</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__bear_lvl1" category="boots"></variant>
+		</variants>
+	</item>
+
+<!-- Upgrade -->
+	<item
+		name							="Bear Pants 2"
+		category						="pants"
+		price							="799"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__bear_lvl1"
+		localisation_key_name			="item_name_bear_pants_2"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/l_01_mg__bear_lvl1_64x128.png"
+	>
+		<tags>							Armor, HeavyArmor, BearSetMinor, mod_armor, DoNotEnhance, mod_legendary, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Bear Pants 2 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Leather</parts>
+										<parts count="1">Silver ingot</parts>
+										<parts count="1">Meteorite silver ingot</parts>
+										<parts count="1">Chitin scale</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__bear_lvl1" category="boots"></variant>
+		</variants>
+	</item>
+	
+<!-- Upgrade -->
+	<item
+		name							="Bear Pants 3"
+		category						="pants"
+		price							="1392"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="2"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__bear_lvl2"
+		localisation_key_name			="item_name_bear_pants_3"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/l_01_mg__bear_lvl2.png"
+	>
+		<tags>							Armor, HeavyArmor, BearSetMinor, mod_armor, DoNotEnhance, mod_legendary, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Bear Pants 3 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Leather</parts>
+										<parts count="1">Silver ingot</parts>
+										<parts count="1">Dwimeryte ingot</parts>
+										<parts count="1">Chitin scale</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__bear_lvl2" category="boots"></variant>
+		</variants>
+	</item>
+	
+<!-- Upgrade -->
+	<item
+		name							="Bear Pants 4"
+		category						="pants"
+		price							="2388"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="2"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__bear_lvl2"
+		localisation_key_name			="item_name_bear_pants_4"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/l_01_mg__bear_lvl2.png"
+	>
+		<tags>							Armor, HeavyArmor, BearSetMinor, mod_armor, DoNotEnhance, mod_legendary, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Bear Pants 4 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Leather</parts>
+										<parts count="1">Silver ingot</parts>
+										<parts count="1">Dwimeryte ingot</parts>
+										<parts count="1">Monstrous plate</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__bear_lvl2" category="boots"></variant>
+		</variants>
+	</item>
+
+<!-- modSpectre: Kaer Morhen Pants -->
+	<item
+		name							="Kaer Morhen Pants"
+		category						="pants"
+		price							="75"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__viper_lvl3"
+		localisation_key_name			="item_name_kaer_morhen_pants"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/trousers-01.png"
+	>
+		<tags>							Armor, MediumArmor, KaerMorhenSet, mod_armor, DoNotEnhance, mod_legendary, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Kaer Morhen Pants _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Linen</parts>
+										<parts count="1">Leather squares</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>				
+										<variant equip_template="l_01a_mg__viper_lvl3" category="boots"></variant>
+		</variants>
+	</item>
+
+<!-- Upgrade -->
+	<item
+		name							="Kaer Morhen Pants 1"
+		category						="pants"
+		price							="225"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__viper_lvl3"
+		localisation_key_name			="item_name_kaer_morhen_pants_1"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/trousers-01.png"
+	>
+		<tags>							Armor, MediumArmor, KaerMorhenSet, mod_armor, DoNotEnhance, mod_legendary, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Kaer Morhen Pants 1 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Linen</parts>
+										<parts count="1">Leather</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>				
+										<variant equip_template="l_01a_mg__viper_lvl3" category="boots"></variant>
+		</variants>
+	</item>
+	
+<!-- Upgrade -->
+	<item
+		name							="Kaer Morhen Pants 2"
+		category						="pants"
+		price							="500"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="2"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__viper_lvl3"
+		localisation_key_name			="item_name_kaer_morhen_pants_2"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/trousers-01.png"
+	>
+		<tags>							Armor, MediumArmor, KaerMorhenSet, mod_armor, DoNotEnhance, mod_legendary, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Kaer Morhen Pants 2 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Silk</parts>
+										<parts count="1">Hardened leather</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>				
+										<variant equip_template="l_01a_mg__viper_lvl3" category="boots"></variant>
+		</variants>
+	</item>
+	
+<!-- Upgrade -->
+	<item
+		name							="Kaer Morhen Pants 3"
+		category						="pants"
+		price							="850"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="2"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__viper_lvl3"
+		localisation_key_name			="item_name_kaer_morhen_pants_3"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/trousers-01.png"
+	>
+		<tags>							Armor, MediumArmor, KaerMorhenSet, mod_armor, DoNotEnhance, mod_legendary, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Kaer Morhen Pants 3 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Silk</parts>
+										<parts count="1">Hardened leather</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>				
+										<variant equip_template="l_01a_mg__viper_lvl3" category="boots"></variant>
+		</variants>
+	</item>
+
+</items>
+
+</definitions>
+</redxml>

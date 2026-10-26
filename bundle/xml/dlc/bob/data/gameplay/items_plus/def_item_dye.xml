@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+<definitions>
+
+<!-- ######################## ABILITY DEFINITIONS ######################## -->
+<abilities>
+	<ability name="Dye Default Color">
+		<item_color						type="base"	min="0"				/>
+	</ability>
+
+	<ability name="Dye Black Color">
+		<item_color						type="base"	min="1"				/>
+	</ability>
+	
+	<ability name="Dye Blue Color">
+		<item_color						type="base"	min="2"				/>
+	</ability>
+	
+	<ability name="Dye Brown Color">
+		<item_color						type="base"	min="3"				/>
+	</ability>
+	
+	<ability name="Dye Gray Color">
+		<item_color						type="base"	min="4"				/>
+	</ability>
+	
+	<ability name="Dye Green Color">
+		<item_color						type="base"	min="5"				/>
+	</ability>
+	
+	<ability name="Dye Orange Color">
+		<item_color						type="base"	min="6"				/>
+	</ability>
+	
+	<ability name="Dye Pink Color">
+		<item_color						type="base"	min="7"				/>
+	</ability>
+	
+	<ability name="Dye Purple Color">
+		<item_color						type="base"	min="8"				/>
+	</ability>
+	
+	<ability name="Dye Red Color">
+		<item_color						type="base"	min="9"				/>
+	</ability>
+	
+	<ability name="Dye Turquoise Color">
+		<item_color						type="base"	min="10"			/>
+	</ability>
+	
+	<ability name="Dye White Color">
+		<item_color						type="base"	min="11"			/>
+	</ability>
+	
+	<ability name="Dye Yellow Color">
+		<item_color						type="base"	min="12"			/>
+	</ability>
+</abilities>
+
+<!-- ######################## ITEM DEFINITIONS ######################## -->
+<items>
+
+<!-- DYE SOLUTION -->
+	<item
+		name							="Dye Solution"
+		category						="dye"
+		price							="25"
+		weight							="0.1"
+		grid_size						="1"
+		stackable						="999"
+		localisation_key_name			="item_name_dye_solution"
+		localisation_key_description	="item_desc_dye_solution"
+		icon_path						="icons/inventory/dye/dye_solution_64x64.png"
+	>
+		<tags>							CraftingIngredient, mod_crafting, mod_dye
+		</tags>
+		<base_abilities>
+		</base_abilities>
+	</item>
+
+<!-- -->
+	<item
+		name							="Dye Default"
+		category						="dye"
+		price							="50"
+		weight							="0.1"
+		grid_size						="1"
+		stackable						="999"
+		localisation_key_name			="item_name_dye_default"
+		localisation_key_description	="item_desc_dye_default"
+		icon_path						="icons/inventory/dye/dye_default_64x64.png"
+	>
+		<tags>							CraftingIngredient, mod_crafting, mod_dye
+		</tags>
+		<base_abilities>				<a>Dye Default Color</a>
+		</base_abilities>
+	</item>
+
+<!-- -->
+	<item
+		name							="Dye Gray"
+		category						="dye"
+		price							="50"
+		weight							="0.1"
+		grid_size						="1"
+		stackable						="999"
+		localisation_key_name			="item_name_dye_gray"
+		localisation_key_description	="item_desc_dye"
+		icon_path						="icons/inventory/dye/dye_gray_64x64.png"
+	>
+		<tags>							CraftingIngredient, mod_crafting, mod_dye
+		</tags>
+		<base_abilities>				<a>Dye Gray Color</a>
+		</base_abilities>
+	</item>
+
+<!-- -->
+	<item
+		name							="Dye Turquoise"
+		category						="dye"
+		price							="50"
+		weight							="0.1"
+		grid_size						="1"
+		stackable						="999"
+		localisation_key_name			="item_name_dye_turquoise"
+		localisation_key_description	="item_desc_dye"
+		icon_path						="icons/inventory/dye/dye_turquoise_64x64.png"
+	>
+		<tags>							CraftingIngredient, mod_crafting, mod_dye
+		</tags>
+		<base_abilities>				<a>Dye Turquoise Color</a>
+		</base_abilities>
+	</item>
+
+<!-- -->
+	<item
+		name							="Dye Brown"
+		category						="dye"
+		price							="50"
+		weight							="0.1"
+		grid_size						="1"
+		stackable						="999"
+		localisation_key_name			="item_name_dye_brown"
+		localisation_key_description	="item_desc_dye"
+		icon_path						="icons/inventory/dye/dye_brown_64x64.png"
+	>
+		<tags>							CraftingIngredient, mod_crafting, mod_dye
+		</tags>
+		<base_abilities>				<a>Dye Brown Color</a>
+		</base_abilities>
+	</item>
+
+<!-- -->
+	<item
+		name							="Dye Green"
+		category						="dye"
+		price							="50"
+		weight							="0.1"
+		grid_size						="1"
+		stackable						="999"
+		localisation_key_name			="item_name_dye_green"
+		localisation_key_description	="item_desc_dye"
+		icon_path						="icons/inventory/dye/dye_green_64x64.png"
+	>
+		<tags>							CraftingIngredient, mod_crafting, mod_dye
+		</tags>
+		<base_abilities>				<a>Dye Green Color</a>
+		</base_abilities>
+	</item>
+	
+<!-- -->
+	<item
+		name							="Dye Blue"
+		category						="dye"
+		price							="50"
+		weight							="0.1"
+		grid_size						="1"
+		stackable						="999"
+		localisation_key_name			="item_name_dye_blue"
+		localisation_key_description	="item_desc_dye"
+		icon_path						="icons/inventory/dye/dye_blue_64x64.png"
+	>
+		<tags>							CraftingIngredient, mod_crafting, mod_dye
+		</tags>
+		<base_abilities>				<a>Dye Blue Color</a>
+		</base_abilities>
+	</item>
+<!-- -->
+	<item
+		name							="Dye Orange"
+		category						="dye"
+		price							="50"
+		weight							="0.1"
+		grid_size						="1"
+		stackable						="999"
+		localisation_key_name			="item_name_dye_orange"
+		localisation_key_description	="item_desc_dye"
+		icon_path						="icons/inventory/dye/dye_orange_64x64.png"
+	>
+		<tags>							CraftingIngredient, mod_crafting, mod_dye
+		</tags>
+		<base_abilities>				<a>Dye Orange Color</a>
+		</base_abilities>
+	</item>
+
+<!-- -->
+	<item
+		name							="Dye Pink"
+		category						="dye"
+		price							="50"
+		weight							="0.1"
+		grid_size						="1"
+		stackable						="999"
+		localisation_key_name			="item_name_dye_pink"
+		localisation_key_description	="item_desc_dye"
+		icon_path						="icons/inventory/dye/dye_pink_64x64.png"
+	>
+		<tags>							CraftingIngredient, mod_crafting, mod_dye
+		</tags>
+		<base_abilities>				<a>Dye Pink Color</a>
+		</base_abilities>
+	</item>
+
+<!-- -->
+	<item
+		name							="Dye Yellow"
+		category						="dye"
+		price							="50"
+		weight							="0.1"
+		grid_size						="1"
+		stackable						="999"
+		localisation_key_name			="item_name_dye_yellow"
+		localisation_key_description	="item_desc_dye"
+		icon_path						="icons/inventory/dye/dye_yellow_64x64.png"
+	>
+		<tags>							CraftingIngredient, mod_crafting, mod_dye
+		</tags>
+		<base_abilities>				<a>Dye Yellow Color</a>
+		</base_abilities>
+	</item>
+
+<!-- -->
+	<item
+		name							="Dye Black"
+		category						="dye"
+		price							="50"
+		weight							="0.1"
+		grid_size						="1"
+		stackable						="999"
+		localisation_key_name			="item_name_dye_black"
+		localisation_key_description	="item_desc_dye"
+		icon_path						="icons/inventory/dye/dye_black_64x64.png"
+	>
+		<tags>							CraftingIngredient, mod_crafting, mod_dye
+		</tags>
+		<base_abilities>				<a>Dye Black Color</a>
+		</base_abilities>
+	</item>
+
+<!-- -->
+	<item
+		name							="Dye White"
+		category						="dye"
+		price							="50"
+		weight							="0.1"
+		grid_size						="1"
+		stackable						="999"
+		localisation_key_name			="item_name_dye_white"
+		localisation_key_description	="item_desc_dye"
+		icon_path						="icons/inventory/dye/dye_white_64x64.png"
+	>
+		<tags>							CraftingIngredient, mod_crafting, mod_dye
+		</tags>
+		<base_abilities>				<a>Dye White Color</a>
+		</base_abilities>
+	</item>
+
+<!-- -->
+	<item
+		name							="Dye Red"
+		category						="dye"
+		price							="50"
+		weight							="0.1"
+		grid_size						="1"
+		stackable						="999"
+		localisation_key_name			="item_name_dye_red"
+		localisation_key_description	="item_desc_dye"
+		icon_path						="icons/inventory/dye/dye_red_64x64.png"
+	>
+		<tags>							CraftingIngredient, mod_crafting, mod_dye
+		</tags>
+		<base_abilities>				<a>Dye Red Color</a>
+		</base_abilities>
+	</item>
+
+<!-- -->
+	<item
+		name							="Dye Purple"
+		category						="dye"
+		price							="50"
+		weight							="0.1"
+		grid_size						="1"
+		stackable						="999"
+		localisation_key_name			="item_name_dye_purple"
+		localisation_key_description	="item_desc_dye"
+		icon_path						="icons/inventory/dye/dye_purple_64x64.png"
+	>
+		<tags>							CraftingIngredient, mod_crafting, mod_dye
+		</tags>
+		<base_abilities>				<a>Dye Purple Color</a>
+		</base_abilities>
+	</item>
+
+</items>
+
+</definitions>
+</redxml>

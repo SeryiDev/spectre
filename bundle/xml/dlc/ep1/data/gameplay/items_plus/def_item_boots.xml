@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+<definitions>
+
+<!-- ######################## ABILITY DEFINITIONS ######################## -->
+<abilities>
+
+<!-- LIGHT -->
+
+	<ability name="Geralt Kontusz Boots _Stats">
+		<tags></tags>		
+		<weight							type="base"	min="2.0"				/>
+		<quality						type="add"	min="1"		max="1"		/>
+		<slashing_resistance_perc		type="base"	min="0.01"				/>
+		<piercing_resistance_perc		type="base"	min="0.0"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.0"				/>
+		<rending_resistance_perc		type="base"	min="0.01"				/>
+		<elemental_resistance_perc		type="base"	min="0.01"				/>
+		<staminaRegen_armor_mod			type="mult" min="0.01"				/>
+	</ability>
+	
+	<ability name="Geralt Kontusz Boots R _Stats">
+		<tags></tags>		
+		<weight							type="base"	min="3"					/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.04"				/>
+		<piercing_resistance_perc		type="base"	min="0.02"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.02"				/>
+		<rending_resistance_perc		type="base"	min="0.04"				/>
+		<elemental_resistance_perc		type="base"	min="0.04"				/>
+		<staminaRegen_armor_mod			type="mult" min="0.01"				/>
+		<burning_resistance_perc 		type="base" min="0.06" 				/>
+		<spell_power_igni 				type="mult" min="0.06" 				/>
+		<staminaRegen_armor_mod			type="mult"	min="0.03"				/>
+		<item_level_min					type="add"	min="30"				/>
+		<item_level_max					type="add"	min="34"				/>
+	</ability>
+	
+<!-- MEDIUM -->
+
+	<ability name="Thief Boots _Stats">
+		<weight							type="base"	min="3"					/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.06"				/>
+		<piercing_resistance_perc		type="base"	min="0.04"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+		<rending_resistance_perc		type="base"	min="0.06"				/>
+		<elemental_resistance_perc		type="base"	min="0.06"				/>
+		<bonus_money 					type="add" 	min="0.1" 				/>
+		<encumbrance					type="add"	min="6"					/>
+	</ability>
+	
+	<ability name="Thief Boots B _Stats">
+		<weight							type="base"	min="3"					/>
+		<quality						type="add"	min="2"		max="2"		/>
+		<slashing_resistance_perc		type="base"	min="0.04"				/>
+		<piercing_resistance_perc		type="base"	min="0.02"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.01"				/>
+		<rending_resistance_perc		type="base"	min="0.03"				/>
+		<elemental_resistance_perc		type="base"	min="0.03"				/>
+		<bonus_money 					type="add" 	min="0.05" 				/>
+		<encumbrance					type="add"	min="4"					/>
+	</ability>
+	
+	<ability name="Thief Boots Y _Stats">
+		<weight							type="base"	min="3"					/>
+		<quality						type="add"	min="3"		max="3"		/>
+		<slashing_resistance_perc		type="base"	min="0.04"				/>
+		<piercing_resistance_perc		type="base"	min="0.02"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.02"				/>
+		<rending_resistance_perc		type="base"	min="0.04"				/>
+		<elemental_resistance_perc		type="base"	min="0.04"				/>
+		<bonus_money 					type="add" 	min="0.05" 				/>
+		<encumbrance					type="add"	min="4"					/>
+	</ability>
+	
+	<ability name="Thief Boots No Medallion _Stats">
+		<weight							type="base"	min="3"					/>
+		<quality						type="add"	min="2"		max="2"		/>
+		<slashing_resistance_perc		type="base"	min="0.04"				/>
+		<piercing_resistance_perc		type="base"	min="0.02"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.01"				/>
+		<rending_resistance_perc		type="base"	min="0.03"				/>
+		<elemental_resistance_perc		type="base"	min="0.03"				/>
+		<bonus_money 					type="add" 	min="0.05" 				/>
+		<encumbrance					type="add"	min="4"					/>
+	</ability>
+	
+<!-- LIGHT -->
+
+	<ability name="Ofir Boots _Stats">
+		<weight							type="base"	min="3"					/>
+		<quality						type="add"	min="3"		max="3"		/>
+		<slashing_resistance_perc		type="base"	min="0.02"				/>
+		<piercing_resistance_perc		type="base"	min="0.01"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.0"				/>
+		<rending_resistance_perc		type="base"	min="0.02"				/>
+		<elemental_resistance_perc		type="base"	min="0.02"				/>
+		<staminaRegen_armor_mod			type="mult" min="0.01"				/>
+	</ability>
+	
+	<ability name="Ofir Boots B _Stats">
+		<weight							type="base"	min="2.5"				/>
+		<quality						type="add"	min="2"		max="2"		/>
+		<slashing_resistance_perc		type="base"	min="0.02"				/>
+		<piercing_resistance_perc		type="base"	min="0.01"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.0"				/>
+		<rending_resistance_perc		type="base"	min="0.01"				/>
+		<elemental_resistance_perc		type="base"	min="0.01"				/>
+		<staminaRegen_armor_mod			type="mult" min="0.01"				/>
+	</ability>
+	
+</abilities>
+
+<!-- ######################## ITEM DEFINITIONS ######################## -->
+<items>
+
+	<item
+		name							="Geralt Kontusz Boots"
+		category						="boots"
+		price							="25"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="s_01_mg__common_heavy_lvl3"
+		localisation_key_name			="item_name_geralt_kontusz_boots"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_boots_lvl1_64x128.png"
+	>
+		<tags>							Autogen, AutogenForceLevel, Armor, LightArmor, mod_armor, DoNotEnhance, gm_NoSetBonuses
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Geralt Kontusz Boots _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Leather squares</parts>
+		</recycling_parts>
+	</item>
+	
+	<item
+		name							="Geralt Kontusz Boots R"
+		category						="boots"
+		price							="170"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="s_01_mg__common_heavy_lvl3"
+		localisation_key_name			="item_name_geralt_kontusz_boots"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_boots_lvl1_64x128.png"
+	>
+		<tags>							Autogen, AutogenForceLevel, AutogenUseLevelRange, Armor, LightArmor, mod_armor, mod_legendary, EP1, DoNotEnhance
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Geralt Kontusz Boots R _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Glowing ingot</parts>
+										<parts count="1">Leather squares</parts>
+		</recycling_parts>
+	</item>
+	
+	<item 
+		name							="Thief Boots" 
+		category						="boots" 
+		price							="286"
+		initial_durability				="100" 
+		max_durability					="100" 
+		enhancement_slots				="1" 
+		stackable						="1"
+		grid_size 						="2"
+		upgrade_list_name				="list6"
+		ability_mode					="OnMount" 
+		equip_template					="s_01_mg__thief" 
+		localisation_key_name 			="item_name_thief_borsody_boots" 
+		localisation_key_description 	="item_category_medium_armor_description" 
+		icon_path						="icons/inventory/armors/thief_shoes_64x128.png" 
+	>
+		<tags>							Autogen, Armor, MediumArmor, mod_armor, mod_legendary, EP1 
+		</tags>
+		<base_abilities>
+										<a>Thief Boots _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>		
+		<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+										<parts count="1">Glowing ingot</parts>
+										<parts count="1">Leather</parts>
+		</recycling_parts> 		
+		<variants>
+		</variants>			
+	</item>
+	
+	<item 
+		name							="Thief Boots B" 
+		category						="boots" 
+		price							="120"
+		initial_durability				="100" 
+		max_durability					="100" 
+		enhancement_slots				="0" 
+		stackable						="1"
+		grid_size 						="2"
+		upgrade_list_name				="list6"
+		ability_mode					="OnMount" 
+		equip_template					="s_01_mg__thief" 
+		localisation_key_name 			="item_name_thief_borsody_boots" 
+		localisation_key_description 	="item_category_medium_armor_description" 
+		icon_path						="icons/inventory/armors/thief_shoes_64x128.png" 
+	>
+		<tags>							Autogen, AutogenForceLevel, Armor, MediumArmor, mod_armor
+		</tags>
+		<base_abilities>
+										<a>Thief Boots B _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>		
+		<recycling_parts>				<parts count="1">Dark steel ingot</parts>
+										<parts count="1">Leather squares</parts>
+		</recycling_parts> 		
+		<variants>
+		</variants>			
+	</item>
+	
+	<item 
+		name							="Thief Boots Y" 
+		category						="boots" 
+		price							="200"
+		initial_durability				="100" 
+		max_durability					="100" 
+		enhancement_slots				="1" 
+		stackable						="1"
+		grid_size 						="2"
+		upgrade_list_name				="list6"
+		ability_mode					="OnMount" 
+		equip_template					="s_01_mg__thief" 
+		localisation_key_name 			="item_name_thief_borsody_boots" 
+		localisation_key_description 	="item_category_medium_armor_description" 
+		icon_path						="icons/inventory/armors/thief_shoes_64x128.png" 
+	>
+		<tags>							Autogen, Armor, MediumArmor, mod_armor, EP1
+		</tags>
+		<base_abilities>
+										<a>Thief Boots Y _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>		
+		<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+										<parts count="1">Leather</parts>
+		</recycling_parts> 		
+		<variants>
+		</variants>			
+	</item>
+	
+	<item 
+		name							="Thief Boots No Medallion" 
+		category						="boots" 
+		price							="120"
+		initial_durability				="100" 
+		max_durability					="100" 
+		enhancement_slots				="0" 
+		stackable						="1"
+		grid_size 						="2"
+		upgrade_list_name				="list6"
+		ability_mode					="OnMount" 
+		equip_template					="s_01_mg__thief" 
+		localisation_key_name 			="item_name_thief_borsody_boots" 
+		localisation_key_description 	="item_category_medium_armor_description" 
+		icon_path						="icons/inventory/armors/thief_shoes_64x128.png" 
+	>
+		<tags>							Autogen, AutogenForceLevel, Armor, MediumArmor, mod_armor
+		</tags>
+		<base_abilities>
+										<a>Thief Boots No Medallion _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>		
+		<recycling_parts>				<parts count="1">Dark steel ingot</parts>
+										<parts count="1">Leather squares</parts>
+		</recycling_parts> 		
+		<variants>
+		</variants>			
+	</item>
+	
+	<item 
+		name							="Ofir Boots" 
+		category						="boots" 
+		price							="125"
+		initial_durability				="100" 
+		max_durability					="100" 
+		enhancement_slots				="1" 
+		stackable						="1"
+		grid_size 						="2"
+		upgrade_list_name				="list6"
+		ability_mode					="OnMount" 
+		equip_template					="s_01_mg__ofir_lv1" 
+		localisation_key_name 			="item_name_ofir_shoes" 
+		localisation_key_description 	="item_category_light_armor_description" 
+		icon_path						="icons/inventory/armors/ofir_shoes_64x128.png" 
+	>
+		<tags>							Autogen, Armor, LightArmor, mod_armor, mod_origin_ofir, Ofir, EP1
+		</tags>
+		<base_abilities>
+										<a>Ofir Boots _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>		
+		<recycling_parts>				<parts count="1">Silver ingot</parts>
+										<parts count="1">Leather squares</parts>
+		</recycling_parts> 		
+		<variants>
+		</variants>			
+	</item>
+	
+	<item 
+		name							="Ofir Boots B" 
+		category						="boots" 
+		price							="50"
+		initial_durability				="100" 
+		max_durability					="100" 
+		enhancement_slots				="0" 
+		stackable						="1"
+		grid_size 						="2"
+		upgrade_list_name				="list6"
+		ability_mode					="OnMount" 
+		equip_template					="s_01_mg__ofir_lv1" 
+		localisation_key_name 			="item_name_ofir_shoes" 
+		localisation_key_description 	="item_category_light_armor_description" 
+		icon_path						="icons/inventory/armors/ofir_shoes_64x128.png" 
+	>
+		<tags>							Autogen, Armor, LightArmor, mod_armor, mod_origin_ofir, Ofir
+		</tags>
+		<base_abilities>
+										<a>Ofir Boots B _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>		
+		<recycling_parts>				<parts count="1">Steel ingot</parts>
+										<parts count="1">Leather squares</parts>
+		</recycling_parts> 		
+		<variants>
+		</variants>			
+	</item>
+	
+</items>
+
+</definitions>
+
+</redxml>

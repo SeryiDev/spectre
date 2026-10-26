@@ -1,9 +1,13 @@
 # Entities, scenes and quest files
 
-These scripts make `bundle/entities501.json`: the list of CR2W files (`.w2ent`, `.w2scene`, `.w2phase`, `.journal`...) that the bundle takes from the 5.01 game instead of Spectre v0.93, with Spectre's edits put back. The build (`bundle/build_bundle.py` with `bundle/cr2w_ops.py`) only replays that file, so these are needed only to make it again:
+These scripts make `entities501.json`: the list of CR2W files (`.w2ent`, `.w2scene`, `.w2phase`, `.journal`...) that the bundle takes from the 5.01 game instead of Spectre v0.93, with Spectre's edits put back. `from_game.py` replays that file (with `cr2w_ops.py`) on the game's copies and writes the results to `bundle/files`. It also writes `bundle/alchemy501` from `alchemy501.json`. The bundle build only reads `bundle/`, so these are needed only:
 
-- after a game patch that changes one of the files (the build stops: "N files of entities501.json are not in the 5.01 game ... or are a different version"),
+- after a game patch that changes one of the files (`from_game.py` stops: "N files of entities501.json are not in the 5.01 game ... or are a different version"),
 - to change or add a Spectre edit.
+
+```
+python tools\entities\from_game.py <The Witcher 3 5.01 folder>
+```
 
 Requires Python 3 and `pip install lz4`.
 
@@ -48,7 +52,7 @@ v0.93's files came from game versions up to 1.32, so they lacked what 4.0 and 5.
 
    The report lists every change per file. The check reads every result back and must end with `problems: 0`.
 
-5. Copy `<work>\entities501.json` to `bundle\`, rebuild with `pack-release.ps1 -Version 1.0 -Base <v0.93 release>` and update `bundle\bundle.sha256`.
+5. Copy `<work>\entities501.json` to `tools\entities\`, run `from_game.py`, rebuild with `pack-release.ps1 -Version 1.0 -Rebuild` and update `bundle\bundle.sha256`.
 
 Which classes and properties count as Spectre edits is set at the top of `gen_patches.py` (value edits) and `gen_phase2.py` (structural edits).
 
@@ -57,4 +61,5 @@ Which classes and properties count as Spectre edits is set at the top of `gen_pa
 - `cr2w.py`: CR2W dumper (path = value). `cr2wloc.py`: the same, plus the file offset of each value. `diff3.py`: three-way listing of a work folder.
 - `cr2wedit.py`: reads and writes CR2W files without buffers or embedded files, byte-identical on the 649 game files. `cr2wval.py`: decodes and encodes property values (names, handles, imports, structs). `sem.py`: compares the same file across versions by object and value.
 - `doboz.py`: Doboz decompressor (1.32 bundles). `game501.py`: reads the 5.01 game bundles.
+- `from_game.py`: writes `bundle/files` and `bundle/alchemy501` from the game. `cr2w_ops.py`: replays the "ops".
 - `test_roundtrip.py`, `test_values.py`: check `cr2wedit` and `cr2wval` on a work folder.

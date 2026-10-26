@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+<definitions>
+
+<!-- ######################## ABILITY DEFINITIONS ######################## -->
+<abilities>
+
+<!-- LIGHT -->
+	
+	<ability name="Crafted Ofir Boots _Stats"> <!-- lvl 32 -->
+		<weight 						type="base"	min="2.5"				/>
+		<quality 						type="add"	min="4"					/>
+		<armor							type="base" min="69"	max="69"	/>
+		<slashing_resistance_perc		type="base"	min="0.04"				/>
+		<piercing_resistance_perc		type="base"	min="0.02"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.02"				/>
+		<rending_resistance_perc		type="base"	min="0.04"				/>
+		<elemental_resistance_perc		type="base"	min="0.04"				/>
+		<staminaRegen_armor_mod			type="mult"	min="0.01"				/>
+		<spell_power_igni 				type="mult" min="0.05" 				/>
+		<spell_power_quen 				type="mult" min="0.05" 				/>
+		<spell_power_yrden 				type="mult" min="0.05" 				/>
+	</ability>
+	
+<!-- MEDIUM -->
+
+	<ability name="EP1 Witcher Boots _Stats"> <!-- lvl 34 -->
+		<weight							type="base"	min="4"					/>
+		<quality						type="add"	min="5"					/>
+		<armor							type="base" min="73"	max="73"	/>
+		<slashing_resistance_perc		type="base"	min="0.08"				/>
+		<piercing_resistance_perc		type="base"	min="0.06"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.06"				/>
+		<rending_resistance_perc		type="base"	min="0.08"				/>
+		<elemental_resistance_perc		type="base"	min="0.08"				/>
+		<toxicity 						type="base" min="5" 				/>
+		<vitality 						type="base" min="50"				/>
+	</ability>
+	
+</abilities>
+
+
+<!-- ######################## ITEM DEFINITIONS ######################## -->
+<items>
+	
+	<item 
+		name							="Crafted Ofir Boots" 
+		category						="boots" 
+		price							="170"
+		initial_durability				="100" 
+		max_durability					="100" 
+		enhancement_slots				="1" 
+		stackable						="1"
+		grid_size 						="2"
+		upgrade_list_name				="list6"
+		ability_mode					="OnMount" 
+		equip_template					="s_01_mg__ofir_lv1" 
+		localisation_key_name 			="item_name_ofir_shoes" 
+		localisation_key_description 	="item_category_light_armor_description" 
+		icon_path						="icons/inventory/armors/ofir_shoes_64x128.png" 
+	>
+		<tags>							Armor, LightArmor, mod_armor, mod_legendary, mod_origin_ofir, Ofir, EP1
+		</tags>
+		<base_abilities>
+										<a>Crafted Ofir Boots _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>		
+		<recycling_parts>				<parts count="1">Glowing ingot</parts>
+										<parts count="1">Leather squares</parts>
+		</recycling_parts> 		
+		<variants>
+		</variants>			
+	</item>
+
+	<item 
+		name							="EP1 Witcher Boots" 
+		category						="boots" 
+		price							="1700"
+		initial_durability				="100" 
+		max_durability					="100" 
+		enhancement_slots				="1" 
+		stackable						="1"
+		grid_size 						="2"
+		upgrade_list_name				="list6"
+		ability_mode					="OnMount" 
+		equip_template					="s_01_mg__viper_v2" 
+		localisation_key_name 			="item_name_hoscorset_boots" 
+		localisation_key_description 	="item_category_medium_armor_description" 
+		icon_path						="icons/inventory/armors/viper_shoes_64x128.png" 
+	>
+		<tags>							Armor, MediumArmor, mod_armor, mod_legendary, EP1, ViperSet, SetBonusPiece
+		</tags>
+		<base_abilities>
+										<a>EP1 Witcher Boots _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>		
+		<recycling_parts>				<parts count="1">Leather</parts>
+										<parts count="1">Wire</parts>
+										<parts count="1">Monstrous hide</parts>
+										<parts count="2">Chitin scale</parts>
+		</recycling_parts> 		
+		<variants>
+		</variants>			
+	</item>
+
+</items>
+
+</definitions>
+</redxml>

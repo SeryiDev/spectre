@@ -3,7 +3,7 @@
 # made by bundle\build_bundle.py. Strings (built from strings\*.csv), 000Spectre.xml, and
 # dlc000Spectre come from this repo.
 #
-#   .\pack-release.ps1 -Version 1.0 -Base "C:\path\to\Spectre.-.Release.-.v0.93.zip" [-Game "C:\path\to\The Witcher 3"]
+#   .\pack-release.ps1 -Version 1.0 -Rebuild
 #   .\pack-release.ps1 -Version 1.0 -Bundle "C:\path\to\folder-or-zip-or-url"
 #   .\pack-release.ps1 -Version 1.0      (reuses the bundle already in build)
 #
@@ -12,7 +12,10 @@
 # folder, a zip, or an https URL to that zip. Python is not needed. The files
 # are checked against bundle\bundle.sha256 before they are used.
 #
-# -Alchemy501 (with -Base) also builds the variant bundle with the 5.01 alchemy data
+# -Rebuild builds the bundle from the files in bundle\ (Python and lz4 needed; neither the
+# game nor an older release is needed).
+#
+# -Alchemy501 (with -Rebuild) also builds the variant bundle with the 5.01 alchemy data
 # and writes spectre_vanilla_alchemy_v<Version>.zip:
 # blob0.bundle and metadata.store, to copy over mods\mod000Spectre\content.
 
@@ -20,17 +23,13 @@ param(
     [Parameter(Mandatory = $true)]
     [string]$Version,
 
-    # Spectre v0.93 release zip or folder. When given, the bundle is rebuilt first.
-    [string]$Base,
+    # Build the bundle from bundle\ first.
+    [switch]$Rebuild,
 
     # The finished bundle: folder, zip, or https URL of a zip. No Python needed.
     [string]$Bundle,
 
-    # The Witcher 3 5.01 folder, needed with -Base: the bundle takes the 5.01 copies of
-    # the entities listed in bundle\entities501.json. Found in the Steam libraries when left out.
-    [string]$Game,
-
-    # Also build the vanilla alchemy variant and its zip. Needs -Base.
+    # Also build the vanilla alchemy variant and its zip. Needs -Rebuild.
     [switch]$Alchemy501
 )
 
@@ -44,7 +43,7 @@ if ($Version -notmatch '^\d+\.\d+$') {
 $Root = $PSScriptRoot
 $BuildDir = Join-Path $Root "build\mod000Spectre\content"
 $BuildDir501 = Join-Path $Root "build\mod000Spectre-alchemy501\content"
-if ($Alchemy501 -and -not $Base) { throw "-Alchemy501 needs -Base: the variant is built from the v0.93 release." }
+if ($Alchemy501 -and -not $Rebuild) { throw "-Alchemy501 needs -Rebuild." }
 
 if ($Bundle) {
     $tmp = Join-Path $Root "build\bundle-download"
@@ -78,28 +77,14 @@ if ($Bundle) {
     Write-Output "Bundle checked and copied to build."
 }
 
-if ($Base) {
+if ($Rebuild) {
     $python = Get-Command python -ErrorAction SilentlyContinue
     if (-not $python) { $python = Get-Command py -ErrorAction SilentlyContinue }
     if (-not $python) { throw "Python is needed to build the bundle." }
-    if (-not $Game) {
-        $steam = (Get-ItemProperty -Path "HKCU:\Software\Valve\Steam" -ErrorAction SilentlyContinue).SteamPath
-        if ($steam) {
-            $vdf = Join-Path $steam "steamapps\libraryfolders.vdf"
-            $libs = @($steam)
-            if (Test-Path -LiteralPath $vdf) {
-                $libs += Select-String -LiteralPath $vdf -Pattern '"path"\s+"([^"]+)"' |
-                    ForEach-Object { $_.Matches[0].Groups[1].Value -replace '\\\\', '\' }
-            }
-            $Game = $libs | ForEach-Object { Join-Path $_ "steamapps\common\The Witcher 3" } |
-                Where-Object { Test-Path -LiteralPath (Join-Path $_ "content\content0") } | Select-Object -First 1
-        }
-        if (-not $Game) { throw "The Witcher 3 5.01 was not found in the Steam libraries. Pass -Game with its folder." }
-    }
-    & $python.Source (Join-Path $Root "bundle\build_bundle.py") --base $Base --game $Game --out $BuildDir
+    & $python.Source (Join-Path $Root "bundle\build_bundle.py") --out $BuildDir
     if ($LASTEXITCODE -ne 0) { throw "bundle\build_bundle.py failed." }
     if ($Alchemy501) {
-        & $python.Source (Join-Path $Root "bundle\build_bundle.py") --base $Base --game $Game --out $BuildDir501 --alchemy501
+        & $python.Source (Join-Path $Root "bundle\build_bundle.py") --out $BuildDir501 --alchemy501
         if ($LASTEXITCODE -ne 0) { throw "bundle\build_bundle.py --alchemy501 failed." }
     }
 }
@@ -120,8 +105,8 @@ function Require-Path([string]$Path, [string]$Why) {
 }
 
 Require-Path $Scripts "The repo has no src folder."
-Require-Path $Bundle "Build the mod bundle first: pass -Bundle with the published bundle, or -Base with the Spectre v0.93 release."
-Require-Path $Metadata "Build the mod bundle first: pass -Bundle with the published bundle, or -Base with the Spectre v0.93 release."
+Require-Path $Bundle "Build the mod bundle first: pass -Bundle with the published bundle, or -Rebuild to build it from bundle."
+Require-Path $Metadata "Build the mod bundle first: pass -Bundle with the published bundle, or -Rebuild to build it from bundle."
 Require-Path $StringsDir "The repo has no strings folder."
 Require-Path $MenuXml "The repo has no bin menu file for Spectre."
 Require-Path $DlcContent "The repo has no dlc\dlc000Spectre\content."

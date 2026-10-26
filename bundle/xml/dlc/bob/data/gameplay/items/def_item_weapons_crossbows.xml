@@ -1,0 +1,135 @@
+﻿<?xml version="1.0"	encoding="UTF-8"?>
+<redxml>
+	<definitions>
+
+		<!-- ######################## ABILITY DEFINITIONS ######################## -->
+		<abilities>
+			<ability name="Toussaint Crossbow 1 _Stats">
+				<quality						type="add"	min="2"		max="2"		/>
+				<attack_power					type="mult"	min="2.1"	max="2.1"	/>
+				<ammo							type="add"	min="3"					/>
+				<armor_reduction				type="base"	min="170"	max="190"	/>
+			</ability>
+
+			<ability name="Toussaint Crossbow 2 _Stats">
+				<quality						type="add"	min="3"		max="3"		/>
+				<attack_power					type="mult"	min="2.2"	max="2.2"	/>
+				<ammo							type="add"	min="3"					/>
+				<focus_gain						type="add"	min="0.02"	max="0.02"	/>
+				<armor_reduction				type="base"	min="200"	max="250"	/>
+			</ability>
+
+		</abilities>
+
+		<!-- ######################## ABILITY DEFINITIONS ######################## -->
+		<items>
+
+			<item
+				name							="Toussaint Crossbow 1"
+				category						="crossbow"
+				price							="85"
+				weight 							="2"
+				enhancement_slots				="0"
+				ability_slots					="0"
+				grid_size						="2"
+				hold_slot						="l_weapon"
+				equip_template					="witcher_crossbow_toussaint"
+				equip_slot						="crossbow_back_slot"
+				localisation_key_name			="item_name_toussaint_crossbow"
+				localisation_key_description	="item_desc_crossbow_1"
+				icon_path						="icons/inventory/weapons/crossbow/crossbow_toussaint_1_64x128.png"
+			>
+				<tags>							Weapon, crossbow, mod_weapon
+				</tags>
+				<base_abilities>				<a>Default weapon _Stats</a>
+												<a>Toussaint Crossbow 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Hardened timber</parts>
+												<parts count="1">String</parts>
+												<parts count="1">Steel ingot</parts>
+				</recycling_parts>
+			</item>
+
+			<item
+				name							="Toussaint Crossbow 2"
+				category						="crossbow"
+				price							="100"
+				weight 							="3"
+				enhancement_slots				="0"
+				ability_slots					="0"
+				grid_size						="2"
+				hold_slot						="l_weapon"
+				equip_template					="witcher_crossbow_toussaint"
+				equip_slot						="crossbow_back_slot"
+				localisation_key_name			="item_name_toussaint_crossbow"
+				localisation_key_description	="item_desc_crossbow_1"
+				icon_path						="icons/inventory/weapons/crossbow/crossbow_toussaint_1_64x128.png"
+			>
+				<tags>							Weapon, crossbow, mod_weapon
+				</tags>
+				<base_abilities>				<a>Default weapon _Stats</a>
+												<a>Toussaint Crossbow 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Hardened timber</parts>
+												<parts count="1">Twine</parts>
+												<parts count="1">Dark iron ingot</parts>
+				</recycling_parts>
+			</item>
+
+			<item
+				name							="Ravix of Fourhorn Crossbow"
+				category						="crossbow"
+				price							="100"
+				weight 							="3"
+				enhancement_slots				="0"
+				ability_slots					="0"
+				grid_size						="2"
+				hold_slot						="l_weapon"
+				equip_template					="witcher_crossbow_ravix_of_fourhorn"
+				equip_slot						="crossbow_back_slot"
+				localisation_key_name			="item_name_ravix_of_fourhorn_crossbow"
+				localisation_key_description	="item_desc_crossbow_1"
+				icon_path						="icons/inventory/quests/sq701_crossbow_ravix_64x64.png"
+			>
+				<tags>							Weapon, crossbow, mod_weapon
+				</tags>
+				<base_abilities>				<a>Default weapon _Stats</a>
+												<a>Toussaint Crossbow 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Hardened timber</parts>
+												<parts count="1">Twine</parts>
+												<parts count="1">Dark iron ingot</parts>
+				</recycling_parts>
+			</item>
+
+			<item
+				name							="Geralt of Rivia Crossbow"
+				category						="crossbow"
+				price							="100"
+				weight 							="3"
+				enhancement_slots				="0"
+				ability_slots					="0"
+				grid_size						="2"
+				hold_slot						="l_weapon"
+				equip_template					="witcher_crossbow_geralt_of_rivia"
+				equip_slot						="crossbow_back_slot"
+				localisation_key_name			="item_name_geralt_of_rivia_crossbow"
+				localisation_key_description	="item_desc_crossbow_1"
+				icon_path						="icons/inventory/quests/sq701_crossbow_geralt_64x128.png"
+			>
+				<tags>							Weapon, crossbow, mod_weapon
+				</tags>
+				<base_abilities>				<a>Default weapon _Stats</a>
+												<a>Toussaint Crossbow 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Hardened timber</parts>
+												<parts count="1">Twine</parts>
+												<parts count="1">Dark iron ingot</parts>
+				</recycling_parts>
+			</item>
+
+		</items>
+
+	</definitions>
+
+</redxml>

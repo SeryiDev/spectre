@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+<definitions>
+
+<!-- ######################## ABILITY DEFINITIONS ######################## -->
+<abilities>
+
+<!-- -->
+	<ability name="Crossbow 1 _Stats"> <!-- lvl 1 -->
+		<attack_power					type="mult" min="1.01"				/>
+		<ammo							type="add"	min="3"					/>
+	</ability>
+
+	<!-- -->
+	<ability name="Crossbow 1 q1 _Stats"> <!-- lvl 2 -->
+		<attack_power					type="mult" min="1.03" max="1.1"	/>
+		<ammo							type="add"	min="3"					/>
+		<armor_reduction				type="base"	min="5"		max="10"	/>
+	</ability>
+
+<!-- -->
+	<ability name="Crossbow 2 _Stats"> <!-- lvl 4 -->
+		<quality						type="add"	min="2"	max="2"			/>
+		<attack_power					type="mult" min="1.13"	max="1.2"	/>
+		<ammo							type="add"	min="3"					/>
+		<armor_reduction				type="base"	min="15"	max="50"	/>
+	</ability>
+
+<!-- -->
+	<ability name="Crossbow q206 _Stats"> <!-- lvl 15 -->
+		<quality						type="add"	min="4"		max="4"		/>
+		<attack_power					type="mult"	min="1.5"	max="1.5"	/>
+		<focus_gain						type="add"	min="0.02"	max="0.02"	/>
+		<critical_hit_damage_bonus		type="add"	min="0.25"	max="0.25"	/>
+		<ammo							type="add"	min="2"					/>
+		<armor_reduction				type="base"	min="70"	max="70"	/>
+	</ability>
+
+<!-- -->
+	<ability name="Crossbow 3 _Stats"> <!-- lvl 11 -->
+		<quality						type="add"	min="2"		max="2"		/>
+		<attack_power					type="mult"	min="1.33"	max="1.4"	/>
+		<ammo							type="add"	min="3"					/>
+		<armor_reduction				type="base"	min="50"	max="70"	/>
+	</ability>
+
+<!-- -->
+	<ability name="Crossbow 4 _Stats"> <!-- lvl 15 -->
+		<quality						type="add"	min="2"		max="2"		/>
+		<attack_power					type="mult"	min="1.43"	max="1.5"	/>
+		<ammo							type="add"	min="3"					/>
+		<armor_reduction				type="base"	min="70"	max="90"	/>
+	</ability>
+
+<!-- -->
+	<ability name="Crossbow 5 _Stats"> <!-- lvl 19 -->
+		<quality						type="add"	min="3"		max="3"		/>
+		<attack_power					type="mult"	min="1.53"	max="1.6"	/>
+		<ammo							type="add"	min="3"					/>
+		<armor_reduction				type="base"	min="90"	max="105"	/>
+	</ability>
+
+<!-- -->
+	<ability name="Crossbow 6 _Stats"> <!-- lvl 22 -->
+		<quality						type="add"	min="3"		max="3"		/>
+		<attack_power					type="mult"	min="1.65"	max="1.65"	/>
+		<focus_gain						type="add"	min="0.02"	max="0.02"	/>
+		<ammo							type="add"	min="3"					/>
+		<armor_reduction				type="base"	min="105"	max="120"	/>
+	</ability>
+
+<!-- -->
+	<ability name="Crossbow 7 _Stats"> <!-- lvl 25 -->
+		<quality						type="add"	min="4"		max="4"		/>
+		<attack_power					type="mult"	min="1.75"	max="1.75"	/>
+		<focus_gain						type="add"	min="0.02"	max="0.02" 	/>
+		<critical_hit_damage_bonus		type="add"	min="0.5"	max="0.5"	/>
+		<ammo							type="add"	min="2"					/>
+		<armor_reduction				type="base"	min="120"	max="130"	/>
+	</ability>
+
+<!-- -->
+	<ability name="Lynx School Crossbow _Stats"> <!-- lvl 27 -->
+		<quality						type="add"	min="5"		max="5"		/>
+		<attack_power					type="mult"	min="1.85"	max="1.85"	/>
+		<focus_gain						type="add"	min="0.02"	max="0.02"	/>
+		<critical_hit_damage_bonus		type="add"	min="0.5"	max="0.5"	/>
+		<ammo							type="add"	min="2"					/>
+		<armor_reduction				type="base"	min="140"	max="140"	/>
+	</ability>
+
+<!-- -->
+	<ability name="Bear School Crossbow _Stats"> <!-- lvl 32 -->
+		<quality						type="add"	min="5"		max="5"		/>
+		<attack_power					type="mult"	min="2.0"	max="2.0"	/>
+		<focus_gain						type="add"	min="0.02"	max="0.02"	/>
+		<critical_hit_damage_bonus		type="add"	min="0.75"	max="0.75"	/>
+		<ammo							type="add"	min="2"					/>
+		<armor_reduction				type="base"	min="160"	max="160"	/>
+	</ability>
+
+</abilities>
+
+<items>
+		
+	<item
+		name							="Crossbow 1"
+		category						="crossbow"
+		price							="24"
+		weight 							="2"
+		enhancement_slots				="0"
+		ability_slots					="0"
+		grid_size						="2"
+		hold_slot						="l_weapon"
+		equip_template					="witcher_crossbow_lvl1"
+		equip_slot						="crossbow_back_slot"
+		localisation_key_name			="item_name_crossbow_1"
+		localisation_key_description	="item_desc_crossbow_1"
+		icon_path						="icons/inventory/weapons/crossbow/witcher_crossbow_lvl1_64x128.png"
+	>
+		<tags>							Weapon, crossbow, mod_weapon
+		</tags>
+		<base_abilities>				<a>Default weapon _Stats</a>
+										<a>Crossbow 1 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Timber</parts>
+										<parts count="1">String</parts>
+										<parts count="1">Iron ore</parts>
+		</recycling_parts>
+	</item>
+	
+	<item
+		name							="Crossbow q206"
+		category						="crossbow"
+		price							="30"
+		weight 							="2"
+		enhancement_slots				="0"
+		ability_slots					="0"
+		grid_size						="2"
+		hold_slot						="l_weapon"
+		equip_template					="witcher_crossbow_lvl3"
+		equip_slot						="crossbow_back_slot"
+		localisation_key_name			="item_name_draconides_vol_2"
+		localisation_key_description	="item_desc_crossbow_1"
+		icon_path						="icons/inventory/weapons/crossbow/witcher_crossbow_lvl3_64x128.png"
+	>
+		<tags>							Weapon, crossbow, mod_weapon
+		</tags>
+		<base_abilities>				<a>Default weapon _Stats</a>
+										<a>Crossbow q206 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Hardened timber</parts>
+										<parts count="1">String</parts>
+										<parts count="1">Iron ore</parts>
+		</recycling_parts>
+	</item>
+
+	<item
+		name							="Crossbow 2"
+		category						="crossbow"
+		price							="33"
+		weight 							="2"
+		enhancement_slots				="0"
+		ability_slots					="0"
+		grid_size						="2"
+		hold_slot						="l_weapon"
+		equip_template					="witcher_crossbow_lvl2"
+		equip_slot						="crossbow_back_slot"
+		localisation_key_name			="item_name_crossbow_1"
+		localisation_key_description	="item_desc_crossbow_1"
+		icon_path						="icons/inventory/weapons/crossbow/witcher_crossbow_lvl2_64x128.png"
+	>
+		<tags>							Weapon, crossbow, mod_weapon
+		</tags>
+		<base_abilities>				<a>Default weapon _Stats</a>
+										<a>Crossbow 2 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Hardened timber</parts>
+										<parts count="1">Twine</parts>
+										<parts count="1">Iron ore</parts>
+		</recycling_parts>
+	</item>
+
+	<item
+		name							="Crossbow 3"
+		category						="crossbow"
+		price							="42"
+		weight 							="2.5"
+		enhancement_slots				="0"
+		ability_slots					="0"
+		grid_size						="2"
+		hold_slot						="l_weapon"
+		equip_template					="witcher_crossbow_lvl3"
+		equip_slot						="crossbow_back_slot"
+		localisation_key_name			="item_name_crossbow_1"
+		localisation_key_description	="item_desc_crossbow_1"
+		icon_path						="icons/inventory/weapons/crossbow/witcher_crossbow_lvl3_64x128.png"
+	>
+		<tags>							Weapon, crossbow, mod_weapon
+		</tags>
+		<base_abilities>				<a>Default weapon _Stats</a>
+										<a>Crossbow 3 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Timber</parts>
+										<parts count="1">String</parts>
+										<parts count="1">Steel ingot</parts>
+		</recycling_parts>
+	</item>
+	
+	<item
+		name							="Crossbow 4"
+		category						="crossbow"
+		price							="48"
+		weight 							="2.5"
+		enhancement_slots				="0"
+		ability_slots					="0"
+		grid_size						="2"
+		hold_slot						="l_weapon"
+		equip_template					="witcher_crossbow_lvl4"
+		equip_slot						="crossbow_back_slot"
+		localisation_key_name			="item_name_crossbow_1"
+		localisation_key_description	="item_desc_crossbow_1"
+		icon_path						="icons/inventory/weapons/crossbow/witcher_crossbow_lvl4_64x128.png"
+	>
+		<tags>							Weapon, crossbow, mod_weapon
+		</tags>
+		<base_abilities>				<a>Default weapon _Stats</a>
+										<a>Crossbow 4 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Hardened timber</parts>
+										<parts count="1">String</parts>
+										<parts count="1">Steel ingot</parts>
+		</recycling_parts>
+	</item>
+	
+	<item
+		name							="Crossbow 5"
+		category						="crossbow"
+		price							="55"
+		weight 							="3.0"
+		enhancement_slots				="0"
+		ability_slots					="0"
+		grid_size						="2"
+		hold_slot						="l_weapon"
+		equip_template					="witcher_crossbow_lvl5"
+		equip_slot						="crossbow_back_slot"
+		localisation_key_name			="item_name_crossbow_1"
+		localisation_key_description	="item_desc_crossbow_1"
+		icon_path						="icons/inventory/weapons/crossbow/witcher_crossbow_lvl5_64x128.png"
+	>
+		<tags>							Weapon, crossbow, mod_weapon
+		</tags>
+		<base_abilities>				<a>Default weapon _Stats</a>
+										<a>Crossbow 5 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Hardened timber</parts>
+										<parts count="1">Twine</parts>
+										<parts count="1">Dark iron ingot</parts>
+		</recycling_parts>
+	</item>
+	
+	<item
+		name							="Crossbow 6"
+		category						="crossbow"
+		price							="84"
+		weight 							="3.0"
+		enhancement_slots				="0"
+		ability_slots					="0"
+		grid_size						="2"
+		hold_slot						="l_weapon"
+		equip_template					="witcher_crossbow_lvl6"
+		equip_slot						="crossbow_back_slot"
+		localisation_key_name			="item_name_crossbow_1"
+		localisation_key_description	="item_desc_crossbow_1"
+		icon_path						="icons/inventory/weapons/crossbow/witcher_crossbow_lvl6_64x128.png"
+	>
+		<tags>							Weapon, crossbow, mod_weapon
+		</tags>
+		<base_abilities>				<a>Default weapon _Stats</a>
+										<a>Crossbow 6 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Hardened timber</parts>
+										<parts count="1">Twine</parts>
+										<parts count="1">Silver ingot</parts>
+		</recycling_parts>
+	</item>
+	
+	<item
+		name							="Crossbow 7"
+		category						="crossbow"
+		price							="102"
+		weight 							="3.0"
+		enhancement_slots				="0"
+		ability_slots					="0"
+		grid_size						="2"
+		hold_slot						="l_weapon"
+		equip_template					="witcher_crossbow_lvl7"
+		equip_slot						="crossbow_back_slot"
+		localisation_key_name			="item_name_crossbow_1"
+		localisation_key_description	="item_desc_crossbow_1"
+		icon_path						="icons/inventory/weapons/crossbow/witcher_crossbow_lvl7_64x128.png"
+	>
+		<tags>							Weapon, crossbow, mod_weapon
+		</tags>
+		<base_abilities>				<a>Default weapon _Stats</a>
+										<a>Crossbow 7 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Hardened timber</parts>
+										<parts count="1">Twine</parts>
+										<parts count="1">Meteorite ingot</parts>
+		</recycling_parts>
+	</item>
+	
+	<item
+		name							="Lynx School Crossbow"
+		category						="crossbow"
+		price							="135"
+		weight 							="1.5"
+		enhancement_slots				="0"
+		ability_slots					="0"
+		grid_size						="2"
+		hold_slot						="l_weapon"
+		equip_template					="witcher_crossbow_lvl8"
+		equip_slot						="crossbow_back_slot"
+		localisation_key_name			="item_name_lynx_school_crossbow"
+		localisation_key_description	="item_desc_lynx_school_crossbow"
+		icon_path						="icons/inventory/weapons/crossbow/witcher_crossbow_lvl8_64x128.png"
+	>
+		<tags>							Weapon, crossbow, mod_weapon, mod_legendary, LynxSet
+		</tags>
+		<base_abilities>				<a>Default weapon _Stats</a>
+										<a>Lynx School Crossbow _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Hardened timber</parts>
+										<parts count="1">Meteorite ingot</parts>
+										<parts count="1">String</parts>
+		</recycling_parts>
+	</item>
+
+	<item
+		name							="Bear School Crossbow"
+		category						="crossbow"
+		price							="144"
+		weight 							="1.5"
+		enhancement_slots				="0"
+		ability_slots					="0"
+		grid_size						="2"
+		hold_slot						="l_weapon"
+		equip_template					="witcher_crossbow_lvl9"
+		equip_slot						="crossbow_back_slot"
+		localisation_key_name			="item_name_bear_school_crossbow"
+		localisation_key_description	="item_desc_bear_school_crossbow"
+		icon_path						="icons/inventory/weapons/crossbow/witcher_crossbow_lvl9_64x128.png"
+	>
+		<tags>							Weapon, crossbow, mod_weapon, mod_legendary, BearSet
+		</tags>
+		<base_abilities>				<a>Default weapon _Stats</a>
+										<a>Bear School Crossbow _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Hardened timber</parts>
+										<parts count="1">Glowing ingot</parts>
+										<parts count="1">String</parts>
+		</recycling_parts>
+	</item>
+
+</items>
+
+</definitions>
+</redxml>

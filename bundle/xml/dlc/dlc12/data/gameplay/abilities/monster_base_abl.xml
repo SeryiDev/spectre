@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+<definitions>
+<abilities>
+
+	<ability name="DLC12_endriagas">
+        <tags> "add" </tags>
+		<attack_power type="mult" always_random="false" min="-0.7" max="-0.7"/>
+	</ability>
+	
+	<ability name="DLC12_arachas">
+        <tags> "add" </tags>
+		<attack_power type="mult" always_random="false" min="-0.4" max="-0.4"/>
+	</ability>
+    
+	<ability name="DLC12_doppler">
+        <tags> "add" </tags>
+        <essence type="base" always_random="false" min="500" max="500" />
+	</ability>
+
+	<ability name="DLC12_werewolf">
+        <tags> "add" </tags>
+        <essence type="base" always_random="false" min="500" max="500" />
+	</ability>
+
+</abilities>
+</definitions>
+</redxml>

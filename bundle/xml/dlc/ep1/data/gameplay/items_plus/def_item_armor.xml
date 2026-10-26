@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+<definitions>
+
+<!-- ######################## ABILITY DEFINITIONS ######################## -->
+<abilities>
+
+<!-- LIGHT -->
+
+	<ability name="Geralt_kontusz _Stats">
+		<weight							type="base" min="4"					/>
+		<quality						type="add"	min="1"		max="1"		/>
+		<slashing_resistance_perc		type="base"	min="0.02"				/>
+		<piercing_resistance_perc		type="base"	min="0.0"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.0"				/>
+		<rending_resistance_perc		type="base"	min="0.02"				/>
+		<elemental_resistance_perc		type="base"	min="0.02"				/>
+		<staminaRegen_armor_mod			type="mult"	min="0.05"				/>
+	</ability> 
+	
+	<ability name="Geralt_kontusz_r _Stats">
+		<weight							type="base" min="4"					/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.08"				/>
+		<piercing_resistance_perc		type="base"	min="0.07"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.07"				/>
+		<rending_resistance_perc		type="base"	min="0.08"				/>
+		<elemental_resistance_perc		type="base"	min="0.08"				/>
+		<staminaRegen_armor_mod			type="mult"	min="0.07"				/>
+		<burning_resistance_perc 		type="base" min="0.35" 				/>
+		<spell_power_igni 				type="mult" min="0.25" 				/>
+		<item_level_min					type="add"	min="60"				/>
+		<item_level_max					type="add"	min="64"				/>
+	</ability> 
+	
+	<ability name="Ofir Armor _Stats">
+		<weight 						type="base" min="9" 				/>
+		<quality 						type="add" 	min="3"		max="3"		/>
+		<slashing_resistance_perc		type="base" min="0.03"				/>
+		<piercing_resistance_perc		type="base" min="0.02"				/>
+		<bludgeoning_resistance_perc	type="base" min="0.02"				/>
+		<rending_resistance_perc		type="base" min="0.03"				/>
+		<elemental_resistance_perc		type="base" min="0.03"				/>
+		<staminaRegen_armor_mod			type="mult" min="0.07"				/>
+	</ability>
+	
+	<ability name="Ofir Armor B _Stats">
+		<weight							type="base" min="6.5"				/>
+		<quality						type="add"	min="2"		max="2"		/>
+		<slashing_resistance_perc		type="base"	min="0.03"				/>
+		<piercing_resistance_perc		type="base"	min="0.02"				/>
+		<bludgeoning_resistance_perc	type="base" min="0.01"				/>
+		<rending_resistance_perc		type="base" min="0.02"				/>
+		<elemental_resistance_perc		type="base" min="0.02"				/>
+		<staminaRegen_armor_mod			type="mult" min="0.06"				/>
+	</ability>
+	
+<!-- MEDIUM -->
+
+	<ability name="Thief Armor _Stats">
+		<weight							type="base"	min="10"				/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.17"				/>
+		<piercing_resistance_perc		type="base"	min="0.09"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+		<rending_resistance_perc		type="base"	min="0.17"				/>
+		<elemental_resistance_perc		type="base"	min="0.17"				/>
+		<bonus_money 					type="add" 	min="0.7" 				/>
+		<encumbrance					type="add"	min="20"				/>
+	</ability>
+	
+	<ability name="Thief Armor B _Stats">
+		<weight							type="base"	min="15"				/>
+		<quality						type="add"	min="2"		max="2"		/>
+		<slashing_resistance_perc		type="base"	min="0.09"				/>
+		<piercing_resistance_perc		type="base"	min="0.03"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+		<rending_resistance_perc		type="base"	min="0.09"				/>
+		<elemental_resistance_perc		type="base"	min="0.09"				/>
+		<bonus_money 					type="add" 	min="0.35" 				/>
+		<encumbrance					type="add"	min="20"				/>
+	</ability>
+	
+	<ability name="Thief Armor Y _Stats">
+		<weight							type="base"	min="15"				/>
+		<quality						type="add"	min="3"		max="3"		/>
+		<slashing_resistance_perc		type="base"	min="0.12"				/>
+		<piercing_resistance_perc		type="base"	min="0.04"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+		<rending_resistance_perc		type="base"	min="0.12"				/>
+		<elemental_resistance_perc		type="base"	min="0.12"				/>
+		<bonus_money 					type="add" 	min="0.5" 				/>
+		<encumbrance					type="add"	min="20"				/>
+	</ability>
+	
+	<ability name="Thief Armor No Medallion _Stats">
+		<weight							type="base"	min="15"				/>
+		<quality						type="add"	min="2"		max="2"		/>
+		<slashing_resistance_perc		type="base"	min="0.09"				/>
+		<piercing_resistance_perc		type="base"	min="0.03"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+		<rending_resistance_perc		type="base"	min="0.09"				/>
+		<elemental_resistance_perc		type="base"	min="0.09"				/>
+		<bonus_money 					type="add" 	min="0.35" 				/>
+		<encumbrance					type="add"	min="20"				/>
+	</ability>
+
+<!-- HEAVY -->
+
+	<ability name="Burning Rose Armor _Stats">
+		<weight							type="base"	min="20"				/>
+		<quality 						type="add"	min="3"		max="3"		/>
+		<slashing_resistance_perc		type="base"	min="0.20" 				/>
+		<piercing_resistance_perc		type="base" min="0.20"				/>
+		<bludgeoning_resistance_perc	type="base" min="0.20"				/>
+		<rending_resistance_perc		type="base" min="0.20"				/>
+		<elemental_resistance_perc		type="base" min="0.20"				/>
+		<staminaRegen_armor_mod			type="mult"	min="-0.30"				/>
+	</ability>
+	
+	<ability name="Burning Rose Armor B _Stats">
+		<weight 						type="base" min="17.5"				/>
+		<quality 						type="add" 	min="2" 	max="2"		/>
+		<slashing_resistance_perc 		type="base" min="0.175"				/>
+		<piercing_resistance_perc 		type="base" min="0.175"				/>
+		<bludgeoning_resistance_perc 	type="base" min="0.175"				/>
+		<rending_resistance_perc 		type="base" min="0.175"				/>
+		<elemental_resistance_perc 		type="base" min="0.175"				/>
+		<staminaRegen_armor_mod 		type="mult" min="-0.30"				/>
+	</ability>
+	
+</abilities>
+
+<!-- ######################## ITEM DEFINITIONS ######################## -->
+<items>
+
+	<item
+		name							="Geralt Kontusz"
+		category						="armor"
+		price							="110"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_01_mg__wedding_suit"
+		localisation_key_name			="item_name_geralt_kontusz"
+		localisation_key_description	="item_desc_kontusz"
+		icon_path						="icons/inventory/quests/q602_wedding_suit_64x128.png"
+	>
+		<tags>							Autogen, AutogenForceLevel, Armor, LightArmor, mod_armor, DoNotEnhance, Sleevless, gm_NoSetBonuses
+		</tags>
+		<base_abilities>				<a>Geralt_kontusz _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Silk</parts>
+										<parts count="1">Linen</parts>
+										<parts count="1">Leather straps</parts>
+		</recycling_parts>
+		<variants>
+		<variant equip_template="t_01b_mg__wedding_suit">
+						<item>Body palms cut</item>
+		</variant>
+		<variant equip_template="t_01a_mg__wedding_suit" category="gloves"></variant>
+		</variants>
+	</item>
+
+	<item
+		name							="Geralt Kontusz R"
+		category						="armor"
+		price							="500"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_02_mg__wedding_suit"
+		localisation_key_name			="item_name_geralt_kontusz"
+		localisation_key_description	="item_desc_kontusz"
+		icon_path						="icons/inventory/armors/wedding_suit_64x128.png"
+	>
+		<tags>							Autogen, AutogenForceLevel, AutogenUseLevelRange, Armor, LightArmor, mod_armor, mod_legendary, EP1, DoNotEnhance, Sleevless
+		</tags>
+		<base_abilities>				<a>Geralt_kontusz_r _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="2">Silk</parts>
+										<parts count="2">Hardened leather</parts>
+										<parts count="1">Glowing ore</parts>
+		</recycling_parts>
+		<variants>						
+		<variant equip_template="t_02b_mg__wedding_suit">
+						<item>Body palms cut</item>
+		</variant>
+		<variant equip_template="t_02a_mg__wedding_suit" category="gloves"></variant>
+		</variants>
+	</item>
+	
+	<item
+		name							="Ofir Armor"
+		category						="armor"
+		price							="355"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="2"
+		grid_size 						="2"
+		stackable						="1"
+		ability_mode					="OnMount"
+		equip_template					="t1_05_mg__common_light_lv1"
+		localisation_key_name 			="item_name_ofir_armor_2"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/ofir_armor_2_64x128.png"
+	>									  
+		<tags>							Autogen, Armor, LightArmor, mod_armor, mod_origin_ofir, Ofir, Sleevless
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Ofir Armor _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Silk</parts>
+										<parts count="1">Hardened leather</parts>
+		</recycling_parts>
+	    <variants>						<variant equip_template="t1_05a_mg__common_light_lv1" category="gloves"></variant>
+		</variants>
+	</item>
+	
+	<item
+		name							="Ofir Armor B"
+		category						="armor"
+		price							="182"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="1"
+		grid_size 						="2"
+		stackable						="1"
+		ability_mode					="OnMount"
+		equip_template					="t1_05_mg__common_light_lv1"
+		localisation_key_name 			="item_name_ofir_armor_2"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/ofir_armor_2_64x128.png"
+	>									  
+		<tags>							Autogen, Armor, LightArmor, mod_armor, mod_origin_ofir, Ofir, Sleevless
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Ofir Armor B _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Silk</parts>
+										<parts count="1">Leather</parts>
+		</recycling_parts>
+	    <variants>						<variant equip_template="t1_05a_mg__common_light_lv1" category="gloves"></variant>
+		</variants>
+	</item>
+	
+	<item 
+		name							="Thief Armor" 
+		category						="armor" 
+		price							="800"
+		initial_durability				="100" 
+		max_durability					="100" 
+		enhancement_slots				="3" 
+		stackable						="1"
+		grid_size 						="2"
+		ability_mode					="OnMount" 
+		equip_template					="t_01_mg__thief" 
+		localisation_key_name 			="item_name_thief_borsody_armor" 
+		localisation_key_description 	="item_category_medium_armor_description" 
+		icon_path						="icons/inventory/armors/thief_armor_64x128.png" 
+	>
+		<tags>							Autogen, Armor, MediumArmor, mod_armor, mod_legendary, EP1
+		</tags>
+		<bound_items>
+		</bound_items>
+		<base_abilities>
+										<a>Thief Armor _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>		
+		<recycling_parts>				<parts count="1">Meteorite plate</parts>
+										<parts count="1">Silver ingot</parts>
+										<parts count="1">Glowing ingot</parts>
+										<parts count="2">Hardened leather</parts>
+		</recycling_parts> 	
+		<variants>						<variant equip_template="t_01a_mg__thief" category="gloves"></variant>						
+		</variants>		
+	</item>
+	
+	<item 
+		name							="Thief Armor B" 
+		category						="armor" 
+		price							="434"
+		initial_durability				="100" 
+		max_durability					="100" 
+		enhancement_slots				="1" 
+		stackable						="1"
+		grid_size 						="2"
+		ability_mode					="OnMount" 
+		equip_template					="t_01_mg__thief" 
+		localisation_key_name 			="item_name_thief_borsody_armor" 
+		localisation_key_description 	="item_category_medium_armor_description" 
+		icon_path						="icons/inventory/armors/thief_armor_64x128.png" 
+	>
+		<tags>							Autogen, AutogenForceLevel, Armor, MediumArmor, mod_armor
+		</tags>
+		<bound_items>
+		</bound_items>
+		<base_abilities>
+										<a>Thief Armor B _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>		
+		<recycling_parts>				<parts count="1">Leather</parts>
+										<parts count="1">Silk</parts>
+										<parts count="1">Dark steel plate</parts>
+		</recycling_parts> 	
+		<variants>						<variant equip_template="t_01a_mg__thief" category="gloves"></variant>						
+		</variants>		
+	</item>
+	
+	<item 
+		name							="Thief Armor Y" 
+		category						="armor" 
+		price							="706"
+		initial_durability				="100" 
+		max_durability					="100" 
+		enhancement_slots				="2" 
+		stackable						="1"
+		grid_size 						="2"
+		ability_mode					="OnMount" 
+		equip_template					="t_01_mg__thief" 
+		localisation_key_name 			="item_name_thief_borsody_armor" 
+		localisation_key_description 	="item_category_medium_armor_description" 
+		icon_path						="icons/inventory/armors/thief_armor_64x128.png" 
+	>
+		<tags>							Autogen, Armor, MediumArmor, mod_armor, EP1
+		</tags>
+		<bound_items>
+		</bound_items>
+		<base_abilities>
+										<a>Thief Armor Y _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>		
+		<recycling_parts>				<parts count="1">Hardened leather</parts>
+										<parts count="1">Silk</parts>
+										<parts count="1">Meteorite plate</parts>
+										<parts count="1">Silver ingot</parts>
+		</recycling_parts> 	
+		<variants>						<variant equip_template="t_01a_mg__thief" category="gloves"></variant>						
+		</variants>		
+	</item>
+	
+	<item 
+		name							="Thief Armor No Medallion" 
+		category						="armor" 
+		price							="434"
+		initial_durability				="100" 
+		max_durability					="100" 
+		enhancement_slots				="1" 
+		stackable						="1"
+		grid_size 						="2"
+		ability_mode					="OnMount" 
+		equip_template					="t_01_mg__thief_no_medallion" 
+		localisation_key_name 			="item_name_thief_borsody_armor" 
+		localisation_key_description 	="item_category_medium_armor_description" 
+		icon_path						="icons/inventory/armors/thief_armor_64x128.png" 
+	>
+		<tags>							Autogen, AutogenForceLevel, Armor, MediumArmor, mod_armor
+		</tags>
+		<bound_items>
+		</bound_items>
+		<base_abilities>
+										<a>Thief Armor No Medallion _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>		
+		<recycling_parts>				<parts count="1">Leather</parts>
+										<parts count="1">Silk</parts>
+										<parts count="1">Dark steel plate</parts>
+		</recycling_parts> 	
+		<variants>						<variant equip_template="t_01a_mg__thief_no_medallion" category="gloves"></variant>						
+		</variants>	
+	</item>		
+	
+	<item
+		name							="Burning Rose Armor"
+		category						="armor"
+		price							="856"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="2"
+		stackable						="1"
+		ability_mode					="OnMount"
+		grid_size						="2"
+		equip_template					="t_01_mg__flaming_rose_lv1"
+		localisation_key_name			="item_name_rose_armor"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/flaming_rose_armor_64x128.png"
+	>
+		<tags>							Autogen, Armor, HeavyArmor, mod_armor, EP1
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Burning Rose Armor _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Leather</parts>
+										<parts count="1">Meteorite silver plate</parts>
+		</recycling_parts>	
+		<variants>						<variant equip_template="t_01a_mg__flaming_rose_lv1" category="gloves"></variant>
+		</variants>
+	</item>
+	
+	<item
+		name							="Burning Rose Armor B"
+		category						="armor"
+		price							="412"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="1"
+		stackable						="1"
+		ability_mode					="OnMount"
+		grid_size						="2"
+		equip_template					="t_01_mg__flaming_rose_lv1"
+		localisation_key_name			="item_name_rose_armor"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/flaming_rose_armor_64x128.png"
+	>
+		<tags>							Autogen, Armor, HeavyArmor, mod_armor
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Burning Rose Armor B _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Leather</parts>
+										<parts count="1">Meteorite plate</parts>
+		</recycling_parts>	
+		<variants>						<variant equip_template="t_01a_mg__flaming_rose_lv1" category="gloves"></variant>
+		</variants>
+	</item>
+
+</items>
+
+</definitions>
+</redxml>

@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+	<definitions>
+		<items>     
+			<!-- HACK this name must be the same as the one under custom definition -->
+			<!-- Recipe for Beast Oil -->
+			
+			<item category="alchemy_recipe" name="Recipe for Beast Oil 1" stackable="100" price="30" weight="0.1"
+			icon_path="icons/inventory/quests/ico_recipe.png" localisation_key_name = "item_name_recipe_for_beast_oil_1" localisation_key_description = "item_desc_alchemy_recipe_oil">
+				<tags>ReadableItem, mod_alchemy</tags>
+					<base_abilities>
+						<a>Magic _Stats</a>
+					</base_abilities>
+			</item>
+			
+			<!-- Recipe for Cursed Oil -->
+			
+			<item category="alchemy_recipe" name="Recipe for Cursed Oil 1" stackable="100" price="30" weight="0.1"
+			icon_path="icons/inventory/quests/ico_recipe.png" localisation_key_name = "item_name_recipe_for_cursed_oil_1" localisation_key_description = "item_desc_alchemy_recipe_oil">
+				<tags>ReadableItem, mod_alchemy</tags>
+					<base_abilities>
+						<a>Magic _Stats</a>
+					</base_abilities>
+			</item>
+			
+			<!-- Recipe for Hanged Man Oil -->
+			
+			<item category="alchemy_recipe" name="Recipe for Hanged Man Venom 1" stackable="100" price="30"	 weight="0.1"
+			icon_path="icons/inventory/quests/ico_recipe.png" localisation_key_name = "item_name_recipe_for_hanged_man_venom_1" localisation_key_description = "item_desc_alchemy_recipe_oil">
+				<tags>ReadableItem, mod_alchemy</tags>
+					<base_abilities>
+						<a>Magic _Stats</a>
+					</base_abilities>
+			</item>
+			
+			<!-- Recipe for Hybrid Oil -->
+			
+			<item category="alchemy_recipe" name="Recipe for Hybrid Oil 1" stackable="100" price="30" weight="0.1"
+			icon_path="icons/inventory/quests/ico_recipe.png" localisation_key_name = "item_name_recipe_for_hybrid_oil_1" localisation_key_description = "item_desc_alchemy_recipe_oil">
+				<tags>ReadableItem, mod_alchemy</tags>
+					<base_abilities>
+						<a>Magic _Stats</a>
+					</base_abilities>
+			</item>
+			
+			<!-- Recipe for Insectoid Oil -->
+			
+			<item category="alchemy_recipe" name="Recipe for Insectoid Oil 1" stackable="100" price="30" weight="0.1"
+			icon_path="icons/inventory/quests/ico_recipe.png" localisation_key_name = "item_name_recipe_for_insectoid_oil_1" localisation_key_description = "item_desc_alchemy_recipe_oil">
+				<tags>ReadableItem, mod_alchemy</tags>
+					<base_abilities>
+						<a>Magic _Stats</a>
+					</base_abilities>
+			</item>
+			
+			<!-- Recipe for Magical Oil -->
+			
+			<item category="alchemy_recipe" name="Recipe for Magicals Oil 1" stackable="100" price="30" weight="0.1"
+			icon_path="icons/inventory/quests/ico_recipe.png" localisation_key_name = "item_name_recipe_for_magicals_oil_1" localisation_key_description = "item_desc_alchemy_recipe_oil">
+				<tags>ReadableItem, mod_alchemy</tags>
+					<base_abilities>
+						<a>Magic _Stats</a>
+					</base_abilities>
+			</item>
+			
+			<!-- Recipe for Necrophage Oil -->
+			
+			<item category="alchemy_recipe" name="Recipe for Necrophage Oil 1" stackable="100" price="30" weight="0.1"
+			icon_path="icons/inventory/quests/ico_recipe.png" localisation_key_name = "item_name_recipe_for_necrophage_oil_1" localisation_key_description = "item_desc_alchemy_recipe_oil">
+				<tags>ReadableItem, mod_alchemy</tags>
+					<base_abilities>
+						<a>Magic _Stats</a>
+					</base_abilities>
+			</item>
+				
+			<!-- Recipe for Specter Oil -->
+			
+			<item category="alchemy_recipe" name="Recipe for Specter Oil 1" stackable="100" price="30" weight="0.1"
+			icon_path="icons/inventory/quests/ico_recipe.png" localisation_key_name = "item_name_recipe_for_specter_oil_1" localisation_key_description = "item_desc_alchemy_recipe_oil">
+				<tags>ReadableItem, mod_alchemy</tags>
+					<base_abilities>
+						<a>Magic _Stats</a>
+					</base_abilities>
+			</item>
+			
+			<!-- Recipe for Vampire Oil -->
+			
+			<item category="alchemy_recipe" name="Recipe for Vampire Oil 1" stackable="100" price="30" weight="0.1"
+			icon_path="icons/inventory/quests/ico_recipe.png" localisation_key_name = "item_name_recipe_for_vampire_oil_1" localisation_key_description = "item_desc_alchemy_recipe_oil">
+				<tags>ReadableItem, mod_alchemy</tags>
+					<base_abilities>
+						<a>Magic _Stats</a>
+					</base_abilities>
+			</item>
+			
+			<!-- Recipe for Draconide Oil -->
+			
+			<item category="alchemy_recipe" name="Recipe for Draconide Oil 1" stackable="100" price="30" weight="0.1"
+			icon_path="icons/inventory/scrolls/scroll6.dds" localisation_key_name = "item_name_recipe_for_draconide_oil_1" localisation_key_description = "item_desc_alchemy_recipe_oil">
+				<tags>ReadableItem, mod_alchemy</tags>
+					<base_abilities>
+						<a>Magic _Stats</a>
+					</base_abilities>
+			</item>
+			
+			<!-- Recipe for Ogre Oil -->
+			
+			<item category="alchemy_recipe" name="Recipe for Ogre Oil 1" stackable="100" price="30" weight="0.1"
+			icon_path="icons/inventory/quests/ico_recipe.png" localisation_key_name = "item_name_recipe_for_ogre_oil_1" localisation_key_description = "item_desc_alchemy_recipe_oil">
+				<tags>ReadableItem, mod_alchemy</tags>
+					<base_abilities>
+						<a>Magic _Stats</a>
+					</base_abilities>
+			</item>
+			
+			<!-- Recipe for Relic Oil -->
+			
+			<item category="alchemy_recipe" name="Recipe for Relic Oil 1" stackable="100" price="30" weight="0.1"
+			icon_path="icons/inventory/quests/ico_recipe.png" localisation_key_name = "item_name_recipe_for_relic_oil_1" localisation_key_description = "item_desc_alchemy_recipe_oil">
+				<tags>ReadableItem, mod_alchemy</tags>
+					<base_abilities>
+						<a>Magic _Stats</a>
+					</base_abilities>
+			</item>
+			
+		</items>	
+	</definitions>
+
+	<custom>
+		<alchemy_recipes>
+			<!-- BEAST OIL -->
+			
+			<recipe name_name="Recipe for Beast Oil 1" type_name="beast" level="1" cookedItem_name="Beast Oil 1" cookedItemType="oil" cookedItemQuantity="1" localisation_key_name = "item_name_recipe_for_beast_oil_1" >
+				<ingredients>
+					<ingredient item_name="Bear fat" quantity="1" />
+					<ingredient item_name="Empty bottle" quantity="1" />
+					<ingredient item_name="Rebis" quantity="5" />
+					<ingredient item_name="Aether" quantity="5" />
+					<ingredient item_name="Quebrith" quantity="9" />
+					<ingredient item_name="Vermilion" quantity="2" />
+				</ingredients>
+			</recipe>
+			
+		
+			<!-- CURSED OIL -->
+			
+			<recipe name_name="Recipe for Cursed Oil 1" type_name="cursed" level="1" cookedItem_name="Cursed Oil 1" cookedItemType="oil" cookedItemQuantity="1" localisation_key_name = "item_name_recipe_for_cursed_oil_1" >
+				<ingredients>
+					<ingredient item_name="Dog tallow" quantity="2" />
+					<ingredient item_name="Empty bottle" quantity="1" />
+					<ingredient item_name="Aether" quantity="5" />
+					<ingredient item_name="Vitriol" quantity="9" />
+					<ingredient item_name="Rebis" quantity="5" />
+				</ingredients>
+			</recipe>
+			
+					
+			<!-- HANGED MAN VENOM -->
+			
+			<recipe name_name="Recipe for Hanged Man Venom 1" type_name="hanged" level="1" cookedItem_name="Hanged Man Venom 1" cookedItemType="oil" cookedItemQuantity="1" localisation_key_name = "item_name_recipe_for_hanged_man_venom_1" >
+				<ingredients>
+					<ingredient item_name="Alchemical paste" quantity="1" />
+					<ingredient item_name="Empty bottle" quantity="1" />
+					<ingredient item_name="Vitriol" quantity="2" />
+					<ingredient item_name="Rebis" quantity="2" />
+					<ingredient item_name="Aether" quantity="3" />
+					<ingredient item_name="Hydragenum" quantity="6" />
+					<ingredient item_name="Vermilion" quantity="3" />
+				</ingredients>
+			</recipe>
+			
+			
+			<!-- HYBRID OIL -->
+			
+			<recipe name_name="Recipe for Hybrid Oil 1" type_name="hybrid" level="1" cookedItem_name="Hybrid Oil 1" cookedItemType="oil" cookedItemQuantity="1" localisation_key_name = "item_name_recipe_for_hybrid_oil_" >
+				<ingredients>
+					<ingredient item_name="Dog tallow" quantity="2" />
+					<ingredient item_name="Empty bottle" quantity="1" />
+					<ingredient item_name="Quebrith" quantity="5" />
+					<ingredient item_name="Rebis" quantity="9" />
+					<ingredient item_name="Hydragenum" quantity="5" />
+				</ingredients>
+			</recipe>
+			
+			
+			<!-- INSECTOID OIL -->
+			
+			<recipe name_name="Recipe for Insectoid Oil 1" type_name="insectoid" level="1" cookedItem_name="Insectoid Oil 1" cookedItemType="oil" cookedItemQuantity="1" localisation_key_name = "item_name_recipe_for_insectoid_oil_1" >
+				<ingredients>
+					<ingredient item_name="Bear fat" quantity="1" />
+					<ingredient item_name="Empty bottle" quantity="1" />
+					<ingredient item_name="Aether" quantity="9" />
+					<ingredient item_name="Rebis" quantity="3" />
+					<ingredient item_name="Vermilion" quantity="5" />
+					<ingredient item_name="Quebrith" quantity="5" />
+				</ingredients>
+			</recipe>
+			
+			
+			<!-- MAGICALS OIL -->
+			
+			<recipe name_name="Recipe for Magicals Oil 1" type_name="magicals" level="1" cookedItem_name="Magicals Oil 1" cookedItemType="oil" cookedItemQuantity="1" localisation_key_name = "item_name_recipe_for_magicals_oil_1" >
+				<ingredients>
+					<ingredient item_name="Bear fat" quantity="1" />
+					<ingredient item_name="Empty bottle" quantity="1" />
+					<ingredient item_name="Hydragenum" quantity="5" />
+					<ingredient item_name="Rebis" quantity="3" />
+					<ingredient item_name="Vitriol" quantity="5" />
+					<ingredient item_name="Quebrith" quantity="9" />
+				</ingredients>
+			</recipe>
+			
+			
+			<!-- NECROPHAGE OIL -->
+			
+			<recipe name_name="Recipe for Necrophage Oil 1" type_name="necrophage" level="1" cookedItem_name="Necrophage Oil 1" cookedItemType="oil" cookedItemQuantity="1" localisation_key_name = "item_name_recipe_for_necrophage_oil_1">
+				<ingredients>
+					<ingredient item_name="Dog tallow" quantity="1" />
+					<ingredient item_name="Empty bottle" quantity="1" />
+					<ingredient item_name="Vitriol" quantity="5" />	
+					<ingredient item_name="Aether" quantity="9" />
+				</ingredients>
+			</recipe>
+			
+					
+			<!-- SPECTER OIL -->
+			
+			<recipe name_name="Recipe for Specter Oil 1" type_name="specter" level="1" cookedItem_name="Specter Oil 1" cookedItemType="oil" cookedItemQuantity="1" localisation_key_name="item_name_recipe_for_specter_oil_1">
+				<ingredients>
+					<ingredient item_name="Dog tallow" quantity="2" />
+					<ingredient item_name="Empty bottle" quantity="1" />
+					<ingredient item_name="Aether" quantity="5" />
+					<ingredient item_name="Vitriol" quantity="5" />
+					<ingredient item_name="Rebis" quantity="5" />
+				</ingredients>
+			</recipe>
+			
+			
+			<!-- VAMPIRE OIL -->
+			
+			<recipe name_name="Recipe for Vampire Oil 1" type_name="vampire" level="1" cookedItem_name="Vampire Oil 1" cookedItemType="oil" cookedItemQuantity="1" localisation_key_name="item_name_recipe_for_vampire_oil_1">
+				<ingredients>
+					<ingredient item_name="Bear fat" quantity="1" />
+					<ingredient item_name="Empty bottle" quantity="1" />
+					<ingredient item_name="Vitriol" quantity="5" />
+					<ingredient item_name="Vermilion" quantity="5" />
+					<ingredient item_name="Hydragenum" quantity="5" />
+					<ingredient item_name="Quebrith" quantity="9" />
+				</ingredients>
+			</recipe>
+			
+			
+			<!-- DRACONIDE OIL -->
+			
+			<recipe name_name="Recipe for Draconide Oil 1" type_name="draconide" level="1" cookedItem_name="Draconide Oil 1" cookedItemType="oil" cookedItemQuantity="1" localisation_key_name="item_name_recipe_for_draconide_oil_1">
+				<ingredients>
+					<ingredient item_name="Bear fat" quantity="1" />
+					<ingredient item_name="Empty bottle" quantity="1" />
+					<ingredient item_name="Rebis" quantity="3" />
+					<ingredient item_name="Vitriol" quantity="5" />
+					<ingredient item_name="Quebrith" quantity="5" />
+					<ingredient item_name="Hydragenum" quantity="9" />
+				</ingredients>
+			</recipe>
+			
+			
+			<!-- OGRE OIL -->
+			
+			<recipe name_name="Recipe for Ogre Oil 1" type_name="ogre" level="1" cookedItem_name="Ogre Oil 1" cookedItemType="oil" cookedItemQuantity="1" localisation_key_name="item_name_recipe_for_ogre_oil_1">
+				<ingredients>
+					<ingredient item_name="Dog tallow" quantity="1" />
+					<ingredient item_name="Empty bottle" quantity="1" />
+					<ingredient item_name="Vermilion" quantity="9" />
+					<ingredient item_name="Quebrith" quantity="9" />
+				</ingredients>
+			</recipe>
+			
+
+			<!-- RELIC OIL -->
+			
+			<recipe name_name="Recipe for Relic Oil 1" type_name="relic" level="1" cookedItem_name="Relic Oil 1" cookedItemType="oil" cookedItemQuantity="1" localisation_key_name="item_name_recipe_for_relic_oil_1">
+				<ingredients>
+					<ingredient item_name="Dog tallow" quantity="2" />
+					<ingredient item_name="Empty bottle" quantity="1" />
+					<ingredient item_name="Vermilion" quantity="5" />
+					<ingredient item_name="Hydragenum" quantity="5" />
+					<ingredient item_name="Aether" quantity="5" />
+				</ingredients>
+			</recipe>
+			
+		</alchemy_recipes>
+	</custom>
+</redxml>

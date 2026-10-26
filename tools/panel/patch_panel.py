@@ -12,7 +12,7 @@ Only the classes in it are replaced. tools\\panel\\as holds every class Spectre 
 again gives the same panel.
 --redswf defaults to bundle\\files\\gameplay\\gui_new\\swf\\character\\panel_character_dupe.redswf.
 Before writing, the old file is copied to tools\\panel\\backup. After writing, the movie is read back and
-compared. Rebuild the bundle afterwards (pack-release.ps1 -Base ...) and update bundle\\bundle.sha256.
+compared. Rebuild the bundle afterwards (pack-release.ps1 -Rebuild) and update bundle\\bundle.sha256.
 
 Needs FFDec (ffdec-cli.exe) and the zopfli Python module (pip install zopfli).
 """

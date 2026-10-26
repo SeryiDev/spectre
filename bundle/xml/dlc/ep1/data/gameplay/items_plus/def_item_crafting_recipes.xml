@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+<definitions>
+
+<!-- ######################## SCHEMATIC ITEMS ######################## -->
+<items>
+
+<!-- Easter Egg Items -->
+	<item
+		name							="Concealment Kit schematic"
+		category						="crafting_schematic"
+		price							="22"
+		stackable						="100"
+		localisation_key_name			="item_name_concealment_kit_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>	
+		</base_abilities>
+	</item>
+
+<!-- Steel Sword -->
+	<item
+		name							="Crafted Ofir Steel Sword schematic"
+		category						="crafting_schematic"
+		price							="240"
+		stackable						="100"
+		localisation_key_name			="item_name_ofir_steel_sabre_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting
+		</tags>
+		<base_abilities>				<a>Relic _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="EP1 Viper School steel sword schematic"
+		category						="crafting_schematic"
+		price							="280"
+		stackable						="100"
+		localisation_key_name			="item_name_hosviper_school_steel_sword_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="Crafted Burning Rose Sword schematic"
+		category						="crafting_schematic"
+		price							="250"
+		stackable						="100"
+		localisation_key_name			="item_name_burning_rose_steel_sword_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting
+		</tags>
+		<base_abilities>				<a>Relic _Stats</a>
+		</base_abilities>
+	</item>
+
+<!-- Silver Sword -->
+	<item
+		name							="EP1 Crafted Witcher Silver Sword schematic"
+		category						="crafting_schematic"
+		price							="310"
+		stackable						="100"
+		localisation_key_name			="item_name_electrum_sword_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>Relic _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="EP1 Viper School silver sword schematic"
+		category						="crafting_schematic"
+		price							="340"
+		stackable						="100"
+		localisation_key_name			="item_name_hosviper_school_silver_sword_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+<!--  ARMORS  -->
+	<item
+		name							="Crafted Ofir Armor schematic"
+		category						="crafting_schematic"
+		price							="120"
+		stackable						="100"
+		localisation_key_name			="item_name_ofir_armor_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting
+		</tags>
+		<base_abilities>				<a>Relic _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Crafted Ofir Boots schematic"
+		category						="crafting_schematic"
+		price							="34"
+		stackable						="100"
+		localisation_key_name			="item_name_ofir_shoes_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting
+		</tags>
+		<base_abilities>				<a>Relic _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Crafted Ofir Gloves schematic"
+		category						="crafting_schematic"
+		price							="34"
+		stackable						="100"
+		localisation_key_name			="item_name_ofir_gloves_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting
+		</tags>
+		<base_abilities>				<a>Relic _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Crafted Ofir Pants schematic"
+		category						="crafting_schematic"
+		price							="54"
+		stackable						="100"
+		localisation_key_name			="item_name_ofir_pants_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting
+		</tags>
+		<base_abilities>				<a>Relic _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="Crafted Burning Rose Armor schematic"
+		category						="crafting_schematic"
+		price							="320"
+		stackable						="100"
+		localisation_key_name			="item_name_rose_armor_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting
+		</tags>
+		<base_abilities>				<a>Relic _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="Crafted Burning Rose Gloves schematic"
+		category						="crafting_schematic"
+		price							="100"
+		stackable						="100"
+		localisation_key_name			="item_name_rose_gloves_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting
+		</tags>
+		<base_abilities>				<a>Relic _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="EP1 Witcher Armor schematic"
+		category						="crafting_schematic"
+		price							="320"
+		stackable						="100"
+		localisation_key_name			="item_name_hoscorset_armor_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="EP1 Witcher Boots schematic"
+		category						="crafting_schematic"
+		price							="170"
+		stackable						="100"
+		localisation_key_name			="item_name_hoscorset_boots_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="EP1 Witcher Gloves schematic"
+		category						="crafting_schematic"
+		price							="140"
+		stackable						="100"
+		localisation_key_name			="item_name_hoscorset_gloves_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="EP1 Witcher Pants schematic"
+		category						="crafting_schematic"
+		price							="170"
+		stackable						="100"
+		localisation_key_name			="item_name_hoscorset_pants_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+</items>
+</definitions>
+
+<custom>
+
+<!-- ######################## SCHEMATIC DEFINITONS ######################## -->
+<crafting_schematics>
+
+<!-- Easter Egg Items -->
+	<schematic
+		name_name						="Concealment Kit schematic"
+		craftedItem_name				="Concealment Kit"
+		craftsmanType_name				="Crafter"
+		craftsmanLevel_name				="Journeyman"
+		price							="110"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="q602_donkey_ears"				/>
+										<ingredient	quantity="1"	item_name="q603_magister_glasses"			/>
+		</ingredients>
+	</schematic>
+
+<!-- STEEL WITCHER -->
+	<schematic
+		name_name						="Crafted Ofir Steel Sword schematic"
+		craftedItem_name				="Crafted Ofir Steel Sword"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Grand Master"
+		price							="1200"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient	quantity="2"	item_name="Wire rope"						/>
+										<ingredient	quantity="1"	item_name="Haft"							/>
+										<ingredient	quantity="1"	item_name="Amber dust"						/>
+										<ingredient	quantity="1"	item_name="Sapphire dust"					/>
+										<ingredient	quantity="1"	item_name="Ruby dust"						/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="EP1 Viper School steel sword schematic"
+		craftedItem_name				="EP1 Viper School steel sword"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Grand Master"
+		price							="1400"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient	quantity="1"	item_name="Leather"							/>
+										<ingredient	quantity="2"	item_name="Wire rope"						/>
+										<ingredient	quantity="1"	item_name="Haft"							/>
+										<ingredient	quantity="1"	item_name="Arachas venom"					/>
+										<ingredient	quantity="1"	item_name="Emerald dust"					/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="Crafted Burning Rose Sword schematic"
+		craftedItem_name				="Crafted Burning Rose Sword"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Master"
+		price							="1250"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient	quantity="2"	item_name="Wire rope"						/>
+										<ingredient	quantity="1"	item_name="Haft"							/>
+										<ingredient	quantity="1"	item_name="Amethyst dust"					/>
+										<ingredient	quantity="1"	item_name="Amber dust"						/>
+										<ingredient	quantity="1"	item_name="Diamond dust"					/>
+		</ingredients>
+	</schematic>
+
+<!-- SILVER WITCHER -->
+	<schematic
+		name_name						="EP1 Crafted Witcher Silver Sword schematic"
+		craftedItem_name				="EP1 Crafted Witcher Silver Sword"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Grand Master"
+		price							="1550"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Meteorite silver ingot"			/>
+										<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient	quantity="2"	item_name="Wire rope"						/>
+										<ingredient	quantity="1"	item_name="Amethyst dust"					/>
+										<ingredient	quantity="1"	item_name="Sapphire dust"					/>
+										<ingredient	quantity="1"	item_name="Diamond dust"					/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="EP1 Viper School silver sword schematic"
+		craftedItem_name				="EP1 Viper School silver sword"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Grand Master"
+		price							="1700"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Meteorite silver ingot"			/>
+										<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient quantity="1"	item_name="Leather"							/>
+										<ingredient	quantity="2"	item_name="Wire rope"						/>
+										<ingredient	quantity="1"	item_name="Arachas venom"					/>
+										<ingredient	quantity="1"	item_name="Emerald dust"					/>
+		</ingredients>
+	</schematic>
+
+<!-- ARMOR WITCHER -->
+	<schematic
+		name_name						="Crafted Ofir Armor schematic"
+		craftedItem_name				="Crafted Ofir Armor"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Grand Master"
+		price							="600"
+	>
+		<ingredients>					<ingredient	quantity="2"	item_name="Silk"							/>
+										<ingredient	quantity="2"	item_name="Hardened leather"				/>
+										<ingredient	quantity="1"	item_name="Glowing ore"						/>
+										<ingredient	quantity="1"	item_name="Amethyst dust"					/>
+										<ingredient	quantity="1"	item_name="Ruby dust"						/>
+										<ingredient	quantity="1"	item_name="Emerald dust"					/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="Crafted Ofir Boots schematic"
+		craftedItem_name				="Crafted Ofir Boots"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Grand Master"
+		price							="170"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Glowing ingot"					/>
+										<ingredient	quantity="1"	item_name="Leather squares"					/>
+										<ingredient	quantity="2"	item_name="Thread"							/>
+										<ingredient	quantity="1"	item_name="Amber dust"						/>
+										<ingredient	quantity="1"	item_name="Ruby dust"						/>
+										<ingredient	quantity="1"	item_name="Amethyst dust"					/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="Crafted Ofir Gloves schematic"
+		craftedItem_name				="Crafted Ofir Gloves"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Grand Master"
+		price							="170"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Glowing ingot"					/>
+										<ingredient	quantity="2"	item_name="Leather straps"					/>
+										<ingredient	quantity="1"	item_name="String"							/>
+										<ingredient	quantity="1"	item_name="Sapphire dust"					/>
+										<ingredient	quantity="1"	item_name="Emerald dust"					/>
+										<ingredient	quantity="1"	item_name="Amber dust"						/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="Crafted Ofir Pants schematic"
+		craftedItem_name				="Crafted Ofir Pants"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Grand Master"
+		price							="270"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Leather squares"					/>
+										<ingredient	quantity="1"	item_name="Silk"							/>
+										<ingredient	quantity="1"	item_name="Sapphire dust"					/>
+										<ingredient	quantity="1"	item_name="Ruby dust"						/>
+										<ingredient	quantity="1"	item_name="Amethyst dust"					/>
+		</ingredients>
+	</schematic>
+	
+	<!-- ARMOR WITCHER -->
+	<schematic
+		name_name						="Crafted Burning Rose Armor schematic"
+		craftedItem_name				="Crafted Burning Rose Armor"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Master"
+		price							="1600"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Dwimeryte plate"					/>
+										<ingredient	quantity="1"	item_name="Leather"							/>
+										<ingredient	quantity="1"	item_name="String"							/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="Crafted Burning Rose Gloves schematic"
+		craftedItem_name				="Crafted Burning Rose Gloves"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Master"
+		price							="500"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Meteorite silver ingot"			/>
+										<ingredient	quantity="1"	item_name="Dark steel ingot"				/>
+										<ingredient	quantity="2"	item_name="Leather"							/>
+										<ingredient	quantity="2"	item_name="String"							/>					
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="EP1 Witcher Armor schematic"
+		craftedItem_name				="EP1 Witcher Armor"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Grand Master"
+		price							="3200"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Geralt Shirt"					/>
+										<ingredient	quantity="2"	item_name="Hardened leather"				/>
+										<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Troll skin"						/>
+										<ingredient	quantity="1"	item_name="Basilisk plate"					/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="EP1 Witcher Boots schematic"
+		craftedItem_name				="EP1 Witcher Boots"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Grand Master"
+		price							="1700"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Leather"							/>
+										<ingredient	quantity="1"	item_name="Wire"							/>
+										<ingredient	quantity="1"	item_name="Troll skin"						/>
+										<ingredient	quantity="1"	item_name="Wyvern plate"					/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="EP1 Witcher Gloves schematic"
+		craftedItem_name				="EP1 Witcher Gloves"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Grand Master"
+		price							="1400"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Leather straps"					/>
+										<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient	quantity="1"	item_name="Monstrous hide"					/>
+										<ingredient	quantity="2"	item_name="Dragon scales"					/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="EP1 Witcher Pants schematic"
+		craftedItem_name				="EP1 Witcher Pants"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Grand Master"
+		price							="1700"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Leather"							/>
+										<ingredient	quantity="1"	item_name="Monstrous hide"					/>
+										<ingredient	quantity="1"	item_name="Forktail plate"					/>
+		</ingredients>
+	</schematic>
+
+</crafting_schematics>
+
+</custom>
+</redxml>

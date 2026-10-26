@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+  <definitions>
+    <abilities>
+<!-- modSigns: done -->
+      <ability name="attack_heavy_noparry">
+        <tags>attack_heavy</tags>
+        <!-- <attack_power type="mult" always_random="false" min="0.25" max="0.25" /> -->
+        <!-- <focus_gain type="base" min="0.1" /> -->
+        <focus_hit_drain_mod type="mult" always_random="false" min="1.5" max="1.5" />
+      </ability>
+    </abilities>
+  </definitions>
+</redxml>

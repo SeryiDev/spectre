@@ -238,27 +238,27 @@ The finished gameplay bundle (`blob0.bundle` and `metadata.store`) is published 
 
 `-Bundle` also takes the unzipped folder or an https link to the zip. The files are checked against `bundle\bundle.sha256`.
 
-To rebuild the bundle from source instead, it is built from the published v0.93 release, the files in `bundle`, and your The Witcher 3 5.01 install. Download `Spectre.-.Release.-.v0.93.zip` from the [v0.93 release](https://github.com/apokryphus/spectre/releases/tag/v0.93). Python needs `lz4` (`pip install lz4`).
+To rebuild the bundle from source instead: every file of the bundle is in `bundle`, so neither the game nor another release is needed. Python needs `lz4` (`pip install lz4`).
 
 From the repo root:
 
 ```
-.\pack-release.ps1 -Version 1.0 -Base "C:\path\to\Spectre.-.Release.-.v0.93.zip"
+.\pack-release.ps1 -Version 1.0 -Rebuild
 ```
 
-The script finds the game in the Steam libraries; pass `-Game "C:\path\to\The Witcher 3"` if it is somewhere else. That builds `build\mod000Spectre\content` and writes `dist\spectre_release_v1.0.zip`. Without `-Base` the script packs the bundle already in `build`. To build only the bundle:
+That builds `build\mod000Spectre\content` and writes `dist\spectre_release_v1.0.zip`. Without `-Rebuild` the script packs the bundle already in `build`. To build only the bundle:
 
 ```
-python bundle\build_bundle.py --base "C:\path\to\Spectre.-.Release.-.v0.93.zip" --game "C:\path\to\The Witcher 3"
+python bundle\build_bundle.py
 ```
 
 - `src` is the scripts.
-- `bundle\xml` is the gameplay XML rebased onto 5.01. Edit these to change skills, effects, or items. They replace the v0.93 copies.
-- `bundle\files` is the files v0.93 does not have, such as the 5.01 character panel, and non-XML files that replace the v0.93 copy (the loot window, `popup_loot.redswf`).
-- `bundle\entities501.json` lists the entities, scenes and quest files taken from the 5.01 game instead of v0.93, with Spectre's edits (levels, loot, damage, prices, abilities...) put back: value patches in place, then the structural edits that `bundle\cr2w_ops.py` replays. The v0.93 copies came from old game versions and lacked the 4.0 and 5.0 changes. The originals and the results are checked by SHA-256.
-- `bundle\metadata.store` is the bundle index. The build only rewrites sizes and offsets. A new file in `bundle\files` needs a record here first, made with [w3edit](https://github.com/Systemcluster/w3edit).
+- `bundle\xml` is every XML of the bundle. Edit these to change skills, effects, or items.
+- `bundle\files` is every other file of the bundle: entities, scenes, quest files, journals, CSV, menus and the Flash panels (the 5.01 character panel, the loot window).
+- `bundle\alchemy501` is the 5.01 alchemy data for the vanilla alchemy variant (`-Alchemy501`).
+- `bundle\metadata.store` is the bundle index. The build only rewrites sizes and offsets. A new file needs a record here first, made with [w3edit](https://github.com/Systemcluster/w3edit).
 - `tools\panel` patches the ActionScript of the two Flash panels in `bundle\files` (the 5.01 skill menu and the loot window); the changed classes are in it. See `tools\panel\README.md`.
-- `tools\entities` makes `bundle\entities501.json` again, from the 1.32, v0.93 and 5.01 files, after a game patch or to change an edit. See `tools\entities\README.md`.
+- `tools\entities` makes the entities, scenes and quest files of `bundle\files` again from the 5.01 game, with Spectre's edits (levels, loot, damage, prices, abilities...) put back, after a game patch or to change an edit. See `tools\entities\README.md`.
 - `strings\*.w3strings` are the 17 language files. `strings\en.csv` is the source for the lines added in this port. `es.w3strings` carries that English text, so a game set to Spanish still shows it. The other languages keep the v0.93 text, plus the English text of the new lines.
 - `bin\config\r4game\user_config_matrix\pc\000Spectre.xml` is the options menu.
 - `dlc\dlc000Spectre` is the DLC bundle, metadata, and texture cache.

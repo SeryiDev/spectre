@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+    <reward name="mq1058_child_found" 								level="25"	experience="30" 		gold="0" 	achievement="0" 	script="" comment="medium exp" />
+    <reward name="mq1058_witcher_killed" 							level="25"	experience="150" 		gold="0" 	achievement="0" 	script="" comment="medium exp" />
+    <reward name="mq1058_witcher_spared" 							level="25"	experience="300" 		gold="0" 	achievement="0" 	script="" comment="medium exp" />
+    <reward name="mq1058_lynx_stash" 							    level="25"	experience="0" 			gold="300" 	achievement="0" 	script="" comment="gold and items left behind by Cat Witcher, recipies, a sword perhaps"> 
+		<items> 
+			<item name="mq1058_cat_note" amount="1" />
+			<item name="mq1058_cat_school_sword" amount="1" />	
+		</items>    
+	</reward>
+</redxml>

@@ -40,4 +40,4 @@ python tools\panel\patch_panel.py patch --redswf bundle\files\gameplay\gui_new\s
 python tools\panel\patch_panel.py patch --redswf bundle\files\gameplay\gui_new\swf\popups\popup_loot.redswf --scripts tools\panel\loot_as
 ```
 
-After patching either panel, rebuild the bundle (`pack-release.ps1 -Version 1.0 -Base <v0.93 release>`) and update `bundle\bundle.sha256` with the hashes of `build\mod000Spectre\content`.
+After patching either panel, rebuild the bundle (`pack-release.ps1 -Version 1.0 -Rebuild`) and update `bundle\bundle.sha256` with the hashes of `build\mod000Spectre\content`.

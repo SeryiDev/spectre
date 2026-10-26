@@ -4,3 +4,5 @@
 metadata.store binary
 *.redswf binary
 bundle/xml/** -text
+bundle/files/** -text
+bundle/alchemy501/** -text

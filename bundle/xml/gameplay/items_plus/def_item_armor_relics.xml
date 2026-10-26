@@ -1,0 +1,1146 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+<definitions>
+
+<!-- ######################## ABILITY DEFINITIONS ######################## -->
+<abilities>
+
+<!-- Light armor -->
+	<ability name="Shiadhal armor _Stats"> <!-- Shiadhal's Armor - light, +5 stats, 50% burning res, +10% igni power -->
+		<weight							type="base"	min="9"					/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.08"				/>
+		<piercing_resistance_perc		type="base"	min="0.07"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.07"				/>
+		<rending_resistance_perc		type="base"	min="0.08"				/>
+		<elemental_resistance_perc		type="base"	min="0.08"				/>
+		<burning_resistance_perc		type="base"	min="0.50"				/>
+		<spell_power_igni				type="mult"	min="0.1"				/>
+		<staminaRegen_armor_mod			type="mult"	min="0.07"				/>
+	</ability>
+
+<!-- Medium armor -->
+	<ability name="Thyssen armor _Stats"> <!-- Thyssen Armor - medium, +5 stats, 50% poison res, 25% activate quen when hit -->
+		<weight							type="base"	min="15"				/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.17"				/>
+		<piercing_resistance_perc		type="base"	min="0.09"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+		<rending_resistance_perc		type="base"	min="0.17"				/>
+		<elemental_resistance_perc		type="base"	min="0.17"				/>
+		<poison_resistance_perc			type="base"	min="0.50"				/>
+		<quen_chance_on_projectile		type="add"	min="0.25"				/>
+	</ability>
+
+<!-- Medium armor -->
+	<ability name="Oathbreaker armor _Stats"> <!-- Oathbreaker Armor - medium, +5 stats, +10% axii power, +10% money -->
+		<weight							type="base"	min="15"				/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.17"				/>
+		<piercing_resistance_perc		type="base"	min="0.09"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+		<rending_resistance_perc		type="base"	min="0.17"				/>
+		<elemental_resistance_perc		type="base"	min="0.17"				/>
+		<bonus_money					type="add"	min="0.10"				/>
+		<spell_power_axii				type="mult"	min="0.10"				/>
+	</ability>
+
+<!-- Heavy armor -->
+	<ability name="Relic Heavy 3 armor _Stats"> <!-- Impera Brigade Armor - heavy, +5 stats, +10% aard power, less stamina regen penalty -->
+		<weight							type="base"	min="20"				/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.22"				/>
+		<piercing_resistance_perc		type="base"	min="0.22"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.22"				/>
+		<rending_resistance_perc		type="base"	min="0.22"				/>
+		<elemental_resistance_perc		type="base"	min="0.22"				/>
+		<spell_power_aard				type="mult"	min="0.10"				/>
+		<staminaRegen_armor_mod			type="mult"	min="-0.20"				/>
+	</ability>
+
+<!-- Heavy armor -->
+	<ability name="Zireael armor _Stats"> <!-- Zirael Armor - heavy, +5 stats, 50% bleeding resist, less stamina regen penalty -->
+		<weight							type="base"	min="20"				/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.22"				/>
+		<piercing_resistance_perc		type="base"	min="0.22"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.22"				/>
+		<rending_resistance_perc		type="base"	min="0.22"				/>
+		<elemental_resistance_perc		type="base"	min="0.22"				/>
+		<bleeding_resistance_perc 		type="base" min="0.50"				/>
+		<staminaRegen_armor_mod			type="mult"	min="-0.20"				/>
+	</ability>
+
+<!-- Heavy armor -->
+	<ability name="Shadaal armor _Stats"> <!-- Great Sun Armor - heavy, +5 stats, 25% activate quen when hit, +10% quen power, less stamina regen penalty -->
+		<weight							type="base"	min="20"				/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.22"				/>
+		<piercing_resistance_perc		type="base"	min="0.22"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.22"				/>
+		<rending_resistance_perc		type="base"	min="0.22"				/>
+		<elemental_resistance_perc		type="base"	min="0.22"				/>
+		<quen_chance_on_projectile		type="add"	min="0.25"				/>
+		<spell_power_quen				type="mult"	min="0.10"				/>
+		<staminaRegen_armor_mod			type="mult"	min="-0.20"				/>
+	</ability>
+	
+	
+<!-- ARMOR LIGHT -->
+	<ability name="Light armor 01r _Stats"> <!-- Cidarian Gambeson - light, +5 stats, +100-150 vitality -->
+		<weight							type="base" min="9"					/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.08"				/>
+		<piercing_resistance_perc		type="base"	min="0.07"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.07"				/>
+		<rending_resistance_perc		type="base"	min="0.08"				/>
+		<elemental_resistance_perc		type="base"	min="0.08"				/>
+		<staminaRegen_armor_mod			type="mult"	min="0.07"				/>
+		<vitality						type="base" min="100"	max="150"	/>
+	</ability>
+	
+	<ability name="Light armor 02r _Stats"> <!-- Skellige Gambeson - light, +5 stats, +5-10% igni power -->
+		<weight							type="base" min="9"					/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.08"				/>
+		<piercing_resistance_perc		type="base"	min="0.07"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.07"				/>
+		<rending_resistance_perc		type="base"	min="0.08"				/>
+		<elemental_resistance_perc		type="base"	min="0.08"				/>
+		<staminaRegen_armor_mod			type="mult"	min="0.07"				/>
+		<spell_power_igni 				type="mult" min="0.05" max="0.10"	/>
+	</ability>
+	
+	<ability name="Light armor 03r _Stats"> <!-- Kaedveni Gambeson - light, +5 stats, +5-10% aard power -->
+		<weight							type="base" min="9"					/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.08"				/>
+		<piercing_resistance_perc		type="base"	min="0.07"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.07"				/>
+		<rending_resistance_perc		type="base"	min="0.08"				/>
+		<elemental_resistance_perc		type="base"	min="0.08"				/>
+		<staminaRegen_armor_mod			type="mult"	min="0.07"				/>
+		<spell_power_aard 				type="mult" min="0.05" max="0.10"	/>
+	</ability>
+	
+	<ability name="Light armor 04r _Stats"> <!-- Spikeroog Aketon - light, +5 stats, +focus gain -->
+		<weight							type="base" min="9"					/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.08"				/>
+		<piercing_resistance_perc		type="base"	min="0.07"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.07"				/>
+		<rending_resistance_perc		type="base"	min="0.08"				/>
+		<elemental_resistance_perc		type="base"	min="0.08"				/>
+		<staminaRegen_armor_mod			type="mult"	min="0.07"				/>
+		<focus_gain 					type="add"	min="0.04"	max="0.08"	/>
+	</ability>
+	
+<!-- Light armor 02 variant -->
+	<ability name="Light armor 06r _Stats"> <!-- Verden Archer's Gambeson - light, +5 stats, +5-10% yrden power -->
+		<weight							type="base" min="9"					/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.08"				/>
+		<piercing_resistance_perc		type="base"	min="0.07"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.07"				/>
+		<rending_resistance_perc		type="base"	min="0.08"				/>
+		<elemental_resistance_perc		type="base"	min="0.08"				/>
+		<staminaRegen_armor_mod			type="mult"	min="0.07"				/>
+		<spell_power_yrden 				type="mult" min="0.05" max="0.10"	/>
+	</ability>
+	
+<!-- Light armor 03 variant -->
+	<ability name="Light armor 07r _Stats"> <!-- Bounty Hunter's Gambeson - light, +5 stats, +5-10% axii power -->
+		<weight							type="base" min="9"					/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.08"				/>
+		<piercing_resistance_perc		type="base"	min="0.07"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.07"				/>
+		<rending_resistance_perc		type="base"	min="0.08"				/>
+		<elemental_resistance_perc		type="base"	min="0.08"				/>
+		<staminaRegen_armor_mod			type="mult"	min="0.07"				/>
+		<spell_power_axii 				type="mult" min="0.05" max="0.10"	/>
+	</ability>
+	
+<!-- Light armor 04 variant -->
+	<ability name="Light armor 08r _Stats"> <!-- Ard Skellig Aketon - light, +5 stats, +5-10% quen power -->
+		<weight							type="base" min="9"					/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.08"				/>
+		<piercing_resistance_perc		type="base"	min="0.07"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.07"				/>
+		<rending_resistance_perc		type="base"	min="0.08"				/>
+		<elemental_resistance_perc		type="base"	min="0.08"				/>
+		<staminaRegen_armor_mod			type="mult"	min="0.07"				/>
+		<spell_power_quen 				type="mult" min="0.05"  max="0.10"	/>
+	</ability>
+
+<!-- Light armor 02 variant -->
+	<ability name="Light armor 09r _Stats"> <!-- Freya's Warriors' Armor - light, +5 stats, +5-10% quen power -->
+		<weight							type="base" min="9"					/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.08"				/>
+		<piercing_resistance_perc		type="base"	min="0.07"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.07"				/>
+		<rending_resistance_perc		type="base"	min="0.08"				/>
+		<elemental_resistance_perc		type="base"	min="0.08"				/>
+		<staminaRegen_armor_mod			type="mult"	min="0.07"				/>
+		<spell_power_quen 				type="mult" min="0.05"  max="0.10"	/>
+	</ability>
+
+<!-- ARMOR MEDIUM -->		
+	<ability name="Medium armor 01r _Stats"> <!-- Salmian Brigandine - medium, +5 stats, +150-200 vitality -->
+		<weight 						type="base"	min="15"				/>
+		<quality						type="add"	min="4"		max="4" 	/>
+		<slashing_resistance_perc		type="base"	min="0.15"				/>
+		<piercing_resistance_perc		type="base" min="0.08"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.08"				/>
+		<rending_resistance_perc		type="base"	min="0.15"				/>
+		<elemental_resistance_perc		type="base"	min="0.15"				/>
+		<vitality 						type="base" min="150"	max="200"	/>
+	</ability>
+	
+	<ability name="Medium armor 02r _Stats"> <!-- Cidarian Cavalry Armor - medium, +5 stats, +5-10% igni power -->
+		<weight 						type="base"	min="15"				/>
+		<quality						type="add"	min="4"		max="4" 	/>
+		<slashing_resistance_perc		type="base"	min="0.16"				/>
+		<piercing_resistance_perc		type="base" min="0.09"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+		<rending_resistance_perc		type="base"	min="0.16"				/>
+		<elemental_resistance_perc		type="base"	min="0.16"				/>
+		<spell_power_igni 				type="mult" min="0.05" max="0.10"	/>
+	</ability>
+	
+	<ability name="Medium armor 03r _Stats"> <!-- Redanian Halberdier's Armor - medium, +5 stats, +5-10% aard power -->
+		<weight 						type="base"	min="15"				/>
+		<quality						type="add"	min="4"		max="4" 	/>
+		<slashing_resistance_perc		type="base"	min="0.17"				/>
+		<piercing_resistance_perc		type="base" min="0.09"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+		<rending_resistance_perc		type="base"	min="0.17"				/>
+		<elemental_resistance_perc		type="base"	min="0.17"				/>
+		<spell_power_aard 				type="mult" min="0.05" max="0.10"	/>
+	</ability>
+	
+	<ability name="Medium armor 04r _Stats"> <!-- Angrenian Cuirass - medium, +5 stats, +5-10% yrden power -->
+		<weight 						type="base"	min="15"				/>
+		<quality						type="add"	min="4"		max="4" 	/>
+		<slashing_resistance_perc		type="base"	min="0.17"				/>
+		<piercing_resistance_perc		type="base" min="0.09"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+		<rending_resistance_perc		type="base"	min="0.17"				/>
+		<elemental_resistance_perc		type="base"	min="0.17"				/>
+		<spell_power_yrden 				type="mult" min="0.05" max="0.10"	/>
+	</ability>
+	
+<!-- Medium armor 01 alternate stats -->
+	<ability name="Medium armor 05r _Stats"> <!-- Belhaven Brigandine - medium, +5 stats, +focus gain -->
+		<weight 						type="base"	min="15"				/>
+		<quality						type="add"	min="4"		max="4" 	/>
+		<slashing_resistance_perc		type="base"	min="0.17"				/>
+		<piercing_resistance_perc		type="base" min="0.09"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+		<rending_resistance_perc		type="base"	min="0.17"				/>
+		<elemental_resistance_perc		type="base"	min="0.17"				/>
+		<focus_gain 					type="add"	min="0.04"	max="0.08"	/>
+	</ability>
+	
+<!-- Medium armor 04 alternate stats -->
+	<ability name="Medium armor 07r _Stats"> <!-- Kaedveni Cuirass - medium, +5 stats, +5-10% axii power -->
+		<weight 						type="base"	min="15"				/>
+		<quality						type="add"	min="4"		max="4" 	/>
+		<slashing_resistance_perc		type="base"	min="0.17"				/>
+		<piercing_resistance_perc		type="base" min="0.09"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+		<rending_resistance_perc		type="base"	min="0.17"				/>
+		<elemental_resistance_perc		type="base"	min="0.17"				/>
+		<spell_power_axii 				type="mult" min="0.05" max="0.10"/>
+	</ability>
+	
+<!-- Medium armor 04 alternate stats -->
+	<ability name="Medium armor 10r _Stats"> <!-- Witch Hunter's Armor - medium, +5 stats, +10-15% burning resistance -->
+		<weight 						type="base"	min="15"				/>
+		<quality						type="add"	min="4"		max="4" 	/>
+		<slashing_resistance_perc		type="base"	min="0.17"				/>
+		<piercing_resistance_perc		type="base" min="0.09"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+		<rending_resistance_perc		type="base"	min="0.17"				/>
+		<elemental_resistance_perc		type="base"	min="0.17"				/>
+		<burning_resistance_perc		type="base" min="0.10" max="0.15"	/>
+	</ability>
+	
+<!-- Medium armor 04 alternate stats -->
+	<ability name="Medium armor 11r _Stats"> <!-- Eternal Fire Executioner's Armor - medium, +5 stats, +10-15% burning resistance -->
+		<weight 						type="base"	min="15"				/>
+		<quality						type="add"	min="4"		max="4" 	/>
+		<slashing_resistance_perc		type="base"	min="0.17"				/>
+		<piercing_resistance_perc		type="base" min="0.09"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+		<rending_resistance_perc		type="base"	min="0.17"				/>
+		<elemental_resistance_perc		type="base"	min="0.17"				/>
+		<burning_resistance_perc		type="base" min="0.10" max="0.15"	/>
+	</ability>
+
+<!-- ARMOR HEAVY -->	
+	<ability name="Heavy armor 01r _Stats"> <!-- Mag Deira Cuirass - heavy, +2 stats, +200-300 vitality -->
+		<weight							type="base" min="20"				/>
+		<quality 						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.22"				/>
+		<piercing_resistance_perc 		type="base" min="0.22"				/>
+		<bludgeoning_resistance_perc 	type="base" min="0.22"				/>
+		<rending_resistance_perc 		type="base" min="0.22"				/>
+		<elemental_resistance_perc 		type="base" min="0.22"				/>
+		<staminaRegen_armor_mod 		type="mult" min="-0.20"				/>
+		<vitality 						type="base" min="200"	max="300"	/>
+	</ability>
+	
+	<ability name="Heavy armor 02r _Stats"> <!-- Ban Ard Breastplate - heavy, +2 stats, 25% activate quen when hit -->
+		<weight							type="base" min="20"				/>
+		<quality 						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.22"				/>
+		<piercing_resistance_perc 		type="base" min="0.22"				/>
+		<bludgeoning_resistance_perc 	type="base" min="0.22"				/>
+		<rending_resistance_perc 		type="base" min="0.22"				/>
+		<elemental_resistance_perc 		type="base" min="0.22"				/>
+		<staminaRegen_armor_mod 		type="mult" min="-0.20"				/>
+		<quen_chance_on_projectile		type="add"	min="0.25"				/>
+	</ability>
+	
+	<ability name="Heavy armor 03r _Stats"> <!-- Nilfgaardian Guardsman Armor - heavy, +2 stats, +10% to dismember chance -->
+		<weight							type="base" min="20"				/>
+		<quality 						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.22"				/>
+		<piercing_resistance_perc 		type="base" min="0.22"				/>
+		<bludgeoning_resistance_perc 	type="base" min="0.22"				/>
+		<rending_resistance_perc 		type="base" min="0.22"				/>
+		<elemental_resistance_perc 		type="base" min="0.22"				/>
+		<staminaRegen_armor_mod 		type="mult" min="-0.20"				/>
+		<dismember_chance			type="add"	min="0.10"				/>
+	</ability>
+	
+	<ability name="Heavy armor 04r _Stats"> <!-- Hindarfjall Heavy Armor - heavy, +5 stats, +5-10% focus gain -->
+		<weight							type="base" min="20"				/>
+		<quality 						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.22"				/>
+		<piercing_resistance_perc 		type="base" min="0.22"				/>
+		<bludgeoning_resistance_perc 	type="base" min="0.22"				/>
+		<rending_resistance_perc 		type="base" min="0.22"				/>
+		<elemental_resistance_perc 		type="base" min="0.22"				/>
+		<staminaRegen_armor_mod 		type="mult" min="-0.20"				/>
+		<focus_gain 					type="add"	min="0.05"	max="0.10"	/>
+		</ability>
+	
+<!-- Heavy armor 01 variant -->
+	<ability name="Heavy armor 05r _Stats"> <!-- Mahakaman Heavy Armor - heavy, +5 stats, +5-10% focus gain -->
+		<weight							type="base" min="20"				/>
+		<quality 						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.22"				/>
+		<piercing_resistance_perc 		type="base" min="0.22"				/>
+		<bludgeoning_resistance_perc 	type="base" min="0.22"				/>
+		<rending_resistance_perc 		type="base" min="0.22"				/>
+		<elemental_resistance_perc 		type="base" min="0.22"				/>
+		<staminaRegen_armor_mod 		type="mult" min="-0.20"				/>
+		<focus_gain 					type="add"	min="0.05"	max="0.10"	/>
+	</ability>
+	
+
+</abilities>
+
+<!-- ######################## ITEM DEFINITIONS ######################## -->
+
+<items>	
+
+<!-- Light armor 5 -->
+	<item
+		name							="Shiadhal armor"
+		category						="armor"
+		price							="580"
+		initial_durability				="200"
+		max_durability					="200"
+		enhancement_slots				="3"
+		grid_size 						="2"
+		stackable						="1"
+		ability_mode					="OnMount"
+		equip_template					="t_02_mg__common_light_lvl1"
+		localisation_key_name 			="item_name_shiadhalarmor"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_lvl1_02_64x128.png"
+	>
+		<tags>							Autogen, Armor, LightArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Shiadhal armor _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="2">Silk</parts>
+										<parts count="2">Hardened leather</parts>
+										<parts count="1">Glowing ore</parts>
+										<parts count="1">Amber</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="t_02a_mg__common_light_lvl1" category="gloves"></variant>
+		</variants>
+	</item>
+
+<!-- Medium armor 6 -->
+	<item
+		name							="Thyssen armor"
+		category						="armor"
+		price							="845"
+		initial_durability				="200"
+		max_durability					="200"
+		enhancement_slots				="3"
+		grid_size						="2"
+		stackable						="1"
+		ability_mode					="OnMount"
+		equip_template					="t_02_mg__common_medium_lvl2"
+		localisation_key_name			="item_name_thyssenarmor"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/common_medium_lvl2_02_64x128.png"
+	 >
+		<tags>							Autogen, Armor, MediumArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Thyssen armor _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Meteorite plate</parts>
+										<parts count="1">Silver ingot</parts>
+										<parts count="1">Glowing ingot</parts>
+										<parts count="1">Ruby</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="t_02a_mg__common_medium_lvl2" category="gloves"></variant>
+		</variants>
+	</item>
+
+<!-- Medium armor 7 -->
+	<item
+		name							="Oathbreaker armor"
+		category						="armor"
+		price							="845"
+		initial_durability				="200"
+		max_durability					="200"
+		enhancement_slots				="3"
+		grid_size						="2"
+		stackable						="1"
+		ability_mode					="OnMount"
+		equip_template					="t_02_mg__common_medium_lvl3"
+		localisation_key_name			="item_name_oathbreakerarmor"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/common_medium_lvl3_02_64x128.png"
+	>
+		<tags>							Autogen, Armor, MediumArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Oathbreaker armor _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Meteorite plate</parts>
+										<parts count="1">Silver ingot</parts>
+										<parts count="1">Glowing ingot</parts>
+										<parts count="1">Emerald</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="t_02a_mg__common_medium_lvl3" category="gloves"></variant>
+		</variants>
+	</item>
+	
+<!-- Relic Heavy 3 armor -->
+	<item
+		name							="Relic Heavy 3 armor"
+		category						="armor"
+		price							="1595"
+		initial_durability				="300"
+		max_durability					="300" 
+		enhancement_slots				="3"
+		stackable						="1"
+		ability_mode					="OnMount"
+		grid_size						="2"
+		equip_template					="t_03_mg__common_heavy_lvl3"
+		localisation_key_name			="item_name_heavy_armor_08"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_lvl3_02_64x128.png"
+	>
+		<tags>							Autogen, Armor, HeavyArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Relic Heavy 3 armor _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Dwimeryte plate</parts>
+										<parts count="1">Leather</parts>
+										<parts count="1">Sapphire</parts>
+		</recycling_parts>	
+		<variants>						<variant equip_template="t_03a_mg__common_heavy_lvl3" category="gloves"></variant>
+		</variants>
+	</item>
+
+<!-- Heavy armor 6 -->
+	<item
+		name							="Zireael armor"
+		category						="armor"
+		price							="1595"
+		initial_durability				="200"
+		max_durability					="200" 
+		enhancement_slots				="3"
+		grid_size						="2"
+		stackable						="1"
+		ability_mode					="OnMount"
+		equip_template					="t_02_mg__common_heavy_lvl2"
+		localisation_key_name			="item_name_zireaelarmor"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_lvl2_02_64x128.png"
+	>
+		<tags>							Autogen, Armor, HeavyArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Zireael armor _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Dwimeryte plate</parts>
+										<parts count="1">Leather</parts>
+										<parts count="2">Lunar shards</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="t_02a_mg__common_heavy_lvl2" category="gloves"></variant>
+		</variants>
+	</item>
+	
+<!-- Heavy armor 7 -->
+	<item
+		name							="Shadaal armor"
+		category						="armor"
+		price							="1595"
+		initial_durability				="300"
+		max_durability					="300" 
+		enhancement_slots				="3"
+		grid_size						="2"
+		stackable						="1"
+		ability_mode					="OnMount"
+		equip_template					="t_02_mg__common_heavy_lvl3"
+		localisation_key_name			="item_name_heavy_armor_07"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_lvl3_02_64x128.png"
+	>
+		<tags>							Autogen, Armor, HeavyArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Shadaal armor _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Dwimeryte plate</parts>
+										<parts count="1">Leather</parts>
+										<parts count="1">Ruby</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="t_02a_mg__common_heavy_lvl3" category="gloves"></variant>
+		</variants>
+	</item>
+	
+<!-- ARMOR LIGHT -->
+	<item
+		name							="Light armor 01r"
+		category						="armor"
+		price							="500"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_01_mg__common_light_lvl1"
+		localisation_key_name			="item_name_light_armor_01"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_lvl1_01_64x128.png"
+	>
+		<tags>							Autogen, Armor,LightArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Light armor 01r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="2">Silk</parts>
+										<parts count="2">Hardened leather</parts>
+										<parts count="1">Glowing ore</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_01a_mg__common_light_lvl1" category="gloves"></variant>
+		</variants>
+	</item>
+	
+<!-- Light armor 2-->
+	<item
+		name							="Light armor 02r"
+		category						="armor"
+		price							="500"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_01_mg__common_light_lvl2"
+		localisation_key_name			="item_name_light_armor_02"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_lvl2_01_64x128.png"
+	>
+		<tags>							Autogen, Armor,LightArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Light armor 02r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="2">Silk</parts>
+										<parts count="2">Hardened leather</parts>
+										<parts count="1">Glowing ore</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_01a_mg__common_light_lvl2" category="gloves"></variant>
+		</variants>
+	</item>
+	
+<!-- Light armor 3-->
+	<item
+		name							="Light armor 03r"
+		category						="armor"
+		price							="500"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_01_mg__common_light_lvl3"
+		localisation_key_name			="item_name_light_armor_03"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_lvl3_01_64x128.png"
+	>
+		<tags>							Autogen, Armor,LightArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Light armor 03r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="2">Silk</parts>
+										<parts count="2">Hardened leather</parts>
+										<parts count="1">Glowing ore</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_01a_mg__common_light_lvl3" category="gloves"></variant>
+		</variants>
+	</item>
+	
+<!-- Light armor 4-->
+	<item
+		name							="Light armor 04r"
+		category						="armor"
+		price							="500"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_01_mg__common_light_lvl4"
+		localisation_key_name			="item_name_light_armor_04"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_lvl4_01_64x128.png"
+	>
+		<tags>							Autogen, Armor,LightArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Light armor 04r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="2">Silk</parts>
+										<parts count="2">Hardened leather</parts>
+										<parts count="1">Glowing ore</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_01a_mg__common_light_lvl4" category="gloves"></variant>
+		</variants>
+	</item>
+
+<!-- Light armor 6 -->
+	<item
+		name							="Light armor 06r"
+		category						="armor"
+		price							="500"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_02_mg__common_light_lvl2"
+		localisation_key_name			="item_name_light_armor_06"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_lvl2_02_64x128.png"
+	>
+		<tags>							Autogen, Armor,LightArmor, mod_armor, mod_legendary
+		</tags> 				
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Light armor 06r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="2">Silk</parts>
+										<parts count="2">Hardened leather</parts>
+										<parts count="1">Glowing ore</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="t_02a_mg__common_light_lvl2" category="gloves"></variant>
+		</variants>
+	</item>
+	
+<!-- Light armor 7 -->
+	<item
+		name							="Light armor 07r"
+		category						="armor"
+		price							="500"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_02_mg__common_light_lvl3"
+		localisation_key_name			="item_name_light_armor_07"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_lvl3_02_64x128.png"
+	>
+		<tags>							Autogen, Armor,LightArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Light armor 07r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="2">Silk</parts>
+										<parts count="2">Hardened leather</parts>
+										<parts count="1">Glowing ore</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_02a_mg__common_light_lvl3" category="gloves"></variant>
+		</variants>
+	</item>
+	
+<!-- Light armor 8 -->
+	<item
+		name							="Light armor 08r"
+		category						="armor"
+		price							="500"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_02_mg__common_light_lvl4"
+		localisation_key_name			="item_name_light_armor_08"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_lvl4_02_64x128.png"
+	>
+		<tags>							Autogen, Armor,LightArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Light armor 08r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="2">Silk</parts>
+										<parts count="2">Hardened leather</parts>
+										<parts count="1">Glowing ore</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_02a_mg__common_light_lvl4" category="gloves"></variant>
+		</variants>
+	</item>
+	
+<!-- Light armor 9 -->
+	<item
+		name							="Light armor 09r"
+		category						="armor"
+		price							="500"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_03_mg__common_light_lvl2"
+		localisation_key_name			="item_name_light_armor_09"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_lvl2_03_64x128.png"
+	>
+		<tags>							Autogen, Armor,LightArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Light armor 09r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="2">Silk</parts>
+										<parts count="2">Hardened leather</parts>
+										<parts count="1">Glowing ore</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_03a_mg__common_light_lvl2" category="gloves"></variant>
+		</variants>
+	</item>
+	
+<!-- ARMOR MEDIUM -->
+	<item
+		name							="Medium armor 01r"
+		category						="armor"
+		price							="800"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_01_mg__common_medium_lvl1"
+		localisation_key_name			="item_name_medium_armor_01"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/common_medium_lvl1_01_64x128.png"
+	>
+		<tags>							Autogen, Armor,MediumArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Medium armor 01r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Meteorite plate</parts>
+										<parts count="1">Silver ingot</parts>
+										<parts count="1">Glowing ingot</parts>
+										<parts count="2">Hardened leather</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_01a_mg__common_medium_lvl1" category="gloves"></variant>
+		</variants>
+	</item>
+
+<!-- Medium armor 2-->
+	<item
+		name							="Medium armor 02r"
+		category						="armor"
+		price							="800"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_01_mg__common_medium_lvl2"
+		localisation_key_name			="item_name_medium_armor_02"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/t_01_mg__common_medium_lvl2-64x128.png"
+	>
+		<tags>							Autogen, Armor,MediumArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Medium armor 02r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Meteorite plate</parts>
+										<parts count="1">Silver ingot</parts>
+										<parts count="1">Glowing ingot</parts>
+										<parts count="2">Hardened leather</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_01a_mg__common_medium_lvl2" category="gloves"></variant>
+		</variants>
+	</item>
+	
+<!-- Medium armor 3-->
+	<item
+		name							="Medium armor 03r"
+		category						="armor"
+		price							="800"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_01_mg__common_medium_lvl3"
+		localisation_key_name			="item_name_medium_armor_03"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/t_01_mg__common_medium_lvl3-64x128.png"
+	>
+		<tags>							Autogen, Armor,MediumArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Medium armor 03r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Meteorite plate</parts>
+										<parts count="1">Silver ingot</parts>
+										<parts count="1">Glowing ingot</parts>
+										<parts count="2">Hardened leather</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_01a_mg__common_medium_lvl3" category="gloves"></variant>
+		</variants>
+	</item>
+	
+<!-- Medium armor 4-->
+	<item
+		name							="Medium armor 04r"
+		category						="armor"
+		price							="800"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_01_mg__common_medium_lvl4"
+		localisation_key_name			="item_name_medium_armor_04"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/common_medium_lvl4_01_64x128.png"
+	>
+		<tags>							Autogen, Armor,MediumArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Medium armor 04r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Meteorite plate</parts>
+										<parts count="1">Silver ingot</parts>
+										<parts count="1">Glowing ingot</parts>
+										<parts count="2">Hardened leather</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_01a_mg__common_medium_lvl4" category="gloves"></variant>
+		</variants>
+	</item>
+	
+<!-- Medium armor 5-->
+	<item
+		name							="Medium armor 05r"
+		category						="armor"
+		price							="800"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_02_mg__common_medium_lvl1"
+		localisation_key_name			="item_name_medium_armor_05"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/common_medium_lvl1_02_64x128.png"
+	>
+		<tags>							Autogen, Armor,MediumArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Medium armor 05r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Meteorite plate</parts>
+										<parts count="1">Silver ingot</parts>
+										<parts count="1">Glowing ingot</parts>
+										<parts count="2">Hardened leather</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_02a_mg__common_medium_lvl1" category="gloves"></variant>
+		</variants>
+	</item>
+	
+<!-- Medium armor 7-->
+	<item
+		name							="Medium armor 07r"
+		category						="armor"
+		price							="800"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_03_mg__common_medium_lvl4"
+		localisation_key_name			="item_name_medium_armor_07"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/common_medium_lvl4_03_64x128.png"
+	>
+		<tags>							Autogen, Armor,MediumArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Medium armor 07r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Meteorite plate</parts>
+										<parts count="1">Silver ingot</parts>
+										<parts count="1">Glowing ingot</parts>
+										<parts count="2">Hardened leather</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_03a_mg__common_medium_lvl4" category="gloves"></variant>
+		</variants>
+	</item>
+	
+<!-- Medium armor 10-->
+	<item
+		name							="Medium armor 10r"
+		category						="armor"
+		price							="800"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_02_mg__common_medium_lvl4"
+		localisation_key_name			="item_name_medium_armor_10"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/common_medium_lvl4_02_64x128.png"
+	>
+		<tags>							Autogen, Armor,MediumArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Medium armor 10r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Meteorite plate</parts>
+										<parts count="1">Silver ingot</parts>
+										<parts count="1">Glowing ingot</parts>
+										<parts count="2">Hardened leather</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_02a_mg__common_medium_lvl4" category="gloves"></variant>
+		</variants>
+	</item>
+	
+	
+<!-- Medium armor 11-->
+	<item
+		name							="Medium armor 11r"
+		category						="armor"
+		price							="800"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_04_mg__common_medium_lvl4"
+		localisation_key_name			="item_name_medium_armor_11"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/common_medium_lvl4_04_64x128.png"
+	>
+		<tags>							Autogen, Armor,MediumArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Medium armor 11r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Meteorite plate</parts>
+										<parts count="1">Silver ingot</parts>
+										<parts count="1">Glowing ingot</parts>
+										<parts count="2">Hardened leather</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_04a_mg__common_medium_lvl4" category="gloves"></variant>
+		</variants>
+	</item>
+
+<!-- ARMOR HEAVY -->
+	<item
+		name							="Heavy armor 01r"
+		category						="armor"
+		price							="1500"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_01_mg__common_heavy_lvl1"
+		localisation_key_name			="item_name_heavy_armor_01"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_lvl1_01_64x128.png"
+	>
+		<tags>							Autogen, Armor,HeavyArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Heavy armor 01r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Dwimeryte plate</parts>
+										<parts count="1">Leather</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_01a_mg__common_heavy_lvl1" category="gloves"></variant>
+		</variants>
+	</item>
+	
+<!-- Heavy armor 2-->
+	<item
+		name							="Heavy armor 02r"
+		category						="armor"
+		price							="1500"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_01_mg__common_heavy_lvl2"
+		localisation_key_name			="item_name_heavy_armor_02"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_lvl2_01_64x128.png"
+	>
+		<tags>							Autogen, Armor,HeavyArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Heavy armor 02r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Dwimeryte plate</parts>
+										<parts count="1">Leather</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_01a_mg__common_heavy_lvl2" category="gloves"></variant>
+		</variants>
+	</item>
+	
+<!-- Heavy armor 3-->
+	<item
+		name							="Heavy armor 03r"
+		category						="armor"
+		price							="1500"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_01_mg__common_heavy_lvl3"
+		localisation_key_name			="item_name_heavy_armor_03"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_lvl3_01_64x128.png"
+	>
+		<tags>							Autogen, Armor,HeavyArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Heavy armor 03r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Dwimeryte plate</parts>
+										<parts count="1">Leather</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_01a_mg__common_heavy_lvl3" category="gloves"></variant>
+		</variants>
+	</item>
+	
+<!-- Heavy armor 4-->
+	<item
+		name							="Heavy armor 04r"
+		category						="armor"
+		price							="1500"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_01_mg__common_heavy_lvl4"
+		localisation_key_name			="item_name_heavy_armor_04"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_lvl4_01_64x128.png"
+	>
+		<tags>							Autogen, Armor,HeavyArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Heavy armor 04r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Dwimeryte plate</parts>
+										<parts count="1">Leather</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="t_01a_mg__common_heavy_lvl4" category="gloves"></variant>
+		</variants>
+	</item>
+
+<!-- Heavy armor 5-->
+	<item
+		name							="Heavy armor 05r"
+		category						="armor"
+		price							="1500"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_02_mg__common_heavy_lvl1"
+		localisation_key_name			="item_name_heavy_armor_05"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_lvl1_02_64x128.png"
+	>
+		<tags>							Autogen, Armor,HeavyArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Heavy armor 05r _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Dwimeryte plate</parts>
+										<parts count="1">Leather</parts>
+		</recycling_parts> 				
+		<variants>						<variant equip_template="t_02a_mg__common_heavy_lvl1" category="gloves"></variant>
+		</variants>
+	</item>
+	
+
+</items>
+
+</definitions>
+</redxml>

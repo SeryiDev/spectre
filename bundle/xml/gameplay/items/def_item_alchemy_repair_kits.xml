@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+<definitions>
+
+<!-- ######################## ABILITY DEFINITIONS ######################## -->
+<abilities>
+
+<!-- REPAIR KIT - DEFAULT STATS -->
+
+	<ability name="Default_WeaponRepairKit_Stats">
+		<!-- <weight							type="base"	min="0.1"				/> -->
+		<quality						type="add"	min="2"		max="2"		/>
+	</ability>
+  
+	<ability name="Default_ArmorRepairKit_Stats">
+		<!-- <weight							type="base"	min="0.1"				/> -->
+		<quality						type="add"	min="2"		max="2"		/>
+	</ability>
+	
+	<!-- modSpectre -->
+	<ability name="WeaponRepairKit_1_Stats">
+		<quality						type="add"	min="1"		max="1"		/>
+	</ability>
+
+	<ability name="WeaponRepairKit_2_Stats">
+		<quality						type="add"	min="2"		max="2"		/>
+	</ability>
+
+	<ability name="WeaponRepairKit_3_Stats">
+		<quality						type="add"	min="3"		max="3"		/>
+	</ability>
+
+	<ability name="WeaponRepairKit_4_Stats">
+		<quality						type="add"	min="4"		max="4"		/>
+	</ability>
+	
+	<ability name="ArmorRepairKit_1_Stats">
+		<quality						type="add"	min="1"		max="1"		/>
+	</ability>
+
+	<ability name="ArmorRepairKit_2_Stats">
+		<quality						type="add"	min="2"		max="2"		/>
+	</ability>
+
+	<ability name="ArmorRepairKit_3_Stats">
+		<quality						type="add"	min="3"		max="3"		/>
+	</ability>
+
+	<ability name="ArmorRepairKit_4_Stats">
+		<quality						type="add"	min="4"		max="4"		/>
+	</ability>
+	
+	<!-- modSpectre -->
+
+	<ability name="GearDismantleKit_1_Stats">
+		<quality						type="add"	min="1"		max="1"		/>
+	</ability>
+	
+	<ability name="AlchemyDismantleKit_1_Stats">
+		<quality						type="add"	min="1"		max="1"		/>
+	</ability>
+	
+<!-- REPAIR KIT - WEAPON -->
+
+	<ability name="WeaponRepairKit_1">
+		<tags>							RepairValue
+		</tags>
+		<weight							type="base"	min="0.1"				/>
+		<level							type="add"	min="1"					/>
+		<repairValue					type="mult" min="0.1"				/>
+	</ability>
+  
+	<ability name="WeaponRepairKit_2">
+		<tags>							RepairValue
+		</tags>
+		<weight							type="base"	min="0.2"				/>
+		<level							type="add"	min="1"					/>
+		<repairValue					type="mult"	min="0.2"				/>
+	</ability>
+
+	<ability name="WeaponRepairKit_3">
+		<tags>							RepairValue
+		</tags>
+		<weight							type="base"	min="0.3"				/>
+		<level							type="add"	min="1"					/>
+		<repairValue					type="mult"	min="0.3"				/>
+	</ability>
+
+	<ability name="WeaponRepairKit_4"> <!-- modSpectre -->
+		<tags>							RepairValue
+		</tags>
+		<weight							type="base"	min="0.4"				/>
+		<level							type="add"	min="1"					/>
+		<repairValue					type="mult"	min="1.0"				/>
+	</ability>
+
+<!-- REPAIR KIT - ARMOR -->
+
+	<ability name="ArmorRepairKit_1">
+		<tags>							RepairValue
+		</tags>
+		<weight							type="base"	min="0.1"				/>
+		<level							type="add"	min="1"					/>
+		<repairValue					type="mult" min="0.1"				/>
+	</ability>
+  
+  <ability name="ArmorRepairKit_2">
+		<tags>							RepairValue
+		</tags>
+		<weight							type="base"	min="0.2"				/>
+		<level							type="add"	min="1"					/>
+		<repairValue					type="mult"	min="0.2"				/>
+	</ability>
+
+  <ability name="ArmorRepairKit_3">
+		<tags>							RepairValue
+		</tags>
+		<weight							type="base"	min="0.3"				/>
+		<level							type="add"	min="1"					/>
+		<repairValue					type="mult"	min="0.3"				/>
+	</ability>
+
+	<ability name="ArmorRepairKit_4"> <!-- modSpectre -->
+		<tags>							RepairValue
+		</tags>
+		<weight							type="base"	min="0.4"				/>
+		<level							type="add"	min="1"					/>
+		<repairValue					type="mult"	min="1.0"				/>
+	</ability>
+	
+	<!-- modSpectre -->
+
+	<ability name="GearDismantleKit_1">
+		<weight							type="base"	min="0.01"				/>
+		<level							type="add"	min="1"					/>
+	</ability>
+  
+	<ability name="AlchemyDismantleKit_1">
+		<weight							type="base"	min="0.01"				/>
+		<level							type="add"	min="1"					/>
+	</ability>
+  
+</abilities>
+
+<!-- ######################## ITEM DEFINITIONS ######################## -->
+
+<items>
+
+	<item
+		name							="weapon_repair_kit_1"
+		category						="tool"
+		price							="20"
+		grid_size						="1"
+		ability_slots					="0"
+		stackable						="999"
+		template						=""
+		localisation_key_name			="item_name_repair_kit_weapon_1"
+		localisation_key_description	="item_desc_weapon_repair_kit"
+		icon_path						="icons/inventory/ingredients/upgrades/repair_kit_weapon_1_64x64.png"
+	>
+		<tags>							WeaponReapairKit, WeaponReapairKit_Weak, mod_upgrade
+		</tags>
+		<base_abilities>				<a>WeaponRepairKit_1_Stats</a>
+										<a>WeaponRepairKit_1</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Whetstone elven</parts>
+		</recycling_parts> 
+	</item>
+
+	<item
+		name							="weapon_repair_kit_2"
+		category						="tool"
+		price							="30"
+		grid_size						="1"
+		ability_slots					="0"
+		stackable						="999"
+		template						=""
+		localisation_key_name			="item_name_repair_kit_weapon_2"
+		localisation_key_description	="item_desc_weapon_repair_kit"
+		icon_path						="icons/inventory/ingredients/upgrades/repair_kit_weapon_2_64x64.png"
+	>
+		<tags>							WeaponReapairKit, WeaponReapairKit_Medium, mod_upgrade
+		</tags>
+		<base_abilities>				<a>WeaponRepairKit_2_Stats</a>
+										<a>WeaponRepairKit_2</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Whetstone dwarven</parts>
+		</recycling_parts> 
+	</item>
+
+	<item
+		name							="weapon_repair_kit_3"
+		category						="tool"
+		price							="50"
+		grid_size						="1"
+		ability_slots					="0"
+		stackable						="999"
+		template						=""
+		localisation_key_name			="item_name_repair_kit_weapon_3"
+		localisation_key_description	="item_desc_weapon_repair_kit"
+		icon_path						="icons/inventory/ingredients/upgrades/repair_kit_weapon_3_64x64.png"
+	>
+		<tags>							WeaponReapairKit, WeaponReapairKit_Strong, mod_upgrade
+		</tags>
+		<base_abilities>				<a>WeaponRepairKit_3_Stats</a>
+										<a>WeaponRepairKit_3</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Whetstone gnomish</parts>
+		</recycling_parts> 
+	</item>
+
+	<!-- modSpectre -->
+	<item
+		name							="weapon_repair_kit_4"
+		category						="tool"
+		price							="150"
+		grid_size						="1"
+		ability_slots					="0"
+		stackable						="999"
+		template						=""
+		localisation_key_name			="item_name_repair_kit_weapon_4"
+		localisation_key_description	="item_desc_repair_kit_weapon_4"
+		icon_path						="icons/inventory/quests/locked_strongbox_64x64.png"
+	>
+		<tags>							WeaponReapairKit, WeaponReapairKit_Master, mod_upgrade
+		</tags>
+		<base_abilities>				<a>WeaponRepairKit_4_Stats</a>
+										<a>WeaponRepairKit_4</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="armor_repair_kit_1"
+		category						="tool"
+		price							="20"
+		grid_size						="1"
+		ability_slots					="0"
+		stackable						="999"
+		template						=""
+		localisation_key_name			="item_name_repair_kit_armor_1"
+		localisation_key_description	="item_desc_armor_repair_kit"
+		icon_path						="icons/inventory/ingredients/upgrades/repair_kit_armor_1_64x64.png"
+	>
+		<tags>							ArmorReapairKit, ArmorReapairKit_Weak, mod_upgrade
+		</tags>
+		<base_abilities>				<a>ArmorRepairKit_1_Stats</a>
+										<a>ArmorRepairKit_1</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Smithing tools elven</parts>
+		</recycling_parts> 
+	</item>
+
+	<item
+		name							="armor_repair_kit_2"
+		category						="tool"
+		price							="30"
+		grid_size						="1"
+		ability_slots					="0"
+		stackable						="999"
+		template						=""
+		localisation_key_name			="item_name_repair_kit_armor_2"
+		localisation_key_description	="item_desc_armor_repair_kit"
+		icon_path						="icons/inventory/ingredients/upgrades/repair_kit_armor_2_64x64.png"
+	>
+		<tags>							ArmorReapairKit, ArmorReapairKit_Medium, mod_upgrade
+		</tags>
+		<base_abilities>				<a>ArmorRepairKit_2_Stats</a>
+										<a>ArmorRepairKit_2</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Smithing tools dwarven</parts>
+		</recycling_parts>
+	</item>
+
+	<item
+		name							="armor_repair_kit_3"
+		category						="tool"
+		price							="50"
+		grid_size						="1"
+		ability_slots					="0"
+		stackable						="999"
+		template						=""
+		localisation_key_name			="item_name_repair_kit_armor_3"
+		localisation_key_description	="item_desc_armor_repair_kit"
+		icon_path						="icons/inventory/ingredients/upgrades/repair_kit_armor_3_64x64.png"
+	>
+		<tags>							ArmorReapairKit, ArmorReapairKit_Strong, mod_upgrade
+		</tags>
+		<base_abilities>				<a>ArmorRepairKit_3_Stats</a>
+										<a>ArmorRepairKit_3</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Smithing tools gnomish</parts>
+		</recycling_parts>
+	</item>
+
+	<!-- modSpectre -->
+	<item
+		name							="armor_repair_kit_4"
+		category						="tool"
+		price							="150"
+		grid_size						="1"
+		ability_slots					="0"
+		stackable						="999"
+		template						=""
+		localisation_key_name			="item_name_repair_kit_armor_4"
+		localisation_key_description	="item_desc_repair_kit_armor_4"
+		icon_path						="icons/inventory/quests/sq108_smith_tools.png"
+	>
+		<tags>							ArmorReapairKit, ArmorReapairKit_Master, mod_upgrade
+		</tags>
+		<base_abilities>				<a>ArmorRepairKit_4_Stats</a>
+										<a>ArmorRepairKit_4</a>
+		</base_abilities>
+	</item>
+
+	<!-- modSpectre -->
+ 	<item
+		name							="gear_dismantle_kit_1"
+		category						="misc"
+		price							="2"
+		grid_size						="1"
+		ability_slots					="0"
+		stackable						="999"
+		template						=""
+		localisation_key_name			="item_name_dismantle_kit_gear_1"
+		localisation_key_description	="item_desc_dismantle_kit_gear_1"
+		icon_path						="icons/inventory/ingredients/upgrades/repair_kit_armor_1_64x64.png"
+	>
+		<tags>							GearDismantleKit
+		</tags>
+		<base_abilities>				<a>GearDismantleKit_1_Stats</a>
+										<a>GearDismantleKit_1</a>
+		</base_abilities>
+	</item>
+
+	<!-- modSpectre -->
+ 	<item
+		name							="alchemy_dismantle_kit_1"
+		category						="misc"
+		price							="2"
+		grid_size						="1"
+		ability_slots					="0"
+		stackable						="999"
+		template						=""
+		localisation_key_name			="item_name_dismantle_kit_alchemy_1"
+		localisation_key_description	="item_desc_dismantle_kit_alchemy_1"
+		icon_path						="icons/inventory/ingredients/junk/knife_bread_rusty_64x64.png"
+	>
+		<tags>							AlchemyDismantleKit
+		</tags>
+		<base_abilities>				<a>AlchemyDismantleKit_1_Stats</a>
+										<a>AlchemyDismantleKit_1</a>
+		</base_abilities>
+	</item>
+
+</items>
+
+</definitions>
+</redxml>

@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+<definitions>
+	
+<!-- ######################## ABILITY DEFINITIONS ######################## -->
+<abilities>
+
+<!-- GLOVES STARTING -->
+	<ability name="Starting Gloves _Stats"> <!-- medium gloves -->
+		<weight							type="base"	min="2"					/>
+		<quality						type="add"	min="1"		max="1"		/>
+		<armor							type="base"	min="1"		max="1"		/>
+		<slashing_resistance_perc		type="base"	min="0.03"				/>
+		<piercing_resistance_perc		type="base"	min="0.01"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.01"				/>
+		<rending_resistance_perc		type="base"	min="0.03"				/>
+		<elemental_resistance_perc		type="base"	min="0.03"				/>
+	</ability>
+	
+<!-- GLOVES LIGHT -->
+	<ability name="Gloves 01 _Stats"> <!-- Hunting Gauntlets - low-quality light gloves -->
+		<weight							type="base"	min="1"					/>
+		<quality						type="add"	min="1"		max="1"		/>
+		<slashing_resistance_perc		type="base"	min="0.01"				/>
+		<piercing_resistance_perc		type="base"	min="0.0"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.0"				/>
+		<rending_resistance_perc		type="base"	min="0.01"				/>
+		<elemental_resistance_perc		type="base"	min="0.01"				/>
+		<staminaRegen_armor_mod			type="mult" min="0.01"				/>
+	</ability>
+	
+	<ability name="Gloves 01 q2 _Stats"> <!-- Hunting Gauntlets - medium-quality light gloves -->
+		<weight							type="base" min="1.5" 				/>
+		<quality						type="add"	min="2"		max="2"		/>
+		<slashing_resistance_perc		type="base"	min="0.02"				/>
+		<piercing_resistance_perc		type="base"	min="0.0"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.0"				/>
+		<rending_resistance_perc		type="base"	min="0.01"				/>
+		<elemental_resistance_perc		type="base"	min="0.01"				/>
+		<staminaRegen_armor_mod			type="mult" min="0.01"				/>
+	</ability>
+	
+	<ability name="Gloves 03 _Stats"> <!-- Tracker's Gauntlets - random quality light gloves -->
+		<weight							type="base" min="1.5"				/>
+		<quality						type="add"	min="1"		max="3"		/>
+		<slashing_resistance_perc		type="base"	min="0.02"				/>
+		<piercing_resistance_perc		type="base"	min="0.0"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.0"				/>
+		<rending_resistance_perc		type="base"	min="0.01"				/>
+		<elemental_resistance_perc		type="base"	min="0.01"				/>
+		<staminaRegen_armor_mod			type="mult" min="0.01"				/>
+	</ability>
+
+<!-- Relic -->	
+	<ability name="Gloves 04 _Stats"> <!-- Assassin's Gauntlets - relic light gloves: +2 to resists, +8-10% to crit chance -->
+		<weight							type="base"	min="2"					/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.04"				/>
+		<piercing_resistance_perc		type="base"	min="0.02"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.02"				/>
+		<rending_resistance_perc		type="base"	min="0.04"				/>
+		<elemental_resistance_perc		type="base"	min="0.04"				/>
+		<critical_hit_chance			type="add"	min="0.08"	max="0.1"	/>
+		<staminaRegen_armor_mod			type="mult"	min="0.01"				/>
+	</ability>
+	
+<!-- Medium -->
+	<ability name="Gloves 02 _Stats"> <!-- Cavalry Gauntlets - low to medium quality medium gloves -->
+		<weight							type="base"	min="3.25"				/>
+		<quality						type="add"	min="1"		max="2"		/>
+		<slashing_resistance_perc		type="base"	min="0.03"				/>
+		<piercing_resistance_perc		type="base"	min="0.02"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.01"				/>
+		<rending_resistance_perc		type="base"	min="0.04"				/>
+		<elemental_resistance_perc		type="base"	min="0.03"				/>
+	</ability>
+	
+	<ability name="Heavy gloves 02 _Stats">  <!-- Knight's Gauntlets - random quality medium gloves -->
+		<weight							type="base" min="3.5"				/>
+		<quality						type="add"	min="1"		max="3"		/>
+		<slashing_resistance_perc		type="base"	min="0.03"				/>
+		<piercing_resistance_perc		type="base"	min="0.02"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.02"				/>
+		<rending_resistance_perc		type="base"	min="0.03"				/>
+		<elemental_resistance_perc		type="base"	min="0.04"				/>
+	</ability>
+	
+<!-- GLOVES HEAVY -->
+	<ability name="Heavy gloves 01 _Stats"> <!-- Axeman's Gauntlets - low to medium quality heavy gloves -->
+		<weight							type="base"	min="5.25"				/>
+		<quality						type="add"	min="1"		max="2"		/>
+		<slashing_resistance_perc		type="base"	min="0.06"				/>
+		<piercing_resistance_perc		type="base"	min="0.05"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.06"				/>
+		<rending_resistance_perc		type="base"	min="0.05"				/>
+		<elemental_resistance_perc		type="base"	min="0.05"				/>
+		<staminaRegen_armor_mod			type="mult"	min="-0.05"				/>
+	</ability>
+
+	<ability name="Heavy gloves 03 _Stats">  <!-- Assault Gauntlets - random quality heavy gloves -->
+		<weight							type="base" min="6.5"					/>
+		<quality						type="add"	min="1"		max="3"		/>
+		<slashing_resistance_perc		type="base"	min="0.06"				/>
+		<piercing_resistance_perc		type="base"	min="0.07"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.06"				/>
+		<rending_resistance_perc		type="base"	min="0.06"				/>
+		<elemental_resistance_perc		type="base"	min="0.07"				/>
+		<staminaRegen_armor_mod			type="mult"	min="-0.05"				/>
+	</ability>
+
+<!-- Relic -->
+	<ability name="Heavy gloves 04 _Stats"> <!-- Nilfgaardian Guardsman's Gauntlets - relic heavy gloves: +2 to resists, +40-50% to crit damage, 50% less stamina penalty -->
+		<weight							type="base"	min="8"					/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.10"				/>
+		<piercing_resistance_perc		type="base"	min="0.10"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.10"				/>
+		<rending_resistance_perc		type="base"	min="0.10"				/>
+		<elemental_resistance_perc		type="base"	min="0.10"				/>
+		<critical_hit_damage_bonus		type="add"	min="0.4"	max="0.5"	/>
+		<staminaRegen_armor_mod			type="mult" min="-0.025"			/>
+	</ability>
+	
+<!-- GLOVES QUEST -->
+	<ability name="Ciri gloves 01 _Stats"> <!-- vanilla values -->
+		<weight							type="base"	min="2.0"				/>
+		<quality						type="add"	min="2"		max="2"		/>
+		<armor							type="base"	min="10"	max="10"	/>
+		<slashing_resistance_perc		type="base"	min="0.05"				/>
+		<piercing_resistance_perc		type="base"	min="0.01"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.01"				/>
+		<rending_resistance_perc		type="base"	min="0.01"				/>
+		<elemental_resistance_perc		type="base"	min="0.01"				/>
+		<burning_resistance_perc		type="base"	min="0.0" 				/>
+	</ability>
+	
+	<ability name="Wild Hunt gloves 01 _Stats"> <!-- vanilla values -->
+		<weight							type="base"	min="2.3"				/>
+		<quality						type="add"	min="1"		max="3"		/>
+		<physical_resistance 			type="base" min="20"				/>
+		<physical_resistance_perc		type="base" min="0.05" 	max="0.06"	/>
+		<burning_resistance_perc		type="base" min="0.03" 	max="0.05"	/>
+		<staminaRegen_armor_mod			type="mult" min="-0.02"				/>
+	</ability>
+
+</abilities>
+
+<!-- ######################## ITEM DEFINITIONS ######################## -->
+<items>
+
+<!-- GLOVES STARTING --> <!-- price -->
+	<item
+		name							="Starting Gloves"
+		category						="gloves"
+		price							="25"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="g_01a_mg__viper_lvl3"
+		localisation_key_name			="item_name_starting_gloves_spectre"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/gauntlet-01.png"
+	>
+		<tags>							Armor, MediumArmor, mod_armor
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Starting Gloves _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="2">Leather straps</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="g_01a_mg__viper_lvl3">
+											<item>Geralt Shirt</item>
+											<item>Lynx Armor</item>
+										</variant>
+										<variant equip_template="g_01_mg__viper_lvl3" category="armor"></variant>
+		</variants>
+	</item>
+
+<!-- GLOVES LIGHT --> <!-- low-quality light gloves -->
+	<item
+		name							="Gloves 01"
+		category						="gloves"
+		price							="25"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="g_01a_mg__common_light_lvl1"
+		localisation_key_name			="item_name_gloves_01"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_64x128.png"
+	>
+		<tags>							Autogen, Armor,LightArmor, mod_armor
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Gloves 01 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="2">Leather straps</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="g_01a_mg__common_light_lvl1">
+											<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+											<item>Lynx Armor</item>           <!-- this item uses slim version -->
+											</variant>
+										<variant equip_template="g_01_mg__common_light_lvl1" category="armor"></variant>  <!-- this item uses bold version -->
+		</variants>
+	</item>
+	<!-- medium-quality light gloves -->
+	<item
+		name							="Gloves 01 q2"
+		category						="gloves"
+		price							="50"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="g_01a_mg__common_light_lvl1"
+		localisation_key_name			="item_name_gloves_01"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_64x128.png"
+	>
+		<tags>							Autogen, Armor,LightArmor, mod_armor
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Gloves 01 q2 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Steel ingot</parts>
+										<parts count="2">Leather straps</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="g_01a_mg__common_light_lvl1">
+											<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+											<item>Lynx Armor</item>           <!-- this item uses slim version -->
+										</variant>
+										<variant equip_template="g_01_mg__common_light_lvl1" category="armor"></variant>  <!-- this item uses bold version -->
+		</variants>
+	</item>
+
+<!-- Gauntlets 2 --> <!-- low to medium quality medium gloves -->
+	<item
+		name							="Gloves 02"
+		category						="gloves"
+		price							="46"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="g_01a_mg__common_light_lvl2"
+		localisation_key_name			="item_name_gloves_02"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/common_light_lvl2_64x128.png"
+	>
+		<tags>							Autogen, Armor,MediumArmor, mod_armor
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Gloves 02 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Steel ingot</parts>
+										<parts count="1">Leather squares</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="g_01a_mg__common_light_lvl2">
+											<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+											<item>Lynx Armor</item>           <!-- this item uses slim version -->
+										</variant>
+										<variant equip_template="g_01_mg__common_light_lvl2" category="armor"></variant>  <!-- this item uses bold version -->
+		</variants>
+	</item>
+	
+<!-- Gauntlets 3--> <!-- random quality light gloves -->
+	<item
+		name							="Gloves 03"
+		category						="gloves"
+		price							="55"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="g_01a_mg__common_light_lvl3"
+		localisation_key_name			="item_name_gloves_03"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_lvl3_64x128.png"
+	>
+		<tags>							Autogen, Armor,LightArmor, mod_armor
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Gloves 03 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="2">Leather straps</parts>
+										<parts count="1">Steel ingot</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="g_01a_mg__common_light_lvl3">
+											<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+											<item>Lynx Armor</item>           <!-- this item uses slim version -->
+										</variant>
+										<variant equip_template="g_01_mg__common_light_lvl3" category="armor"></variant>  <!-- this item uses bold version -->
+		</variants>
+	</item>
+	
+<!-- Gauntlets 4--> <!-- relic light gloves: +2 to resists, +10% to crit chance -->
+	<item
+		name							="Gloves 04"
+		category						="gloves"
+		price							="163"
+		initial_durability				="200"
+		max_durability					="200"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="g_01a_mg__common_light_lvl4"
+		localisation_key_name			="item_name_gloves_04"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_lvl4_64x128.png"
+	>
+		<tags>							Autogen, Armor,LightArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Gloves 04 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Glowing ingot</parts>
+										<parts count="2">Leather straps</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="g_01a_mg__common_light_lvl4">
+											<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+											<item>Lynx Armor</item>           <!-- this item uses slim version -->
+										</variant>
+										<variant equip_template="g_01_mg__common_light_lvl4" category="armor"></variant>  <!-- this item uses bold version -->
+		</variants>
+	</item>
+	
+<!-- GLOVES HEAVY --> <!-- low to medium quality heavy gloves -->
+	<item
+		name							="Heavy gloves 01"
+		category						="gloves"
+		price							="156"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="g_01a_mg__common_heavy_lvl1"
+		localisation_key_name			="item_name_heavy_gloves_01"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_64x128.png"
+	>
+		<tags>							Autogen, Armor,HeavyArmor, mod_armor
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Heavy gloves 01 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Leather</parts>
+										<parts count="1">Steel ingot</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="g_01a_mg__common_heavy_lvl1">
+											<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+											<item>Lynx Armor</item>           <!-- this item uses slim version -->
+										</variant>
+										<variant equip_template="g_01_mg__common_heavy_lvl1" category="armor"></variant>  <!-- this item uses bold version -->
+		</variants>
+	</item>
+	
+<!-- Heavy Gauntlets 2-->  <!-- random quality medium gloves -->
+	<item
+		name							="Heavy gloves 02"
+		category						="gloves"
+		price							="150"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="g_01a_mg__common_heavy_lvl2"
+		localisation_key_name			="item_name_heavy_gloves_02"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_lvl2_64x128.png"
+	>
+		<tags>							Autogen, Armor,MediumArmor, mod_armor
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Heavy gloves 02 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Leather</parts>
+										<parts count="1">Dark steel ingot</parts>
+		</recycling_parts>
+		<variants>
+										<variant equip_template="g_01a_mg__common_heavy_lvl2">
+											<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+											<item>Lynx Armor</item>           <!-- this item uses slim version -->
+										</variant>
+										<variant equip_template="g_01_mg__common_heavy_lvl2" category="armor"></variant>  <!-- this item uses bold version -->
+		</variants>
+	</item>
+	
+<!-- Heavy Gauntlets 3-->  <!-- random quality heavy gloves -->
+	<item
+		name							="Heavy gloves 03"
+		category						="gloves"
+		price							="210"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="g_01a_mg__common_heavy_lvl3"
+		localisation_key_name			="item_name_heavy_gloves_03"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_lvl3_64x128.png"
+	>
+		<tags>							Autogen, Armor,HeavyArmor, mod_armor
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Heavy gloves 03 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Leather</parts>
+										<parts count="1">Dark steel ingot</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="g_01a_mg__common_heavy_lvl3">
+											<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+											<item>Lynx Armor</item>           <!-- this item uses slim version -->
+										</variant>
+										<variant equip_template="g_01_mg__common_heavy_lvl3" category="armor"></variant>  <!-- this item uses bold version -->
+		</variants>
+	</item>
+	
+<!-- Heavy Gauntlets 4--> <!-- relic heavy gloves: +2 to resists, +50% to crit damage, 50% less stamina penalty -->
+	<item
+		name							="Heavy gloves 04"
+		category						="gloves"
+		price							="470"
+		initial_durability				="200"
+		max_durability					="200"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="g_01a_mg__common_heavy_lvl4"
+		localisation_key_name			="item_name_heavy_gloves_04"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_lvl4_64x128.png"
+	>
+		<tags>							Autogen, Armor,HeavyArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Heavy gloves 04 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Meteorite silver ingot</parts>
+										<parts count="1">Dark steel ingot</parts>
+										<parts count="1">Leather</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="g_01a_mg__common_heavy_lvl4">
+											<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+											<item>Lynx Armor</item>           <!-- this item uses slim version -->
+										</variant>
+										<variant equip_template="g_01_mg__common_heavy_lvl4" category="armor"></variant>  <!-- this item uses bold version -->
+		</variants>
+	</item>
+
+<!-- GLOVES QUEST -->
+
+<!-- Ciri armor 1 gauntlets -->
+	<item
+		name							="Ciri gloves 01"
+		category						="gloves"
+		price							="242"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="g_01_mg__ciri"
+		localisation_key_name			="item_name_ciri_gloves_01"
+		localisation_key_description	="item_desc_gloves"
+		icon_path						="icons/inventory/armors/gauntlet-01.png"
+	>
+		<tags>							Armor, mod_armor
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Ciri gloves 01 _Stats</a>										
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Linen</parts>
+										<parts count="1">Dwimeryte ore</parts>
+		</recycling_parts>
+	</item>
+
+<!-- Wild Hunt armor 1 gauntlets-->
+	<item
+		name							="Wild Hunt gloves 01"
+		category						="gloves"
+		price							="190"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="g_01_mg__nithral"
+		localisation_key_name			="item_name_wild_hunt_gloves_01"
+		localisation_key_description	="item_desc_gloves"
+		icon_path						="icons/inventory/armors/gauntlet-01.png"
+	>
+		<tags>							Armor, mod_armor
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Wild Hunt gloves 01 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Linen</parts>
+										<parts count="1">Meteorite ore</parts>
+		</recycling_parts>
+	</item>	
+</items>
+
+</definitions>
+</redxml>

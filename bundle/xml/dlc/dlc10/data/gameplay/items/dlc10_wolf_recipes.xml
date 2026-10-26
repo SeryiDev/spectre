@@ -1,0 +1,1487 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+<definitions>
+
+<!-- ######################## SCHEMATIC ITEMS ######################## -->
+<items>
+
+<!-- Steel Sword -->
+	<item
+		name							="Wolf School steel sword schematic"
+		category						="crafting_schematic"
+		price							="47"
+		stackable						="100"
+		localisation_key_name			="item_name_wolf_school_steel_sword_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Wolf School steel sword Upgrade schematic 1"
+		category						="crafting_schematic"
+		price							="100"
+		stackable						="100"
+		localisation_key_name			="item_name_wolf_school_steel_sword_upgrade_schematic_1"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Wolf School steel sword Upgrade schematic 2"
+		category						="crafting_schematic"
+		price							="155"
+		stackable						="100"
+		localisation_key_name			="item_name_wolf_school_steel_sword_upgrade_schematic_2"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Wolf School steel sword Upgrade schematic 3"
+		category						="crafting_schematic"
+		price							="270"
+		stackable						="100"
+		localisation_key_name			="item_name_wolf_school_steel_sword_upgrade_schematic_3"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+<!-- Silver Sword -->
+	<item
+		name							="Wolf School silver sword schematic"
+		category						="crafting_schematic"
+		price							="54"
+		stackable						="100"
+		localisation_key_name			="item_name_wolf_school_silver_sword_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Wolf School silver sword Upgrade schematic 1"
+		category						="crafting_schematic"
+		price							="114"
+		stackable						="100"
+		localisation_key_name			="item_name_wolf_school_silver_sword_upgrade_schematic_1"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Wolf School silver sword Upgrade schematic 2"
+		category						="crafting_schematic"
+		price							="202"
+		stackable						="100"
+		localisation_key_name			="item_name_wolf_school_silver_sword_upgrade_schematic_2"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Wolf School silver sword Upgrade schematic 3"
+		category						="crafting_schematic"
+		price							="322"
+		stackable						="100"
+		localisation_key_name			="item_name_wolf_school_silver_sword_upgrade_schematic_3"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+<!--  ARMORS  -->
+	<item
+		name							="Wolf Armor schematic"
+		category						="crafting_schematic"
+		price							="113"
+		stackable						="100"
+		localisation_key_name			="item_name_wolf_armor_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Witcher Wolf Jacket Upgrade schematic 1"
+		category						="crafting_schematic"
+		price							="173"
+		stackable						="100"
+		localisation_key_name			="item_name_witcher_wolf_jacket_upgrade_schematic_1"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Witcher Wolf Jacket Upgrade schematic 2"
+		category						="crafting_schematic"
+		price							="375"
+		stackable						="100"
+		localisation_key_name			="item_name_witcher_wolf_jacket_upgrade_schematic_2"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Witcher Wolf Jacket Upgrade schematic 3"
+		category						="crafting_schematic"
+		price							="638"
+		stackable						="100"
+		localisation_key_name			="item_name_witcher_wolf_jacket_upgrade_schematic_3"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Wolf Gloves schematic"
+		category						="crafting_schematic"
+		price							="45"
+		stackable						="100"
+		localisation_key_name			="item_name_wolf_gloves_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Witcher Wolf Gloves Upgrade schematic 1"
+		category						="crafting_schematic"
+		price							="114"
+		stackable						="100"
+		localisation_key_name			="item_name_witcher_wolf_gloves_upgrade_schematic_1"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="Witcher Wolf Gloves Upgrade schematic 2"
+		category						="crafting_schematic"
+		price							="186"
+		stackable						="100"
+		localisation_key_name			="item_name_witcher_wolf_gloves_upgrade_schematic_2"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="Witcher Wolf Gloves Upgrade schematic 3"
+		category						="crafting_schematic"
+		price							="267"
+		stackable						="100"
+		localisation_key_name			="item_name_witcher_wolf_gloves_upgrade_schematic_3"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Wolf Pants schematic"
+		category						="crafting_schematic"
+		price							="54"
+		stackable						="100"
+		localisation_key_name			="item_name_wolf_pants_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Witcher Wolf Pants Upgrade schematic 1"
+		category						="crafting_schematic"
+		price							="122"
+		stackable						="100"
+		localisation_key_name			="item_name_witcher_wolf_pants_upgrade_schematic_1"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="Witcher Wolf Pants Upgrade schematic 2"
+		category						="crafting_schematic"
+		price							="195"
+		stackable						="100"
+		localisation_key_name			="item_name_witcher_wolf_pants_upgrade_schematic_2"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="Witcher Wolf Pants Upgrade schematic 3"
+		category						="crafting_schematic"
+		price							="328"
+		stackable						="100"
+		localisation_key_name			="item_name_witcher_wolf_pants_upgrade_schematic_3"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Wolf Boots schematic"
+		category						="crafting_schematic"
+		price							="58"
+		stackable						="100"
+		localisation_key_name			="item_name_wolf_boots_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Witcher Wolf Boots Upgrade schematic 1"
+		category						="crafting_schematic"
+		price							="65"
+		stackable						="100"
+		localisation_key_name			="item_name_witcher_wolf_boots_upgrade_schematic_1"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="Witcher Wolf Boots Upgrade schematic 2"
+		category						="crafting_schematic"
+		price							="198"
+		stackable						="100"
+		localisation_key_name			="item_name_witcher_wolf_boots_upgrade_schematic_2"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="Witcher Wolf Boots Upgrade schematic 3"
+		category						="crafting_schematic"
+		price							="332"
+		stackable						="100"
+		localisation_key_name			="item_name_witcher_wolf_boots_upgrade_schematic_3"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+<!-- NEW GAME+ -->
+<!-- Steel Sword -->
+	<item
+		name							="NGP Wolf School steel sword schematic"
+		category						="crafting_schematic"
+		price							="47"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_wolf_school_steel_sword_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="NGP Wolf School steel sword Upgrade schematic 1"
+		category						="crafting_schematic"
+		price							="100"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_wolf_school_steel_sword_upgrade_schematic_1"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="NGP Wolf School steel sword Upgrade schematic 2"
+		category						="crafting_schematic"
+		price							="155"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_wolf_school_steel_sword_upgrade_schematic_2"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="NGP Wolf School steel sword Upgrade schematic 3"
+		category						="crafting_schematic"
+		price							="270"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_wolf_school_steel_sword_upgrade_schematic_3"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+<!-- Silver Sword -->
+	<item
+		name							="NGP Wolf School silver sword schematic"
+		category						="crafting_schematic"
+		price							="54"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_wolf_school_silver_sword_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="NGP Wolf School silver sword Upgrade schematic 1"
+		category						="crafting_schematic"
+		price							="114"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_wolf_school_silver_sword_upgrade_schematic_1"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="NGP Wolf School silver sword Upgrade schematic 2"
+		category						="crafting_schematic"
+		price							="202"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_wolf_school_silver_sword_upgrade_schematic_2"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="NGP Wolf School silver sword Upgrade schematic 3"
+		category						="crafting_schematic"
+		price							="322"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_wolf_school_silver_sword_upgrade_schematic_3"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+<!--  ARMORS  -->
+	<item
+		name							="NGP Wolf Armor schematic"
+		category						="crafting_schematic"
+		price							="113"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_wolf_armor_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="NGP Witcher Wolf Jacket Upgrade schematic 1"
+		category						="crafting_schematic"
+		price							="173"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_witcher_wolf_jacket_upgrade_schematic_1"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="NGP Witcher Wolf Jacket Upgrade schematic 2"
+		category						="crafting_schematic"
+		price							="375"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_witcher_wolf_jacket_upgrade_schematic_2"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="NGP Witcher Wolf Jacket Upgrade schematic 3"
+		category						="crafting_schematic"
+		price							="638"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_witcher_wolf_jacket_upgrade_schematic_3"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="NGP Wolf Gloves schematic"
+		category						="crafting_schematic"
+		price							="45"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_wolf_gloves_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="NGP Witcher Wolf Gloves Upgrade schematic 1"
+		category						="crafting_schematic"
+		price							="114"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_witcher_wolf_gloves_upgrade_schematic_1"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="NGP Witcher Wolf Gloves Upgrade schematic 2"
+		category						="crafting_schematic"
+		price							="186"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_witcher_wolf_gloves_upgrade_schematic_2"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="NGP Witcher Wolf Gloves Upgrade schematic 3"
+		category						="crafting_schematic"
+		price							="267"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_witcher_wolf_gloves_upgrade_schematic_3"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="NGP Wolf Pants schematic"
+		category						="crafting_schematic"
+		price							="54"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_wolf_pants_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="NGP Witcher Wolf Pants Upgrade schematic 1"
+		category						="crafting_schematic"
+		price							="122"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_witcher_wolf_pants_upgrade_schematic_1"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="NGP Witcher Wolf Pants Upgrade schematic 2"
+		category						="crafting_schematic"
+		price							="195"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_witcher_wolf_pants_upgrade_schematic_2"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="NGP Witcher Wolf Pants Upgrade schematic 3"
+		category						="crafting_schematic"
+		price							="328"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_witcher_wolf_pants_upgrade_schematic_3"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="NGP Wolf Boots schematic"
+		category						="crafting_schematic"
+		price							="58"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_wolf_boots_schematic"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="NGP Witcher Wolf Boots Upgrade schematic 1"
+		category						="crafting_schematic"
+		price							="65"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_witcher_wolf_boots_upgrade_schematic_1"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="NGP Witcher Wolf Boots Upgrade schematic 2"
+		category						="crafting_schematic"
+		price							="198"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_witcher_wolf_boots_upgrade_schematic_2"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+	
+	<item
+		name							="NGP Witcher Wolf Boots Upgrade schematic 3"
+		category						="crafting_schematic"
+		price							="332"
+		stackable						="100"
+		localisation_key_name			="item_name_newgame_witcher_wolf_boots_upgrade_schematic_3"
+		localisation_key_description	="item_desc_crafting_schematic"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_crafting, mod_legendary
+		</tags>
+		<base_abilities>				<a>SetItem _Stats</a>
+		</base_abilities>
+	</item>
+	
+</items>
+</definitions>
+
+<custom>
+
+<!-- ######################## SCHEMATIC DEFINITONS ######################## -->
+<crafting_schematics>
+
+<!-- STEEL WITCHER -->
+	<schematic
+		name_name						="Wolf School steel sword schematic"
+		craftedItem_name				="Wolf School steel sword"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Journeyman"
+		price							="238"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Steel ingot"						/>
+										<ingredient	quantity="1"	item_name="Leather"							/>
+										<ingredient	quantity="1"	item_name="Wire rope"						/>
+										<ingredient	quantity="1"	item_name="Amber dust"						/>
+										<ingredient	quantity="1"	item_name="Monstrous brain"					/>
+										<ingredient	quantity="1"	item_name="Monstrous eye"					/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="Wolf School steel sword Upgrade schematic 1"
+		craftedItem_name				="Wolf School steel sword 1"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Master"
+		price							="502"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Wolf School steel sword"			/>
+										<ingredient	quantity="1"	item_name="Dark steel ingot"				/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Ruby dust"						/>
+										<ingredient	quantity="1"	item_name="Monstrous dust"					/>
+										<ingredient	quantity="1"	item_name="Monstrous claw"					/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="Wolf School steel sword Upgrade schematic 2"
+		craftedItem_name				="Wolf School steel sword 2"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Master"
+		price							="775"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Wolf School steel sword 1"		/>
+										<ingredient	quantity="1"	item_name="Dark steel ingot"				/>
+										<ingredient	quantity="1"	item_name="Glowing ingot"					/>
+										<ingredient	quantity="1"	item_name="Sapphire dust"					/>
+										<ingredient	quantity="1"	item_name="Monstrous blood"					/>
+										<ingredient	quantity="1"	item_name="Monstrous feather"				/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="Wolf School steel sword Upgrade schematic 3"
+		craftedItem_name				="Wolf School steel sword 3"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Grand Master"
+		price							="1351"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Wolf School steel sword 2"		/>
+										<ingredient	quantity="1"	item_name="Dark steel ingot"				/>
+										<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient	quantity="1"	item_name="Diamond dust"					/>
+										<ingredient	quantity="1"	item_name="Monstrous egg"					/>
+										<ingredient	quantity="1"	item_name="Siren vocal cords"				/>
+		</ingredients>
+	</schematic>
+
+<!-- SILVER WITCHER -->
+	<schematic
+		name_name						="Wolf School silver sword schematic"
+		craftedItem_name				="Wolf School silver sword"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Journeyman"
+		price							="274"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Silver ingot"					/>
+										<ingredient	quantity="1"	item_name="Leather"							/>
+										<ingredient	quantity="1"	item_name="Wire rope"						/>
+										<ingredient	quantity="1"	item_name="Amber dust"						/>
+										<ingredient	quantity="1"	item_name="Monstrous eye"					/>
+										<ingredient	quantity="1"	item_name="Monstrous brain"					/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="Wolf School silver sword Upgrade schematic 1"
+		craftedItem_name				="Wolf School silver sword 1"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Master"
+		price							="574"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Wolf School silver sword"		/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Glowing ingot"					/>
+										<ingredient	quantity="1"	item_name="Ruby dust"						/>
+										<ingredient	quantity="1"	item_name="Monstrous egg"					/>
+										<ingredient	quantity="1"	item_name="Monstrous tongue"				/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="Wolf School silver sword Upgrade schematic 2"
+		craftedItem_name				="Wolf School silver sword 2"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Master"
+		price							="1011"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Wolf School silver sword 1"		/>
+										<ingredient	quantity="1"	item_name="Meteorite silver ingot"			/>
+										<ingredient	quantity="1"	item_name="Glowing ingot"					/>
+										<ingredient	quantity="1"	item_name="Diamond dust"					/>
+										<ingredient	quantity="1"	item_name="Monstrous blood"					/>
+										<ingredient	quantity="1"	item_name="Monstrous dust"					/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="Wolf School silver sword Upgrade schematic 3"
+		craftedItem_name				="Wolf School silver sword 3"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Grand Master"
+		price							="1614"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Wolf School silver sword 2"		/>
+										<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Diamond dust"					/>
+										<ingredient	quantity="1"	item_name="Monstrous feather"				/>
+										<ingredient	quantity="1"	item_name="Monstrous heart"					/>
+		</ingredients>
+	</schematic>
+
+<!-- ARMOR WITCHER -->
+	<schematic
+		name_name						="Wolf Armor schematic"
+		craftedItem_name				="Wolf Armor"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Journeyman"
+		price							="565"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Geralt Shirt"					/>
+										<ingredient	quantity="2"	item_name="Hardened leather"				/>
+										<ingredient	quantity="1"	item_name="Silver ingot"					/>
+										<ingredient	quantity="1"	item_name="Monstrous hide"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous eye"					/>					
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="Witcher Wolf Jacket Upgrade schematic 1"
+		craftedItem_name				="Wolf Armor 1"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Master"
+		price							="865"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Wolf Armor"						/>
+										<ingredient	quantity="1"	item_name="Silver ingot"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Monstrous hide"					/>
+										<ingredient	quantity="2"	item_name="Monstrous heart"					/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="Witcher Wolf Jacket Upgrade schematic 2"
+		craftedItem_name				="Wolf Armor 2"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Master"
+		price							="1875"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Wolf Armor 1"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Glowing ingot"					/>
+										<ingredient	quantity="1"	item_name="Draconide leather"				/>
+										<ingredient	quantity="1"	item_name="Monstrous feather"				/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="Witcher Wolf Jacket Upgrade schematic 3"
+		craftedItem_name				="Wolf Armor 3"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Grand Master"
+		price							="3193"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Wolf Armor 2"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient	quantity="1"	item_name="Draconide leather"				/>
+										<ingredient	quantity="1"	item_name="Monstrous brain"					/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="Wolf Gloves schematic"
+		craftedItem_name				="Wolf Gloves 1"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Journeyman"
+		price							="226"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Leather straps"					/>
+										<ingredient	quantity="1"	item_name="Silver ingot"					/>
+										<ingredient	quantity="1"	item_name="Monstrous hide"					/>
+										<ingredient	quantity="1"	item_name="Monstrous heart"					/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="Witcher Wolf Gloves Upgrade schematic 1"
+		craftedItem_name				="Wolf Gloves 2"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Master"
+		price							="570"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Wolf Gloves 1"					/>
+										<ingredient	quantity="1"	item_name="Silver ingot"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous tongue"				/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="Witcher Wolf Gloves Upgrade schematic 2"
+		craftedItem_name				="Wolf Gloves 3"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Master"
+		price							="934"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Wolf Gloves 2"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Glowing ingot"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous dust"					/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="Witcher Wolf Gloves Upgrade schematic 3"
+		craftedItem_name				="Wolf Gloves 4"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Grand Master"
+		price							="1338"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Wolf Gloves 3"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous essence"				/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="Wolf Pants schematic"
+		craftedItem_name				="Wolf Pants 1"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Journeyman"
+		price							="273"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Leather"							/>
+										<ingredient	quantity="1"	item_name="Silver ingot"					/>
+										<ingredient	quantity="1"	item_name="Monstrous hide"					/>
+										<ingredient	quantity="1"	item_name="Monstrous egg"					/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="Witcher Wolf Pants Upgrade schematic 1"
+		craftedItem_name				="Wolf Pants 2"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Master"
+		price							="610"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Wolf Pants 1"					/>
+										<ingredient	quantity="1"	item_name="Silver ingot"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous blood"					/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="Witcher Wolf Pants Upgrade schematic 2"
+		craftedItem_name				="Wolf Pants 3"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Master"
+		price							="975"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Wolf Pants 2"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Glowing ingot"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous bone"					/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="Witcher Wolf Pants Upgrade schematic 3"
+		craftedItem_name				="Wolf Pants 4"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Grand Master"
+		price							="1642"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Wolf Pants 3"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous feather"				/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="Wolf Boots schematic"
+		craftedItem_name				="Wolf Boots 1"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Journeyman"
+		price							="291"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Leather"							/>
+										<ingredient	quantity="2"	item_name="Wire"							/>
+										<ingredient	quantity="1"	item_name="Silver ingot"					/>
+										<ingredient	quantity="1"	item_name="Monstrous hide"					/>
+										<ingredient	quantity="1"	item_name="Monstrous brain"					/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="Witcher Wolf Boots Upgrade schematic 1"
+		craftedItem_name				="Wolf Boots 2"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Master"
+		price							="628"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Wolf Boots 1"					/>
+										<ingredient	quantity="1"	item_name="Silver ingot"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous saliva"				/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="Witcher Wolf Boots Upgrade schematic 2"
+		craftedItem_name				="Wolf Boots 3"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Master"
+		price							="993"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Wolf Boots 2"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Glowing ingot"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous ear"					/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="Witcher Wolf Boots Upgrade schematic 3"
+		craftedItem_name				="Wolf Boots 4"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Grand Master"
+		price							="1660"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Wolf Boots 3"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous hair"					/>
+		</ingredients>
+	</schematic>
+	
+<!-- NEW GAME+ -->
+<!-- STEEL WITCHER -->
+	<schematic
+		name_name						="NGP Wolf School steel sword schematic"
+		craftedItem_name				="NGP Wolf School steel sword"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Journeyman"
+		price							="238"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Steel ingot"						/>
+										<ingredient	quantity="1"	item_name="Leather"							/>
+										<ingredient	quantity="1"	item_name="Wire rope"						/>
+										<ingredient	quantity="1"	item_name="Amber dust"						/>
+										<ingredient	quantity="1"	item_name="Monstrous brain"					/>
+										<ingredient	quantity="1"	item_name="Monstrous eye"					/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="NGP Wolf School steel sword Upgrade schematic 1"
+		craftedItem_name				="NGP Wolf School steel sword 1"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Master"
+		price							="502"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="NGP Wolf School steel sword"			/>
+										<ingredient	quantity="1"	item_name="Dark steel ingot"				/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Ruby dust"						/>
+										<ingredient	quantity="1"	item_name="Monstrous dust"					/>
+										<ingredient	quantity="1"	item_name="Monstrous claw"					/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="NGP Wolf School steel sword Upgrade schematic 2"
+		craftedItem_name				="NGP Wolf School steel sword 2"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Master"
+		price							="775"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="NGP Wolf School steel sword 1"		/>
+										<ingredient	quantity="1"	item_name="Dark steel ingot"				/>
+										<ingredient	quantity="1"	item_name="Glowing ingot"					/>
+										<ingredient	quantity="1"	item_name="Sapphire dust"					/>
+										<ingredient	quantity="1"	item_name="Monstrous blood"					/>
+										<ingredient	quantity="1"	item_name="Monstrous feather"				/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="NGP Wolf School steel sword Upgrade schematic 3"
+		craftedItem_name				="NGP Wolf School steel sword 3"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Grand Master"
+		price							="1351"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="NGP Wolf School steel sword 2"		/>
+										<ingredient	quantity="1"	item_name="Dark steel ingot"				/>
+										<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient	quantity="1"	item_name="Diamond dust"					/>
+										<ingredient	quantity="1"	item_name="Monstrous egg"					/>
+										<ingredient	quantity="1"	item_name="Siren vocal cords"				/>
+		</ingredients>
+	</schematic>
+
+<!-- SILVER WITCHER -->
+	<schematic
+		name_name						="NGP Wolf School silver sword schematic"
+		craftedItem_name				="NGP Wolf School silver sword"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Journeyman"
+		price							="274"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Silver ingot"					/>
+										<ingredient	quantity="1"	item_name="Leather"							/>
+										<ingredient	quantity="1"	item_name="Wire rope"						/>
+										<ingredient	quantity="1"	item_name="Amber dust"						/>
+										<ingredient	quantity="1"	item_name="Monstrous eye"					/>
+										<ingredient	quantity="1"	item_name="Monstrous brain"					/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="NGP Wolf School silver sword Upgrade schematic 1"
+		craftedItem_name				="NGP Wolf School silver sword 1"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Master"
+		price							="574"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="NGP Wolf School silver sword"		/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Glowing ingot"					/>
+										<ingredient	quantity="1"	item_name="Ruby dust"						/>
+										<ingredient	quantity="1"	item_name="Monstrous egg"					/>
+										<ingredient	quantity="1"	item_name="Monstrous tongue"				/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="NGP Wolf School silver sword Upgrade schematic 2"
+		craftedItem_name				="NGP Wolf School silver sword 2"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Master"
+		price							="1011"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="NGP Wolf School silver sword 1"		/>
+										<ingredient	quantity="1"	item_name="Meteorite silver ingot"			/>
+										<ingredient	quantity="1"	item_name="Glowing ingot"					/>
+										<ingredient	quantity="1"	item_name="Diamond dust"					/>
+										<ingredient	quantity="1"	item_name="Monstrous blood"					/>
+										<ingredient	quantity="1"	item_name="Monstrous dust"					/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="NGP Wolf School silver sword Upgrade schematic 3"
+		craftedItem_name				="NGP Wolf School silver sword 3"
+		craftsmanType_name				="Smith"
+		craftsmanLevel_name				="Grand Master"
+		price							="1614"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="NGP Wolf School silver sword 2"		/>
+										<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Diamond dust"					/>
+										<ingredient	quantity="1"	item_name="Monstrous feather"				/>
+										<ingredient	quantity="1"	item_name="Monstrous heart"					/>
+		</ingredients>
+	</schematic>
+
+<!-- ARMOR WITCHER -->
+	<schematic
+		name_name						="NGP Wolf Armor schematic"
+		craftedItem_name				="NGP Wolf Armor"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Journeyman"
+		price							="565"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Geralt Shirt"					/>
+										<ingredient	quantity="2"	item_name="Hardened leather"				/>
+										<ingredient	quantity="1"	item_name="Silver ingot"					/>
+										<ingredient	quantity="1"	item_name="Monstrous hide"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous eye"					/>					
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="NGP Witcher Wolf Jacket Upgrade schematic 1"
+		craftedItem_name				="NGP Wolf Armor 1"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Master"
+		price							="865"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="NGP Wolf Armor"						/>
+										<ingredient	quantity="1"	item_name="Silver ingot"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Monstrous hide"					/>
+										<ingredient	quantity="2"	item_name="Monstrous heart"					/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="NGP Witcher Wolf Jacket Upgrade schematic 2"
+		craftedItem_name				="NGP Wolf Armor 2"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Master"
+		price							="1875"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="NGP Wolf Armor 1"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Glowing ingot"					/>
+										<ingredient	quantity="1"	item_name="Draconide leather"				/>
+										<ingredient	quantity="1"	item_name="Monstrous feather"				/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="NGP Witcher Wolf Jacket Upgrade schematic 3"
+		craftedItem_name				="NGP Wolf Armor 3"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Grand Master"
+		price							="3193"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="NGP Wolf Armor 2"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient	quantity="1"	item_name="Draconide leather"				/>
+										<ingredient	quantity="1"	item_name="Monstrous brain"					/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="NGP Wolf Gloves schematic"
+		craftedItem_name				="NGP Wolf Gloves 1"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Journeyman"
+		price							="226"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Leather straps"					/>
+										<ingredient	quantity="1"	item_name="Silver ingot"					/>
+										<ingredient	quantity="1"	item_name="Monstrous hide"					/>
+										<ingredient	quantity="1"	item_name="Monstrous heart"					/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="NGP Witcher Wolf Gloves Upgrade schematic 1"
+		craftedItem_name				="NGP Wolf Gloves 2"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Master"
+		price							="570"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="NGP Wolf Gloves 1"					/>
+										<ingredient	quantity="1"	item_name="Silver ingot"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous tongue"				/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="NGP Witcher Wolf Gloves Upgrade schematic 2"
+		craftedItem_name				="NGP Wolf Gloves 3"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Master"
+		price							="934"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="NGP Wolf Gloves 2"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Glowing ingot"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous dust"					/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="NGP Witcher Wolf Gloves Upgrade schematic 3"
+		craftedItem_name				="NGP Wolf Gloves 4"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Grand Master"
+		price							="1338"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="NGP Wolf Gloves 3"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous essence"				/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="NGP Wolf Pants schematic"
+		craftedItem_name				="NGP Wolf Pants 1"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Journeyman"
+		price							="273"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Leather"							/>
+										<ingredient	quantity="1"	item_name="Silver ingot"					/>
+										<ingredient	quantity="1"	item_name="Monstrous hide"					/>
+										<ingredient	quantity="1"	item_name="Monstrous egg"					/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="NGP Witcher Wolf Pants Upgrade schematic 1"
+		craftedItem_name				="NGP Wolf Pants 2"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Master"
+		price							="610"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="NGP Wolf Pants 1"					/>
+										<ingredient	quantity="1"	item_name="Silver ingot"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous blood"					/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="NGP Witcher Wolf Pants Upgrade schematic 2"
+		craftedItem_name				="NGP Wolf Pants 3"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Master"
+		price							="975"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="NGP Wolf Pants 2"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Glowing ingot"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous bone"					/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="NGP Witcher Wolf Pants Upgrade schematic 3"
+		craftedItem_name				="NGP Wolf Pants 4"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Grand Master"
+		price							="1642"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="NGP Wolf Pants 3"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous feather"				/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="NGP Wolf Boots schematic"
+		craftedItem_name				="NGP Wolf Boots 1"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Journeyman"
+		price							="291"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="Leather"							/>
+										<ingredient	quantity="2"	item_name="Wire"							/>
+										<ingredient	quantity="1"	item_name="Silver ingot"					/>
+										<ingredient	quantity="1"	item_name="Monstrous hide"					/>
+										<ingredient	quantity="1"	item_name="Monstrous brain"					/>
+		</ingredients>
+	</schematic>
+
+	<schematic
+		name_name						="NGP Witcher Wolf Boots Upgrade schematic 1"
+		craftedItem_name				="NGP Wolf Boots 2"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Master"
+		price							="628"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="NGP Wolf Boots 1"					/>
+										<ingredient	quantity="1"	item_name="Silver ingot"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous saliva"				/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="NGP Witcher Wolf Boots Upgrade schematic 2"
+		craftedItem_name				="NGP Wolf Boots 3"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Master"
+		price							="993"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="NGP Wolf Boots 2"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Glowing ingot"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous ear"					/>
+		</ingredients>
+	</schematic>
+	
+	<schematic
+		name_name						="NGP Witcher Wolf Boots Upgrade schematic 3"
+		craftedItem_name				="NGP Wolf Boots 4"
+		craftsmanType_name				="Armorer"
+		craftsmanLevel_name				="Grand Master"
+		price							="1660"
+	>
+		<ingredients>					<ingredient	quantity="1"	item_name="NGP Wolf Boots 3"					/>
+										<ingredient	quantity="1"	item_name="Meteorite ingot"					/>
+										<ingredient	quantity="1"	item_name="Dwimeryte ingot"					/>
+										<ingredient	quantity="1"	item_name="Chitin scale"					/>
+										<ingredient	quantity="1"	item_name="Monstrous hair"					/>
+		</ingredients>
+	</schematic>
+
+</crafting_schematics>
+
+</custom>
+</redxml>

@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+<definitions>
+
+<!-- ######################## ITEM DEFINITIONS ######################## -->
+<items>     			
+	<!-- Potion Bases to provide a use for non-alchemical alcohol -->
+	<!-- modSpectre: recipe for Mandrake cordial -->
+	<item
+		name							="Recipe for Mandrake cordial 1"
+		category						="alchemy_recipe"
+		price							="20"
+		weight							="0.1"
+		stackable						="100"
+		localisation_key_name			="item_name_mandrake_cordial"
+		localisation_key_description	="item_desc_alchemy_recipe_alcohol"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_alchemy
+		</tags>
+		<base_abilities>				
+		</base_abilities>
+	</item>
+	<!-- modSpectre: recipe for Mahakam spirit -->
+	<item
+		name							="Recipe for Mahakam spirit 1"
+		category						="alchemy_recipe"
+		price							="20"
+		weight							="0.1"
+		stackable						="100"
+		localisation_key_name			="item_name_mahakam_spirit"
+		localisation_key_description	="item_desc_alchemy_recipe_alcohol"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_alchemy
+		</tags>
+		<base_abilities>				
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Recipe for Dwarven spirit 1"
+		category						="alchemy_recipe"
+		price							="25"
+		weight							="0.1"
+		stackable						="100"
+		localisation_key_name			="item_name_recipe_for_dwarven_spirit"
+		localisation_key_description	="item_desc_alchemy_recipe_alcohol"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_alchemy
+		</tags>
+		<base_abilities>				<a>Magic _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Recipe for Alcohest 1"
+		category						="alchemy_recipe"
+		price							="25"
+		weight							="0.1"
+		localisation_key_name			="item_name_recipe_for_alcohest"
+		localisation_key_description	="item_desc_alchemy_recipe_alcohol"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+										<tags>ReadableItem, mod_alchemy</tags>
+		<base_abilities>				<a>Magic _Stats</a>
+		</base_abilities>
+	</item>
+
+	<item
+		name							="Recipe for White Gull 1"
+		category						="alchemy_recipe"
+		price							="25"
+		weight							="0.1"
+		stackable						="100"
+		localisation_key_name			="item_name_recipe_for_white_gull"
+		localisation_key_description	="item_desc_alchemy_recipe_alcohol"
+		icon_path						="icons/inventory/quests/ico_recipe.png"
+	>
+		<tags>							ReadableItem, mod_alchemy
+		</tags>
+		<base_abilities>				<a>Magic _Stats</a>
+		</base_abilities>
+	</item>
+
+</items>	
+
+</definitions>
+
+<custom>
+
+<alchemy_recipes>
+<!-- POTION BASES -->
+<!-- modSpectre: MANDRAKE CORDIAL -->
+	<recipe
+		name_name						="Recipe for Mandrake cordial 1"
+		level							="1"
+		cookedItem_name					="Mandrake cordial"
+		cookedItemType					="alcohol"
+		cookedItemQuantity				="1"
+		localisation_key_name			="item_name_mandrake_cordial"
+	>
+		<ingredients>					<ingredient quantity="1"	item_name="Empty bottle" 					/>
+										<ingredient quantity="7"	item_name="Mandrake root"					/>
+		</ingredients>
+	</recipe>
+
+<!-- modSpectre: MAHAKAM SPIRIT -->
+	<recipe
+		name_name						="Recipe for Mahakam spirit 1"
+		level							="1"
+		cookedItem_name					="Mahakam Spirit"
+		cookedItemType					="alcohol"
+		cookedItemQuantity				="1"
+		localisation_key_name			="item_name_mahakam_spirit"
+	>
+		<ingredients>					<ingredient quantity="1"	item_name="Empty bottle" 					/>
+										<ingredient quantity="1"	item_name="Hop umbels"						/>
+										<ingredient quantity="1"	item_name="Sewant mushrooms"				/>
+		</ingredients>
+	</recipe>
+
+<!-- DWARVEN SPIRIT -->
+	<recipe
+		name_name						="Recipe for Dwarven spirit 1"
+		level							="1"
+		cookedItem_name					="Dwarven spirit"
+		cookedItemType					="alcohol"
+		cookedItemQuantity				="1"
+		localisation_key_name			="item_name_recipe_for_dwarven_spirit"
+	>
+		<ingredients>					<ingredient quantity="1"	item_name="Empty bottle" 					/>
+										<ingredient quantity="1"	item_name="Mahakam Spirit"					/>
+										<ingredient quantity="1"	item_name="White myrtle" 					/>
+		</ingredients>
+	</recipe>
+
+<!-- ALCOHEST -->
+	<recipe
+		name_name						="Recipe for Alcohest 1"
+		level							="1"
+		cookedItem_name					="Alcohest"
+		cookedItemType					="alcohol"
+		cookedItemQuantity				="1"
+		localisation_key_name			="item_name_recipe_for_alcohest"
+	>
+		<ingredients>					<ingredient quantity="1"	item_name="Empty bottle" 					/>
+										<ingredient quantity="3"	item_name="Cherry Cordial"					/>
+										<ingredient quantity="3"	item_name="Nilfgaardian Lemon"				/>
+										<ingredient quantity="5"	item_name="Balisse fruit" 					/>
+										<ingredient quantity="10"	item_name="Aether" 							/>
+										<ingredient quantity="10"	item_name="Hydragenum" 						/>
+		</ingredients>
+	</recipe>
+
+<!-- WHITE GULL -->
+	<recipe
+		name_name						="Recipe for White Gull 1"
+		type_name						="WhiteGullEffect"
+		level							="1"
+		cookedItem_name					="White Gull 1"
+		cookedItemType					="alcohol"
+		cookedItemQuantity				="1"
+		localisation_key_name			="item_name_recipe_for_white_gull"
+	>
+		<ingredients>					<ingredient quantity="3"	item_name="Redanian Herbal" 				/>
+										<ingredient quantity="1"	item_name="Empty bottle" 					/>
+										<ingredient quantity="8"	item_name="Vitriol" 						/>
+										<ingredient quantity="4"	item_name="Rebis" 							/>
+		</ingredients>
+	</recipe>
+
+</alchemy_recipes>
+
+</custom>
+</redxml>

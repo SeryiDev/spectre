@@ -1,0 +1,938 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+	<definitions>
+
+		<!-- ######################## ABILITY DEFINITIONS ######################## -->
+		<abilities>
+
+			<!-- Default weapon stats -->
+				<ability name="Default armor _Stats"></ability>
+
+			<!-- Do not delete -->
+				<ability name="bounce_arrows"></ability>
+
+			<!-- 15% armor bonus -->
+				<ability name="repair_object_armor_bonus">
+					<repair_armor_stat_bonus 		type="mult"	min="0.15"				/>
+				</ability>
+
+			<!-- ARMOR LIGHT -->
+			<!-- ARMOR GUARD LVL1 -->
+				<ability name="Guard Lvl1 Armor 1 _Stats">
+					<weight							type="base"	min="7"		 			/>
+					<quality						type="add"	min="2"		max="2"		/>
+					<slashing_resistance_perc		type="base"	min="0.03"				/>
+					<piercing_resistance_perc		type="base"	min="0.02"				/>
+					<bludgeoning_resistance_perc	type="base" min="0.02"				/>
+					<rending_resistance_perc		type="base" min="0.03"				/>
+					<elemental_resistance_perc		type="base" min="0.03"				/>
+					<staminaRegen_armor_mod			type="mult" min="0.07"				/>
+				</ability>
+
+				<ability name="Guard Lvl1 Armor 2 _Stats">
+					<weight							type="base"	min="7" 					/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc		type="base"	min="0.03"				/>
+					<piercing_resistance_perc		type="base"	min="0.02"				/>
+					<bludgeoning_resistance_perc	type="base" min="0.02"				/>
+					<rending_resistance_perc		type="base" min="0.03"				/>
+					<elemental_resistance_perc		type="base" min="0.03"				/>
+					<staminaRegen_armor_mod			type="mult" min="0.07"				/>
+				</ability>
+
+			<!-- ARMOR GUARD LVL1 A -->
+				<ability name="Guard Lvl1 A Armor 1 _Stats">
+					<weight							type="base"	min="7"		 			/>
+					<quality						type="add"	min="2"		max="2"		/>
+					<slashing_resistance_perc		type="base"	min="0.03"				/>
+					<piercing_resistance_perc		type="base"	min="0.02"				/>
+					<bludgeoning_resistance_perc	type="base" min="0.02"				/>
+					<rending_resistance_perc		type="base" min="0.03"				/>
+					<elemental_resistance_perc		type="base" min="0.03"				/>
+					<staminaRegen_armor_mod			type="mult" min="0.07"				/>
+				</ability>
+
+				<ability name="Guard Lvl1 A Armor 2 _Stats">
+					<weight							type="base"	min="7" 				/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc		type="base"	min="0.03"				/>
+					<piercing_resistance_perc		type="base"	min="0.02"				/>
+					<bludgeoning_resistance_perc	type="base" min="0.02"				/>
+					<rending_resistance_perc		type="base" min="0.03"				/>
+					<elemental_resistance_perc		type="base" min="0.03"				/>
+					<staminaRegen_armor_mod			type="mult" min="0.07"				/>
+				</ability>
+
+			
+		<!-- ARMOR MEDIUM -->		
+
+			<!-- ARMOR GUARD LVL2-->
+				<ability name="Guard Lvl2 Armor 1 _Stats">
+					<weight							type="base"	min="15"	 			/>
+					<quality						type="add"	min="2"		max="2"		/>
+					<slashing_resistance_perc		type="base"	min="0.12"				/>
+					<piercing_resistance_perc		type="base"	min="0.04"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+					<rending_resistance_perc		type="base"	min="0.12"				/>
+					<elemental_resistance_perc		type="base"	min="0.12"				/>
+				</ability>
+
+				<ability name="Guard Lvl2 Armor 2 _Stats">
+					<weight							type="base"	min="15"	 			/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc		type="base"	min="0.12"				/>
+					<piercing_resistance_perc		type="base"	min="0.04"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+					<rending_resistance_perc		type="base"	min="0.12"				/>
+					<elemental_resistance_perc		type="base"	min="0.12"				/>
+				</ability>
+
+			<!-- ARMOR GUARD LVL2 A-->
+				<ability name="Guard Lvl2 A Armor 1 _Stats">
+					<weight							type="base"	min="15"	 			/>
+					<quality						type="add"	min="2"		max="2"		/>
+					<slashing_resistance_perc		type="base"	min="0.12"				/>
+					<piercing_resistance_perc		type="base"	min="0.04"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+					<rending_resistance_perc		type="base"	min="0.12"				/>
+					<elemental_resistance_perc		type="base"	min="0.12"				/>
+				</ability>
+
+				<ability name="Guard Lvl2 A Armor 2 _Stats">
+					<weight							type="base"	min="15"	 			/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc		type="base"	min="0.12"				/>
+					<piercing_resistance_perc		type="base"	min="0.04"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+					<rending_resistance_perc		type="base"	min="0.12"				/>
+					<elemental_resistance_perc		type="base"	min="0.12"				/>
+				</ability>
+			
+		<!-- ARMOR HEAVY -->
+
+			<!-- ARMOR KNIGHT GERALT -->
+				<ability name="Knight Geralt Armor 1 _Stats">
+					<weight							type="base"	min="18"	 			/>
+					<quality						type="add"	min="2"		max="2"		/>
+					<slashing_resistance_perc		type="base"	min="0.20" 				/>
+					<piercing_resistance_perc		type="base" min="0.20"				/>
+					<bludgeoning_resistance_perc	type="base" min="0.20"				/>
+					<rending_resistance_perc		type="base" min="0.20"				/>
+					<elemental_resistance_perc		type="base" min="0.20"				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.30"				/>
+				</ability>
+
+				<ability name="Knight Geralt Armor 2 _Stats">
+					<weight							type="base"	min="18" 				/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc		type="base"	min="0.20" 				/>
+					<piercing_resistance_perc		type="base" min="0.20"				/>
+					<bludgeoning_resistance_perc	type="base" min="0.20"				/>
+					<rending_resistance_perc		type="base" min="0.20"				/>
+					<elemental_resistance_perc		type="base" min="0.20"				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.30"				/>
+				</ability>
+
+			<!-- ARMOR KNIGHT GERALT A -->
+				<ability name="Knight Geralt A Armor 1 _Stats">
+					<weight							type="base"	min="18" 				/>
+					<quality						type="add"	min="2"		max="2"		/>
+					<slashing_resistance_perc		type="base"	min="0.20" 				/>
+					<piercing_resistance_perc		type="base" min="0.20"				/>
+					<bludgeoning_resistance_perc	type="base" min="0.20"				/>
+					<rending_resistance_perc		type="base" min="0.20"				/>
+					<elemental_resistance_perc		type="base" min="0.20"				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.30"				/>
+				</ability>	
+
+				<ability name="Knight Geralt A Armor 2 _Stats">
+					<weight							type="base"	min="18" 				/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc		type="base"	min="0.20" 				/>
+					<piercing_resistance_perc		type="base" min="0.20"				/>
+					<bludgeoning_resistance_perc	type="base" min="0.20"				/>
+					<rending_resistance_perc		type="base" min="0.20"				/>
+					<elemental_resistance_perc		type="base" min="0.20"				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.30"				/>
+				</ability>
+				
+			<!-- ARMOR TOUSSAINT -->
+				<ability name="Toussaint Armor 2 _Stats">
+					<weight							type="base"	min="18" 				/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc		type="base"	min="0.20" 				/>
+					<piercing_resistance_perc		type="base" min="0.20"				/>
+					<bludgeoning_resistance_perc	type="base" min="0.20"				/>
+					<rending_resistance_perc		type="base" min="0.20"				/>
+					<elemental_resistance_perc		type="base" min="0.20"				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.30"				/>
+				</ability>
+					
+			<!-- ARMOR QUEST -->
+				<ability name="sq701_geralt_armor _Stats">
+					<weight							type="base"	min="18"				/>
+					<quality						type="add"	min="4"					/>
+					<slashing_resistance_perc		type="base"	min="0.20" 				/>
+					<piercing_resistance_perc		type="base" min="0.20"				/>
+					<bludgeoning_resistance_perc	type="base" min="0.20"				/>
+					<rending_resistance_perc		type="base" min="0.20"				/>
+					<elemental_resistance_perc		type="base" min="0.20"				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.30"				/>
+				</ability>
+
+				<ability name="sq701_ravix_armor _Stats">
+					<weight							type="base"	min="18"				/>
+					<quality						type="add"	min="4"					/>
+					<slashing_resistance_perc		type="base"	min="0.20" 				/>
+					<piercing_resistance_perc		type="base" min="0.20"				/>
+					<bludgeoning_resistance_perc	type="base" min="0.20"				/>
+					<rending_resistance_perc		type="base" min="0.20"				/>
+					<elemental_resistance_perc		type="base" min="0.20"				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.30"				/>
+				</ability>
+				
+				<ability name="q702_vampire_armor _Stats">
+					<weight							type="base"	min="18"	 			/>
+					<quality						type="add"	min="4"					/>
+					<slashing_resistance_perc		type="base"	min="0.22"				/>
+					<piercing_resistance_perc		type="base"	min="0.22"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.22"				/>
+					<rending_resistance_perc		type="base"	min="0.22"				/>
+					<elemental_resistance_perc		type="base"	min="0.22"				/>
+					<bleeding_resistance_perc 		type="base" min="0.50"				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.20"				/>
+				</ability>
+				
+				<ability name="q704_vampire_armor _Stats">
+					<weight							type="base"	min="18"	 			/>
+					<quality						type="add"	min="4"					/>
+					<slashing_resistance_perc		type="base"	min="0.22"				/>
+					<piercing_resistance_perc		type="base"	min="0.22"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.22"				/>
+					<rending_resistance_perc		type="base"	min="0.22"				/>
+					<elemental_resistance_perc		type="base"	min="0.22"				/>
+					<bleeding_resistance_perc 		type="base" min="0.50"				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.20"				/>
+				</ability>
+				
+		</abilities>
+
+		<!-- ######################## ITEM DEFINITIONS ######################## -->
+		<items>
+
+		<!-- ARMOR LIGHT -->
+		
+			<!-- GUARD LVL1 ARMOR -->
+			<item
+					name							="Guard Lvl1 Armor 1"
+					category						="armor"
+					price							="195"
+					initial_durability				="100"
+					max_durability					="100" 
+					enhancement_slots				="1"
+					stackable						="1"
+					grid_size						="2"
+					ability_mode					="OnMount"
+					equip_template					="t_01_mg__guard"
+					localisation_key_name			="item_name_guard_lvl1_geralt_armor"
+					localisation_key_description	="item_category_light_armor_description"
+					icon_path						="icons/inventory/armors/guard_1_armor_1_64x128.png"
+				>
+					<tags>							Autogen, Armor, LightArmor, mod_armor
+					</tags>
+					<base_abilities>				<a>Default armor _Stats</a>
+													<a>Guard Lvl1 Armor 1 _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Silk</parts>
+													<parts count="1">Leather</parts>
+					</recycling_parts> 					
+					<variants>						<variant equip_template="t_01a_mg__guard" category="gloves"></variant>
+					</variants>
+			</item>
+
+			<item
+					name							="Guard Lvl1 Armor 2"
+					category						="armor"
+					price							="376"
+					initial_durability				="100"
+					max_durability					="100" 
+					enhancement_slots				="2"
+					stackable						="1"
+					grid_size						="2"
+					ability_mode					="OnMount"
+					equip_template					="t_01_mg__guard"
+					localisation_key_name			="item_name_guard_lvl1_geralt_armor"
+					localisation_key_description	="item_category_light_armor_description"
+					icon_path						="icons/inventory/armors/guard_1_armor_1_64x128.png"
+				>
+					<tags>							Autogen, Armor, LightArmor, mod_armor
+					</tags>
+					<base_abilities>				<a>Default armor _Stats</a>
+													<a>Guard Lvl1 Armor 2 _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Silk</parts>
+													<parts count="1">Hardened leather</parts>
+					</recycling_parts> 					
+					<variants>						<variant equip_template="t_01a_mg__guard" category="gloves"></variant>
+					</variants>
+			</item>
+
+			<!-- GUARD LVL1 A ARMOR -->
+			<item
+					name							="Guard Lvl1 A Armor 1"
+					category						="armor"
+					price							="201"
+					initial_durability				="100"
+					max_durability					="100" 
+					enhancement_slots				="1"
+					stackable						="1"
+					grid_size						="2"
+					ability_mode					="OnMount"
+					equip_template					="t_02_mg__guard"
+					localisation_key_name			="item_name_guard_lvl1_A_geralt_armor"
+					localisation_key_description	="item_category_light_armor_description"
+					icon_path						="icons/inventory/armors/guard_1a_armor_1_64x128.png"
+				>
+					<tags>							Autogen, Armor, LightArmor, mod_armor
+					</tags>
+					<base_abilities>				<a>Default armor _Stats</a>
+													<a>Guard Lvl1 A Armor 1 _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Silk</parts>
+													<parts count="1">Leather</parts>
+					</recycling_parts> 					
+					<variants>						<variant equip_template="t_02a_mg__guard" category="gloves"></variant>
+					</variants>
+			</item>
+
+			<item
+					name							="Guard Lvl1 A Armor 2"
+					category						="armor"
+					price							="389"
+					initial_durability				="100"
+					max_durability					="100" 
+					enhancement_slots				="2"
+					stackable						="1"
+					grid_size						="2"
+					ability_mode					="OnMount"
+					equip_template					="t_02_mg__guard"
+					localisation_key_name			="item_name_guard_lvl1_A_geralt_armor"
+					localisation_key_description	="item_category_light_armor_description"
+					icon_path						="icons/inventory/armors/guard_1a_armor_1_64x128.png"
+				>
+					<tags>							Autogen, Armor, LightArmor, mod_armor
+					</tags>
+					<base_abilities>				<a>Default armor _Stats</a>
+													<a>Guard Lvl1 A Armor 2 _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Silk</parts>
+													<parts count="1">Hardened leather</parts>
+					</recycling_parts> 					
+					<variants>						<variant equip_template="t_02a_mg__guard" category="gloves"></variant>
+					</variants>
+			</item>
+				
+		<!-- ARMOR MEDIUM -->
+
+			<!-- GUARD LVL2 ARMOR -->
+			<item
+					name							="Guard Lvl2 Armor 1"
+					category						="armor"
+					price							="356"
+					initial_durability				="100"
+					max_durability					="100" 
+					enhancement_slots				="1"
+					stackable						="1"
+					grid_size						="2"
+					ability_mode					="OnMount"
+					equip_template					="t_01_mg__damien"
+					localisation_key_name			="item_name_guard_lvl2_geralt_armor"
+					localisation_key_description	="item_category_medium_armor_description"
+					icon_path						="icons/inventory/armors/guard_2_armor_1_64x128.png"
+				>
+					<tags>							Autogen, Armor, MediumArmor, mod_armor
+					</tags>
+					<base_abilities>				<a>Default armor _Stats</a>
+													<a>Guard Lvl2 Armor 1 _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Leather</parts>
+													<parts count="1">Dark steel plate</parts>
+					</recycling_parts> 					
+					<variants>						<variant equip_template="t_01a_mg__damien" category="gloves"></variant>
+					</variants>
+			</item>
+
+			<item
+					name							="Guard Lvl2 Armor 2"
+					category						="armor"
+					price							="523"
+					initial_durability				="100"
+					max_durability					="100" 
+					enhancement_slots				="2"
+					stackable						="1"
+					grid_size						="2"
+					ability_mode					="OnMount"
+					equip_template					="t_01_mg__damien"
+					localisation_key_name			="item_name_guard_lvl2_geralt_armor"
+					localisation_key_description	="item_category_medium_armor_description"
+					icon_path						="icons/inventory/armors/guard_2_armor_1_64x128.png"
+				>
+					<tags>							Autogen, Armor, MediumArmor, mod_armor
+					</tags>
+					<base_abilities>				<a>Default armor _Stats</a>
+													<a>Guard Lvl2 Armor 2 _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Hardened leather</parts>
+													<parts count="1">Meteorite plate</parts>
+													<parts count="1">Silver ingot</parts>
+					</recycling_parts> 					
+					<variants>						<variant equip_template="t_01a_mg__damien" category="gloves"></variant>
+					</variants>
+			</item>
+
+			<!-- GUARD LVL2 A ARMOR -->
+			<item
+					name							="Guard Lvl2 A Armor 1"
+					category						="armor"
+					price							="365"
+					initial_durability				="100"
+					max_durability					="100" 
+					enhancement_slots				="1"
+					stackable						="1"
+					grid_size						="2"
+					ability_mode					="OnMount"
+					equip_template					="t_02_mg__damien"
+					localisation_key_name			="item_name_guard_lvl2_A_geralt_armor"
+					localisation_key_description	="item_category_medium_armor_description"
+					icon_path						="icons/inventory/armors/guard_2a_armor_1_64x128.png"
+				>
+					<tags>							Autogen, Armor, MediumArmor, mod_armor
+					</tags>
+					<base_abilities>				<a>Default armor _Stats</a>
+													<a>Guard Lvl2 A Armor 1 _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Leather</parts>
+													<parts count="1">Dark steel plate</parts>
+					</recycling_parts> 					
+					<variants>						<variant equip_template="t_02a_mg__damien" category="gloves"></variant>
+					</variants>
+			</item>
+
+			<item
+					name							="Guard Lvl2 A Armor 2"
+					category						="armor"
+					price							="542"
+					initial_durability				="100"
+					max_durability					="100" 
+					enhancement_slots				="2"
+					stackable						="1"
+					grid_size						="2"
+					ability_mode					="OnMount"
+					equip_template					="t_02_mg__damien"
+					localisation_key_name			="item_name_guard_lvl2_A_geralt_armor"
+					localisation_key_description	="item_category_medium_armor_description"
+					icon_path						="icons/inventory/armors/guard_2a_armor_1_64x128.png"
+				>
+					<tags>							Autogen, Armor, MediumArmor, mod_armor
+					</tags>
+					<base_abilities>				<a>Default armor _Stats</a>
+													<a>Guard Lvl2 A Armor 2 _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Hardened leather</parts>
+													<parts count="1">Meteorite plate</parts>
+													<parts count="1">Silver ingot</parts>
+					</recycling_parts> 					
+					<variants>						<variant equip_template="t_02a_mg__damien" category="gloves"></variant>
+					</variants>
+			</item>
+			
+		<!-- ARMOR HEAVY -->
+
+			<!-- KNIGHT GERALT ARMOR -->
+			<item
+					name							="Knight Geralt Armor 1"
+					category						="armor"
+					price							="432"
+					initial_durability				="100"
+					max_durability					="100" 
+					enhancement_slots				="1"
+					stackable						="1"
+					grid_size						="2"
+					ability_mode					="OnMount"
+					equip_template					="t_01_mg__errant_knight"
+					localisation_key_name			="item_name_knight_geralt_armor"
+					localisation_key_description	="item_category_heavy_armor_description"
+					icon_path						="icons/inventory/armors/knight_1_armor_1_64x128.png"
+				>
+					<tags>							Autogen, Armor, HeavyArmor, mod_armor
+					</tags>
+					<base_abilities>				<a>Default armor _Stats</a>
+													<a>Knight Geralt Armor 1 _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Leather</parts>
+													<parts count="1">Meteorite plate</parts>
+					</recycling_parts> 					
+					<variants>	
+													<variant equip_template="t_01_mg__errant_knight"> 
+														<item>q702_vampire_gloves</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>q704_vampire_gloves</item> <!-- these gloves don't need the armor to be collapsed -->                                   
+														<item>Knight Geralt Gloves 1</item> <!-- these gloves don't need the armor to be collapsed -->    
+														<item>Knight Geralt Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Knight Geralt Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->      
+														<item>Knight Geralt A Gloves 1</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>Knight Geralt A Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Knight Geralt A Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>Toussaint Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Toussaint Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>sq701_geralt_gloves</item> <!-- these gloves don't need the armor to be collapsed -->  
+													</variant>
+													<variant equip_template="t_01a_mg__errant_knight" category="gloves"></variant>
+					</variants>
+			</item>
+
+			<item
+					name							="Knight Geralt Armor 2"
+					category						="armor"
+					price							="865"
+					initial_durability				="100"
+					max_durability					="100" 
+					enhancement_slots				="2"
+					stackable						="1"
+					grid_size						="2"
+					ability_mode					="OnMount"
+					equip_template					="t_01_mg__errant_knight"
+					localisation_key_name			="item_name_knight_geralt_armor"
+					localisation_key_description	="item_category_heavy_armor_description"
+					icon_path						="icons/inventory/armors/knight_1_armor_1_64x128.png"
+				>
+					<tags>							Autogen, Armor, HeavyArmor, mod_armor
+					</tags>
+					<base_abilities>				<a>Default armor _Stats</a>
+													<a>Knight Geralt Armor 2 _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Leather</parts>
+													<parts count="1">Meteorite silver plate</parts>
+					</recycling_parts> 					
+					<variants>			
+													<variant equip_template="t_01_mg__errant_knight"> 
+														<item>q702_vampire_gloves</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>q704_vampire_gloves</item> <!-- these gloves don't need the armor to be collapsed -->                                   
+														<item>Knight Geralt Gloves 1</item> <!-- these gloves don't need the armor to be collapsed -->    
+														<item>Knight Geralt Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Knight Geralt Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->      
+														<item>Knight Geralt A Gloves 1</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>Knight Geralt A Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Knight Geralt A Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>Toussaint Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Toussaint Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>sq701_geralt_gloves</item> <!-- these gloves don't need the armor to be collapsed -->  
+													</variant>
+													<variant equip_template="t_01a_mg__errant_knight" category="gloves"></variant>
+					</variants>
+			</item>
+
+			<!-- KNIGHT GERALT A ARMOR -->
+			<item
+					name							="Knight Geralt A Armor 1"
+					category						="armor"
+					price							="456"
+					initial_durability				="100"
+					max_durability					="100" 
+					enhancement_slots				="1"
+					stackable						="1"
+					grid_size						="2"
+					ability_mode					="OnMount"
+					equip_template					="t_02_mg__errant_knight"
+					localisation_key_name			="item_name_knight_A_geralt_armor"
+					localisation_key_description	="item_category_heavy_armor_description"
+					icon_path						="icons/inventory/armors/knight_2_armor_1_64x128.png"
+				>
+					<tags>							Autogen, Armor, HeavyArmor, mod_armor
+					</tags>
+					<base_abilities>				<a>Default armor _Stats</a>
+													<a>Knight Geralt A Armor 1 _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Leather</parts>
+													<parts count="1">Meteorite plate</parts>
+					</recycling_parts> 					
+					<variants>		
+													<variant equip_template="t_02_mg__errant_knight"> 
+														<item>q702_vampire_gloves</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>q704_vampire_gloves</item> <!-- these gloves don't need the armor to be collapsed -->                                   
+														<item>Knight Geralt Gloves 1</item> <!-- these gloves don't need the armor to be collapsed -->    
+														<item>Knight Geralt Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Knight Geralt Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->      
+														<item>Knight Geralt A Gloves 1</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>Knight Geralt A Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Knight Geralt A Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>Toussaint Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Toussaint Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>sq701_geralt_gloves</item> <!-- these gloves don't need the armor to be collapsed -->  
+													</variant>
+													<variant equip_template="t_02a_mg__errant_knight" category="gloves"></variant>
+					</variants>
+			</item>
+
+			<item
+					name							="Knight Geralt A Armor 2"
+					category						="armor"
+					price							="876"
+					initial_durability				="100"
+					max_durability					="100" 
+					enhancement_slots				="2"
+					stackable						="1"
+					grid_size						="2"
+					ability_mode					="OnMount"
+					equip_template					="t_02_mg__errant_knight"
+					localisation_key_name			="item_name_knight_A_geralt_armor"
+					localisation_key_description	="item_category_heavy_armor_description"
+					icon_path						="icons/inventory/armors/knight_2_armor_1_64x128.png"
+				>
+					<tags>							Autogen, Armor, HeavyArmor, mod_armor
+					</tags>
+					<base_abilities>				<a>Default armor _Stats</a>
+													<a>Knight Geralt A Armor 2 _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Leather</parts>
+													<parts count="1">Meteorite silver plate</parts>
+					</recycling_parts> 					
+					<variants>		
+													<variant equip_template="t_02_mg__errant_knight"> 
+														<item>q702_vampire_gloves</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>q704_vampire_gloves</item> <!-- these gloves don't need the armor to be collapsed -->                                   
+														<item>Knight Geralt Gloves 1</item> <!-- these gloves don't need the armor to be collapsed -->    
+														<item>Knight Geralt Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Knight Geralt Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->      
+														<item>Knight Geralt A Gloves 1</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>Knight Geralt A Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Knight Geralt A Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>Toussaint Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Toussaint Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>sq701_geralt_gloves</item> <!-- these gloves don't need the armor to be collapsed -->  
+													</variant>
+													<variant equip_template="t_02a_mg__errant_knight" category="gloves"></variant>
+					</variants>
+			</item>
+			
+			<item
+					name							="Toussaint Armor 2"
+					category						="armor"
+					price							="915"
+					initial_durability				="100"
+					max_durability					="100" 
+					enhancement_slots				="2"
+					stackable						="1"
+					grid_size						="2"
+					ability_mode					="OnMount"
+					equip_template					="t_03_mg__errant_knight"
+					localisation_key_name			="item_name_toussaint_armor"
+					localisation_key_description	="item_category_heavy_armor_description"
+					icon_path						="icons/inventory/armors/toussaint_armor_2_64x128.png"
+				>
+					<tags>							Autogen, Armor, HeavyArmor, mod_armor
+					</tags>
+					<base_abilities>				<a>Default armor _Stats</a>
+													<a>Toussaint Armor 2 _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Meteorite silver plate</parts>
+													<parts count="1">Orichalcum ingot</parts>
+					</recycling_parts> 					
+					<variants>		
+													<variant equip_template="t_03_mg__errant_knight"> 
+														<item>q702_vampire_gloves</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>q704_vampire_gloves</item> <!-- these gloves don't need the armor to be collapsed -->                                   
+														<item>Knight Geralt Gloves 1</item> <!-- these gloves don't need the armor to be collapsed -->    
+														<item>Knight Geralt Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Knight Geralt Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->      
+														<item>Knight Geralt A Gloves 1</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>Knight Geralt A Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Knight Geralt A Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>Toussaint Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Toussaint Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>sq701_geralt_gloves</item> <!-- these gloves don't need the armor to be collapsed -->  
+													</variant>
+													<variant equip_template="t_03a_mg__errant_knight" category="gloves"></variant>
+					</variants>
+			</item>
+			
+			<!-- ARMOR QUEST -->
+	
+			<item
+					name							="sq701_geralt_armor"
+					category						="armor"
+					price							="1050"
+					initial_durability				="100"
+					max_durability					="100" 
+					enhancement_slots				="3"
+					stackable						="1"
+					grid_size						="2"
+					ability_mode					="OnMount"
+					equip_template					="t_01_mg__errant_knight_tourney"
+					localisation_key_name			="item_name_sq701_geralt_armor"
+					localisation_key_description	="item_category_heavy_armor_description"
+					icon_path						="icons/inventory/armors/sq701_geralt_armor_64x128.png"
+				>
+					<tags>							Autogen, AutogenForceLevel, Armor, HeavyArmor, mod_armor, mod_legendary
+					</tags>
+					<base_abilities>				<a>Default armor _Stats</a>
+													<a>sq701_geralt_armor _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Meteorite silver plate</parts>
+													<parts count="1">Orichalcum ingot</parts>
+					</recycling_parts> 					
+					<variants>			
+													<variant equip_template="t_01_mg__errant_knight_tourney"> 
+														<item>q702_vampire_gloves</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>q704_vampire_gloves</item> <!-- these gloves don't need the armor to be collapsed -->                                   
+														<item>Knight Geralt Gloves 1</item> <!-- these gloves don't need the armor to be collapsed -->    
+														<item>Knight Geralt Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Knight Geralt Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->      
+														<item>Knight Geralt A Gloves 1</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>Knight Geralt A Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Knight Geralt A Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>Toussaint Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Toussaint Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>sq701_geralt_gloves</item> <!-- these gloves don't need the armor to be collapsed -->  
+													</variant>
+													<variant equip_template="t_01a_mg__errant_knight_tourney" category="gloves"></variant>
+					</variants>
+			</item>
+
+			<item
+					name							="sq701_ravix_armor"
+					category						="armor"
+					price							="1050"
+					initial_durability				="100"
+					max_durability					="100" 
+					enhancement_slots				="3"
+					stackable						="1"
+					grid_size						="2"
+					ability_mode					="OnMount"
+					equip_template					="t_02_mg__errant_knight_tourney"
+					localisation_key_name			="item_name_sq701_ravix_armor"
+					localisation_key_description	="item_category_heavy_armor_description"
+					icon_path						="icons/inventory/armors/sq701_ravix_armor_64x128.png"
+				>
+					<tags>							Autogen, AutogenForceLevel, Armor, HeavyArmor, mod_armor, mod_legendary
+					</tags>
+					<base_abilities>				<a>Default armor _Stats</a>
+													<a>sq701_ravix_armor _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Meteorite silver plate</parts>
+													<parts count="1">Orichalcum ingot</parts>
+					</recycling_parts> 					
+					<variants>		
+													<variant equip_template="t_02_mg__errant_knight_tourney"> 
+														<item>q702_vampire_gloves</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>q704_vampire_gloves</item> <!-- these gloves don't need the armor to be collapsed -->                                   
+														<item>Knight Geralt Gloves 1</item> <!-- these gloves don't need the armor to be collapsed -->    
+														<item>Knight Geralt Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Knight Geralt Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->      
+														<item>Knight Geralt A Gloves 1</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>Knight Geralt A Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Knight Geralt A Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>Toussaint Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Toussaint Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>sq701_geralt_gloves</item> <!-- these gloves don't need the armor to be collapsed -->  
+													</variant>
+													<variant equip_template="t_02a_mg__errant_knight_tourney" category="gloves"></variant>
+					</variants>
+			</item>
+		
+			<item
+					name							="q702_vampire_armor"
+					category						="armor"
+					price							="1617"
+					initial_durability				="100"
+					max_durability					="100" 
+					enhancement_slots				="3"
+					stackable						="1"
+					grid_size						="2"
+					ability_mode					="OnMount"
+					equip_template					="q_704_t_01_mg__vampire"
+					localisation_key_name			="item_name_baw_vampire_chest"
+					localisation_key_description	="item_category_heavy_armor_description"
+					icon_path						="icons/inventory/armors/q704_vampire_armor_64x128.png"
+				>
+					<tags>							Autogen, Armor, HeavyArmor, mod_armor, mod_legendary, VampireSet, SetBonusPiece
+					</tags>
+					<base_abilities>				<a>Default armor _Stats</a>
+													<a>q702_vampire_armor _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Dwimeryte plate</parts>
+													<parts count="1">Leather</parts>
+													<parts count="2">Lunar shards</parts>
+					</recycling_parts> 					
+					<variants>
+													<variant equip_template="q_704_t_01_mg__vampire"> 
+														<item>q702_vampire_gloves</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>q704_vampire_gloves</item> <!-- these gloves don't need the armor to be collapsed -->                                   
+														<item>Knight Geralt Gloves 1</item> <!-- these gloves don't need the armor to be collapsed -->    
+														<item>Knight Geralt Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Knight Geralt Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->      
+														<item>Knight Geralt A Gloves 1</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>Knight Geralt A Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Knight Geralt A Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>Toussaint Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Toussaint Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>sq701_geralt_gloves</item> <!-- these gloves don't need the armor to be collapsed -->
+													</variant>
+													<variant equip_template="q704_t_01a_mg__vampire" category="gloves"></variant>
+											
+					</variants>
+			</item>
+		
+			<item
+					name							="q704_vampire_armor"
+					category						="armor"
+					price							="1617"
+					initial_durability				="100"
+					max_durability					="100" 
+					enhancement_slots				="3"
+					stackable						="1"
+					grid_size						="2"
+					ability_mode					="OnMount"
+					equip_template					="t_01_mg__vampire"
+					localisation_key_name			="item_name_baw_vampire_chest_2"
+					localisation_key_description	="item_category_heavy_armor_description"
+					icon_path						="icons/inventory/armors/vampire_armor_64x128.png"
+				>
+					<tags>							Autogen, Armor, HeavyArmor, mod_armor, mod_legendary, VampireSet, SetBonusPiece
+					</tags>
+					<base_abilities>				<a>Default armor _Stats</a>
+													<a>q704_vampire_armor _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Dwimeryte plate</parts>
+													<parts count="1">Leather</parts>
+													<parts count="2">Lunar shards</parts>
+					</recycling_parts> 					
+					<variants>
+													<variant equip_template="t_01_mg__vampire"> 
+														<item>q702_vampire_gloves</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>q704_vampire_gloves</item> <!-- these gloves don't need the armor to be collapsed -->                                   
+														<item>Knight Geralt Gloves 1</item> <!-- these gloves don't need the armor to be collapsed -->    
+														<item>Knight Geralt Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Knight Geralt Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->      
+														<item>Knight Geralt A Gloves 1</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>Knight Geralt A Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Knight Geralt A Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>Toussaint Gloves 2</item> <!-- these gloves don't need the armor to be collapsed -->
+														<item>Toussaint Gloves 3</item> <!-- these gloves don't need the armor to be collapsed -->  
+														<item>sq701_geralt_gloves</item> <!-- these gloves don't need the armor to be collapsed -->
+													</variant>
+													<variant equip_template="t_01a_mg__vampire" category="gloves"></variant>
+	                
+					</variants>
+			</item>
+		
+		
+			<!-- CASUAL SUITS -->
+	
+			<!-- MANDRAGORA SUIT -->
+			<item
+					name							="Beauclair elegant suit"
+					category						="armor"
+					price							="75"
+					initial_durability				="100"
+					max_durability					="100"
+					enhancement_slots				="0"
+					stackable						="1"
+					grid_size						="2"
+					ability_mode					="OnMount"
+					equip_template					="t2_11_mg__bob"
+					localisation_key_name			="item_name_elegant_beauclair_suit"
+					localisation_key_description	="item_desc_armor"
+					icon_path						="icons/inventory/quests/q703_beauclair_elegant_suit.png"
+				>
+					<tags>							Armor, LightArmor, mod_armor, mod_origin_nilfgaard, DoNotEnhance, gm_NoSetBonuses
+					</tags>
+					<base_abilities>				<a>Nilfgaardian_suit _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Silk</parts>
+					</recycling_parts>
+					<variants>						<variant equip_template="t2_11a_mg__bob" category="gloves"></variant>
+					</variants>
+			</item>	
+			
+			<item
+				name								="Beauclair Casual Suit 01"
+				category							="armor"
+				stackable							="1"
+				enhancement_slots					="0"
+				equip_template						="t2_10_mg__bob"
+				ability_mode						="OnMount"
+				grid_size							= "2"
+				icon_path							="icons/inventory/quests/Beauclair-Casual-Suit-01_64x128.png"
+				localisation_key_name				= "item_name_beauclair_suit_01"
+				localisation_key_description		= "item_desc_beauclair_suit_01"
+				price								="75"
+			>
+					<tags>							Armor, LightArmor, mod_armor, Quest, DoNotEnhance, gm_NoSetBonuses
+					</tags>
+					<bound_items>
+					</bound_items>
+					<base_abilities>
+													<a>Nilfgaardian_suit _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Silk</parts>
+					</recycling_parts>
+					<variants>											
+													<variant equip_template="t2_10a_mg__bob" category="gloves"></variant>
+					</variants>
+			</item>
+			
+			<item
+				name								="Beauclair Casual Suit with medal"
+				category							="armor"
+				stackable							="1"
+				enhancement_slots					="0"
+				equip_template						="t2_10_mg_medal__bob"
+				ability_mode						="OnMount"
+				grid_size							= "2"
+				icon_path							="icons/inventory/quests/Beauclair-Casual-Suit-with-medal_64x128.png"
+				localisation_key_name				= "item_name_beauclair_suit_01"
+				localisation_key_description		= "item_desc_beauclair_suit_01"
+				price								="75"
+			>
+					<tags>							Armor, LightArmor, mod_armor, Quest, DoNotEnhance, gm_NoSetBonuses
+					</tags>
+					<bound_items>
+					</bound_items>
+					<base_abilities>
+													<a>Nilfgaardian_suit _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Silk</parts>
+					</recycling_parts>
+					<variants>											
+													<variant equip_template="t2_10a_mg_medal__bob" category="gloves"></variant>
+					</variants>
+			</item>
+			
+			<item
+				name								="Beauclair Prison Shirt"
+				category							="armor"
+				stackable							="1"
+				enhancement_slots					="2"
+				equip_template						="t_01_mg__prison_outfit"
+				ability_mode						="OnMount"
+				grid_size							= "2"
+				icon_path							="icons/inventory/quests/Beauclair-Prison-Shirt_64x64.png"
+				localisation_key_name				= "item_name_beauclair_prison_shirt"
+				localisation_key_description		= "item_desc_beauclair_prison_shirt"
+				price								="10"
+			>
+					<tags>							Armor, LightArmor, mod_armor, Quest, DoNotEnhance, gm_NoSetBonuses
+					</tags>
+					<bound_items>
+					</bound_items>
+					<base_abilities>
+													<a>Nilfgaardian_suit _Stats</a>
+					</base_abilities>
+					<recycling_parts>				<parts count="1">Linen</parts>
+					</recycling_parts>
+			</item>
+
+		</items>
+
+	</definitions>
+</redxml>

@@ -1,0 +1,1487 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+	<definitions>
+		<abilities>
+		
+		<!-- WITCHER WOLF ARMOR: 5% to focus, attack and spell power, up to 15% -->
+			<ability name="Wolf Armor _Stats"> <!-- lvl 16 -> 14 -> 21 - corresponding enemies are lvl 21 -->
+				<weight							type="base"	min="10"				/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="130"				/>
+				<slashing_resistance_perc		type="base" min="0.17"				/>
+				<piercing_resistance_perc		type="base" min="0.09"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+				<rending_resistance_perc		type="base" min="0.17"				/>
+				<elemental_resistance_perc		type="base" min="0.17"				/>
+				<focus_gain 					type="base" min="0.05" 				/>
+				<spell_power					type="mult"	min="0.05"				/>
+				<attack_power					type="mult" min="0.05"				/>
+			</ability>
+			
+			<ability name="Wolf Armor 1 _Stats"> <!-- lvl 23 -> 21 -> 24 - KM battle is 24 -->
+				<weight							type="base"	min="10"				/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="145"				/>
+				<slashing_resistance_perc		type="base" min="0.17"				/>
+				<piercing_resistance_perc		type="base" min="0.09"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+				<rending_resistance_perc		type="base" min="0.17"				/>
+				<elemental_resistance_perc		type="base" min="0.17"				/>
+				<focus_gain 					type="base" min="0.08" 				/>
+				<spell_power					type="mult"	min="0.08"				/>
+				<attack_power					type="mult" min="0.08"				/>
+			</ability>
+			
+			<ability name="Wolf Armor 2 _Stats"> <!-- lvl 31 -> 28 -->
+				<weight							type="base"	min="10"				/>
+				<quality						type="add"	min="5"					/>
+				<armor 							type="base"	min="165"				/>
+				<slashing_resistance_perc		type="base" min="0.17"				/>
+				<piercing_resistance_perc		type="base" min="0.09"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+				<rending_resistance_perc		type="base" min="0.17"				/>
+				<elemental_resistance_perc		type="base" min="0.17"				/>
+				<focus_gain 					type="base" min="0.11" 				/>
+				<spell_power					type="mult"	min="0.11"				/>
+				<attack_power					type="mult" min="0.11"				/>
+			</ability>
+			
+			<ability name="Wolf Armor 3 _Stats"> <!-- lvl 36 -> 34 -->
+				<weight							type="base"	min="10"				/>
+				<quality						type="add"	min="5" 				/>
+				<armor							type="base"	min="195"				/>
+				<slashing_resistance_perc		type="base" min="0.17"				/>
+				<piercing_resistance_perc		type="base" min="0.09"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+				<rending_resistance_perc		type="base" min="0.17"				/>
+				<elemental_resistance_perc		type="base" min="0.17"				/>
+				<focus_gain 					type="base" min="0.15" 				/>
+				<spell_power					type="mult"	min="0.15"				/>
+				<attack_power					type="mult" min="0.15"				/>
+			</ability>	
+			
+		<!-- WITCHER WOLF BOOTS: 3% to focus, attack and spell power, up to 6% -->
+			<ability name="Wolf Boots 1 _Stats"> <!-- lvl 16 -> 14 -> 21 - KM quests are lvl 19 -->
+				<weight							type="base"	min="4"					/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="47"				/>
+				<slashing_resistance_perc		type="base"	min="0.06"				/>
+				<piercing_resistance_perc		type="base"	min="0.04"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+				<rending_resistance_perc		type="base"	min="0.06"				/>
+				<elemental_resistance_perc		type="base"	min="0.06"				/>
+				<focus_gain 					type="base" min="0.03" 				/>
+				<spell_power					type="mult"	min="0.03"				/>
+				<attack_power					type="mult" min="0.03"				/>
+			</ability>
+
+			<ability name="Wolf Boots 2 _Stats"> <!-- lvl 23 -> 21 -> 24 - KM battle is 24 -->
+				<weight							type="base"	min="4"					/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="53"				/>
+				<slashing_resistance_perc		type="base"	min="0.06"				/>
+				<piercing_resistance_perc		type="base"	min="0.04"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+				<rending_resistance_perc		type="base"	min="0.06"				/>
+				<elemental_resistance_perc		type="base"	min="0.06"				/>
+				<focus_gain 					type="base" min="0.04" 				/>
+				<spell_power					type="mult"	min="0.04"				/>
+				<attack_power					type="mult" min="0.04"				/>
+			</ability>
+			
+			<ability name="Wolf Boots 3 _Stats"> <!-- lvl 31 -> 28 -->
+				<weight							type="base"	min="4"					/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="61"				/>
+				<slashing_resistance_perc		type="base"	min="0.06"				/>
+				<piercing_resistance_perc		type="base"	min="0.04"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+				<rending_resistance_perc		type="base"	min="0.06"				/>
+				<elemental_resistance_perc		type="base"	min="0.06"				/>
+				<focus_gain 					type="base" min="0.05" 				/>
+				<spell_power					type="mult"	min="0.05"				/>
+				<attack_power					type="mult" min="0.05"				/>
+			</ability>
+			
+			<ability name="Wolf Boots 4 _Stats"> <!-- lvl 36 -> 34 -->
+				<weight							type="base"	min="4"					/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="73"				/>
+				<slashing_resistance_perc		type="base"	min="0.06"				/>
+				<piercing_resistance_perc		type="base"	min="0.04"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+				<rending_resistance_perc		type="base"	min="0.06"				/>
+				<elemental_resistance_perc		type="base"	min="0.06"				/>
+				<focus_gain 					type="base" min="0.06" 				/>
+				<spell_power					type="mult"	min="0.06"				/>
+				<attack_power					type="mult" min="0.06"				/>
+			</ability>
+				
+		<!-- WITCHER WOLF GLOVES: 3% to focus, attack and spell power, up to 6% -->
+			<ability name="Wolf Gloves 1 _Stats"> <!-- lvl 16 -> 14 -> 21 - KM quests are lvl 19 -->
+				<weight							type="base"	min="3"					/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="43"				/>
+				<slashing_resistance_perc		type="base"	min="0.05"				/>
+				<piercing_resistance_perc		type="base"	min="0.03"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+				<rending_resistance_perc		type="base"	min="0.05"				/>
+				<elemental_resistance_perc		type="base"	min="0.05"				/>
+				<focus_gain 					type="base" min="0.03" 				/>
+				<spell_power					type="mult"	min="0.03"				/>
+				<attack_power					type="mult" min="0.03"				/>
+			</ability>
+
+			<ability name="Wolf Gloves 2 _Stats"> <!-- lvl 23 -> 21 -> 24 - KM battle is 24 -->
+				<weight							type="base"	min="3"					/>
+				<quality 						type="add"	min="5"					/>
+				<armor							type="base"	min="49"				/>
+				<slashing_resistance_perc		type="base"	min="0.05"				/>
+				<piercing_resistance_perc		type="base"	min="0.03"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+				<rending_resistance_perc		type="base"	min="0.05"				/>
+				<elemental_resistance_perc		type="base"	min="0.05"				/>
+				<focus_gain 					type="base" min="0.04" 				/>
+				<spell_power					type="mult"	min="0.04"				/>
+				<attack_power					type="mult" min="0.04"				/>
+			</ability>
+			
+			<ability name="Wolf Gloves 3 _Stats"> <!-- lvl 31 -> 28 -->
+				<weight							type="base"	min="3"					/>
+				<quality 						type="add"	min="5"					/>
+				<armor							type="base"	min="57"				/>
+				<slashing_resistance_perc		type="base"	min="0.05"				/>
+				<piercing_resistance_perc		type="base"	min="0.03"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+				<rending_resistance_perc		type="base"	min="0.05"				/>
+				<elemental_resistance_perc		type="base"	min="0.05"				/>
+				<focus_gain 					type="base" min="0.05" 				/>
+				<spell_power					type="mult"	min="0.05"				/>
+				<attack_power					type="mult" min="0.05"				/>
+			</ability>
+			
+			<ability name="Wolf Gloves 4 _Stats"> <!-- lvl 36 -> 34 -->
+				<weight							type="base"	min="3"					/>
+				<quality 						type="add"	min="5"					/>
+				<armor							type="base"	min="69"				/>
+				<slashing_resistance_perc		type="base"	min="0.05"				/>
+				<piercing_resistance_perc		type="base"	min="0.03"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+				<rending_resistance_perc		type="base"	min="0.05"				/>
+				<elemental_resistance_perc		type="base"	min="0.05"				/>
+				<focus_gain 					type="base" min="0.06" 				/>
+				<spell_power					type="mult"	min="0.06"				/>
+				<attack_power					type="mult" min="0.06"				/>
+			</ability>
+			
+		<!-- WITCHER WOLF PANTS: 3% to focus, attack and spell power, up to 6% -->
+			<ability name="Wolf Pants 1 _Stats"> <!-- lvl 16 -> 14 -> 21 - KM quests are lvl 19 -->
+				<weight 						type="base" min="3" 				/>
+				<quality 						type="add" 	min="5"				 	/>
+				<armor 							type="base" min="47"			 	/>
+				<slashing_resistance_perc		type="base"	min="0.07"				/>
+				<piercing_resistance_perc		type="base"	min="0.04"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+				<rending_resistance_perc		type="base" min="0.07"				/>
+				<elemental_resistance_perc		type="base" min="0.07"				/>
+				<focus_gain 					type="base" min="0.03" 				/>
+				<spell_power					type="mult"	min="0.03"				/>
+				<attack_power					type="mult" min="0.03"				/>
+			</ability>
+			
+			<ability name="Wolf Pants 2 _Stats"> <!-- lvl 23 -> 21 -> 24 - KM battle is 24 -->
+				<weight 						type="base" min="3" 				/>
+				<quality 						type="add" 	min="5"				 	/>
+				<armor 							type="base" min="53"			 	/>
+				<slashing_resistance_perc		type="base"	min="0.07"				/>
+				<piercing_resistance_perc		type="base"	min="0.04"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+				<rending_resistance_perc		type="base" min="0.07"				/>
+				<elemental_resistance_perc		type="base" min="0.07"				/>
+				<focus_gain 					type="base" min="0.04" 				/>
+				<spell_power					type="mult"	min="0.04"				/>
+				<attack_power					type="mult" min="0.04"				/>
+			</ability>
+			
+			<ability name="Wolf Pants 3 _Stats"> <!-- lvl 31 -> 28 -->
+				<weight 						type="base" min="3" 				/>
+				<quality 						type="add" 	min="5"				 	/>
+				<armor 							type="base" min="61"			 	/>
+				<slashing_resistance_perc		type="base"	min="0.07"				/>
+				<piercing_resistance_perc		type="base"	min="0.04"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+				<rending_resistance_perc		type="base" min="0.07"				/>
+				<elemental_resistance_perc		type="base" min="0.07"				/>
+				<focus_gain 					type="base" min="0.05" 				/>
+				<spell_power					type="mult"	min="0.05"				/>
+				<attack_power					type="mult" min="0.05"				/>
+			</ability>
+			
+			<ability name="Wolf Pants 4 _Stats"> <!-- lvl 36 -> 34 -->
+				<weight 						type="base" min="3" 				/>
+				<quality 						type="add" 	min="5"				 	/>
+				<armor 							type="base" min="73"			 	/>
+				<slashing_resistance_perc		type="base"	min="0.07"				/>
+				<piercing_resistance_perc		type="base"	min="0.04"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+				<rending_resistance_perc		type="base" min="0.07"				/>
+				<elemental_resistance_perc		type="base" min="0.07"				/>
+				<focus_gain 					type="base" min="0.06" 				/>
+				<spell_power					type="mult"	min="0.06"				/>
+				<attack_power					type="mult" min="0.06"				/>
+			</ability>
+			
+		<!-- NEW GAME+ WITCHER WOLF GEAR -->		
+		<!-- WITCHER WOLF ARMOR: 5% to focus, attack and spell power, up to 15% -->
+			<ability name="NGP Wolf Armor _Stats"> <!-- lvl 46 -> 44 -> 51 - KM quests are lvl 19 -->
+				<weight							type="base"	min="10"				/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="280"				/>
+				<slashing_resistance_perc		type="base" min="0.17"				/>
+				<piercing_resistance_perc		type="base" min="0.09"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+				<rending_resistance_perc		type="base" min="0.17"				/>
+				<elemental_resistance_perc		type="base" min="0.17"				/>
+				<focus_gain 					type="base" min="0.05" 				/>
+				<spell_power					type="mult"	min="0.05"				/>
+				<attack_power					type="mult" min="0.05"				/>
+			</ability>
+			
+			<ability name="NGP Wolf Armor 1 _Stats"> <!-- lvl 53 -> 51 -> 54 - KM battle is 24 -->
+				<weight							type="base"	min="10"				/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="295"				/>
+				<slashing_resistance_perc		type="base" min="0.17"				/>
+				<piercing_resistance_perc		type="base" min="0.09"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+				<rending_resistance_perc		type="base" min="0.17"				/>
+				<elemental_resistance_perc		type="base" min="0.17"				/>
+				<focus_gain 					type="base" min="0.08" 				/>
+				<spell_power					type="mult"	min="0.08"				/>
+				<attack_power					type="mult" min="0.08"				/>
+			</ability>
+			
+			<ability name="NGP Wolf Armor 2 _Stats"> <!-- lvl 61 -> 58 -->
+				<weight							type="base"	min="10"				/>
+				<quality						type="add"	min="5"					/>
+				<armor 							type="base"	min="315"				/>
+				<slashing_resistance_perc		type="base" min="0.17"				/>
+				<piercing_resistance_perc		type="base" min="0.09"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+				<rending_resistance_perc		type="base" min="0.17"				/>
+				<elemental_resistance_perc		type="base" min="0.17"				/>
+				<focus_gain 					type="base" min="0.11" 				/>
+				<spell_power					type="mult"	min="0.11"				/>
+				<attack_power					type="mult" min="0.11"				/>
+			</ability>
+			
+			<ability name="NGP Wolf Armor 3 _Stats"> <!-- lvl 66 -> 64 -->
+				<weight							type="base"	min="10"				/>
+				<quality						type="add"	min="5" 				/>
+				<armor							type="base"	min="345"				/>
+				<slashing_resistance_perc		type="base" min="0.17"				/>
+				<piercing_resistance_perc		type="base" min="0.09"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+				<rending_resistance_perc		type="base" min="0.17"				/>
+				<elemental_resistance_perc		type="base" min="0.17"				/>
+				<focus_gain 					type="base" min="0.15" 				/>
+				<spell_power					type="mult"	min="0.15"				/>
+				<attack_power					type="mult" min="0.15"				/>
+			</ability>	
+			
+		<!-- WITCHER WOLF BOOTS: 3% to focus, attack and spell power, up to 6% -->
+			<ability name="NGP Wolf Boots 1 _Stats"> <!-- lvl 46 -> 44 -> 51 - KM quests are lvl 19 -->
+				<weight							type="base"	min="4"					/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="107"				/>
+				<slashing_resistance_perc		type="base"	min="0.06"				/>
+				<piercing_resistance_perc		type="base"	min="0.04"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+				<rending_resistance_perc		type="base"	min="0.06"				/>
+				<elemental_resistance_perc		type="base"	min="0.06"				/>
+				<focus_gain 					type="base" min="0.03" 				/>
+				<spell_power					type="mult"	min="0.03"				/>
+				<attack_power					type="mult" min="0.03"				/>
+			</ability>
+
+			<ability name="NGP Wolf Boots 2 _Stats"> <!-- lvl 53 -> 51 -> 54 - KM battle is 24 -->
+				<weight							type="base"	min="4"					/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="113"				/>
+				<slashing_resistance_perc		type="base"	min="0.06"				/>
+				<piercing_resistance_perc		type="base"	min="0.04"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+				<rending_resistance_perc		type="base"	min="0.06"				/>
+				<elemental_resistance_perc		type="base"	min="0.06"				/>
+				<focus_gain 					type="base" min="0.04" 				/>
+				<spell_power					type="mult"	min="0.04"				/>
+				<attack_power					type="mult" min="0.04"				/>
+			</ability>
+			
+			<ability name="NGP Wolf Boots 3 _Stats"> <!-- lvl 61 -> 58 -->
+				<weight							type="base"	min="4"					/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="121"				/>
+				<slashing_resistance_perc		type="base"	min="0.06"				/>
+				<piercing_resistance_perc		type="base"	min="0.04"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+				<rending_resistance_perc		type="base"	min="0.06"				/>
+				<elemental_resistance_perc		type="base"	min="0.06"				/>
+				<focus_gain 					type="base" min="0.05" 				/>
+				<spell_power					type="mult"	min="0.05"				/>
+				<attack_power					type="mult" min="0.05"				/>
+			</ability>
+			
+			<ability name="NGP Wolf Boots 4 _Stats"> <!-- lvl 66 -> 64 -->
+				<weight							type="base"	min="4"					/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="73"				/>
+				<slashing_resistance_perc		type="base"	min="0.06"				/>
+				<piercing_resistance_perc		type="base"	min="0.04"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+				<rending_resistance_perc		type="base"	min="0.06"				/>
+				<elemental_resistance_perc		type="base"	min="0.06"				/>
+				<focus_gain 					type="base" min="0.06" 				/>
+				<spell_power					type="mult"	min="0.06"				/>
+				<attack_power					type="mult" min="0.06"				/>
+			</ability>
+				
+		<!-- WITCHER WOLF GLOVES: 3% to focus, attack and spell power, up to 6% -->
+			<ability name="NGP Wolf Gloves 1 _Stats"> <!-- lvl 46 -> 44 -> 51 - KM quests are lvl 19 -->
+				<weight							type="base"	min="3"					/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="103"				/>
+				<slashing_resistance_perc		type="base"	min="0.05"				/>
+				<piercing_resistance_perc		type="base"	min="0.03"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+				<rending_resistance_perc		type="base"	min="0.05"				/>
+				<elemental_resistance_perc		type="base"	min="0.05"				/>
+				<focus_gain 					type="base" min="0.03" 				/>
+				<spell_power					type="mult"	min="0.03"				/>
+				<attack_power					type="mult" min="0.03"				/>
+			</ability>
+
+			<ability name="NGP Wolf Gloves 2 _Stats"> <!-- lvl 53 -> 51 -> 54 - KM battle is 24 -->
+				<weight							type="base"	min="3"					/>
+				<quality 						type="add"	min="5"					/>
+				<armor							type="base"	min="109"				/>
+				<slashing_resistance_perc		type="base"	min="0.05"				/>
+				<piercing_resistance_perc		type="base"	min="0.03"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+				<rending_resistance_perc		type="base"	min="0.05"				/>
+				<elemental_resistance_perc		type="base"	min="0.05"				/>
+				<focus_gain 					type="base" min="0.04" 				/>
+				<spell_power					type="mult"	min="0.04"				/>
+				<attack_power					type="mult" min="0.04"				/>
+			</ability>
+			
+			<ability name="NGP Wolf Gloves 3 _Stats"> <!-- lvl 61 -> 58 -->
+				<weight							type="base"	min="3"					/>
+				<quality 						type="add"	min="5"					/>
+				<armor							type="base"	min="117"				/>
+				<slashing_resistance_perc		type="base"	min="0.05"				/>
+				<piercing_resistance_perc		type="base"	min="0.03"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+				<rending_resistance_perc		type="base"	min="0.05"				/>
+				<elemental_resistance_perc		type="base"	min="0.05"				/>
+				<focus_gain 					type="base" min="0.05" 				/>
+				<spell_power					type="mult"	min="0.05"				/>
+				<attack_power					type="mult" min="0.05"				/>
+			</ability>
+			
+			<ability name="NGP Wolf Gloves 4 _Stats"> <!-- lvl 66 -> 64 -->
+				<weight							type="base"	min="3"					/>
+				<quality 						type="add"	min="5"					/>
+				<armor							type="base"	min="129"				/>
+				<slashing_resistance_perc		type="base"	min="0.05"				/>
+				<piercing_resistance_perc		type="base"	min="0.03"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+				<rending_resistance_perc		type="base"	min="0.05"				/>
+				<elemental_resistance_perc		type="base"	min="0.05"				/>
+				<focus_gain 					type="base" min="0.06" 				/>
+				<spell_power					type="mult"	min="0.06"				/>
+				<attack_power					type="mult" min="0.06"				/>
+			</ability>
+			
+		<!-- WITCHER WOLF PANTS: 3% to focus, attack and spell power, up to 6% -->
+			<ability name="NGP Wolf Pants 1 _Stats"> <!-- lvl 46 -> 44 -> 51 - KM quests are lvl 19 -->
+				<weight 						type="base" min="3" 				/>
+				<quality 						type="add" 	min="5"				 	/>
+				<armor 							type="base" min="107"			 	/>
+				<slashing_resistance_perc		type="base"	min="0.07"				/>
+				<piercing_resistance_perc		type="base"	min="0.04"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+				<rending_resistance_perc		type="base" min="0.07"				/>
+				<elemental_resistance_perc		type="base" min="0.07"				/>
+				<focus_gain 					type="base" min="0.03" 				/>
+				<spell_power					type="mult"	min="0.03"				/>
+				<attack_power					type="mult" min="0.03"				/>
+			</ability>
+			
+			<ability name="NGP Wolf Pants 2 _Stats"> <!-- lvl 53 -> 51 -> 54 - KM battle is 24 -->
+				<weight 						type="base" min="3" 				/>
+				<quality 						type="add" 	min="5"				 	/>
+				<armor 							type="base" min="113"			 	/>
+				<slashing_resistance_perc		type="base"	min="0.07"				/>
+				<piercing_resistance_perc		type="base"	min="0.04"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+				<rending_resistance_perc		type="base" min="0.07"				/>
+				<elemental_resistance_perc		type="base" min="0.07"				/>
+				<focus_gain 					type="base" min="0.04" 				/>
+				<spell_power					type="mult"	min="0.04"				/>
+				<attack_power					type="mult" min="0.04"				/>
+			</ability>
+			
+			<ability name="NGP Wolf Pants 3 _Stats"> <!-- lvl 61 -> 58 -->
+				<weight 						type="base" min="3" 				/>
+				<quality 						type="add" 	min="5"				 	/>
+				<armor 							type="base" min="121"			 	/>
+				<slashing_resistance_perc		type="base"	min="0.07"				/>
+				<piercing_resistance_perc		type="base"	min="0.04"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+				<rending_resistance_perc		type="base" min="0.07"				/>
+				<elemental_resistance_perc		type="base" min="0.07"				/>
+				<focus_gain 					type="base" min="0.05" 				/>
+				<spell_power					type="mult"	min="0.05"				/>
+				<attack_power					type="mult" min="0.05"				/>
+			</ability>
+			
+			<ability name="NGP Wolf Pants 4 _Stats"> <!-- lvl 66 -> 64 -->
+				<weight 						type="base" min="3" 				/>
+				<quality 						type="add" 	min="5"				 	/>
+				<armor 							type="base" min="133"			 	/>
+				<slashing_resistance_perc		type="base"	min="0.07"				/>
+				<piercing_resistance_perc		type="base"	min="0.04"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+				<rending_resistance_perc		type="base" min="0.07"				/>
+				<elemental_resistance_perc		type="base" min="0.07"				/>
+				<focus_gain 					type="base" min="0.06" 				/>
+				<spell_power					type="mult"	min="0.06"				/>
+				<attack_power					type="mult" min="0.06"				/>
+			</ability>
+						
+		</abilities>
+		
+		<items>
+			
+		<!-- WITCHER WOLF ARMOR -->
+			<item
+				name							="Wolf Armor"
+				category						="armor"
+				price							="615"
+				initial_durability				="100"
+				max_durability					="100" 
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="t_01_mg__wolf"
+				localisation_key_name			="item_name_wolf_armor"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_armor_lvl1_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSetMinor, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Wolf Armor _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Geralt Shirt</parts>
+												<parts count="1">Hardened leather</parts>
+												<parts count="1">Silver ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts> 				
+				<variants>
+					<variant equip_template="t_01a_mg__wolf" category="gloves"></variant>
+				</variants>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="Wolf Armor 1"
+				category						="armor"
+				price							="865"
+				initial_durability				="100"
+				max_durability					="100" 
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="t_02_mg__wolf"
+				localisation_key_name			="item_name_wolf_armor_1"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_armor_lvl2_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSetMinor, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Wolf Armor 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Geralt Shirt</parts>
+												<parts count="1">Hardened leather</parts>
+												<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts> 
+				<variants>						<variant equip_template="t_02a_mg__wolf" category="gloves"></variant>
+				</variants>
+			</item>
+
+			<!-- Upgrade -->
+			<item
+				name							="Wolf Armor 2"
+				category						="armor"
+				price							="1875"
+				initial_durability				="100"
+				max_durability					="100" 
+				enhancement_slots				="3"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="t_03_mg__wolf"
+				localisation_key_name			="item_name_wolf_armor_2"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_armor_lvl3_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSetMinor, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Wolf Armor 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Geralt Shirt</parts>
+												<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Glowing ingot</parts>
+												<parts count="1">Draconide leather</parts>
+				</recycling_parts>
+				<variants>						<variant equip_template="t_03a_mg__wolf" category="gloves"></variant>
+				</variants>
+			</item>
+
+			<!-- Upgrade -->
+			<item
+				name							="Wolf Armor 3"
+				category						="armor"
+				price							="3193"
+				initial_durability				="100"
+				max_durability					="100" 
+				enhancement_slots				="3"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="t_04_mg__wolf"
+				localisation_key_name			="item_name_wolf_armor_3"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_armor_lvl4_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSetMinor, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Wolf Armor 3 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Geralt Shirt</parts>
+												<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Dwimeryte ingot</parts>
+												<parts count="1">Draconide leather</parts>
+				</recycling_parts>
+				<variants>						<variant equip_template="t_04a_mg__wolf" category="gloves"></variant>
+				</variants>
+			</item>
+			
+		<!-- WITCHER WOLF BOOTS -->
+			<item
+				name							="Wolf Boots 1"
+				category						="boots"
+				price							="291"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="s_01_mg__wolf"
+				localisation_key_name			="item_name_wolf_boots_1"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_boots_lvl1_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSetMinor, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Wolf Boots 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Leather</parts>
+												<parts count="1">Wire</parts>
+												<parts count="1">Silver ingot</parts>
+				</recycling_parts>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="Wolf Boots 2"
+				category						="boots"
+				price							="628"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="s_01_mg__wolf"
+				localisation_key_name			="item_name_wolf_boots_2"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_boots_lvl1_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSetMinor, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Wolf Boots 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Leather</parts>
+												<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="Wolf Boots 3"
+				category						="boots"
+				price							="993"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="s_02_mg__wolf"
+				localisation_key_name			="item_name_wolf_boots_3"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_boots_lvl2_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSetMinor, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Wolf Boots 3 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Glowing ingot</parts>
+												<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="Wolf Boots 4"
+				category						="boots"
+				price							="1660"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="s_02_mg__wolf"
+				localisation_key_name			="item_name_wolf_boots_4"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_boots_lvl2_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSetMinor, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Wolf Boots 4 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Dwimeryte ingot</parts>
+												<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+			</item>
+	
+		<!-- GLOVES CRAFTED WOLF  -->
+			<item
+				name							="Wolf Gloves 1"
+				category						="gloves"
+				price							="226"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__wolf"
+				localisation_key_name			="item_name_wolf_gloves_1"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_gloves_lvl1_64x128.png"
+			>
+				<tags>							Armor,MediumArmor,WolfSetMinor, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Wolf Gloves 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Leather straps</parts>
+												<parts count="1">Silver ingot</parts>
+												<parts count="1">Monstrous hide</parts>
+				</recycling_parts>
+				<variants>				
+												<variant equip_template="g_01a_mg__wolf">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01_mg__wolf" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="Wolf Gloves 2"
+				category						="gloves"
+				price							="570"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__wolf"
+				localisation_key_name			="item_name_wolf_gloves_2"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_gloves_lvl1_64x128.png"
+			>
+				<tags>							Armor,MediumArmor,WolfSetMinor, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Wolf Gloves 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Silver ingot</parts>
+												<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+				<variants>				
+												<variant equip_template="g_01a_mg__wolf">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01_mg__wolf" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="Wolf Gloves 3"
+				category						="gloves"
+				price							="934"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_02a_mg__wolf"
+				localisation_key_name			="item_name_wolf_gloves_3"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_gloves_lvl2_64x128.png"
+			>
+				<tags>							Armor,MediumArmor,WolfSetMinor, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Wolf Gloves 3 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Glowing ingot</parts>
+												<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+				<variants>				
+												<variant equip_template="g_02a_mg__wolf">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_02_mg__wolf" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="Wolf Gloves 4"
+				category						="gloves"
+				price							="1338"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_02a_mg__wolf"
+				localisation_key_name			="item_name_wolf_gloves_4"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_gloves_lvl2_64x128.png"
+			>
+				<tags>							Armor,MediumArmor,WolfSetMinor, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Wolf Gloves 4 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Dwimeryte ingot</parts>
+												<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+				<variants>				
+												<variant equip_template="g_02a_mg__wolf">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_02_mg__wolf" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+			
+		<!-- PANTS WITCHER WOLF  -->
+			<item
+				name							="Wolf Pants 1"
+				category						="pants"
+				price							="273"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l_01_mg__wolf"
+				localisation_key_name			="item_name_wolf_pants_1"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_legs_lvl1_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSetMinor, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Wolf Pants 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Leather</parts>
+												<parts count="1">Silver ingot</parts>
+												<parts count="1">Monstrous hide</parts>
+				</recycling_parts>
+					<collapse>			<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+					</collapse>
+				<variants>				<variant equip_template="l_01a_mg__wolf" category="boots"></variant>
+				</variants>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="Wolf Pants 2"
+				category						="pants"
+				price							="610"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l_01_mg__wolf"
+				localisation_key_name			="item_name_wolf_pants_2"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_legs_lvl1_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSetMinor, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Wolf Pants 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Silver ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+					<collapse>			<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+					</collapse>
+				<variants>				<variant equip_template="l_01a_mg__wolf" category="boots"></variant>
+				</variants>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="Wolf Pants 3"
+				category						="pants"
+				price							="975"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l_02_mg__wolf"
+				localisation_key_name			="item_name_wolf_pants_3"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_legs_lvl2_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSetMinor, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Wolf Pants 3 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Glowing ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+					<collapse>			<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+					</collapse>
+				<variants>				<variant equip_template="l_02a_mg__wolf" category="boots"></variant>
+				</variants>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="Wolf Pants 4"
+				category						="pants"
+				price							="1642"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l_02_mg__wolf"
+				localisation_key_name			="item_name_wolf_pants_4"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_legs_lvl2_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSetMinor, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Wolf Pants 4 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Dwimeryte ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+					<collapse>			<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+					</collapse>
+				<variants>				<variant equip_template="l_02a_mg__wolf" category="boots"></variant>
+				</variants>
+			</item>
+		
+		<!-- NEW GAME+ WITCHER WOLF ARMOR -->
+			<item
+				name							="NGP Wolf Armor"
+				category						="armor"
+				price							="615"
+				initial_durability				="100"
+				max_durability					="100" 
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="t_01_mg__wolf"
+				localisation_key_name			="item_name_newgame_wolf_armor"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_armor_lvl1_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSet, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>NGP Wolf Armor _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Geralt Shirt</parts>
+												<parts count="1">Hardened leather</parts>
+												<parts count="1">Silver ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts> 				
+				<variants>
+					<variant equip_template="t_01a_mg__wolf" category="gloves"></variant>
+				</variants>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="NGP Wolf Armor 1"
+				category						="armor"
+				price							="865"
+				initial_durability				="100"
+				max_durability					="100" 
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="t_02_mg__wolf"
+				localisation_key_name			="item_name_newgame_wolf_armor_1"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_armor_lvl2_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSet, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>NGP Wolf Armor 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Geralt Shirt</parts>
+												<parts count="1">Hardened leather</parts>
+												<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts> 
+				<variants>						<variant equip_template="t_02a_mg__wolf" category="gloves"></variant>
+				</variants>
+			</item>
+
+			<!-- Upgrade -->
+			<item
+				name							="NGP Wolf Armor 2"
+				category						="armor"
+				price							="1875"
+				initial_durability				="100"
+				max_durability					="100" 
+				enhancement_slots				="3"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="t_03_mg__wolf"
+				localisation_key_name			="item_name_newgame_wolf_armor_2"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_armor_lvl3_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSet, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>NGP Wolf Armor 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Geralt Shirt</parts>
+												<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Glowing ingot</parts>
+												<parts count="1">Draconide leather</parts>
+				</recycling_parts>
+				<variants>						<variant equip_template="t_03a_mg__wolf" category="gloves"></variant>
+				</variants>
+			</item>
+
+			<!-- Upgrade -->
+			<item
+				name							="NGP Wolf Armor 3"
+				category						="armor"
+				price							="3193"
+				initial_durability				="100"
+				max_durability					="100" 
+				enhancement_slots				="3"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="t_04_mg__wolf"
+				localisation_key_name			="item_name_newgame_wolf_armor_3"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_armor_lvl4_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSet, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>NGP Wolf Armor 3 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Geralt Shirt</parts>
+												<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Dwimeryte ingot</parts>
+												<parts count="1">Draconide leather</parts>
+				</recycling_parts>
+				<variants>						<variant equip_template="t_04a_mg__wolf" category="gloves"></variant>
+				</variants>
+			</item>
+			
+		<!-- WITCHER WOLF BOOTS -->
+			<item
+				name							="NGP Wolf Boots 1"
+				category						="boots"
+				price							="291"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="s_01_mg__wolf"
+				localisation_key_name			="item_name_newgame_wolf_boots_1"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_boots_lvl1_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSet, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>NGP Wolf Boots 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Leather</parts>
+												<parts count="1">Wire</parts>
+												<parts count="1">Silver ingot</parts>
+				</recycling_parts>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="NGP Wolf Boots 2"
+				category						="boots"
+				price							="628"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="s_01_mg__wolf"
+				localisation_key_name			="item_name_newgame_wolf_boots_2"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_boots_lvl1_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSet, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>NGP Wolf Boots 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Leather</parts>
+												<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="NGP Wolf Boots 3"
+				category						="boots"
+				price							="993"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="s_02_mg__wolf"
+				localisation_key_name			="item_name_newgame_wolf_boots_3"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_boots_lvl2_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSet, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>NGP Wolf Boots 3 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Glowing ingot</parts>
+												<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="NGP Wolf Boots 4"
+				category						="boots"
+				price							="1660"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="s_02_mg__wolf"
+				localisation_key_name			="item_name_newgame_wolf_boots_4"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_boots_lvl2_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSet, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>NGP Wolf Boots 4 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Dwimeryte ingot</parts>
+												<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+			</item>
+	
+		<!-- GLOVES CRAFTED WOLF (DLC) -->
+			<item
+				name							="NGP Wolf Gloves 1"
+				category						="gloves"
+				price							="226"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__wolf"
+				localisation_key_name			="item_name_newgame_wolf_gloves_1"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_gloves_lvl1_64x128.png"
+			>
+				<tags>							Armor,MediumArmor,WolfSet, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>NGP Wolf Gloves 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Leather straps</parts>
+												<parts count="1">Silver ingot</parts>
+												<parts count="1">Monstrous hide</parts>
+				</recycling_parts>
+				<variants>				
+												<variant equip_template="g_01a_mg__wolf">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01_mg__wolf" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="NGP Wolf Gloves 2"
+				category						="gloves"
+				price							="570"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__wolf"
+				localisation_key_name			="item_name_newgame_wolf_gloves_2"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_gloves_lvl1_64x128.png"
+			>
+				<tags>							Armor,MediumArmor,WolfSet, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>NGP Wolf Gloves 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Silver ingot</parts>
+												<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+				<variants>				
+												<variant equip_template="g_01a_mg__wolf">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01_mg__wolf" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="NGP Wolf Gloves 3"
+				category						="gloves"
+				price							="934"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_02a_mg__wolf"
+				localisation_key_name			="item_name_newgame_wolf_gloves_3"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_gloves_lvl2_64x128.png"
+			>
+				<tags>							Armor,MediumArmor,WolfSet, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>NGP Wolf Gloves 3 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Glowing ingot</parts>
+												<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+				<variants>				
+												<variant equip_template="g_02a_mg__wolf">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_02_mg__wolf" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="NGP Wolf Gloves 4"
+				category						="gloves"
+				price							="1338"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_02a_mg__wolf"
+				localisation_key_name			="item_name_newgame_wolf_gloves_4"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_gloves_lvl2_64x128.png"
+			>
+				<tags>							Armor,MediumArmor,WolfSet, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>NGP Wolf Gloves 4 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Dwimeryte ingot</parts>
+												<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+				<variants>				
+												<variant equip_template="g_02a_mg__wolf">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_02_mg__wolf" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+			
+		<!-- PANTS WITCHER WOLF (DLC) -->
+			<item
+				name							="NGP Wolf Pants 1"
+				category						="pants"
+				price							="273"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l_01_mg__wolf"
+				localisation_key_name			="item_name_newgame_wolf_pants_1"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_legs_lvl1_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSet, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>NGP Wolf Pants 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Leather</parts>
+												<parts count="1">Silver ingot</parts>
+												<parts count="1">Monstrous hide</parts>
+				</recycling_parts>
+					<collapse>			<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+					</collapse>
+				<variants>				<variant equip_template="l_01a_mg__wolf" category="boots"></variant>
+				</variants>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="NGP Wolf Pants 2"
+				category						="pants"
+				price							="610"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l_02_mg__wolf"
+				localisation_key_name			="item_name_newgame_wolf_pants_2"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_legs_lvl1_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSet, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>NGP Wolf Pants 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Silver ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+					<collapse>			<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+					</collapse>
+				<variants>				<variant equip_template="l_02a_mg__wolf" category="boots"></variant>
+				</variants>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="NGP Wolf Pants 3"
+				category						="pants"
+				price							="975"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l_02_mg__wolf"
+				localisation_key_name			="item_name_newgame_wolf_pants_3"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_legs_lvl2_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSet, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>NGP Wolf Pants 3 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Glowing ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+					<collapse>			<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+					</collapse>
+				<variants>				<variant equip_template="l_02a_mg__wolf" category="boots"></variant>
+				</variants>
+			</item>
+			
+			<!-- Upgrade -->
+			<item
+				name							="NGP Wolf Pants 4"
+				category						="pants"
+				price							="1642"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l_02_mg__wolf"
+				localisation_key_name			="item_name_newgame_wolf_pants_4"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_legs_lvl2_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSet, mod_armor, mod_legendary, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>NGP Wolf Pants 4 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Dwimeryte ingot</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+					<collapse>			<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+					</collapse>
+				<variants>				<variant equip_template="l_02a_mg__wolf" category="boots"></variant>
+				</variants>
+			</item>
+		
+		</items>
+	</definitions>
+</redxml>

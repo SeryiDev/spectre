@@ -3,7 +3,7 @@
 usage: gen_phase2.py <all dir> <entities501.json> <report.txt>
 
 Starts from the 5.01 file with the phase-1 patches, compares Spectre with 1.32 per object,
-and records "ops" in entities501.json that build_bundle.py replays:
+and records "ops" in entities501.json that from_game.py replays:
   - lists merged three ways (abilities, immunities, recommended oils/bombs),
   - names the 5.01 file does not have (renamed loot, damage type),
   - properties Spectre adds (levels, loot settings...),

@@ -1,0 +1,878 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+	<definitions>
+
+		<!-- ######################## ABILITY DEFINITIONS ######################## -->
+		<abilities>
+		<!-- ARMOR LIGHT -->
+
+			<!-- PANTS GUARD LVL1 -->
+				<ability name="Guard Lvl1 Pants 1 _Stats">
+					<weight							type="base"	min="1.5" 				/>
+					<quality						type="add"	min="2"		max="2"		/>
+					<slashing_resistance_perc 		type="base" min="0.02"				/>
+					<piercing_resistance_perc		type="base"	min="0.01"				/>
+					<bludgeoning_resistance_perc 	type="base" min="0.00"				/>
+					<rending_resistance_perc		type="base" min="0.02"				/>
+					<elemental_resistance_perc 		type="base" min="0.02"				/>
+					<staminaRegen_armor_mod			type="mult" min="0.01" 				/>
+				</ability>
+
+				<ability name="Guard Lvl1 Pants 2 _Stats">
+					<weight							type="base"	min="2" 				/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc 		type="base" min="0.03"				/>
+					<piercing_resistance_perc		type="base"	min="0.01"				/>
+					<bludgeoning_resistance_perc 	type="base" min="0.01"				/>
+					<rending_resistance_perc		type="base" min="0.03"				/>
+					<elemental_resistance_perc 		type="base" min="0.03"				/>
+					<staminaRegen_armor_mod			type="mult" min="0.01" 				/>
+				</ability>
+
+			<!-- PANTS GUARD LVL1 A -->
+				<ability name="Guard Lvl1 A Pants 1 _Stats">
+					<weight							type="base"	min="1.5" 				/>
+					<quality						type="add"	min="2"		max="2"		/>
+					<slashing_resistance_perc 		type="base" min="0.02"				/>
+					<piercing_resistance_perc		type="base"	min="0.01"				/>
+					<bludgeoning_resistance_perc 	type="base" min="0.00"				/>
+					<rending_resistance_perc		type="base" min="0.02"				/>
+					<elemental_resistance_perc 		type="base" min="0.02"				/>
+					<staminaRegen_armor_mod			type="mult" min="0.01" 				/>
+				</ability>
+
+				<ability name="Guard Lvl1 A Pants 2 _Stats">
+					<weight							type="base"	min="2" 				/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc 		type="base" min="0.03"				/>
+					<piercing_resistance_perc		type="base"	min="0.01"				/>
+					<bludgeoning_resistance_perc 	type="base" min="0.01"				/>
+					<rending_resistance_perc		type="base" min="0.03"				/>
+					<elemental_resistance_perc 		type="base" min="0.03"				/>
+					<staminaRegen_armor_mod			type="mult" min="0.01" 				/>
+				</ability>
+
+			
+		<!-- ARMOR MEDIUM -->		
+
+			<!-- PANTS GUARD LVL2-->
+				<ability name="Guard Lvl2 Pants 1 _Stats">
+					<weight							type="base"	min="3.5" 				/>
+					<quality						type="add"	min="2"		max="2"		/>
+					<slashing_resistance_perc 		type="base" min="0.04"				/>
+					<piercing_resistance_perc		type="base"	min="0.01"				/>
+					<bludgeoning_resistance_perc 	type="base" min="0.01"				/>
+					<rending_resistance_perc		type="base" min="0.04"				/>
+					<elemental_resistance_perc 		type="base" min="0.04"				/>
+				</ability>
+
+				<ability name="Guard Lvl2 Pants 2 _Stats">
+					<weight							type="base"	min="4" 				/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc 		type="base" min="0.05"				/>
+					<piercing_resistance_perc		type="base"	min="0.02"				/>
+					<bludgeoning_resistance_perc 	type="base" min="0.02"				/>
+					<rending_resistance_perc		type="base" min="0.05"				/>
+					<elemental_resistance_perc 		type="base" min="0.05"				/>
+				</ability>
+
+			<!-- PANTS GUARD LVL2 A-->
+				<ability name="Guard Lvl2 A Pants 1 _Stats">
+					<weight							type="base"	min="3.5" 				/>
+					<quality						type="add"	min="2"		max="2"		/>
+					<slashing_resistance_perc 		type="base" min="0.04"				/>
+					<piercing_resistance_perc		type="base"	min="0.01"				/>
+					<bludgeoning_resistance_perc 	type="base" min="0.01"				/>
+					<rending_resistance_perc		type="base" min="0.04"				/>
+					<elemental_resistance_perc 		type="base" min="0.04"				/>
+				</ability>
+
+				<ability name="Guard Lvl2 A Pants 2 _Stats">
+					<weight							type="base"	min="4" 				/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc 		type="base" min="0.05"				/>
+					<piercing_resistance_perc		type="base"	min="0.02"				/>
+					<bludgeoning_resistance_perc 	type="base" min="0.02"				/>
+					<rending_resistance_perc		type="base" min="0.05"				/>
+					<elemental_resistance_perc 		type="base" min="0.05"				/>
+				</ability>
+			
+		<!-- ARMOR HEAVY -->
+
+			<!-- PANTS KNIGHT GERALT -->
+				<ability name="Knight Geralt Pants 1 _Stats">
+					<weight							type="base"	min="6.5"	 			/>
+					<quality						type="add"	min="2"		max="2"		/>
+					<slashing_resistance_perc		type="base"	min="0.07"				/>
+					<piercing_resistance_perc		type="base"	min="0.07"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.07"				/>
+					<rending_resistance_perc		type="base"	min="0.06"				/>
+					<elemental_resistance_perc		type="base"	min="0.06"				/>
+					<staminaRegen_armor_mod 		type="mult"	min="-0.05"				/>
+				</ability>
+
+				<ability name="Knight Geralt Pants 2 _Stats">
+					<weight							type="base"	min="8"		 			/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc		type="base"	min="0.08"				/>
+					<piercing_resistance_perc		type="base"	min="0.08"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.08"				/>
+					<rending_resistance_perc		type="base"	min="0.08"				/>
+					<elemental_resistance_perc		type="base"	min="0.08"				/>
+					<staminaRegen_armor_mod 		type="mult"	min="-0.05"				/>
+				</ability>
+
+			<!-- PANTS KNIGHT GERALT A -->
+				<ability name="Knight Geralt A Pants 1 _Stats">
+					<weight							type="base"	min="6.5"	 			/>
+					<quality						type="add"	min="2"		max="2"		/>
+					<slashing_resistance_perc		type="base"	min="0.07"				/>
+					<piercing_resistance_perc		type="base"	min="0.07"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.07"				/>
+					<rending_resistance_perc		type="base"	min="0.06"				/>
+					<elemental_resistance_perc		type="base"	min="0.06"				/>
+					<staminaRegen_armor_mod 		type="mult"	min="-0.05"				/>
+				</ability>	
+
+				<ability name="Knight Geralt A Pants 2 _Stats">
+					<weight							type="base"	min="8"		 			/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc		type="base"	min="0.08"				/>
+					<piercing_resistance_perc		type="base"	min="0.08"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.08"				/>
+					<rending_resistance_perc		type="base"	min="0.08"				/>
+					<elemental_resistance_perc		type="base"	min="0.08"				/>
+					<staminaRegen_armor_mod 		type="mult"	min="-0.05"				/>
+				</ability>
+				
+			<!-- PANTS TOUSSAINT -->
+				<ability name="Toussaint Pants 2 _Stats">
+					<weight							type="base"	min="8"		 			/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc		type="base"	min="0.08"				/>
+					<piercing_resistance_perc		type="base"	min="0.08"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.08"				/>
+					<rending_resistance_perc		type="base"	min="0.08"				/>
+					<elemental_resistance_perc		type="base"	min="0.08"				/>
+					<staminaRegen_armor_mod 		type="mult"	min="-0.05"				/>
+				</ability>
+				
+			<!-- PANTS QUEST -->
+				<ability name="sq701_geralt_pants _Stats">
+					<weight							type="base"	min="8" 				/>
+					<quality						type="add"	min="4"		max="4"		/>
+					<slashing_resistance_perc 		type="base"	min="0.09"				/>
+					<piercing_resistance_perc 		type="base"	min="0.09"				/>
+					<bludgeoning_resistance_perc 	type="base"	min="0.09"				/>
+					<rending_resistance_perc 		type="base"	min="0.09"				/>
+					<elemental_resistance_perc 		type="base"	min="0.09"				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.025"			/>
+				</ability>
+				
+				<ability name="q702_vampire_pants _Stats">
+					<weight							type="base"	min="8" 				/>
+					<quality						type="add"	min="4"		max="4"		/>
+					<slashing_resistance_perc 		type="base"	min="0.09"				/>
+					<piercing_resistance_perc 		type="base"	min="0.09"				/>
+					<bludgeoning_resistance_perc 	type="base"	min="0.09"				/>
+					<rending_resistance_perc 		type="base"	min="0.09"				/>
+					<elemental_resistance_perc 		type="base"	min="0.09"				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.025"			/>
+					<burning_resistance_perc 		type="base" min="0.25" 				/>
+				</ability>
+				
+				<ability name="q704_vampire_pants _Stats">
+					<weight							type="base"	min="8" 				/>
+					<quality						type="add"	min="4"		max="4"		/>
+					<slashing_resistance_perc 		type="base"	min="0.09"				/>
+					<piercing_resistance_perc 		type="base"	min="0.09"				/>
+					<bludgeoning_resistance_perc 	type="base"	min="0.09"				/>
+					<rending_resistance_perc 		type="base"	min="0.09"				/>
+					<elemental_resistance_perc 		type="base"	min="0.09"				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.025"			/>
+					<burning_resistance_perc 		type="base" min="0.25" 				/>
+				</ability>
+				
+		</abilities>
+
+
+		<!-- ######################## ITEMS DEFINITIONS ######################## -->
+		<items>
+
+			<!-- ARMOR LIGHT -->
+
+			<item 
+				name							="Guard Lvl1 Pants 1"
+				category						="pants"
+				price							="75"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l2_01_mg__bob"
+				localisation_key_name			="item_name_guard_lvl1_geralt_pants"
+				localisation_key_description	="item_category_light_armor_description"
+				icon_path						="icons/inventory/armors/guard_1_pants_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, LightArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl1 Pants 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Silk</parts>
+												<parts count="1">Leather squares</parts>
+				</recycling_parts>
+				<collapse>						<category_cond name="armor" collapse="true"/>
+													<item_cond name="Body torso wet" collapse="false"/>
+													<item_cond name="Body torso towel" collapse="false"/>
+													<item_cond name="Body torso 01" collapse="false"/>
+													<item_cond name="Geralt Shirt" collapse="false"/>
+													<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+				</collapse>
+				<variants>				
+												<variant equip_template="l2_01a_mg__bob" category="boots"></variant>
+				</variants>
+			</item>
+
+			<item 
+				name							="Guard Lvl1 Pants 2"
+				category						="pants"
+				price							="170"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l2_01_mg__bob"
+				localisation_key_name			="item_name_guard_lvl1_geralt_pants"
+				localisation_key_description	="item_category_light_armor_description"
+				icon_path						="icons/inventory/armors/guard_1_pants_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, LightArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl1 Pants 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Silk</parts>
+												<parts count="1">Silver ingot</parts>
+				</recycling_parts>
+				<collapse>						<category_cond name="armor" collapse="true"/>
+													<item_cond name="Body torso wet" collapse="false"/>
+													<item_cond name="Body torso towel" collapse="false"/>
+													<item_cond name="Body torso 01" collapse="false"/>
+													<item_cond name="Geralt Shirt" collapse="false"/>
+													<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+				</collapse>
+				<variants>				
+												<variant equip_template="l2_01a_mg__bob" category="boots"></variant>
+				</variants>
+			</item>
+
+			<item 
+				name							="Guard Lvl1 A Pants 1"
+				category						="pants"
+				price							="77"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l2_02_mg__bob"
+				localisation_key_name			="item_name_guard_lvl1_A_geralt_pants"
+				localisation_key_description	="item_category_light_armor_description"
+				icon_path						="icons/inventory/armors/guard_1a_pants_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, LightArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl1 A Pants 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Silk</parts>
+												<parts count="1">Leather squares</parts>
+				</recycling_parts>
+				<collapse>						<category_cond name="armor" collapse="true"/>
+													<item_cond name="Body torso wet" collapse="false"/>
+													<item_cond name="Body torso towel" collapse="false"/>
+													<item_cond name="Body torso 01" collapse="false"/>
+													<item_cond name="Geralt Shirt" collapse="false"/>
+													<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+				</collapse>
+				<variants>				
+												<variant equip_template="l2_02a_mg__bob" category="boots"></variant>
+				</variants>
+			</item>
+
+			<item 
+				name							="Guard Lvl1 A Pants 2"
+				category						="pants"
+				price							="172"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l2_02_mg__bob"
+				localisation_key_name			="item_name_guard_lvl1_A_geralt_pants"
+				localisation_key_description	="item_category_light_armor_description"
+				icon_path						="icons/inventory/armors/guard_1a_pants_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, LightArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl1 A Pants 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Silk</parts>
+												<parts count="1">Silver ingot</parts>
+				</recycling_parts>
+				<collapse>						<category_cond name="armor" collapse="true"/>
+													<item_cond name="Body torso wet" collapse="false"/>
+													<item_cond name="Body torso towel" collapse="false"/>
+													<item_cond name="Body torso 01" collapse="false"/>
+													<item_cond name="Geralt Shirt" collapse="false"/>
+													<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+				</collapse>
+				<variants>				
+												<variant equip_template="l2_02a_mg__bob" category="boots"></variant>
+				</variants>
+			</item>
+
+			<!-- ARMOR MEDIUM -->
+
+			<item 
+				name							="Guard Lvl2 Pants 1"
+				category						="pants"
+				price							="130"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l2_03_mg__bob"
+				localisation_key_name			="item_name_guard_lvl2_geralt_pants"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/guard_2_pants_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, MediumArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl2 Pants 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Dark steel ingot</parts>
+												<parts count="1">Leather squares</parts>
+												<parts count="1">Linen</parts>
+				</recycling_parts>
+				<collapse>						<category_cond name="armor" collapse="true"/>
+													<item_cond name="Body torso wet" collapse="false"/>
+													<item_cond name="Body torso towel" collapse="false"/>
+													<item_cond name="Body torso 01" collapse="false"/>
+													<item_cond name="Geralt Shirt" collapse="false"/>
+													<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+				</collapse>
+				<variants>				
+												<variant equip_template="l2_03a_mg__bob" category="boots"></variant>
+				</variants>
+			</item>
+
+			<item 
+				name							="Guard Lvl2 Pants 2"
+				category						="pants"
+				price							="260"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l2_03_mg__bob"
+				localisation_key_name			="item_name_guard_lvl2_geralt_pants"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/guard_2_pants_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, MediumArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl2 Pants 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Leather</parts>
+												<parts count="1">Silk</parts>
+				</recycling_parts>
+				<collapse>						<category_cond name="armor" collapse="true"/>
+													<item_cond name="Body torso wet" collapse="false"/>
+													<item_cond name="Body torso towel" collapse="false"/>
+													<item_cond name="Body torso 01" collapse="false"/>
+													<item_cond name="Geralt Shirt" collapse="false"/>
+													<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+				</collapse>
+				<variants>				
+												<variant equip_template="l2_03a_mg__bob" category="boots"></variant>
+				</variants>
+			</item>
+
+			<item 
+				name							="Guard Lvl2 A Pants 1"
+				category						="pants"
+				price							="135"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l2_04_mg__bob"
+				localisation_key_name			="item_name_guard_lvl2_A_geralt_pants"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/guard_2a_pants_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, MediumArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl2 A Pants 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Dark steel ingot</parts>
+												<parts count="1">Leather squares</parts>
+												<parts count="1">Linen</parts>
+				</recycling_parts>
+				<collapse>						<category_cond name="armor" collapse="true"/>
+													<item_cond name="Body torso wet" collapse="false"/>
+													<item_cond name="Body torso towel" collapse="false"/>
+													<item_cond name="Body torso 01" collapse="false"/>
+													<item_cond name="Geralt Shirt" collapse="false"/>
+													<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+				</collapse>
+				<variants>				
+												<variant equip_template="l2_04a_mg__bob" category="boots"></variant>
+				</variants>
+			</item>
+
+			<item 
+				name							="Guard Lvl2 A Pants 2"
+				category						="pants"
+				price							="265"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l2_04_mg__bob"
+				localisation_key_name			="item_name_guard_lvl2_A_geralt_pants"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/guard_2a_pants_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, MediumArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl2 A Pants 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Leather</parts>
+												<parts count="1">Silk</parts>
+				</recycling_parts>
+				<collapse>						<category_cond name="armor" collapse="true"/>
+													<item_cond name="Body torso wet" collapse="false"/>
+													<item_cond name="Body torso towel" collapse="false"/>
+													<item_cond name="Body torso 01" collapse="false"/>
+													<item_cond name="Geralt Shirt" collapse="false"/>
+													<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+				</collapse>
+				<variants>				
+												<variant equip_template="l2_04a_mg__bob" category="boots"></variant>
+				</variants>
+			</item>
+
+
+			<!-- ARMOR HEAVY -->
+
+			<item 
+				name							="Knight Geralt Pants 1"
+				category						="pants"
+				price							="195"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l_01_mg__errant_knight"
+				localisation_key_name			="item_name_knight_geralt_pants"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/knight_1_pants_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, HeavyArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Knight Geralt Pants 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Dark steel ingot</parts>
+												<parts count="1">Leather</parts>
+				</recycling_parts>
+				<collapse>						<category_cond name="armor" collapse="true"/>
+													<item_cond name="Body torso wet" collapse="false"/>
+													<item_cond name="Body torso towel" collapse="false"/>
+													<item_cond name="Body torso 01" collapse="false"/>
+													<item_cond name="Geralt Shirt" collapse="false"/>
+													<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+				</collapse>
+				<variants>				
+												<variant equip_template="l_01a_mg__errant_knight" category="boots"></variant>
+				</variants>
+			</item>
+
+			<item 
+				name							="Knight Geralt Pants 2"
+				category						="pants"
+				price							="325"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l_01_mg__errant_knight"
+				localisation_key_name			="item_name_knight_geralt_pants"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/knight_1_pants_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, HeavyArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Knight Geralt Pants 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Dark steel ingot</parts>
+												<parts count="1">Leather</parts>
+				</recycling_parts>
+				<collapse>						<category_cond name="armor" collapse="true"/>
+													<item_cond name="Body torso wet" collapse="false"/>
+													<item_cond name="Body torso towel" collapse="false"/>
+													<item_cond name="Body torso 01" collapse="false"/>
+													<item_cond name="Geralt Shirt" collapse="false"/>
+													<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+				</collapse>
+				<variants>				
+												<variant equip_template="l_01a_mg__errant_knight" category="boots"></variant>
+				</variants>
+			</item>
+
+			<item 
+				name							="Knight Geralt A Pants 1"
+				category						="pants"
+				price							="200"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l_02_mg__errant_knight"
+				localisation_key_name			="item_name_knight_A_geralt_pants"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/knight_2_pants_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, HeavyArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Knight Geralt A Pants 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Dark steel ingot</parts>
+												<parts count="1">Leather</parts>
+				</recycling_parts>
+				<collapse>						<category_cond name="armor" collapse="true"/>
+													<item_cond name="Body torso wet" collapse="false"/>
+													<item_cond name="Body torso towel" collapse="false"/>
+													<item_cond name="Body torso 01" collapse="false"/>
+													<item_cond name="Geralt Shirt" collapse="false"/>
+													<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+				</collapse>
+				<variants>				
+												<variant equip_template="l_02a_mg__errant_knight" category="boots"></variant>
+				</variants>
+			</item>
+
+			<item 
+				name							="Knight Geralt A Pants 2"
+				category						="pants"
+				price							="330"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l_02_mg__errant_knight"
+				localisation_key_name			="item_name_knight_A_geralt_pants"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/knight_2_pants_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, HeavyArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Knight Geralt A Pants 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Dark steel ingot</parts>
+												<parts count="1">Leather</parts>
+				</recycling_parts>
+				<collapse>						<category_cond name="armor" collapse="true"/>
+													<item_cond name="Body torso wet" collapse="false"/>
+													<item_cond name="Body torso towel" collapse="false"/>
+													<item_cond name="Body torso 01" collapse="false"/>
+													<item_cond name="Geralt Shirt" collapse="false"/>
+													<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+				</collapse>
+				<variants>				
+												<variant equip_template="l_02a_mg__errant_knight" category="boots"></variant>
+				</variants>
+			</item>
+			
+			<item 
+				name							="Toussaint Pants 2"
+				category						="pants"
+				price							="350"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l_03_mg__errant_knight"
+				localisation_key_name			="item_name_toussaint_pants"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/toussaint_pants_2_64x128.png"
+			>
+				<tags>							Autogen, Armor, HeavyArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Toussaint Pants 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Orichalcum ingot</parts>
+												<parts count="1">Leather straps</parts>
+				</recycling_parts>
+				<collapse>						<category_cond name="armor" collapse="true"/>
+													<item_cond name="Body torso wet" collapse="false"/>
+													<item_cond name="Body torso towel" collapse="false"/>
+													<item_cond name="Body torso 01" collapse="false"/>
+													<item_cond name="Geralt Shirt" collapse="false"/>
+													<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+				</collapse>
+				<variants>				
+												<variant equip_template="l_03a_mg__errant_knight" category="boots"></variant>
+				</variants>
+			</item>
+			
+		<!-- PANTS QUEST -->
+			<item 
+				name							="sq701_geralt_pants"
+				category						="pants"
+				price							="500"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l_01_mg__errant_knight"
+				localisation_key_name			="item_name_knight_geralt_pants"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/knight_1_pants_1_64x128.png"
+			>
+				<tags>							Autogen, AutogenForceLevel, Armor, HeavyArmor, mod_armor, mod_legendary
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>sq701_geralt_pants _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Orichalcum ingot</parts>
+												<parts count="1">Silver ingot</parts>
+												<parts count="1">Leather straps</parts>
+				</recycling_parts>
+				<collapse>						<category_cond name="armor" collapse="true"/>
+													<item_cond name="Body torso wet" collapse="false"/>
+													<item_cond name="Body torso towel" collapse="false"/>
+													<item_cond name="Body torso 01" collapse="false"/>
+													<item_cond name="Geralt Shirt" collapse="false"/>
+													<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+				</collapse>
+				<variants>				
+												<variant equip_template="l_01a_mg__errant_knight" category="boots"></variant>
+				</variants>
+			</item>
+			
+			<item 
+				name							="q702_vampire_pants"
+				category						="pants"
+				price							="580"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="q704_l_01_mg__vampire" 
+				localisation_key_name			="item_name_baw_vampire_trousers"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/q704_vampire_pants_64x128.png" 
+			>
+				<tags>							Autogen, Armor, HeavyArmor, mod_armor, mod_legendary, VampireSet, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>q702_vampire_pants _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Glowing ingot</parts>
+												<parts count="1">Silver ingot</parts>
+												<parts count="1">Leather</parts>
+				</recycling_parts>
+				<collapse>						<category_cond name="armor" collapse="true"/>
+													<item_cond name="Body torso wet" collapse="false"/>
+													<item_cond name="Body torso towel" collapse="false"/>
+													<item_cond name="Body torso 01" collapse="false"/>
+													<item_cond name="Geralt Shirt" collapse="false"/>
+													<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+				</collapse>
+				<variants>				
+												<variant equip_template="q704_l_01a_mg__vampire" category="boots"></variant> 
+				</variants>
+			</item>
+			
+			<item 
+				name							="q704_vampire_pants"
+				category						="pants"
+				price							="580"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l_01_mg__vampire"
+				localisation_key_name			="item_name_baw_vampire_trousers_2"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/vampire_pants_64x128.png"
+			>
+				<tags>							Autogen, Armor, HeavyArmor, mod_armor, mod_legendary, VampireSet, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>q704_vampire_pants _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Glowing ingot</parts>
+												<parts count="1">Silver ingot</parts>
+												<parts count="1">Leather</parts>
+				</recycling_parts>
+				<collapse>						<category_cond name="armor" collapse="true"/>
+													<item_cond name="Body torso wet" collapse="false"/>
+													<item_cond name="Body torso towel" collapse="false"/>
+													<item_cond name="Body torso 01" collapse="false"/>
+													<item_cond name="Geralt Shirt" collapse="false"/>
+													<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+				</collapse>
+				<variants>				
+												<variant equip_template="l_01a_mg__vampire" category="boots"></variant>
+				</variants>
+			</item>
+			
+			<!-- MANDRAGORA PANTS -->
+		
+			<item
+				name							="Beauclair elegant pants"
+				category						="pants"
+				price							="40"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="l_01_mg__casual_nilfgaardian_pants"
+				localisation_key_name			="item_name_elegant_beauclair_pants"
+				localisation_key_description	="item_desc_pants"
+				icon_path						="icons/inventory/armors/nilfgaardian_casual_pants_64x128.png"
+			>
+				<tags>							Armor, LightArmor, mod_armor, mod_origin_nilfgaard, DoNotEnhance, gm_NoSetBonuses
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Casual pants _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Linen</parts>
+				</recycling_parts>
+				<collapse>						<category_cond name="armor" collapse="true"/>
+													<item_cond name="Body torso wet" collapse="false"/>
+													<item_cond name="Body torso towel" collapse="false"/>
+													<item_cond name="Body torso 01" collapse="false"/>
+													<item_cond name="Geralt Shirt" collapse="false"/>
+													<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+				</collapse>
+				<variants>	
+												<variant equip_template="l_05a_mg__bob"> 
+														<item>Beauclair elegant shoes</item> <!-- Uses shorter pants for those shoes -->									
+												</variant>
+												<variant equip_template="l_01a_mg__casual_nilfgaardian_pants" category="boots"></variant>
+				</variants>
+			</item>
+		
+			<item
+				name							="Beauclair Casual Pants 01"
+				category						="pants"
+				stackable						="1"
+				enhancement_slots				="0"
+				equip_template					="l_06_mg__bob"
+				ability_mode					="OnMount"
+				grid_size						="2"
+				icon_path						="icons/inventory/quests/Beauclair-Casual-Pants-01_64x128.png"
+				localisation_key_name			="item_name_beauclair_pants"
+				localisation_key_description	="item_desc_beauclair_pants"
+				price							="40"
+				initial_durability				="100"
+				max_durability					="100"
+			>
+				<tags>							Armor, LightArmor, mod_armor, Quest, DoNotEnhance, gm_NoSetBonuses
+				</tags>
+				<base_abilities>
+												<a>Casual pants _Stats</a>
+												<a>Default armor _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Linen</parts>
+				</recycling_parts>
+				<variants>	
+												<variant equip_template="l_06b_mg__bob"> 
+														<item>Beauclair elegant shoes</item> <!-- Uses shorter pants for those shoes -->
+												</variant>											
+												<variant equip_template="l_06a_mg__bob" category="boots"></variant>
+				</variants>				
+			</item>
+			
+			<item
+				name							="Beauclair Prison Pants"
+				category						="pants"
+				stackable						="1"
+				enhancement_slots				="0"
+				equip_template					="l_01_mg__prison_outfit"
+				ability_mode					="OnMount"
+				grid_size						="2"
+				icon_path						="icons/inventory/quests/Beauclair-Prison-Pants_64x128.png"
+				localisation_key_name			="item_name_beauclair_prison_pants"
+				localisation_key_description	="item_desc_beauclair_prison_pants"
+				price							="10"
+				initial_durability				="100"
+				max_durability					="100"
+			>
+				<tags>							Armor, LightArmor, mod_armor, Quest, DoNotEnhance, gm_NoSetBonuses
+				</tags>
+				<base_abilities>
+												<a>Casual pants _Stats</a>
+												<a>Default armor _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Linen</parts>
+				</recycling_parts>
+			</item>
+			
+		</items>
+
+	</definitions>
+</redxml>

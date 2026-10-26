@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+	<definitions>
+		<abilities>
+		
+		<!-- ITEM DEFINITION -->
+			<ability name="Nekker Boots _Stats">
+				<weight							type="base"	min="4.5"				/>
+				<quality						type="add"	min="4"					/>
+				<slashing_resistance_perc		type="base"	min="0.06"				/>
+				<piercing_resistance_perc		type="base"	min="0.04"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+				<rending_resistance_perc		type="base"	min="0.06"				/>
+				<elemental_resistance_perc		type="base"	min="0.06"				/>
+				<bleeding_resistance_perc 		type="base" min="0.25" 				/>
+			</ability>
+				
+		</abilities>
+		
+		<items>
+			
+		
+		<!-- WITCHER WOLF BOOTS -->
+			<item
+				name							="Nekker Boots"
+				category						="boots"
+				price							="286"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="s_01_mg__nekker_shoes"
+				localisation_key_name			="dlc_item_name_nekker_boots"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/quests/nekker_shoes_64x128.png"
+			>
+				<tags>							Autogen, Armor, MediumArmor, mod_armor, mod_legendary
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Nekker Boots _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Glowing ingot</parts>
+												<parts count="1">Leather</parts>
+				</recycling_parts>
+			</item>
+			
+		</items>
+	</definitions>
+</redxml>

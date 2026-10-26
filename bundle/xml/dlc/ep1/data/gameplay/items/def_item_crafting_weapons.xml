@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+<definitions>
+
+<!-- ######################## ABILITY DEFINITIONS ######################## -->
+<abilities>
+
+<!-- STEEL -->
+
+	<ability name="Crafted Ofir Steel Sword _Stats"> <!-- lvl 32 -->
+		<weight							type="base"	min="4"					/>
+		<quality						type="add"	min="4"					/>
+		<SlashingDamage 				type="base"	min="282"				/>
+		<SilverDamage 					type="base"	min="1"					/>	
+		<critical_hit_chance			type="add"	min="0.2"				/>
+		<critical_hit_damage_bonus 		type="add" 	min="0.5" 				/>
+		<spell_power_axii				type="mult" min="0.15" 				/>
+		<spell_power_aard				type="mult" min="0.15" 				/>
+		<spell_power_igni 				type="mult" min="0.15" 				/>
+	</ability>
+	
+	<ability name="Crafted Burning Rose Sword _Stats"> <!-- lvl 33 -->
+		<weight 						type="base"	min="4"					/>
+		<quality 						type="add" 	min="4" 				/>
+		<SlashingDamage 				type="base"	min="290"				/>
+		<SilverDamage 					min="1" 	max="1"					/>						
+		<dismember_chance 			type="add"	min="0.5" 				/>
+		<buff_apply_chance 				type="add" 	min="0.05" 				/>
+		<StaggerEffect 					is_ability="true" 					/>
+		<desc_staggerchance_mult 		type="add" 	min="0.05" 				/>
+		<ConfusionEffect 				is_ability="true" 					/>
+		<desc_confusionchance_mult 		type="add" 	min="0.05" 				/>
+		<BurningEffect 					is_ability="true" 					/>
+		<desc_burningchance_mult 		type="add" 	min="0.05" 				/>
+	</ability>
+	
+<!-- SILVER -->
+
+	<ability name="EP1 Crafted Witcher Silver Sword _Stats"> <!-- lvl 33 -->
+		<weight							type="base"	min="2"					/>
+		<quality						type="add"	min="4"					/>
+		<SlashingDamage 				type="base"	min="1"					/>
+		<SilverDamage 					type="base"	min="421" 				/>
+		<armor_reduction_perc			type="add"	min="0.15"				/>
+		<spell_power_aard 				type="mult" min="0.15" 				/>
+		<spell_power_yrden 				type="mult" min="0.15" 				/>
+		<critical_hit_chance 			type="add" 	min="0.25" 				/>
+		<critical_hit_damage_bonus		type="add"	min="0.65"				/>
+	</ability>
+
+<!-- STEEL WITCHER -->
+
+	<ability name="EP1 Viper School steel sword _Stats"> <!-- lvl 34 -->
+		<weight							type="base"	min="4"					/>
+		<quality						type="add"	min="5"					/>
+		<SlashingDamage					type="base"	min="298"				/>
+		<SilverDamage					type="base"	min="1"					/>
+		<desc_poinsonchance_mult		type="add"	min="0.25"				/>
+		<buff_apply_chance				type="add"	min="0.25"				/>
+		<PoisonEffect					is_ability="true"					/>
+		<PoisonDamage 					type="add"  min="45"				/>
+		<armor_reduction 				type="base"	min="60"				/>
+	</ability>
+
+<!-- SILVER WITCHER -->
+
+	<ability name="EP1 Viper School silver sword _Stats"> <!-- lvl 34 -->
+		<weight							type="base"	min="2"					/>
+		<quality						type="add"	min="5"					/>
+		<SlashingDamage 				type="base"	min="1"					/>
+		<SilverDamage 					type="base"	min="431"				/>
+		<desc_poinsonchance_mult		type="add"	min="0.25"				/>
+		<buff_apply_chance				type="add"	min="0.25"				/>
+		<PoisonEffect					is_ability="true"					/>
+		<PoisonDamage 					type="add"  min="55"				/>
+		<armor_reduction 				type="base"	min="60"				/>
+	</ability>
+	
+</abilities>
+
+
+<!-- ######################## ITEM DEFINITIONS ######################## -->
+<items>
+	<item
+		name							="Crafted Ofir Steel Sword"
+		category						="steelsword"
+		price							="1200"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size 						="2"
+		equip_template					="steel_sword_ep1_03"
+		equip_slot						="steel_sword_back_slot"
+		hold_slot						="r_weapon"
+		weapon							="true"
+		lethal							="true"
+		ability_mode					="OnHold"
+		hand							="right"
+		sound_identification			="long steel"
+		draw_event						="DrawWeapon"
+		draw_act						="draw_steel_sword_back_act"
+		draw_deact						="draw_steel_sword_back_deact"
+		holster_event					="HolsterWeapon"
+		holster_act						="holster_steel_sword_back_act"
+		holster_deact					="holster_steel_sword_back_deact"
+		localisation_key_name			="item_name_ofir_steel_sabre"
+		localisation_key_description	="item_desc_steel_sword"
+		icon_path						="icons/inventory/weapons/ofir_steel_sabre_64x128.png"
+	>
+		<tags>							PlayerSteelWeapon, Weapon, sword1h, 1handedWeapon, mod_weapon, mod_legendary, mod_origin_ofir, Ofir, EP1
+		</tags>
+		<base_abilities>				<a>Crafted Ofir Steel Sword _Stats</a>
+										<a>Default weapon _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Dwimeryte ingot</parts>
+										<parts count="1">Leather</parts>
+										<parts count="2">Wire rope</parts>
+										<parts count="1">Haft</parts>
+		</recycling_parts>
+		<anim_actions>
+										<action 
+											name="draw" 
+											event="DrawWeapon"
+											act="draw_steel_sword_back_act" 
+											deact="draw_steel_sword_back_deact">
+										</action>
+										<action 
+											name="holster" 
+											event="HolsterWeapon" 
+											act="holster_steel_sword_back_act" 
+											deact="holster_steel_sword_back_deact">
+										</action>
+										<action 
+											name="attack" 
+											event="attack_steel_sword_back" 
+											act="attack_steel_sword_back_act" 
+											deact="attack_steel_sword_back_deact">
+										</action>
+		</anim_actions>
+		<anim_switches>
+										<anim_switch 
+											category="silversword" 
+											equip_slot="silver_sword_back_slot"
+											event="silver_to_steel"
+											switch_act="silver_to_steel_act"
+											switch_deact="silver_to_steel_deact">
+										</anim_switch>
+		</anim_switches>			
+		<player_override><bound_items>					<item>Sabre Scabbard 07</item>
+		</bound_items></player_override>
+	</item>
+	
+	<item
+		name							="Crafted Burning Rose Sword"
+		category						="steelsword"
+		price							="1250"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		equip_template					="steel_sword_ep1_04"
+		equip_slot						="steel_sword_back_slot" 
+		hold_slot						="r_weapon" 
+		weapon							="true" 
+		lethal							="true"
+		ability_mode					="OnHold"
+		hand							="right"
+		sound_identification			="long steel"
+		draw_event						="DrawWeapon"
+		draw_act						="draw_steel_sword_back_act"
+		draw_deact						="draw_steel_sword_back_deact"
+		holster_event					="HolsterWeapon"
+		holster_act						="holster_steel_sword_back_act"
+		holster_deact					="holster_steel_sword_back_deact"
+		localisation_key_name			="item_name_burning_rose_steel_sword" 
+		localisation_key_description	="item_desc_steel_sword"
+		icon_path						="icons/inventory/weapons/burning_rose_sword_64x128.png"
+	>
+		<tags>							PlayerSteelWeapon, Weapon, sword1h, 1handedWeapon, mod_weapon, mod_legendary, EP1
+		</tags>
+		<base_abilities>				<a>Default weapon _Stats</a>
+										<a>Crafted Burning Rose Sword _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Dwimeryte ingot</parts>
+										<parts count="1">Leather</parts>
+										<parts count="2">Wire rope</parts>
+										<parts count="1">Haft</parts>
+		</recycling_parts>
+		<anim_actions>
+										<action 
+											name="draw" 
+											event="DrawWeapon"
+											act="draw_steel_sword_back_act" 
+											deact="draw_steel_sword_back_deact">
+										</action>
+										<action 
+											name="holster" 
+											event="HolsterWeapon" 
+											act="holster_steel_sword_back_act" 
+											deact="holster_steel_sword_back_deact">
+										</action>
+										<action 
+											name="attack" 
+											event="attack_steel_sword_back" 
+											act="attack_steel_sword_back_act" 
+											deact="attack_steel_sword_back_deact">
+										</action>
+		</anim_actions>
+		<anim_switches>
+										<anim_switch 
+											category="silversword" 
+											equip_slot="silver_sword_back_slot"
+											event="silver_to_steel"
+											switch_act="silver_to_steel_act"
+											switch_deact="silver_to_steel_deact">
+										</anim_switch>
+		</anim_switches>			
+		<player_override><bound_items>					<item>scabbard_steel_novigradian_05</item>
+							 
+		</bound_items></player_override>
+	</item>
+	
+	<!-- ////////////////////// PoI Silver Sword ////////////////////// -->
+	<item
+		name							="EP1 Crafted Witcher Silver Sword"
+		category						="silversword" 
+		price							="1550"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		equip_template					="silver_sword_ep1"
+		equip_slot						="silver_sword_back_slot" 
+		hold_slot						="r_weapon"
+		weapon							="true"
+		lethal							="true"
+		ability_mode					="OnHold"
+		hand							="right"
+		sound_identification			="long steel"
+		draw_event						="DrawWeapon"
+		draw_act						="draw_steel_sword_back_act"
+		draw_deact						="draw_steel_sword_back_deact"
+		holster_event					="HolsterWeapon"
+		holster_act						="holster_steel_sword_back_act"
+		holster_deact					="holster_steel_sword_back_deact"
+		localisation_key_name			="item_name_electrum_sword" 
+		localisation_key_description	="item_desc_silver_sword"
+		icon_path						="icons/inventory/weapons/ep1_silver_sword_64x128.png"
+	>
+		<tags>							PlayerSilverWeapon, Weapon, Upgradeable, sword1h, mod_weapon, mod_legendary, EP1
+		</tags>
+		<base_abilities>				<a>Default weapon _Stats</a>
+										<a>EP1 Crafted Witcher Silver Sword _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Meteorite silver ingot</parts>
+										<parts count="1">Dwimeryte ingot</parts>
+										<parts count="1">Leather</parts>
+										<parts count="2">Wire rope</parts>
+		</recycling_parts>
+		<anim_actions>
+										<action 
+											name="draw" 
+											event="DrawWeapon" 
+											act="draw_steel_sword_back_act" 
+											deact="draw_steel_sword_back_deact">
+										</action>
+										<action 
+											name="holster" 
+											event="HolsterWeapon" 
+											act="holster_steel_sword_back_act" 
+											deact="holster_steel_sword_back_deact">
+										</action>
+										<action 
+											name="attack" 
+											event="attack_silver_sword_back" 
+											act="attack_silver_sword_back_act" 
+											deact="attack_silver_sword_back_deact">
+										</action>
+		</anim_actions>
+		<anim_switches>
+										<anim_switch 
+											category="steelsword" 
+											equip_slot="steel_sword_back_slot"
+											event="steel_to_silver"
+											switch_act="steel_to_silver_act"
+											switch_deact="steel_to_silver_deact">
+										</anim_switch>
+										<anim_switch
+											category="steelsword" 
+											equip_slot="axe_back_slot"
+											event="steel_to_silver"
+											switch_act="steel_to_silver_act"
+											switch_deact="steel_to_silver_deact">
+										</anim_switch>
+		</anim_switches>
+		<player_override><bound_items>					<item>scabbard_silver_3_01</item>
+		</bound_items></player_override>
+	</item>
+	
+	<item
+		name							="EP1 Viper School steel sword"
+		category						="steelsword" 
+		price							="1400"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		equip_template					="witcher_steel_viper_v2_sword_lvl1"
+		equip_slot						="steel_sword_back_slot" 
+		hold_slot						="r_weapon" 
+		weapon							="true" 
+		lethal							="true"
+		ability_mode					="OnHold"
+		hand							="right"
+		sound_identification			="long steel"
+		draw_event						="DrawWeapon"
+		draw_act						="draw_steel_sword_back_act"
+		draw_deact						="draw_steel_sword_back_deact"
+		holster_event					="HolsterWeapon"
+		holster_act						="holster_steel_sword_back_act"
+		holster_deact					="holster_steel_sword_back_deact"
+		localisation_key_name			="item_name_hosviper_school_steel_sword" 
+		localisation_key_description	="item_desc_steel_sword"
+		icon_path						="icons/inventory/weapons/Viper_steel_lvl1_64x128.png"
+	>
+		<tags>							PlayerSteelWeapon, Weapon, sword1h, 1handedWeapon, mod_weapon, mod_legendary, EP1, ViperSet, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default weapon _Stats</a>
+										<a>EP1 Viper School steel sword _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Dark steel ingot</parts>
+										<parts count="1">Dwimeryte ingot</parts>
+										<parts count="1">Leather</parts>
+										<parts count="1">Wire rope</parts>
+		</recycling_parts>
+		<anim_actions>
+										<action 
+											name="draw" 
+											event="DrawWeapon"
+											act="draw_steel_sword_back_act" 
+											deact="draw_steel_sword_back_deact">
+										</action>
+										<action 
+											name="holster" 
+											event="HolsterWeapon" 
+											act="holster_steel_sword_back_act" 
+											deact="holster_steel_sword_back_deact">
+										</action>
+										<action 
+											name="attack" 
+											event="attack_steel_sword_back" 
+											act="attack_steel_sword_back_act" 
+											deact="attack_steel_sword_back_deact">
+										</action>
+		</anim_actions>
+		<anim_switches>
+										<anim_switch 
+											category="silversword" 
+											equip_slot="silver_sword_back_slot"
+											event="silver_to_steel"
+											switch_act="silver_to_steel_act"
+											switch_deact="silver_to_steel_deact">
+										</anim_switch>
+		</anim_switches>
+		<player_override><bound_items>					<item>scabbard_steel_1_02</item>
+		</bound_items></player_override>
+	</item>
+	
+	<item
+		name							="EP1 Viper School silver sword"
+		category						="silversword" 
+		price							="1700"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		equip_template					="witcher_silver_viper_v2_sword_lvl1"
+		equip_slot						="silver_sword_back_slot"
+		hold_slot						="r_weapon"
+		weapon							="true"
+		lethal							="true"
+		ability_mode					="OnHold"
+		hand							="right"
+		sound_identification			="long steel"
+		draw_event						="DrawWeapon"
+		draw_act						="draw_steel_sword_back_act"
+		draw_deact						="draw_steel_sword_back_deact"
+		holster_event					="HolsterWeapon"
+		holster_act						="holster_steel_sword_back_act"
+		holster_deact					="holster_steel_sword_back_deact"
+		localisation_key_name			="item_name_hosviper_school_silver_sword" 
+		localisation_key_description	="item_desc_silver_sword"
+		icon_path						="icons/inventory/weapons/Viper_silver_lvl1_64x128.png"
+	>
+		<tags>							PlayerSilverWeapon, Weapon, Upgradeable, sword1h, mod_weapon, mod_legendary, EP1, ViperSet, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default weapon _Stats</a>
+										<a>EP1 Viper School silver sword _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+										<parts count="1">Dwimeryte ingot</parts>
+										<parts count="1">Leather</parts>
+										<parts count="1">Wire rope</parts>
+		</recycling_parts>
+		<anim_actions>
+										<action 
+											name="draw" 
+											event="DrawWeapon" 
+											act="draw_steel_sword_back_act" 
+											deact="draw_steel_sword_back_deact">
+										</action>
+										<action 
+											name="holster" 
+											event="HolsterWeapon" 
+											act="holster_steel_sword_back_act" 
+											deact="holster_steel_sword_back_deact">
+										</action>
+										<action 
+											name="attack" 
+											event="attack_silver_sword_back" 
+											act="attack_silver_sword_back_act" 
+											deact="attack_silver_sword_back_deact">
+										</action>
+		</anim_actions>
+		<anim_switches>
+										<anim_switch 
+											category="steelsword" 
+											equip_slot="steel_sword_back_slot"
+											event="steel_to_silver"
+											switch_act="steel_to_silver_act"
+											switch_deact="steel_to_silver_deact">
+										</anim_switch>
+										<anim_switch
+											category="steelsword" 
+											equip_slot="axe_back_slot"
+											event="steel_to_silver"
+											switch_act="steel_to_silver_act"
+											switch_deact="steel_to_silver_deact">
+										</anim_switch>
+		</anim_switches>
+		<player_override><bound_items>					<item>scabbard_silver_1_05</item>
+		</bound_items></player_override>
+	</item>
+	
+</items>
+
+</definitions>
+</redxml>

@@ -1,0 +1,672 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+	<definitions>
+
+		<!-- ######################## ABILITY DEFINITIONS ######################## -->
+		<abilities>
+
+		<!-- GLOVES WITCHER LYNX  -->
+			<ability name="Lynx Gloves 5 _Stats">
+				<weight							type="base"	min="1"					/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="81"				/>
+				<slashing_resistance_perc		type="base"	min="0.03"				/>
+				<piercing_resistance_perc		type="base"	min="0.01"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.01"				/>
+				<rending_resistance_perc		type="base"	min="0.03"				/>
+				<elemental_resistance_perc		type="base"	min="0.03"				/>
+				<attack_power					type="mult" min="0.12"				/>
+				<staminaRegen_armor_mod			type="mult"	min="0.01"				/>
+			</ability>
+
+		<!-- GLOVES WITCHER GRYPHON -->
+			<ability name="Gryphon Gloves 5 _Stats">
+				<weight							type="base"	min="3"					/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="81"				/>
+				<slashing_resistance_perc		type="base"	min="0.05"				/>
+				<piercing_resistance_perc		type="base"	min="0.03"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+				<rending_resistance_perc		type="base"	min="0.05"				/>
+				<elemental_resistance_perc		type="base"	min="0.05"				/>
+				<spell_power 					type="mult"	min="0.12"				/>
+			</ability>
+
+		<!-- GLOVES WITCHER BEAR -->
+			<ability name="Bear Gloves 5 _Stats">
+				<weight							type="base" min="5"					/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="81"				/>
+				<slashing_resistance_perc		type="base"	min="0.09"				/>
+				<piercing_resistance_perc		type="base"	min="0.09"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+				<rending_resistance_perc		type="base"	min="0.09"				/>
+				<elemental_resistance_perc		type="base"	min="0.09"				/>
+				<focus_gain						type="add"	min="0.12"				/>
+				<staminaRegen_armor_mod			type="mult"	min="-0.025"			/>
+			</ability>
+
+		<!-- GLOVES WITCHER WOLF  -->
+			<ability name="Wolf Gloves 5 _Stats">
+				<weight							type="base"	min="3"					/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="81"				/>
+				<slashing_resistance_perc		type="base"	min="0.05"				/>
+				<piercing_resistance_perc		type="base"	min="0.03"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+				<rending_resistance_perc		type="base"	min="0.05"				/>
+				<elemental_resistance_perc		type="base"	min="0.05"				/>
+				<focus_gain 					type="base" min="0.07" 				/>
+				<spell_power					type="mult"	min="0.07"				/>
+				<attack_power					type="mult" min="0.07"				/>
+			</ability>
+
+		<!-- GLOVES WITCHER RED WOLF  -->
+			<ability name="Red Wolf Gloves 1 _Stats">
+				<weight							type="base"	min="3"					/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="81"				/>
+				<slashing_resistance_perc		type="base"	min="0.05"				/>
+				<piercing_resistance_perc		type="base"	min="0.03"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+				<rending_resistance_perc		type="base"	min="0.05"				/>
+				<elemental_resistance_perc		type="base"	min="0.05"				/>
+				<toxicity 						type="base" min="5" 				/>
+				<potion_duration 				type="add"	min="0.05"				/>
+			</ability>
+
+			<ability name="Red Wolf Gloves 2 _Stats">
+				<weight							type="base"	min="3"					/>
+				<quality						type="add"	min="5"					/>
+				<armor							type="base"	min="141"				/>
+				<slashing_resistance_perc		type="base"	min="0.05"				/>
+				<piercing_resistance_perc		type="base"	min="0.03"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+				<rending_resistance_perc		type="base"	min="0.05"				/>
+				<elemental_resistance_perc		type="base"	min="0.05"				/>
+				<toxicity 						type="base" min="5" 				/>
+				<potion_duration 				type="add"	min="0.05"				/>
+			</ability>
+
+		<!-- GLOVES GUARD LVL1 3 -->
+			<ability name="Guard Lvl1 Gloves 3 _Stats">
+				<weight							type="base"	min="1.5"				/>
+				<quality						type="add"	min="4"					/>
+				<armor							type="base"	min="87"				/>
+				<slashing_resistance_perc		type="base"	min="0.03"				/>
+				<piercing_resistance_perc		type="base"	min="0.01"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.01"				/>
+				<rending_resistance_perc		type="base"	min="0.03"				/>
+				<elemental_resistance_perc		type="base"	min="0.03"				/>
+				<bleeding_resistance_perc 		type="base" min="0.10" 				/>
+				<vitality 						type="base" min="250" 				/>
+				<staminaRegen_armor_mod			type="mult"	min="0.01"				/>
+			</ability>
+
+		<!-- GLOVES GUARD LVL1 A 3 -->
+			<ability name="Guard Lvl1 A Gloves 3 _Stats">
+				<weight							type="base"	min="1.5"				/>
+				<quality						type="add"	min="4"					/>
+				<armor							type="base"	min="89"				/>
+				<slashing_resistance_perc		type="base"	min="0.03"				/>
+				<piercing_resistance_perc		type="base"	min="0.01"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.01"				/>
+				<rending_resistance_perc		type="base"	min="0.03"				/>
+				<elemental_resistance_perc		type="base"	min="0.03"				/>
+				<bleeding_resistance_perc 		type="base" min="0.15" 				/>
+				<vitality 						type="base" min="300" 				/>
+				<staminaRegen_armor_mod			type="mult"	min="0.01"				/>
+			</ability>
+
+		<!-- GLOVES GUARD LVL2 3-->
+			<ability name="Guard Lvl2 Gloves 3 _Stats">
+				<weight							type="base"	min="3.5" 				/>
+				<quality						type="add"	min="4"					/>
+				<armor							type="base"	min="93"				/>
+				<slashing_resistance_perc		type="base"	min="0.05"				/>
+				<piercing_resistance_perc		type="base"	min="0.03"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+				<rending_resistance_perc		type="base"	min="0.05"				/>
+				<elemental_resistance_perc		type="base"	min="0.05"				/>
+				<poison_resistance_perc 		type="base" min="0.10" 				/>
+				<vitality 						type="base" min="350" 				/>
+			</ability>
+
+		<!-- GLOVES GUARD LVL2 A 3-->
+			<ability name="Guard Lvl2 A Gloves 3 _Stats">
+				<weight							type="base"	min="3.5" 				/>
+				<quality						type="add"	min="4"					/>
+				<armor							type="base"	min="95"				/>
+				<slashing_resistance_perc		type="base"	min="0.05"				/>
+				<piercing_resistance_perc		type="base"	min="0.03"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+				<rending_resistance_perc		type="base"	min="0.05"				/>
+				<elemental_resistance_perc		type="base"	min="0.05"				/>
+				<poison_resistance_perc 		type="base" min="0.15" 				/>
+				<vitality 						type="base" min="400" 				/>
+			</ability>
+
+		<!-- GLOVES KNIGHT GERALT 3 -->
+			<ability name="Knight Geralt Gloves 3 _Stats">
+				<weight							type="base"	min="6.5"				/>
+				<quality						type="add"	min="4"					/>
+				<armor							type="base"	min="99"				/>
+				<slashing_resistance_perc		type="base"	min="0.09"				/>
+				<piercing_resistance_perc		type="base"	min="0.09"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+				<rending_resistance_perc		type="base"	min="0.09"				/>
+				<elemental_resistance_perc		type="base"	min="0.09"				/>
+				<bleeding_resistance_perc 		type="base" min="0.25" 				/>
+				<vitality 						type="base" min="450" 				/>
+				<staminaRegen_armor_mod			type="mult"	min="-0.025"			/>
+			</ability>
+
+		<!-- GLOVES KNIGHT GERALT A 3 -->
+			<ability name="Knight Geralt A Gloves 3 _Stats">
+				<weight							type="base"	min="6.5"				/>
+				<quality						type="add"	min="4"					/>
+				<armor							type="base"	min="101"				/>
+				<slashing_resistance_perc		type="base"	min="0.09"				/>
+				<piercing_resistance_perc		type="base"	min="0.09"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+				<rending_resistance_perc		type="base"	min="0.09"				/>
+				<elemental_resistance_perc		type="base"	min="0.09"				/>
+				<bleeding_resistance_perc 		type="base" min="0.40" 				/>
+				<vitality 						type="base" min="500" 				/>
+				<staminaRegen_armor_mod			type="mult"	min="-0.025"			/>
+			</ability>
+			
+		<!-- GLOVES TOUSSAINT -->
+			<ability name="Toussaint Gloves 3 _Stats">
+				<weight							type="base"	min="6.5"				/>
+				<quality						type="add"	min="4"					/>
+				<item_level_min					type="add"	min="40"				/>
+				<item_level_max					type="add"	min="100"				/>
+				<slashing_resistance_perc		type="base"	min="0.09"				/>
+				<piercing_resistance_perc		type="base"	min="0.09"				/>
+				<bludgeoning_resistance_perc	type="base"	min="0.09"				/>
+				<rending_resistance_perc		type="base"	min="0.09"				/>
+				<elemental_resistance_perc		type="base"	min="0.09"				/>
+				<burning_resistance_perc 		type="base" min="0.25" 				/>
+				<vitality 						type="base" min="450" 				/>
+				<staminaRegen_armor_mod			type="mult"	min="-0.025"			/>
+			</ability>
+
+		</abilities>
+
+
+		<!-- ######################## ITEM DEFINITIONS ######################## -->
+		<items>
+
+		<!-- GLOVES WITCHER LYNX -->
+			<item
+				name							="Lynx Gloves 5"
+				category						="gloves"
+				price							="1435"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__lynx_lvl3"
+				localisation_key_name			="item_name_lynx_gloves_5"
+				localisation_key_description	="item_category_light_armor_description"
+				icon_path						="icons/inventory/armors/lynx_gloves_lvl5_64x128.png"
+			>
+				<tags>							Armor, LightArmor, LynxSet, mod_armor, mod_legendary, SetBonusPiece, EP1
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Lynx Gloves 5 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Leather straps</parts>
+												<parts count="1">Monstrous hide</parts>
+												<parts count="2">Chitin scale</parts>
+				</recycling_parts>
+				<variants>						<variant equip_template="g_01a_mg__lynx_lvl3">
+													<item>Geralt Shirt</item>
+													<item>Lynx Armor</item>
+												</variant>
+												<variant equip_template="g_01_mg__lynx_lvl3" category="armor"></variant>
+				</variants>
+			</item>
+
+		<!-- GLOVES WITCHER GRYPHON -->
+			<item
+				name							="Gryphon Gloves 5"
+				category						="gloves"
+				price							="2298"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__gryphon_lvl3"
+				localisation_key_name			="item_name_gryphon_gloves_5"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/gryphon_gloves_lvl5_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, GryphonSet, mod_armor, mod_legendary, SetBonusPiece, EP1
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Gryphon Gloves 5 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Leather straps</parts>
+												<parts count="1">Dwimeryte enriched ingot</parts>
+												<parts count="1">Monstrous hide</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+				<variants>						<variant equip_template="g_01a_mg__gryphon_lvl3">
+													<item>Geralt Shirt</item>
+													<item>Lynx Armor</item>
+												</variant>
+												<variant equip_template="g_01_mg__gryphon_lvl3" category="armor"></variant>
+				</variants>
+			</item>
+
+		<!-- GLOVES WITCHER BEAR -->
+		<item
+				name							="Bear Gloves 5"
+				category						="gloves"
+				price							="3120"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__bear_lvl3"
+				localisation_key_name			="item_name_bear_gloves_5"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/bear_gloves_lvl5_64x128.png"
+			>
+				<tags>							Armor, HeavyArmor, BearSet, mod_armor, mod_legendary, SetBonusPiece, EP1
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Bear Gloves 5 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Leather straps</parts>
+												<parts count="1">Wire</parts>
+												<parts count="1">Silver ingot</parts>
+												<parts count="1">Monstrous plate</parts>
+				</recycling_parts>
+				<variants>						<variant equip_template="g_01a_mg__bear_lvl3">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01_mg__bear_lvl3" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+		<!-- GLOVES WITCHER WOLF  -->
+			<item
+				name							="Wolf Gloves 5"
+				category						="gloves"
+				price							="2298"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__wolf_lvl3"
+				localisation_key_name			="item_name_wolf_gloves_5"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/wolf_gloves_lvl5_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, WolfSet, mod_armor, mod_legendary, SetBonusPiece, EP1
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Wolf Gloves 5 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Leather straps</parts>
+												<parts count="1">Dwimeryte enriched ingot</parts>
+												<parts count="1">Monstrous hide</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+				<variants>				
+												<variant equip_template="g_01a_mg__wolf_lvl3">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01_mg__wolf_lvl3" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+		<!-- GLOVES WITCHER RED WOLF  -->
+			<item
+				name							="Red Wolf Gloves 1"
+				category						="gloves"
+				price							="1150"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__red_wolf_lvl1"
+				localisation_key_name			="item_name_red_wolf_gloves_1"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/red_wolf_gloves_1_64x128.png"
+			>
+				<tags>							Armor, MediumArmor,RedWolfSetMinor, mod_armor, mod_legendary, SetBonusPiece, EP1
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Red Wolf Gloves 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Leather straps</parts>
+												<parts count="1">Dwimeryte enriched ingot</parts>
+												<parts count="1">Monstrous hide</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+				<variants>				
+												<variant equip_template="g_01a_mg__red_wolf_lvl1">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01_mg__red_wolf_lvl1" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+			<item
+				name							="Red Wolf Gloves 2"
+				category						="gloves"
+				price							="1580"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__red_wolf_lvl2"
+				localisation_key_name			="item_name_newgame_red_wolf_gloves_1"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/red_wolf_gloves_2_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, RedWolfSet, mod_armor, mod_legendary, SetBonusPiece, EP1
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Red Wolf Gloves 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Leather straps</parts>
+												<parts count="1">Dwimeryte enriched ingot</parts>
+												<parts count="1">Monstrous hide</parts>
+												<parts count="1">Chitin scale</parts>
+				</recycling_parts>
+				<variants>				
+												<variant equip_template="g_01a_mg__red_wolf_lvl2">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01_mg__red_wolf_lvl2" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+		<!-- GLOVES GUARD LVL1 3 -->
+			<item
+				name							="Guard Lvl1 Gloves 3"
+				category						="gloves"
+				price							="163"
+				initial_durability				="100"
+				max_durability					="100" 
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__guard_lvl1"
+				localisation_key_name			="item_name_guard_lvl1_geralt_gloves"
+				localisation_key_description	="item_category_light_armor_description"
+				icon_path						="icons/inventory/armors/guard_1a_gloves_1_64x128.png"
+			>
+				<tags>							Armor, LightArmor, mod_armor, mod_legendary, EP1
+				</tags>
+				<recycling_parts>				<parts count="1">Glowing ingot</parts>
+												<parts count="2">Leather straps</parts>
+				</recycling_parts>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl1 Gloves 3 _Stats</a>
+				</base_abilities>
+				<variants>			
+												<variant equip_template="g_01a_mg__guard_lvl1">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01_mg__guard_lvl1" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+		<!-- GLOVES GUARD LVL1 A 3 -->
+			<item
+				name							="Guard Lvl1 A Gloves 3"
+				category						="gloves"
+				price							="173"
+				initial_durability				="100"
+				max_durability					="100" 
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_02a_mg__guard_lvl1"
+				localisation_key_name			="item_name_guard_lvl1_A_geralt_gloves"
+				localisation_key_description	="item_category_light_armor_description"
+				icon_path						="icons/inventory/armors/guard_1_gloves_1_64x128.png"
+			>
+				<tags>							Armor, LightArmor, mod_armor, mod_legendary, EP1
+				</tags>
+				<recycling_parts>				<parts count="1">Glowing ingot</parts>
+												<parts count="2">Leather straps</parts>
+				</recycling_parts>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl1 A Gloves 3 _Stats</a>
+				</base_abilities>
+				<variants>			
+												<variant equip_template="g_02a_mg__guard_lvl1">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_02_mg__guard_lvl1" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+		<!-- GLOVES GUARD LVL2 3-->
+			<item
+				name							="Guard Lvl2 Gloves 3"
+				category						="gloves"
+				price							="283"
+				initial_durability				="100"
+				max_durability					="100" 
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__common_light_lvl3"
+				localisation_key_name			="item_name_guard_lvl2_geralt_gloves"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/common_light_lvl3_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, mod_armor, mod_legendary, EP1
+				</tags>
+				<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Glowing ingot</parts>
+												<parts count="1">Leather</parts>
+				</recycling_parts>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl2 Gloves 3 _Stats</a>
+				</base_abilities>
+				<variants>			
+												<variant equip_template="g_01a_mg__common_light_lvl3">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01_mg__common_light_lvl3" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+		<!-- GLOVES GUARD LVL2 A 3-->
+			<item
+				name							="Guard Lvl2 A Gloves 3"
+				category						="gloves"
+				price							="293"
+				initial_durability				="100"
+				max_durability					="100" 
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__guard_lvl2"
+				localisation_key_name			="item_name_guard_lvl2_A_geralt_gloves"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/guard_2a_gloves_1_64x128.png"
+			>
+				<tags>							Armor, MediumArmor, mod_armor, mod_legendary, EP1
+				</tags>
+				<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Glowing ingot</parts>
+												<parts count="1">Leather</parts>
+				</recycling_parts>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl2 A Gloves 3 _Stats</a>
+				</base_abilities>
+				<variants>			
+												<variant equip_template="g_01a_mg__guard_lvl2">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01_mg__guard_lvl2" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+		<!-- GLOVES KNIGHT GERALT 3 -->
+			<item
+				name							="Knight Geralt Gloves 3"
+				category						="gloves"
+				price							="470"
+				initial_durability				="100"
+				max_durability					="100" 
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__errant_knight"
+				localisation_key_name			="item_name_knight_geralt_gloves"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/knight_1_gloves_1_64x128.png"
+			>
+				<tags>							Armor, HeavyArmor, mod_armor, mod_legendary, EP1
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Knight Geralt Gloves 3 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite silver ingot</parts>
+												<parts count="1">Dark steel ingot</parts>
+												<parts count="2">Leather</parts>
+				</recycling_parts>
+				<variants>						<variant equip_template="g_01a_mg__errant_knight">
+												<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+												<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01b_mg__errant_knight">
+												<item>Toussaint Armor 2</item>      
+												<item>Knight Geralt A Armor 2</item>   
+												<item>Knight Geralt A Armor 1</item>      
+												<item>Knight Geralt Armor 2</item>  
+												<item>Knight Geralt Armor 1</item>      
+												<item>Knight Geralt Armor 3</item>  
+												<item>Knight Geralt A Armor 3</item>      
+												<item>Toussaint Armor 3</item>  											
+												</variant>
+												<variant equip_template="g_01_mg__errant_knight" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+		<!-- GLOVES KNIGHT GERALT A 3 -->
+			<item
+				name							="Knight Geralt A Gloves 3"
+				category						="gloves"
+				price							="480"
+				initial_durability				="100"
+				max_durability					="100" 
+				enhancement_slots				="2"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_02a_mg__errant_knight"
+				localisation_key_name			="item_name_knight_A_geralt_gloves"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/knight_2_gloves_1_64x128.png"
+			>
+				<tags>							Armor, HeavyArmor, mod_armor, mod_legendary, EP1
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Knight Geralt A Gloves 3 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite silver ingot</parts>
+												<parts count="1">Dark steel ingot</parts>
+												<parts count="2">Leather</parts>
+				</recycling_parts>
+				<variants>						<variant equip_template="g_02a_mg__errant_knight">
+												<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+												<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_02b_mg__errant_knight">
+												<item>Toussaint Armor 2</item>      
+												<item>Knight Geralt A Armor 2</item>   
+												<item>Knight Geralt A Armor 1</item>      
+												<item>Knight Geralt Armor 2</item>  
+												<item>Knight Geralt Armor 1</item>      
+												<item>Knight Geralt Armor 3</item>  
+												<item>Knight Geralt A Armor 3</item>      
+												<item>Toussaint Armor 3</item>  											
+												</variant>
+												<variant equip_template="g_02_mg__errant_knight" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+			
+		<item
+			name							="Toussaint Gloves 3"
+			category						="gloves"
+			price							="490"
+			initial_durability				="100"
+			max_durability					="100"
+			enhancement_slots				="2"
+			stackable						="1"
+			grid_size						="2"
+			ability_mode					="OnMount"
+			equip_template					="g_03a_mg__errant_knight"
+			localisation_key_name			="item_name_toussaint_gloves"
+			localisation_key_description	="item_category_heavy_armor_description"
+			icon_path						="icons/inventory/armors/toussaint_gloves_2_64x128.png"
+		>
+			<tags>							Autogen, AutogenUseLevelRange, AutogenForceLevel, Armor, HeavyArmor, mod_armor, mod_legendary, EP1
+			</tags>
+			<base_abilities>				<a>Default armor _Stats</a>
+											<a>Toussaint Gloves 3 _Stats</a>
+			</base_abilities>
+			<recycling_parts>				<parts count="1">Meteorite silver ingot</parts>
+											<parts count="1">Dark steel ingot</parts>
+											<parts count="2">Leather</parts>
+			</recycling_parts>
+			<variants>						<variant equip_template="g_03a_mg__errant_knight">
+												<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+												<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_03b_mg__errant_knight">
+												<item>Toussaint Armor 2</item>      
+												<item>Knight Geralt A Armor 2</item>   
+												<item>Knight Geralt A Armor 1</item>      
+												<item>Knight Geralt Armor 2</item>  
+												<item>Knight Geralt Armor 1</item>      
+												<item>Knight Geralt Armor 3</item>  
+												<item>Knight Geralt A Armor 3</item>      
+												<item>Toussaint Armor 3</item>  											
+												</variant>
+												<variant equip_template="g_03_mg__errant_knight" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+		</item>
+
+
+		</items>
+
+	</definitions>
+</redxml>

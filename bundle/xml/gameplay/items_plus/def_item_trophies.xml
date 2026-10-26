@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+	<definitions>
+		<abilities>
+			<ability name="base_trophy_stats">
+				<weight type="base" min="5"/>
+				<quality type="add" min="4" max="4"/>
+			</ability>
+			<!-- DLC? -->
+			<ability name="cave_troll_trophy_stats">
+				<vitality type="add" min="500" />
+			</ability>
+			<!-- unused? -->
+			<ability name="nekkers_trophy_stats">
+			</ability>
+			<!-- nekker_warrior (lvl 16, ske) -->
+			<ability name="nekker_warrior_trophy_stats">
+				<rending_resistance_perc type="add" min="0.05" />
+			</ability>
+			<!-- unused? -->
+			<ability name="drowned_dead_trophy_stats">
+			</ability>
+			<!-- minion (lvl 14, nov) -->
+			<ability name="minion_trophy_stats">
+				<frost_resistance_perc type="add" min="0.50" />
+			</ability>
+			<!-- leshy (lvl 22, ske) -->
+			<ability name="leshy_trophy_stats">
+				<spell_power type="mult" min="0.1" />
+			</ability>
+			<!-- leshy_mh302 (lvl 25, nov) -->
+			<ability name="leshy_mh302_trophy_stats">
+				<armor_reduction_perc type="add" min="0.1" />
+			</ability>			
+			<!-- forktail (lvl 28, ske) -->
+			<ability name="forktail_trophy_stats">
+				<burning_resistance_perc type="add" min="0.25" />
+			</ability>	
+			<!-- wyvern (lvl 23, nml) -->
+			<ability name="wyvern_trophy_stats">
+				<poison_resistance_perc type="add" min="0.25" />
+			</ability>
+			<!-- wyvern_mq1051 (lvl 7, nml) -->
+			<ability name="wyvern_mq1051_trophy_stats">
+				<staminaRegen type="mult" min="0.05" />
+			</ability>
+			<!-- gravehag (lvl 10, nml) -->
+			<ability name="gravehag_trophy_stats">
+				<focus_gain type="add" min="0.1" />
+			</ability>	
+			<!-- fogling (lvl 12, nml) -->
+			<ability name="fogling_trophy_stats">
+				<spell_power_quen type="mult" min="0.1" />
+			</ability>	
+			<!-- fiend (lvl 29, ske) -->
+			<ability name="fiend_trophy_stats">
+				<critical_hit_damage_bonus type="add" min="0.35" max="0.35" />
+			</ability>	
+			<!-- czart (lvl 20, nml) -->
+			<ability name="czart_trophy_stats">
+				<critical_hit_damage_bonus type="add" min="0.25" max="0.25" />
+			</ability>	
+			<!-- wraith (lvl 17, ske) -->
+			<ability name="wraith_trophy_stats">
+				<elemental_resistance_perc type="add" min="0.05" />
+			</ability>				
+			<!-- lamia (lvl 19, ske) -->
+			<ability name="lamia_trophy_stats">
+				<bleeding_resistance_perc type="add" min="0.25" />
+			</ability>
+			<!-- unused? -->
+			<ability name="bies_trophy_stats">
+			</ability>
+			<!-- unused? -->
+			<ability name="erynie_trophy_stats">
+			</ability>		
+			<!-- water_hag (lvl 18, ske) -->
+			<ability name="water_hag_trophy_stats">
+				<potion_duration type="add" min="0.2" />
+			</ability>		
+			<!-- cockatrice (lvl 8, nml) -->
+			<ability name="cockatrice_trophy_stats">
+				<spell_power_aard type="mult" min="0.1" />
+			</ability>
+			<!-- nightwraith (lvl 10, nml) -->
+			<ability name="nightwraith_trophy_stats">
+				<spell_power_yrden type="mult" min="0.1" />
+			</ability>
+			<!-- ekimma (lvl 22, nml) -->
+			<ability name="ekimma_trophy_stats">
+				<critical_hit_chance type="add" min="0.1"/>
+			</ability>
+			<!-- arachas (lvl 33, nml) -->
+			<ability name="arachas_trophy_stats">
+				<toxicity type="base" min="40" />
+			</ability>
+			<!-- gryphon (lvl 3, pro) -->
+			<ability name="gryphon_trophy_stats">
+				<attack_power type="mult" min="0.05" />
+			</ability>
+			<!-- gryphon_mh301 (lvl 35, nov) -->
+			<ability name="gryphon_mh301_trophy_stats">
+				<spell_power_igni type="mult" min="0.15" />
+			</ability>
+			<!-- gryphon_sq108 (lvl 24, nml) -->
+			<ability name="gryphon_sq108_trophy_stats">
+				<attack_power type="mult" min="0.15" />
+			</ability>
+			<!-- succubus (lvl 15, nov) -->
+			<ability name="succubus_trophy_stats">
+				<spell_power_axii type="mult" min="0.1" />
+			</ability>
+			<!-- katakan (lvl 26, nov) -->
+			<ability name="katakan_trophy_stats">
+				<spell_power_quen type="mult" min="0.15" />
+			</ability>		
+			<!-- dao (lvl 24, nov) -->
+			<ability name="dao_trophy_stats">
+				<armor_reduction type="add" min="40" />
+			</ability>	
+			<!-- doppler (lvl 13, nov) -->
+			<ability name="doppler_trophy_stats">
+				<bonus_money type="add" min="0.25"/>
+			</ability>				
+			<!-- noonwraith (lvl 2, pro) -->
+			<ability name="noonwraith_trophy_stats">
+				<spell_power type="mult" min="0.05" />
+			</ability>	
+			<!-- noonwraith_mh308 (lvl 16, nov) -->
+			<ability name="noonwraith_mh308_trophy_stats">
+				<vitalityRegen type="add" min="5" />
+				<vitalityCombatRegen type="add" min="5" />
+			</ability>
+			<!--
+			<ability name="werewolf_trophy_stats">
+				<weight type="base" min="1"/>				
+			</ability>
+			-->
+		</abilities>
+	  
+		<items>
+
+			<!--
+			<item name="Werewolf Trophy" category="trophy" stackable="1" equip_template="trophy__universal" ability_mode="OnMount"
+			icon_path="icons/inventory/quests/trophy_nekker_64x64.png" localisation_key_name = "item_name_werewolf_trophy" localisation_key_description = "item_desc_trophy" price = "200" >
+				<tags>Trophy</tags>
+				<base_abilities>
+					<a>werewolf_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>
+			-->
+			<item name="q002_griffin_trophy" category="trophy" stackable="1" equip_template="trophy__gryphon" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_gryphon_64x64.png" localisation_key_name = "item_name_q002_griffin_trophy" localisation_key_description = "item_desc_trophy" price = "200" >
+				<tags>Quest,Trophy,HorseTrophy</tags>
+				<base_abilities>
+					<a>gryphon_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>
+
+		
+			<item name="mh101_cockatrice_trophy" category="trophy" stackable="1" equip_template="trophy__cockatris" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_cockatris_64x64.png" localisation_key_name = "item_name_mh101_cockatrice_trophy" localisation_key_description = "item_desc_trophy" price = "200" >
+				<tags>Quest,Trophy,HorseTrophy</tags>
+				<base_abilities>
+					<a>cockatrice_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>
+			
+			<item name="mh102_arachas_trophy" category="trophy" stackable="1" equip_template="trophy__universal" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_arachas_64x64.png" localisation_key_name = "item_name_mh102_arachas_trophy" localisation_key_description = "item_desc_trophy" price = "400" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>arachas_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>	
+			
+			<item name="mh103_nightwraith_trophy" category="trophy" stackable="1" equip_template="trophy__universal_clean" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_nightwraith_64x64.png" localisation_key_name = "item_name_mh103_nightwraith_trophy" localisation_key_description = "item_desc_trophy" price = "250" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>nightwraith_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>	
+
+			<item name="mh104_ekimma_trophy" category="trophy" stackable="1" equip_template="trophy__ekima" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_ekima_64x64.png" localisation_key_name = "item_name_mh104_ekimma_trophy" localisation_key_description = "item_desc_trophy" price = "350" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>ekimma_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>	
+
+			<item name="mh105_wyvern_trophy" category="trophy" stackable="1" equip_template="trophy__wyvern" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_wyvern_64x64.png" localisation_key_name = "item_name_mh105_wyvern_trophy" localisation_key_description = "item_desc_trophy" price = "300" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>wyvern_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>	
+			
+			<item name="mh106_gravehag_trophy" category="trophy" stackable="1" equip_template="trophy__universal" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_grave_hag_64x64.png" localisation_key_name = "item_name_mh106_gravehag_trophy" localisation_key_description = "item_desc_trophy" price = "250" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>gravehag_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>	
+			
+			<item name="mh107_czart_trophy" category="trophy" stackable="1" equip_template="trophy__czart" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_czart_64x64.png" localisation_key_name = "item_name_mh107_czart_trophy" localisation_key_description = "item_desc_trophy" price = "400" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>czart_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>	
+			
+			<item name="mh108_fogling_trophy" category="trophy" stackable="1" equip_template="trophy__universal" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_fogling_64x64.png" localisation_key_name = "item_name_mh108_fogling_trophy" localisation_key_description = "item_desc_trophy" price = "250" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>fogling_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>	
+			
+			<item name="mh201_cave_troll_trophy" category="trophy" stackable="1" equip_template="trophy__cave_troll" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_cave_troll_64x64.png" localisation_key_name = "item_name_mh201_cave_troll_trophy" localisation_key_description = "item_desc_trophy" price = "300" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>cave_troll_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>
+		
+			<item name="mh202_nekker_warrior_trophy" category="trophy" stackable="1" equip_template="trophy__universal" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_nekker_64x64.png" localisation_key_name = "item_name_mh202_nekker_warrior_trophy" localisation_key_description = "item_desc_trophy" price = "250" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>nekker_warrior_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>
+		
+			<item name="mh203_water_hag_trophy" category="trophy" stackable="1" equip_template="trophy__universal" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/mh203_water_hag_trophy_quest_item_64x64.png" localisation_key_name = "item_name_mh203_water_hag_trophy" localisation_key_description = "item_desc_trophy" price = "250" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>water_hag_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>
+
+			<item name="mh204_leshy_trophy" category="trophy" stackable="1" equip_template="trophy__lessun" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_lessun_64x64.png" localisation_key_name = "item_name_mh204_leshy_trophy" localisation_key_description = "item_desc_trophy" price = "400" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>leshy_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>
+			
+			<item name="mh206_fiend_trophy" category="trophy" stackable="1" equip_template="trophy__bies" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_bies_64x64.png" localisation_key_name = "item_name_mh206_fiend_trophy" localisation_key_description = "item_desc_trophy" price = "450" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>fiend_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>	
+	
+			<item name="mh207_wraith_trophy" category="trophy" stackable="1" equip_template="trophy__universal_clean" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_wraith_64x64.png" localisation_key_name = "item_name_mh207_wraith_trophy" localisation_key_description = "item_desc_trophy" price = "350" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>wraith_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>	
+			
+			<item name="mh208_forktail_trophy" category="trophy" stackable="1" equip_template="trophy__forktail" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_forktail_64x64.png" localisation_key_name = "item_name_mh208_forktail_trophy" localisation_key_description = "item_desc_trophy" price = "350" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>forktail_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>
+			
+			<item name="mh210_lamia_trophy" category="trophy" stackable="1" equip_template="trophy__universal" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_syren_64x64.png" localisation_key_name = "item_name_mh210_lamia_trophy" localisation_key_description = "item_desc_trophy" price = "300" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>lamia_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>
+					
+			<item name="mq1051_wyvern_trophy" category="trophy" stackable="1" equip_template="trophy__wyvern" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_wyvern_64x64.png" localisation_key_name = "item_name_mq1051_wyvern_trophy" localisation_key_description = "item_desc_trophy" price = "300" >
+				<tags>Trophy</tags>
+				<base_abilities>
+					<a>wyvern_mq1051_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>	
+			
+			<item name="mh301_gryphon_trophy" category="trophy" stackable="1" equip_template="trophy__gryphon_mh" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_gryphon_64x64.png" localisation_key_name = "item_name_mh301_gryphon_trophy" localisation_key_description = "item_desc_trophy" price = "450" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>gryphon_mh301_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>	
+			
+			<item name="mh302_leshy_trophy" category="trophy" stackable="1" equip_template="trophy__lessun" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_lessun_64x64.png" localisation_key_name = "item_name_mh302_leshy_trophy" localisation_key_description = "item_desc_trophy" price = "500" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>leshy_mh302_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>
+			
+			<item name="mh303_succubus_trophy" category="trophy" stackable="1" equip_template="trophy__universal_clean" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_succubus_64x64.png" localisation_key_name = "item_name_mh303_succubus_trophy" localisation_key_description = "item_desc_trophy" price = "250" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>succubus_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>	
+
+			<item name="mh304_katakan_trophy" category="trophy" stackable="1" equip_template="trophy__katakan" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_katakan_64x64.png" localisation_key_name = "item_name_mh304_katakan_trophy" localisation_key_description = "item_desc_trophy" price = "450" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>katakan_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>	
+
+			<item name="mh305_doppler_trophy" category="trophy" stackable="1" equip_template="trophy__universal" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_doppler_64x64.png" localisation_key_name = "item_name_mh305_doppler_trophy" localisation_key_description = "item_desc_trophy" price = "250" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>doppler_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>				
+			
+			<item name="mh306_dao_trophy" category="trophy" stackable="1" equip_template="trophy__universal_clean" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_elemental_64x64.png" localisation_key_name = "item_name_mh306_dao_trophy" localisation_key_description = "item_desc_trophy" price = "550" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>dao_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>	
+			
+			<item name="mh307_minion_trophy" category="trophy" stackable="1" equip_template="trophy__universal" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_mh307_minion_64x64.png" localisation_key_name = "item_name_mh307_minion_trophy" localisation_key_description = "item_desc_trophy" price = "250" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>minion_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>			
+			
+			<item name="mh308_noonwraith_trophy" category="trophy" stackable="1" equip_template="trophy__universal_clean" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_noonwraith_64x64.png" localisation_key_name = "item_name_mh308_noonwraith_trophy" localisation_key_description = "item_desc_trophy" price = "300" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>noonwraith_mh308_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>				
+			
+			<item name="sq108_griffin_trophy" category="trophy" stackable="1" equip_template="trophy__gryphon" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_gryphon_64x64.png" localisation_key_name = "item_name_sq108_griffin_trophy" localisation_key_description = "item_desc_trophy" price = "350" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>gryphon_sq108_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>
+			<item name="mq0003_noonwraith_trophy" category="trophy" stackable="1" equip_template="trophy__universal_clean" ability_mode="OnMount" grid_size = "2"
+			icon_path="icons/inventory/quests/trophy_noonwraith_64x64.png" localisation_key_name = "item_name_mq0003_noonwraith_trophy" localisation_key_description = "item_desc_trophy" price = "250" >
+				<tags>Quest,Trophy</tags>
+				<base_abilities>
+					<a>noonwraith_trophy_stats</a>
+					<a>base_trophy_stats</a>
+				</base_abilities>
+			</item>
+		</items>
+	</definitions>	
+</redxml>

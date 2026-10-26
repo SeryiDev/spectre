@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+<definitions>
+	
+<!-- ######################## ABILITY DEFINITIONS ######################## -->
+<abilities>
+
+<!-- HEAVY -->
+
+	<ability name="Burning Rose Gloves _Stats">
+		<weight							type="base"	min="8"					/>
+		<quality						type="add"	min="3"		max="3"		/>
+		<slashing_resistance_perc		type="base"	min="0.08"				/>
+		<piercing_resistance_perc		type="base"	min="0.08"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.08"				/>
+		<rending_resistance_perc		type="base"	min="0.08"				/>
+		<elemental_resistance_perc		type="base"	min="0.08"				/>
+		<staminaRegen_armor_mod			type="mult"	min="-0.05"				/>
+	</ability>
+	
+	<ability name="Burning Rose Gloves B _Stats">
+		<weight							type="base"	min="6.5"				/>
+		<quality						type="add"	min="2"		max="2"		/>
+		<slashing_resistance_perc		type="base"	min="0.07"				/>
+		<piercing_resistance_perc		type="base"	min="0.07"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.07"				/>
+		<rending_resistance_perc		type="base"	min="0.06"				/>
+		<elemental_resistance_perc		type="base"	min="0.06"				/>
+		<staminaRegen_armor_mod			type="mult"	min="-0.05"				/>
+	</ability>
+
+<!-- MEDIUM -->
+	
+	<ability name="Thief Gloves _Stats">
+		<weight							type="base"	min="2"					/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc		type="base"	min="0.05"				/>
+		<piercing_resistance_perc		type="base"	min="0.03"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.03"				/>
+		<rending_resistance_perc		type="base"	min="0.05"				/>
+		<elemental_resistance_perc		type="base"	min="0.05"				/>
+		<bonus_money 					type="add" 	min="0.1" 				/>
+		<encumbrance					type="add"	min="4"					/>
+	</ability>
+	
+	<ability name="Thief Gloves B _Stats">
+		<weight							type="base"	min="2"					/>
+		<quality						type="add"	min="2"		max="2"		/>
+		<slashing_resistance_perc		type="base"	min="0.03"				/>
+		<piercing_resistance_perc		type="base"	min="0.02"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.02"				/>
+		<rending_resistance_perc		type="base"	min="0.03"				/>
+		<elemental_resistance_perc		type="base"	min="0.03"				/>
+		<bonus_money 					type="add" 	min="0.05" 				/>
+		<encumbrance					type="add"	min="3"					/>
+	</ability>
+
+	<ability name="Thief Gloves Y _Stats">
+		<weight							type="base"	min="2"					/>
+		<quality						type="add"	min="3"		max="3"		/>
+		<slashing_resistance_perc		type="base"	min="0.04"				/>
+		<piercing_resistance_perc		type="base"	min="0.02"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.02"				/>
+		<rending_resistance_perc		type="base"	min="0.04"				/>
+		<elemental_resistance_perc		type="base"	min="0.04"				/>
+		<bonus_money 					type="add" 	min="0.05" 				/>
+		<encumbrance					type="add"	min="3"					/>
+	</ability>
+	
+	<ability name="Thief Gloves No Medallion _Stats">
+		<weight							type="base"	min="2"					/>
+		<quality						type="add"	min="2"		max="2"		/>
+		<slashing_resistance_perc		type="base"	min="0.03"				/>
+		<piercing_resistance_perc		type="base"	min="0.02"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.02"				/>
+		<rending_resistance_perc		type="base"	min="0.03"				/>
+		<elemental_resistance_perc		type="base"	min="0.03"				/>
+		<bonus_money 					type="add" 	min="0.05" 				/>
+		<encumbrance					type="add"	min="3"					/>
+	</ability>
+
+</abilities>
+
+<!-- ######################## ITEM DEFINITIONS ######################## -->
+<items>
+
+	<item
+		name							="Burning Rose Gloves"
+		category						="gloves"
+		price							="245"
+		initial_durability				="200"
+		max_durability					="200"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="g_01a_mg__flamingrose"
+		localisation_key_name			="item_name_rose_gloves"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/flaming_rose_gloves_64x128.png"
+	>
+		<tags>							Autogen, Armor, HeavyArmor, mod_armor, EP1
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Burning Rose Gloves _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+										<parts count="1">Glowing ingot</parts>
+										<parts count="1">Leather</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="g_01a_mg__flamingrose">
+											<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+											<item>Lynx Armor</item>           <!-- this item uses slim version -->
+										</variant>
+										<variant equip_template="g_01_mg__flamingrose" category="armor"></variant>  <!-- this item uses bold version -->
+		</variants>
+	</item>
+	
+	<item
+		name							="Burning Rose Gloves B"
+		category						="gloves"
+		price							="148"
+		initial_durability				="200"
+		max_durability					="200"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="g_01a_mg__flamingrose"
+		localisation_key_name			="item_name_rose_gloves"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/flaming_rose_gloves_64x128.png"
+	>
+		<tags>							Autogen, Armor, HeavyArmor, mod_armor
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Burning Rose Gloves B _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Dark steel ingot</parts>
+										<parts count="1">Silver ingot</parts>
+										<parts count="1">Leather</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="g_01a_mg__flamingrose">
+											<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+											<item>Lynx Armor</item>           <!-- this item uses slim version -->
+										</variant>
+										<variant equip_template="g_01_mg__flamingrose" category="armor"></variant>  <!-- this item uses bold version -->
+		</variants>
+	</item>
+	
+	<item 
+		name							="Thief Gloves" 
+		category						="gloves" 
+		price							="256"
+		initial_durability				="100" 
+		max_durability					="100" 
+		enhancement_slots				="1" 
+		stackable						="1"
+		grid_size 						="2"
+		upgrade_list_name				="list6"
+		ability_mode					="OnMount" 
+		equip_template					="g_01a_mg__thief" 
+		localisation_key_name 			="item_name_thief_borsody_gloves" 
+		localisation_key_description 	="item_category_medium_armor_description" 
+		icon_path						="icons/inventory/armors/thief_gloves_64x128.png" 
+	>
+		<tags>							Autogen, Armor, MediumArmor, mod_armor, mod_legendary, EP1
+		</tags>
+		<base_abilities>
+										<a>Thief Gloves _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>		
+		<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+										<parts count="1">Glowing ingot</parts>
+										<parts count="1">Leather</parts>
+		</recycling_parts> 	
+		<variants>						<variant equip_template="g_01a_mg__thief">
+											<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+											<item>Lynx Armor</item>           <!-- this item uses slim version -->
+										</variant>
+										<variant equip_template="g_01_mg__thief" category="armor"></variant>  <!-- this item uses bold version -->
+		
+		</variants>			
+	</item>
+	
+	<item 
+		name							="Thief Gloves B" 
+		category						="gloves" 
+		price							="128"
+		initial_durability				="100" 
+		max_durability					="100" 
+		enhancement_slots				="0" 
+		stackable						="1"
+		grid_size 						="2"
+		upgrade_list_name				="list6"
+		ability_mode					="OnMount" 
+		equip_template					="g_01a_mg__thief" 
+		localisation_key_name 			="item_name_thief_borsody_gloves" 
+		localisation_key_description 	="item_category_medium_armor_description" 
+		icon_path						="icons/inventory/armors/thief_gloves_64x128.png" 
+	>
+		<tags>							Autogen, AutogenForceLevel, Armor, MediumArmor, mod_armor
+		</tags>
+		<base_abilities>
+										<a>Thief Gloves B _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>		
+		<recycling_parts>				<parts count="1">Dark steel ingot</parts>
+										<parts count="1">Leather squares</parts>
+		</recycling_parts> 	
+		<variants>						<variant equip_template="g_01a_mg__thief">
+											<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+											<item>Lynx Armor</item>           <!-- this item uses slim version -->
+										</variant>
+										<variant equip_template="g_01_mg__thief" category="armor"></variant>  <!-- this item uses bold version -->
+		
+		</variants>			
+	</item>
+	
+	<item 
+		name							="Thief Gloves Y" 
+		category						="gloves" 
+		price							="206"
+		initial_durability				="100" 
+		max_durability					="100" 
+		enhancement_slots				="1" 
+		stackable						="1"
+		grid_size 						="2"
+		upgrade_list_name				="list6"
+		ability_mode					="OnMount" 
+		equip_template					="g_01a_mg__thief" 
+		localisation_key_name 			="item_name_thief_borsody_gloves" 
+		localisation_key_description 	="item_category_medium_armor_description" 
+		icon_path						="icons/inventory/armors/thief_gloves_64x128.png" 
+	>
+		<tags>							Autogen, Armor, MediumArmor, mod_armor, EP1
+		</tags>
+		<base_abilities>
+										<a>Thief Gloves Y _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>		
+		<recycling_parts>				<parts count="1">Glowing ingot</parts>
+										<parts count="1">Leather</parts>
+		</recycling_parts> 	
+		<variants>						<variant equip_template="g_01a_mg__thief">
+											<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+											<item>Lynx Armor</item>           <!-- this item uses slim version -->
+										</variant>
+										<variant equip_template="g_01_mg__thief" category="armor"></variant>  <!-- this item uses bold version -->
+		
+		</variants>			
+	</item>
+	
+	<item 
+		name							="Thief Gloves No Medallion" 
+		category						="gloves" 
+		price							="128"
+		initial_durability				="100" 
+		max_durability					="100" 
+		enhancement_slots				="0" 
+		stackable						="1"
+		grid_size 						="2"
+		upgrade_list_name				="list6"
+		ability_mode					="OnMount" 
+		equip_template					="g_01a_mg__thief" 
+		localisation_key_name 			="item_name_thief_borsody_gloves" 
+		localisation_key_description 	="item_category_medium_armor_description" 
+		icon_path						="icons/inventory/armors/thief_gloves_64x128.png" 
+	>
+		<tags>							Autogen, AutogenForceLevel, Armor, MediumArmor, mod_armor
+		</tags>
+		<base_abilities>
+										<a>Thief Gloves No Medallion _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>		
+		<recycling_parts>				<parts count="1">Dark steel ingot</parts>
+										<parts count="1">Leather squares</parts>
+		</recycling_parts> 	
+		<variants>						<variant equip_template="g_01a_mg__thief">
+											<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+											<item>Lynx Armor</item>           <!-- this item uses slim version -->
+										</variant>
+										<variant equip_template="g_01_mg__thief" category="armor"></variant>  <!-- this item uses bold version -->
+		
+		</variants>			
+	</item>
+
+</items>
+
+</definitions>
+</redxml>

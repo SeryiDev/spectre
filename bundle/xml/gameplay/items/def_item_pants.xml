@@ -1,0 +1,731 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+<definitions>
+
+<!-- ######################## ABILITY DEFINITIONS ######################## -->
+
+<abilities>
+
+<!-- Starter pants -->
+	<ability name="Starting Pants _Stats"> <!-- medium pants -->
+		<weight 						type="base" min="2" 				/>
+		<quality 						type="add" 	min="1" 	max="1"		/>
+		<armor 							type="base" min="4" 	max="4" 	/>
+		<slashing_resistance_perc 		type="base"	min="0.03"				/>
+		<piercing_resistance_perc 		type="base" min="0.01"				/>
+		<bludgeoning_resistance_perc	type="base" min="0.01"				/>
+		<rending_resistance_perc 		type="base" min="0.03"				/>
+		<elemental_resistance_perc 		type="base" min="0.03"				/>
+	</ability>
+
+<!-- LIGHT PANTS -->
+	<ability name="Pants 01 _Stats"> <!-- Hunting Trousers - low quality light pants -->
+		<weight 						type="base" min="1" 				/>
+		<quality 						type="add"	min="1" 	max="1"		/>
+		<slashing_resistance_perc 		type="base" min="0.01"				/>
+		<piercing_resistance_perc 		type="base" min="0.0"				/>
+		<bludgeoning_resistance_perc 	type="base" min="0.0"				/>
+		<rending_resistance_perc 		type="base" min="0.01"				/>
+		<elemental_resistance_perc 		type="base" min="0.01"				/>
+		<staminaRegen_armor_mod 		type="mult" min="0.01"				/>
+	</ability>
+
+	<ability name="Pants 01 q2 _Stats"> <!-- Hunting Trousers - medium quality light pants -->
+		<weight 						type="base" min="1.5" 				/>
+		<quality 						type="add" 	min="2" 	max="2" 	/>
+		<slashing_resistance_perc 		type="base" min="0.02"				/>
+		<piercing_resistance_perc		type="base"	min="0.01"				/>
+		<bludgeoning_resistance_perc 	type="base" min="0.00"				/>
+		<rending_resistance_perc		type="base" min="0.02"				/>
+		<elemental_resistance_perc 		type="base" min="0.02"				/>
+		<staminaRegen_armor_mod			type="mult" min="0.01" 				/>
+	</ability>
+	
+	<ability name="Pants 03 _Stats"> <!-- Tracker's Trousers - random quality light pants -->
+		<weight 						type="base"	min="1.5" 				/>
+		<quality 						type="add"	min="1"		max="3"		/>
+		<slashing_resistance_perc 		type="base"	min="0.02"				/>
+		<piercing_resistance_perc 		type="base" min="0.01"				/>
+		<bludgeoning_resistance_perc 	type="base" min="0.0"				/>
+		<rending_resistance_perc 		type="base" min="0.02"				/>
+		<elemental_resistance_perc 		type="base" min="0.02"				/>
+		<staminaRegen_armor_mod 		type="mult"	min="0.01"				/>
+	</ability>
+
+<!-- RELIC LIGHT -->
+	<ability name="Pants 04 _Stats"> <!-- Assassin's Trousers - relic light pants: +2 to resists, +4-6% to focus gain -->
+		<weight 						type="base"	min="2" 				/>
+		<quality 						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc 		type="base"	min="0.05"				/>
+		<piercing_resistance_perc 		type="base"	min="0.03"				/>
+		<bludgeoning_resistance_perc 	type="base" min="0.03"				/>
+		<rending_resistance_perc		type="base" min="0.05"				/>
+		<elemental_resistance_perc 		type="base" min="0.05"				/>
+		<focus_gain						type="add" min="0.04" max="0.06"	/>
+		<staminaRegen_armor_mod 		type="mult"	min="0.01"				/>
+	</ability>
+
+<!-- MEDIUM PANTS -->
+	<ability name="Pants 02 _Stats"> <!-- Cavalry Trousers - low quality medium pants -->
+		<weight 						type="base"	min="3"					/>
+		<quality 						type="add" 	min="1" 	max="1"		/>
+		<slashing_resistance_perc 		type="base"	min="0.03"				/>
+		<piercing_resistance_perc		type="base"	min="0.01"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.01"				/>
+		<rending_resistance_perc 		type="base"	min="0.03"				/>
+		<elemental_resistance_perc 		type="base" min="0.03"				/>
+	</ability>
+
+	<ability name="Heavy pants 02 _Stats"> <!-- Sapper's Trousers - random quality medium pants -->
+		<weight 						type="base"	min="3.75" 				/>
+		<quality						type="add"	min="1"		max="3"		/>
+		<slashing_resistance_perc 		type="base"	min="0.04"				/>
+		<piercing_resistance_perc 		type="base"	min="0.02"				/>
+		<bludgeoning_resistance_perc 	type="base"	min="0.01"				/>
+		<rending_resistance_perc 		type="base"	min="0.04"				/>
+		<elemental_resistance_perc		type="base"	min="0.04"				/>
+	</ability>
+	
+<!-- HEAVY PANTS -->		
+	<ability name="Heavy pants 01 _Stats"> <!-- Axeman's Trousers - low quality heavy pants -->
+		<weight							type="base" min="5" 				/>
+		<quality 						type="add"	min="1"		max="1"		/>
+		<slashing_resistance_perc 		type="base"	min="0.05"				/>
+		<piercing_resistance_perc		type="base"	min="0.05"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.05"				/>
+		<rending_resistance_perc 		type="base"	min="0.05"				/>
+		<elemental_resistance_perc		type="base"	min="0.05"				/>
+		<staminaRegen_armor_mod 		type="mult" min="-0.05"				/>
+	</ability>
+	
+	<ability name="Heavy pants 03 _Stats"> <!-- Lyrian Hardened Leather Trousers - random quality heavy pants -->
+		<weight 						type="base"	min="6.5" 				/>
+		<quality 						type="add"	min="1"		max="3"		/>
+		<slashing_resistance_perc		type="base"	min="0.07"				/>
+		<piercing_resistance_perc		type="base"	min="0.06"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.07"				/>
+		<rending_resistance_perc		type="base"	min="0.06"				/>
+		<elemental_resistance_perc		type="base"	min="0.05"				/>
+		<staminaRegen_armor_mod 		type="mult"	min="-0.05"				/>
+	</ability>
+	
+<!-- RELIC HEAVY -->
+	<ability name="Heavy pants 04 _Stats"> <!-- Mahakaman Trousers - relic heavy pants: +1 to resists, +150-200 to vitality, 50% less stamina penalty -->
+		<weight							type="base"	min="8" 				/>
+		<quality						type="add"	min="4"		max="4"		/>
+		<slashing_resistance_perc 		type="base"	min="0.09"				/>
+		<piercing_resistance_perc 		type="base"	min="0.09"				/>
+		<bludgeoning_resistance_perc 	type="base"	min="0.09"				/>
+		<rending_resistance_perc 		type="base"	min="0.09"				/>
+		<elemental_resistance_perc 		type="base"	min="0.09"				/>
+		<vitality 						type="base" min="150"	max="200"	/>
+		<staminaRegen_armor_mod			type="mult"	min="-0.025"			/>
+	</ability>
+
+<!-- ######################## Replacers armor stats ######################## -->
+	<ability name="Casual pants _Stats"> <!-- vanilla -->
+		<weight 						type="base"	min="0.56"				/>
+		<armor 							type="base"	min="2"		max="2"		/>
+	</ability>
+	
+	<ability name="Yennefers Dress _Stats"> <!-- vanilla -->
+		<weight 						type="base" min="0.32" 				/>
+		<quality 						type="add" 	min="5" 	max="5"		/>
+		<armor 							type="base"	min="1"					/>
+		<spell_power 					type="mult" min="0.5" 				/>
+	</ability>
+
+<!-- For q401_konsylium Drag Party -->
+	<ability name="Yennefer's Dress _Stats"> <!-- vanilla -->
+		<weight 						type="base"	min="0.32" 				/>
+		<quality 						type="add"	min="2"		max="2"		/>
+		<armor 							type="base"	min="1"		max="1"		/>
+		<piercing_resistance_perc 		type="base"	min="0.0"				/>
+		<bludgeoning_resistance_perc 	type="base"	min="0.07"				/>
+		<burning_resistance_perc		type="base"	min="0.1" 				/>
+		<frost_resistance_perc			type="base"	min="0.2" 				/>
+	</ability>
+
+	<ability name="Ciri pants 01 _Stats"> <!-- vanilla -->
+		<weight 						type="base"	min="0.2"				/>
+		<quality 						type="add"	min="2"		max="2"		/>
+		<armor							type="base"	min="20"	max="20"	/>
+		<slashing_resistance_perc		type="base" min="0.15"				/>
+		<piercing_resistance_perc		type="base"	min="0.1"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.1"				/>
+		<rending_resistance_perc		type="base"	min="0.1"				/>
+		<elemental_resistance_perc		type="base"	min="0.1"				/>
+		<burning_resistance_perc 		type="base"	min="1"					/>
+	</ability>
+	
+	<ability name="Wild Hunt pants 01 _Stats"> <!-- vanilla -->
+		<weight 						type="base"	min="1.35"				/>
+		<quality 						type="add"	min="1"		max="3"		/>
+		<physical_resistance_perc 		type="base"	min="0.01"	max="0.13"	/>
+		<burning_resistance_perc 		type="base"	min="0.06"	max="0.1"	/>
+		<staminaRegen_armor_mod 		type="mult"	min="-0.10"	max="-0.10"	/>
+		<physical_resistance 			type="base"	min="30"	max="40"	/>
+	</ability>
+
+</abilities>
+
+<!-- ######################## ITEM DEFINITIONS ######################## -->
+
+<items>
+
+<!-- Starting pants --> <!-- price -->
+	<item 
+		name							="Starting Pants"
+		category						="pants"
+		price							="36"
+		initial_durability				="100"
+		max_durability					="100"
+		stackable						="1"
+		grid_size						="2"
+		enhancement_slots				="0"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__viper_lvl3"
+		localisation_key_name			="item_name_starting_pants_spectre"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/trousers-01.png"
+	>
+		<tags>							Armor,MediumArmor, mod_armor
+		</tags>
+		<base_abilities>				<a>Starting Pants _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Linen</parts>
+										<parts count="1">Leather squares</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>				
+										<variant equip_template="l_01a_mg__viper_lvl3" category="boots"></variant>
+		</variants>
+	</item>
+
+<!-- Pants 1--> <!-- low quality light pants -->
+	<item
+		name							="Pants 01"
+		category						="pants"
+		price							="36"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__common_light_lvl1"
+		localisation_key_name			="item_name_pants_01"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_pants_lvl1_64x128.png"
+	>
+		<tags>							Autogen, Armor, LightArmor, mod_armor
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Pants 01 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Linen</parts>
+										<parts count="1">Leather squares</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__common_light_lvl1" category="boots"></variant>
+		</variants>
+	</item>
+
+<!--  --> <!-- medium quality light pants -->
+	<item
+		name							="Pants 01 q2"
+		category						="pants"
+		price							="70"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__common_light_lvl1"
+		localisation_key_name			="item_name_pants_01"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_pants_lvl1_64x128.png"
+	>
+		<tags>							Autogen, Armor, LightArmor, mod_armor
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Pants 01 q2 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Silk</parts>
+										<parts count="1">Leather squares</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__common_light_lvl1" category="boots"></variant>
+		</variants>
+	</item>
+
+<!-- Pants 2--> <!-- low quality medium pants -->
+	<item
+		name							="Pants 02"
+		category						="pants"
+		price							="72"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__common_light_lvl2"
+		localisation_key_name			="item_name_pants_02"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/skellige_casual_pants_01_64x128.png"
+	>
+		<tags>							Autogen, Armor, MediumArmor, mod_armor</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Pants 02 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Steel ingot</parts>
+										<parts count="1">Leather squares</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__common_light_lvl2" category="boots"></variant>
+		</variants>
+	</item>
+
+<!-- Pants 3--> <!-- random quality light pants -->
+	<item
+		name							="Pants 03"
+		category						="pants"
+		price							="135"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__common_light_lvl3"
+		localisation_key_name			="item_name_pants_03"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_pants_lvl3_64x128.png"
+	>
+		<tags>							Autogen, Armor, LightArmor, mod_armor
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Pants 03 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Silk</parts>
+										<parts count="1">Leather squares</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__common_light_lvl3" category="boots"></variant>
+		</variants>
+	</item>
+	
+<!-- Pants 4--> <!-- relic light pants: +2 to resists, +100 to vitality -->
+	<item
+		name							="Pants 04"
+		category						="pants"
+		price							="250"
+		initial_durability				="200"
+		max_durability					="200"
+		enhancement_slots				="2"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__common_light_lvl4"
+		localisation_key_name			="item_name_pants_04"
+		localisation_key_description	="item_category_light_armor_description"
+		icon_path						="icons/inventory/armors/common_light_pants_lvl4_64x128.png"
+	>
+		<tags>							Autogen, Armor, LightArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Pants 04 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+										<parts count="1">Leather squares</parts>
+										<parts count="1">Silk</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__common_light_lvl4" category="boots"></variant>
+		</variants>
+	</item>
+
+<!-- Heavy pants 1--> <!-- low quality heavy pants -->
+	<item
+		name							="Heavy pants 01"
+		category						="pants"
+		price							="107"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__common_heavy_lvl1"
+		localisation_key_name			="item_name_heavy_pants_01"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_pants_lvl1_64x128.png"
+	>
+		<tags>							Autogen, Armor, HeavyArmor, mod_armor
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Heavy pants 01 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Leather</parts>
+										<parts count="1">Steel ingot</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__common_heavy_lvl1" category="boots"></variant>
+		</variants>
+	</item>
+
+<!-- Heavy pants 2--> <!-- random quality medium pants -->
+	<item
+		name							="Heavy pants 02"
+		category						="pants"
+		price							="195"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__common_heavy_lvl2"
+		localisation_key_name			="item_name_heavy_pants_02"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_pants_lvl1_64x128.png"
+	>
+		<tags>							Autogen, Armor, MediumArmor, mod_armor
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Heavy pants 02 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Dark steel ingot</parts>
+										<parts count="1">Leather squares</parts>
+										<parts count="1">Linen</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__common_heavy_lvl2" category="boots"></variant>
+		</variants>
+	</item>
+
+<!-- Heavy pants 3--> <!-- random quality heavy pants -->
+	<item
+		name							="Heavy pants 03"
+		category						="pants"
+		price							="245"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="1"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__common_heavy_lvl3"
+		localisation_key_name			="item_name_heavy_pants_03"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_pants_lvl4_64x128.png"
+	>
+		<tags>							Autogen, Armor, HeavyArmor, mod_armor
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Heavy pants 03 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Leather</parts>
+										<parts count="1">Dark steel ingot</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__common_heavy_lvl3" category="boots"></variant>
+		</variants>
+	</item>
+
+<!-- Heavy pants 4--> <!-- relic heavy pants: +1 to resists, +200 to vitality, 50% less stamina penalty -->
+	<item
+		name							="Heavy pants 04"
+		category						="pants"
+		price							="475"
+		initial_durability				="200"
+		max_durability					="200"
+		enhancement_slots				="2"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__common_heavy_lvl4"
+		localisation_key_name			="item_name_heavy_pants_04"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/common_heavy_pants_lvl4_64x128.png"
+	>
+		<tags>							Autogen, Armor, HeavyArmor, mod_armor, mod_legendary
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Heavy pants 04 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Glowing ingot</parts>
+										<parts count="1">Silver ingot</parts>
+										<parts count="1">Leather</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__common_heavy_lvl4" category="boots"></variant>
+		</variants>
+	</item>
+
+<!-- Casual pants definitions -->
+	<!-- price = 40 -->
+	<item
+		name							="Nilfgaardian Casual Pants"
+		category						="pants"
+		price							="40"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__casual_nilfgaardian_pants"
+		localisation_key_name			="item_name_nilfgaardian_casual_pants"
+		localisation_key_description	="item_desc_pants"
+		icon_path						="icons/inventory/armors/nilfgaardian_casual_pants_64x128.png"
+	>
+		<tags>							Armor, LightArmor, mod_armor, mod_origin_nilfgaard, DoNotEnhance, gm_NoSetBonuses
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Casual pants _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Linen</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_01a_mg__casual_nilfgaardian_pants" category="boots"></variant>
+		</variants>
+	</item>
+	
+	<!-- price = 40 -->
+	<item
+		name							="Skellige Casual Pants 01"
+		category						="pants"
+		price							="40"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__casual_skellige_pants"
+		localisation_key_name			="item_name_skellige_casual_pants01"
+		localisation_key_description	="item_desc_pants"
+		icon_path						="icons/inventory/armors/skellige_casual_pants_01_64x128.png"
+	>
+		<tags>							Armor, LightArmor, mod_armor, mod_origin_skellige, DoNotEnhance, gm_NoSetBonuses
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Casual pants _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Linen</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="l_01a_mg__casual_skellige_pants" category="boots"></variant>
+		</variants>
+	</item>
+
+<!-- price = 40 -->
+	<item
+		name							="Skellige Casual Pants 02"
+		category						="pants"
+		price							="40"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_02_mg__casual_skellige_pants"
+		localisation_key_name			="item_name_skellige_casual_pants02"
+		localisation_key_description	="item_desc_pants"
+		icon_path						="icons/inventory/armors/skellige_casual_pants_02_64x128.png"
+	>
+		<tags>							Armor, LightArmor, mod_armor, mod_origin_skellige, DoNotEnhance, gm_NoSetBonuses
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Casual pants _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Linen</parts>
+		</recycling_parts>
+		<collapse>						<category_cond name="armor" collapse="true"/>
+											<item_cond name="Body torso wet" collapse="false"/>
+											<item_cond name="Body torso towel" collapse="false"/>
+											<item_cond name="Body torso 01" collapse="false"/>
+											<item_cond name="Geralt Shirt" collapse="false"/>
+											<item_cond name="Geralt Shirt No Knife" collapse="false"/>
+		</collapse>
+		<variants>						<variant equip_template="l_02a_mg__casual_skellige_pants" category="boots"></variant>
+		</variants>
+	</item>
+
+	<item
+		name							="Bath Towel Pants 01"
+		category						="pants"
+		price							="20"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__casual_towel"
+		localisation_key_name			="item_name_bath_towel_pants01"
+		localisation_key_description	="item_desc_pants"
+		icon_path						="icons/inventory/quests/towel_64x64.png"
+	>
+		<tags>							Armor, LightArmor, mod_armor, DoNotEnhance, gm_NoSetBonuses
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Casual pants _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Linen</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="l_01_mg__casual_towel">
+											<item>Body feet wet</item>
+										</variant>
+										<variant equip_template="l_01a_mg__casual_towel" category="boots"></variant>
+		</variants>
+	</item>
+
+<!-- For q401_konsylium Drag Party -->
+	<item
+		name							="Yennefers Dress"
+		category						="pants"
+		price							="32"
+		initial_durability				="100"
+		max_durability					="100"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__yennefer_pants"
+		localisation_key_name			="item_name_yennefers_dress"
+		localisation_key_description	="item_desc_yennefers_dress"
+		icon_path						="icons/inventory/quests/yennefer_pants_64x128.png"
+	>
+		<tags>							Armor, LightArmor, mod_armor, Quest, gm_NoSetBonuses
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Yennefers Dress _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Linen</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="l_01a_mg__yennefer_pants" category="boots"></variant>
+		</variants>
+	</item>
+	
+<!-- Ciri armor 1 pants -->
+	<item
+		name							="Ciri pants 01"
+		category						="pants"
+		price							="20"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__ciri"
+		localisation_key_name			="item_name_ciri_pants_01"
+		localisation_key_description	="item_desc_pants"
+		icon_path						="icons/inventory/armors/"	
+	>
+		<tags>							Armor, LightArmor, mod_armor, gm_NoSetBonuses
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Ciri pants 01 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Linen</parts>
+		</recycling_parts>
+	</item>
+
+<!-- Nithral pants definitions -->
+<!-- Wild Hunt armor 1 pants-->
+	<item
+		name							="Wild Hunt pants 01"
+		category						="pants"
+		price							="78"
+		enhancement_slots				="0"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="l_01_mg__nithral"
+		localisation_key_name			="item_name_wild_hunt_pants_01"
+		localisation_key_description	="item_desc_pants"
+		icon_path						="wild_hunt_pants_01"
+	>
+		<tags>							Armor, HeavyArmor, mod_armor, gm_NoSetBonuses
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Wild Hunt pants 01 _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Linen</parts>
+		</recycling_parts>
+	</item>
+
+</items>
+
+</definitions>
+</redxml>

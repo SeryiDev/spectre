@@ -1,0 +1,1518 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+  <definitions>
+    <abilities>
+
+      <ability name="_canBeFollower"> <!-- every follower has this -->
+	  </ability>
+      <ability name="_combatFollowerHardV">
+        <vitality type="mult" always_random="false" min="1.5" max="1.5" />
+	  </ability>
+      <ability name="_combatFollowerHardcoreV">
+        <vitality type="mult" always_random="false" min="2.5" max="2.5" />
+	  </ability>
+      <ability name="_combatFollowerHardE">
+        <essence type="mult" always_random="false" min="1.5" max="1.5" />
+	  </ability>
+      <ability name="_combatFollowerHardcoreE">
+        <essence type="mult" always_random="false" min="2.5" max="2.5" />
+	  </ability>
+	
+      <ability name="CiriHardcoreDebuffHuman">
+        <attack_power type="mult" always_random="false" min="0.0" max="0.0" />
+	  </ability>
+      <ability name="CiriHardcoreDebuffMonster">
+        <attack_power type="mult" always_random="false" min="0.0" max="0.0" />
+	  </ability>
+	  
+      <ability name="ablParryHeavyAttacks">
+        <tags> "ablParryHeavyAttacks" </tags>
+      </ability>
+      <ability name="ablPrioritizeAvoidingHeavyAttacks">
+        <tags> "ablPrioritizeAvoidingHeavyAttacks" </tags>
+      </ability>
+      <ability name="ablComboAttacks">
+        <tags> "ablComboAttacks" </tags>
+      </ability>
+	  <ability name="ablSignAttacks">
+        <tags> "ablSignAttacks" </tags>
+      </ability>
+      <ability name="ablShielded">
+        <tags> "ablShielded" </tags>
+        <shielded type="add" always_random="false" min="1.0" max="1.0" />
+        <protection_angle_left type="add" always_random="false" min="-90.0" max="-90.0" />
+        <protection_angle_right type="add" always_random="false" min="50.0" max="50.0" />
+        <raise_guard_chance type="add" always_random="false" min="1.0" max="1.0" />
+        <lower_guard_chance type="add" always_random="false" min="-1.0" max="-1.0" />
+      </ability>
+      <ability name="ablShieldedWide">
+        <tags> "ablShielded" </tags>
+        <shielded type="add" always_random="false" min="1.0" max="1.0" />
+        <protection_angle_left type="add" always_random="false" min="-90.0" max="-90.0" />
+        <protection_angle_right type="add" always_random="false" min="90.0" max="90.0" />
+        <raise_guard_chance type="add" always_random="false" min="1.0" max="1.0" />
+        <lower_guard_chance type="add" always_random="false" min="-1.0" max="-1.0" />
+      </ability>
+      <ability name="ablIgnoreSigns">
+        <tags> "ablIgnoreSigns" </tags>
+      </ability>
+      <ability name="ablAttackKnockeddownTarget">
+        <tags> "ablAttackKnockeddownTarget" </tags>
+        <attackKnockeddownTarget type="add" always_random="false" min="1.0" max="1.0" />
+      </ability>
+      <ability name="ablCounterHeavyAttacks">
+        <tags> "ablCounterHeavyAttacks" </tags>
+      </ability>
+      <ability name="ablTeleport">
+        <tags> "ablTeleport" </tags>
+      </ability>
+      <ability name="ablFireArrows">
+        <tags> "ablFireArrows" </tags>
+      </ability>
+	  <ability name="ForceCriticalHits">
+        <tags> "ForceCriticalHits" </tags>
+		<critical_hit_chance type="add" min="1.0" />
+      </ability>
+	  <ability name="ForceInstantKill">
+        <tags> "ForceInstantKill" </tags>
+      </ability>
+	  <ability name="ForceHeadbuttFinisher">
+        <tags> "ForceHeadbuttFinisher" </tags>
+      </ability>
+	  <ability name="ForceHiltFinisher">
+        <tags> "ForceHiltFinisher" </tags>
+      </ability>
+	  
+	  <!-- npc gets extra damage if hit by basic bolts if player is mounted on boat -->
+	  <ability name="BoatBoltsAffinity" >
+		<extraDamageWhenPlayerOnBoat type="add" min="2" />  <!-- in how many hits the npc should die, float -->
+	  </ability>
+	  
+	  <ability name="ablMagic">
+        <tags> "ablMagic" </tags>
+      </ability>
+	  <ability name="CannotBeCountered">
+        <tags> "CannotBeCountered" </tags>
+      </ability>
+      <ability name="SummonGuards">
+        <tags> "SummonGuards" </tags>
+      </ability>
+      <ability name="HelpPlayerWithRifts">
+        <tags> "HelpPlayerWithRifts" </tags>
+      </ability>
+      <ability name="StaticShooter">
+        <tags> "StaticShooter" </tags>
+      </ability>
+	  <ability name="PreventChangingCombatStyle">
+		<tags> "PreventChangingCombatStyle" </tags>
+	  </ability>
+	  <ability name="DontDropWeaponsOnDismemberment">
+        <tags> "DontDropWeaponsOnDismemberment" </tags>
+      </ability>
+      <ability name="DisableCounterAttack">
+        <tags> "DisableCounterAttack" </tags>
+      </ability>
+	  <ability name="DisableDismemberment">
+        <tags> "DisableDismemberment" </tags>
+      </ability>
+	  <ability name="DisableFinishers">
+        <tags> "DisableFinishers" </tags>
+      </ability>
+	  <ability name="IsNotScaredOfMonsters">
+        <tags> "IsNotScaredOfMonsters" </tags>
+      </ability>
+	  
+	  <ability name="NewGamePlusFakeLevel">
+		<tags> "NewGamePlusFakeLevel" </tags>
+	  </ability>
+	  <ability name="RoyalArcher">
+        <tags> "RoyalArcher" </tags>
+      </ability>
+	  
+	  <ability name="NPCNoRunning">
+        <tags> "NPCNoRunning" </tags>
+      </ability>
+	  
+      <!-- HUMAN OPPONENTS-->
+      <!-- E3 Demo Hacks, REMOVE WHEN DONE WITH DEMO!!! -->
+      <ability name="E3_Demo_Health_Mod">
+        <vitality type="mult" always_random="false" min="0" max="0" />
+      </ability>
+      <ability name="E3_Demo_Vesemir_Mod">
+        <attack_power type="mult" always_random="false" min="-0.999" max="-0.999" />
+        <spell_power type="mult" always_random="false" min="-0.999" max="-0.999" />
+      </ability>
+      
+	  <!-- CONSTITUTION-->
+      
+	  <!-- minimum needed to create a character is ConDefault and one of the Skill abilities-->
+      
+	  <!-- Default ability - should be added to each and every human opponent-->
+      <ability name="ConDefault">
+        <!-- man_base-->
+        <tags> "base" </tags>
+        <level type="add" always_random="false" min="1" max="1" />
+        <vitality type="base" always_random="false" min="80" max="80" />
+        <essence type="base" always_random="false" min="0" max="0" />
+        <stamina type="base" always_random="false" min="100" max="100" />
+        <morale type="base" always_random="false" min="100" max="100" />
+        <camera_weight type="add" always_random="false" min="0" max="0" />
+        <humanoid type="add" always_random="false" min="1.0" max="1.0" />
+        <vitalityRegen type="mult" always_random="false" min="0" max="0" />
+        <essenceRegen type="mult" always_random="false" min="0" max="0" />
+        <staminaRegen type="mult" always_random="false" min="0.25" max="0.25" />
+        <moraleRegen type="mult" always_random="false" min="0.10" max="0.10" />
+        <!-- skills -->
+        <attack_light is_ability="true" />
+        <attack_heavy is_ability="true" />
+      </ability>
+      
+	  <!-- Additional abilities, used with ConDefault -->
+      <ability name="ConAverage"> <!-- mq2017 hero wannabe & q302 ring opponent -->
+        <tags> "base" </tags>
+        <vitality type="base" always_random="false" min="160" max="160" />
+        <essence type="base" always_random="false" min="0" max="0" />
+      </ability>
+	  
+	  <!-- Base ability, used without ConDefault! -->
+      <ability name="ConAthletic">
+        <tags> "base" </tags>
+		<level type="add" always_random="false" min="1" max="1" />
+        <experience type="add" always_random="false" min="0" max="0" />
+        <vitality type="base" always_random="false" min="320" max="320" />
+        <essence type="base" always_random="false" min="0" max="0" />
+        <stamina type="base" always_random="false" min="100" max="100" />
+        <morale type="base" always_random="false" min="100" max="100" />
+        <camera_weight type="add" always_random="false" min="0" max="0" />
+        <humanoid type="add" always_random="false" min="1.0" max="1.0" />
+        <vitalityRegen type="mult" always_random="false" min="0" max="0" />
+        <essenceRegen type="mult" always_random="false" min="0" max="0" />
+        <staminaRegen type="mult" always_random="false" min="0.25" max="0.25" />
+        <moraleRegen type="mult" always_random="false" min="0.10" max="0.10" />
+		<!-- skills -->
+        <attack_light is_ability="true" />
+        <attack_heavy is_ability="true" />
+	  </ability>
+	  
+	  <!-- Base ability -->
+      <ability name="ConHumanoidMonster">
+        <tags> "base" </tags>
+		<level type="add" always_random="false" min="1" max="1" />
+        <experience type="add" always_random="false" min="0" max="0" />
+        <vitality type="base" always_random="false" min="0" max="0" />
+        <essence type="base" always_random="false" min="500" max="500" />
+        <stamina type="base" always_random="false" min="100" max="100" />
+        <morale type="base" always_random="false" min="100" max="100" />
+        <camera_weight type="add" always_random="false" min="0" max="0" />
+        <humanoid type="add" always_random="false" min="1.0" max="1.0" />
+        <vitalityRegen type="mult" always_random="false" min="0" max="0" />
+        <essenceRegen type="mult" always_random="false" min="0" max="0" />
+        <staminaRegen type="mult" always_random="false" min="0.25" max="0.25" />
+        <moraleRegen type="mult" always_random="false" min="0.10" max="0.10" />
+		<!-- skills -->
+        <attack_light is_ability="true" />
+        <attack_heavy is_ability="true" />
+	  </ability>
+	  
+	  <!-- unused (?) abilities -->
+      <ability name="ConFrail"> <!-- unused? -->
+        <tags> "base" </tags>
+        <vitality type="base" always_random="true" min="50" max="50" />
+        <essence type="base" always_random="false" min="0" max="0" />
+      </ability>
+	  
+      <ability name="ConFat"> <!-- unused? -->
+        <tags> "base" </tags>
+        <vitality type="base" always_random="false" min="100" max="100" />
+        <essence type="base" always_random="false" min="0" max="0" />
+      </ability>
+	  
+      <ability name="ConPudzian"> <!-- unused? -->
+        <tags> "base" </tags>
+        <vitality type="base" always_random="false" min="150" max="150" />
+        <essence type="base" always_random="false" min="0" max="0" />
+      </ability>
+	  
+      <ability name="ConWitcher"> <!-- unused? -->
+        <tags> "base" </tags>
+        <vitality type="base" always_random="false" min="500" max="500" />
+        <essence type="base" always_random="false" min="0" max="0" />
+      </ability>
+	  
+      <!-- why do we need this anyway? -->
+      <ability name="ConImmortal">
+        <tags> "base" </tags>
+        <vitality type="base" always_random="false" min="998000" max="998000" />
+      </ability>
+	  
+	  <ability name="ConDefaultSilver">
+        <!-- man_base-->
+        <tags> "base" </tags>
+        <level type="add" always_random="false" min="1" max="1" />
+        <vitality type="base" always_random="false" min="0" max="0" />
+        <essence type="base" always_random="false" min="25" max="25" />
+        <stamina type="base" always_random="false" min="100" max="100" />
+        <morale type="base" always_random="false" min="100" max="100" />
+        <camera_weight type="add" always_random="false" min="0" max="0" />
+        <humanoid type="add" always_random="false" min="1.0" max="1.0" />
+        <vitalityRegen type="mult" always_random="false" min="0" max="0" />
+        <essenceRegen type="mult" always_random="false" min="0" max="0" />
+        <staminaRegen type="mult" always_random="false" min="0.07" max="0.07" />
+        <moraleRegen type="mult" always_random="false" min="0.08" max="0.12" />
+        <light_attack_damage_vitality type="base" always_random="false" min="100" max="100" />
+        <light_attack_damage_essence type="base" always_random="false" min="0" max="0" />
+        <heavy_attack_damage_vitality type="base" always_random="false" min="100" max="100" />
+        <heavy_attack_damage_vitality type="mult" always_random="false" min="0.0" max="0.0" />
+        <heavy_attack_damage_essence type="base" always_random="false" min="0" max="0" />
+        <physical_resistance type="add" always_random="false" min="0" max="0" />
+        <physical_resistance type="mult" always_random="false" min="0" max="0" />
+        <fire_resistance type="add" always_random="false" min="0" max="0" />
+        <fire_resistance type="mult" always_random="false" min="0" max="0" />
+		    <fire_resistance_perc type="add" always_random="false" min="0.5" max="0.5" />
+        <frost_resistance type="add" always_random="false" min="0" max="0" />
+        <frost_resistance type="mult" always_random="false" min="0" max="0" />
+        <force_resistance type="add" always_random="false" min="0" max="0" />
+        <force_resistance type="mult" always_random="false" min="0" max="0" />
+        <shock_resistance type="add" always_random="false" min="0" max="0" />
+        <shock_resistance type="mult" always_random="false" min="0" max="0" />
+        <poison_resistance type="add" always_random="false" min="0" max="0" />
+        <poison_resistance type="mult" always_random="false" min="0" max="0" />
+        <bleeding_resistance type="add" always_random="false" min="0" max="0" />
+        <bleeding_resistance type="mult" always_random="false" min="0" max="0" />
+		    <taunt_chance type="base" always_random="false" min="0" max="0"/>
+        <!-- skills -->
+        <attack_light is_ability="true" />
+        <attack_heavy is_ability="true" />
+      </ability>
+	  
+	  <ability name="mq1060_Reinald">
+        <!-- man_base-->
+        <tags> "base" </tags>
+        <level type="add" always_random="false" min="1" max="1" />
+        <vitality type="base" always_random="false" min="25" max="25" />
+        <essence type="base" always_random="false" min="0" max="0" />
+        <stamina type="base" always_random="false" min="100" max="100" />
+        <morale type="base" always_random="false" min="100" max="100" />
+        <camera_weight type="add" always_random="false" min="0" max="0" />
+        <humanoid type="add" always_random="false" min="1.0" max="1.0" />
+        <vitalityRegen type="mult" always_random="false" min="0" max="0" />
+        <essenceRegen type="mult" always_random="false" min="0" max="0" />
+        <staminaRegen type="mult" always_random="false" min="0.07" max="0.07" />
+        <moraleRegen type="mult" always_random="false" min="0.08" max="0.12" />
+        <physical_resistance type="add" always_random="false" min="0" max="0" />
+        <physical_resistance type="mult" always_random="false" min="0" max="0" />
+        <fire_resistance type="add" always_random="false" min="0" max="0" />
+        <fire_resistance type="mult" always_random="false" min="0" max="0" />
+		    <fire_resistance_perc type="add" always_random="false" min="0.5" max="0.5" />
+        <frost_resistance type="add" always_random="false" min="0" max="0" />
+        <frost_resistance type="mult" always_random="false" min="0" max="0" />
+        <force_resistance type="add" always_random="false" min="0" max="0" />
+        <force_resistance type="mult" always_random="false" min="0" max="0" />
+        <shock_resistance type="add" always_random="false" min="0" max="0" />
+        <shock_resistance type="mult" always_random="false" min="0" max="0" />
+        <poison_resistance type="add" always_random="false" min="0" max="0" />
+        <poison_resistance type="mult" always_random="false" min="0" max="0" />
+        <bleeding_resistance type="add" always_random="false" min="0" max="0" />
+        <bleeding_resistance type="mult" always_random="false" min="0" max="0" />
+		    <taunt_chance type="base" always_random="false" min="0" max="0"/>
+        <!-- skills -->
+        <attack_light is_ability="true" />
+        <attack_heavy is_ability="true" />
+      </ability>
+	  
+	  <!-- LEVEL BONUSES -->
+	  
+	  <!-- Defining abilities added to default one-->
+      <ability name="NPCLevelBonus">
+        <tags> "base" </tags>
+		<experience type="base" always_random="false" min="2" max="2" />
+        <vitality type="base" always_random="false" min="8" max="8" />
+        <vitality type="mult" always_random="false" min="0.15" max="0.15" />
+        <attack_power type="add" always_random="false" min="1" max="1" /> 
+        <attack_power type="mult" always_random="false" min="0.01" max="0.01" /> 
+        <spell_power type="add" always_random="false" min="1" max="1" /> 
+        <spell_power type="mult" always_random="false" min="0.01" max="0.01" /> 
+		<swarm_attack_damage_vitality type="add" always_random="false" min="1" max="1" /> 
+        <swarm_attack_damage_essence type="add" always_random="false" min="1" max="1" /> 
+		<attack_power type="base" always_random="false" min="11" max="11" />
+        <spell_power type="base" always_random="false" min="11" max="11" />
+		<!-- backward compatibility -->
+		<gm_lvlup_damage_bonus type="base" always_random="false" min="0" max="0" />
+        <level type="add" always_random="false" min="0" max="0" />
+		<physical_resistance type="add" always_random="false" min="0" max="0" />
+		<slashing_resistance type="add" always_random="false" min="0" max="0" />
+		<piercing_resistance type="add" always_random="false" min="0" max="0" />
+		<bludgeoning_resistance type="add" always_random="false" min="0" max="0" />
+		<rending_resistance type="add" always_random="false" min="0" max="0" />
+		<elemental_resistance type="add" always_random="false" min="0" max="0" />
+		<force_resistance type="add" always_random="false" min="0" max="0" />
+		<shock_resistance type="add" always_random="false" min="0" max="0" />
+		<will_resistance type="add" always_random="false" min="0" max="0" />
+		<fire_resistance type="add" always_random="false" min="0" max="0" />
+		<frost_resistance type="add" always_random="false" min="0" max="0" />
+      </ability>
+	  
+	  <ability name="NPCDoNotGainBoost">
+        <tags> "base" </tags>
+      </ability>
+
+	  <ability name="NPCDoNotGainNGPlusLevel">
+        <tags> "base" </tags>
+      </ability>
+ 
+      <ability name="NPCLevelBonusLow">
+        <tags> "base" </tags>
+      </ability>
+	  
+      <ability name="NPCLevelBonusHigh">
+        <tags> "base" </tags>
+		<burning_DoT_damage_resistance_perc type="add" always_random="false" min="0.33" max="0.33" />
+		<poison_DoT_damage_resistance_perc type="add" always_random="false" min="0.33" max="0.33" />
+		<bleeding_DoT_damage_resistance_perc type="add" always_random="false" min="0.33" max="0.33" />
+      </ability>
+	  
+      <ability name="NPCLevelBonusDeadly">
+        <tags> "base" </tags>
+		<burning_DoT_damage_resistance_perc type="add" always_random="false" min="0.5" max="0.5" />
+		<poison_DoT_damage_resistance_perc type="add" always_random="false" min="0.5" max="0.5" />
+		<bleeding_DoT_damage_resistance_perc type="add" always_random="false" min="0.5" max="0.5" />
+      </ability>
+	  
+      <ability name="MiniBoss">
+        <tags> "base" </tags>
+		<experience type="mult" always_random="false" min="2" max="2" />
+        <vitality type="mult" always_random="false" min="1.5" max="1.5" />
+		<attack_power type="mult" always_random="false" min="0.25" max="0.25" /> 
+		<attack_power type="add" always_random="false" min="50" max="50" />
+		<!-- modSpectre: damage resistances -->
+		<!-- damage -->
+		<physical_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+		<slashing_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+		<piercing_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+		<bludgeoning_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+		<rending_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+		<elemental_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+		<!-- magic effects/damage -->
+		<force_resistance_perc type="add" always_random="false" min="0.2" max="0.2" />
+		<shock_resistance_perc type="add" always_random="false" min="0.2" max="0.2" />
+		<burning_resistance_perc type="add" always_random="false" min="0.2" max="0.2" />
+		<will_resistance_perc type="add" always_random="false" min="0.2" max="0.2" />
+		<!-- other effects -->
+		<fire_resistance_perc type="add" always_random="false" min="0.2" max="0.2" />
+		<frost_resistance_perc type="add" always_random="false" min="0.2" max="0.2" />
+		<bleeding_resistance_perc type="add" always_random="false" min="0.2" max="0.2" />
+		<poison_resistance_perc type="add" always_random="false" min="0.2" max="0.2" />
+		<!-- DoT damage -->
+		<burning_DoT_damage_resistance_perc type="add" always_random="false" min="0.5" max="0.5" />
+		<poison_DoT_damage_resistance_perc type="add" always_random="false" min="0.5" max="0.5" />
+		<bleeding_DoT_damage_resistance_perc type="add" always_random="false" min="0.5" max="0.5" />
+      </ability>
+	  
+      <ability name="Boss">
+        <tags> "base" </tags>
+		<experience type="mult" always_random="false" min="4" max="4" />
+        <vitality type="mult" always_random="false" min="2.5" max="2.5" />
+		<attack_power type="mult" always_random="false" min="0.5" max="0.5" /> 
+		<attack_power type="add" always_random="false" min="100" max="100" />
+		<!-- modSpectre: damage resistances -->
+		<!-- damage -->
+		<physical_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+		<slashing_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+		<piercing_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+		<bludgeoning_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+		<rending_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+		<elemental_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+		<!-- magic effects/damage -->
+		<force_resistance_perc type="add" always_random="false" min="0.3" max="0.3" />
+		<shock_resistance_perc type="add" always_random="false" min="0.3" max="0.3" />
+		<burning_resistance_perc type="add" always_random="false" min="0.3" max="0.3" />
+		<will_resistance_perc type="add" always_random="false" min="0.3" max="0.3" />
+		<!-- other effects -->
+		<fire_resistance_perc type="add" always_random="false" min="0.3" max="0.3" />
+		<frost_resistance_perc type="add" always_random="false" min="0.3" max="0.3" />
+		<bleeding_resistance_perc type="add" always_random="false" min="0.3" max="0.3" />
+		<poison_resistance_perc type="add" always_random="false" min="0.3" max="0.3" />
+		<!-- DoT damage -->
+		<burning_DoT_damage_resistance_perc type="add" always_random="false" min="0.5" max="0.5" />
+		<poison_DoT_damage_resistance_perc type="add" always_random="false" min="0.5" max="0.5" />
+		<bleeding_DoT_damage_resistance_perc type="add" always_random="false" min="0.5" max="0.5" />
+      </ability>
+
+      <!-- SKILLS -->
+      <ability name="SkillPeasant">
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="1" max="1" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="25" max="25" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="25" max="25" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="33" max="33" />
+        <counter_stamina_cost type="base" always_random="false" min="33" max="33" />
+        <dodge_stamina_cost type="base" always_random="false" min="33" max="33" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- hit severity reduction -->
+		<hit_severity type="add" always_random="false" min="0" max="0" /> <!-- 1 - npc does not react to light attacks, 2 - npc does not react to light and heavy attacks -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.2" max="0.2" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.8" max="0.8" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.0" max="0.0" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.0" max="0.0" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.0" max="0.0" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.2" max="0.2" />
+      </ability>
+      <ability name="SkillThug">
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="1" max="1" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="25" max="25" />
+        <counter_stamina_cost type="base" always_random="false" min="25" max="25" />
+        <dodge_stamina_cost type="base" always_random="false" min="25" max="25" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- hit severity reduction -->
+		<hit_severity type="add" always_random="false" min="0" max="0" /> <!-- 1 - npc does not react to light attacks, 2 - npc does not react to light and heavy attacks -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.2" max="0.2" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.8" max="0.8" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.2" max="0.2" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.2" max="0.2" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.6" max="0.6" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.2" max="0.2" />
+      </ability>
+      <ability name="SkillBrigand">
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="1" max="1" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <counter_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <dodge_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- hit severity reduction -->
+		<hit_severity type="add" always_random="false" min="0" max="0" /> <!-- 1 - npc does not react to light attacks, 2 - npc does not react to light and heavy attacks -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.8" max="0.8" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.2" max="0.2" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.6" max="0.6" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.2" max="0.2" />
+      </ability>
+      <ability name="SkillSoldier">
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="2" max="2" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <counter_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <dodge_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- hit severity reduction -->
+		<hit_severity type="add" always_random="false" min="0" max="0" /> <!-- 1 - npc does not react to light attacks, 2 - npc does not react to light and heavy attacks -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.0" max="0.0" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.0" max="0.0" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.1" max="0.1" />
+      </ability>
+      <ability name="SkillGuard">
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="1" max="1" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <counter_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <dodge_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- hit severity reduction -->
+		<hit_severity type="add" always_random="false" min="0" max="0" /> <!-- 1 - npc does not react to light attacks, 2 - npc does not react to light and heavy attacks -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.4" max="0.4" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.0" max="0.0" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.0" max="0.0" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.1" max="0.1" />
+      </ability>
+      <ability name="SkillMercenary">
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="1" max="1" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <counter_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <dodge_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- hit severity reduction -->
+		<hit_severity type="add" always_random="false" min="0" max="0" /> <!-- 1 - npc does not react to light attacks, 2 - npc does not react to light and heavy attacks -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.5" max="0.5" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.2" max="0.2" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.6" max="0.6" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.1" max="0.1" />
+      </ability>
+      <ability name="SkillOfficer">
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="1" max="1" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <counter_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <dodge_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- hit severity reduction -->
+		<hit_severity type="add" always_random="false" min="0" max="0" /> <!-- 1 - npc does not react to light attacks, 2 - npc does not react to light and heavy attacks -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.4" max="0.4" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.2" max="0.2" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.5" max="0.5" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.2" max="0.2" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.6" max="0.6" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.05" max="0.05" />
+      </ability>
+      <ability name="SkillElite">
+        <tags> "base" </tags>
+		<experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="1" max="1" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <counter_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <dodge_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- hit severity reduction -->
+		<hit_severity type="add" always_random="false" min="0" max="0" /> <!-- 1 - npc does not react to light attacks, 2 - npc does not react to light and heavy attacks -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.4" max="0.4" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.1" max="0.1" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.5" max="0.5" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.4" max="0.4" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.8" max="0.8" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.05" max="0.05" />
+      </ability>
+      <ability name="SkillBoss">
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="2" max="2" />
+		<staminaRegen type="mult" always_random="false" min="0.25" max="0.25" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <counter_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <dodge_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- hit severity reduction -->
+		<hit_severity type="add" always_random="false" min="0" max="0" /> <!-- 1 - npc does not react to light attacks, 2 - npc does not react to light and heavy attacks -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.5" max="0.5" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.1" max="0.1" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.5" max="0.5" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.4" max="0.4" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.8" max="0.8" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.05" max="0.05" />
+      </ability>
+      <ability name="SkillMage">
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="1" max="1" />
+		<staminaRegen type="mult" always_random="false" min="0.1" max="0.1" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <counter_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <dodge_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- hit severity reduction -->
+		<hit_severity type="add" always_random="false" min="0" max="0" /> <!-- 1 - npc does not react to light attacks, 2 - npc does not react to light and heavy attacks -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.6" max="0.6" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.2" max="0.2" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.6" max="0.6" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.05" max="0.05" />
+      </ability>
+      <ability name="SkillArchmage">
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="1" max="1" />
+		<staminaRegen type="mult" always_random="false" min="0.2" max="0.2" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <counter_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <dodge_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- hit severity reduction -->
+		<hit_severity type="add" always_random="false" min="0" max="0" /> <!-- 1 - npc does not react to light attacks, 2 - npc does not react to light and heavy attacks -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.6" max="0.6" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.4" max="0.4" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.8" max="0.8" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.05" max="0.05" />
+      </ability>
+      <ability name="SkillTwoHanded">
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="2" max="2" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <counter_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <dodge_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- hit severity reduction -->
+		<hit_severity type="add" always_random="false" min="0" max="0" /> <!-- 1 - npc does not react to light attacks, 2 - npc does not react to light and heavy attacks -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.5" max="0.5" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+		<!-- two handed weapons use raise guard chance instead of counter chance and auto-counter after parrying -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.5" max="0.5" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.0" max="0.0" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.0" max="0.0" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.2" max="0.2" />
+      </ability>
+      <ability name="SkillShield">
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="1" max="1" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <counter_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <dodge_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- hit severity reduction -->
+		<hit_severity type="add" always_random="false" min="0" max="0" /> <!-- 1 - npc does not react to light attacks, 2 - npc does not react to light and heavy attacks -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.5" max="0.5" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.5" max="0.5" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.4" max="0.4" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.0" max="0.0" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.0" max="0.0" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.1" max="0.1" />
+      </ability>
+      <ability name="SkillShieldHard">
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="1" max="1" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <counter_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <dodge_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- hit severity reduction -->
+		<hit_severity type="add" always_random="false" min="0" max="0" /> <!-- 1 - npc does not react to light attacks, 2 - npc does not react to light and heavy attacks -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.5" max="0.5" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.5" max="0.5" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.5" max="0.5" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.0" max="0.0" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.0" max="0.0" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.1" max="0.1" />
+      </ability>
+      <ability name="SkillWitcher">
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="1" max="1" />
+		<staminaRegen type="mult" always_random="false" min="0.2" max="0.2" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <counter_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <dodge_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- hit severity reduction -->
+		<hit_severity type="add" always_random="false" min="0" max="0" /> <!-- 1 - npc does not react to light attacks, 2 - npc does not react to light and heavy attacks -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.6" max="0.6" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.1" max="0.1" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.6" max="0.6" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.4" max="0.4" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.8" max="0.8" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.05" max="0.05" />
+      </ability>
+      <ability name="SkillCiri">
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="1" max="1" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="0" max="0" />
+        <heavy_action_stamina_cost type="base" always_random="false" min="0" max="0" />
+		<light_special_stamina_cost type="base" always_random="false" min="0" max="0" />
+        <heavy_special_stamina_cost type="base" always_random="false" min="0" max="0" />
+        <parry_stamina_cost type="base" always_random="false" min="0" max="0" />
+        <counter_stamina_cost type="base" always_random="false" min="0" max="0" />
+        <dodge_stamina_cost type="base" always_random="false" min="0" max="0" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0" max="0" />
+		<!-- hit severity reduction -->
+		<hit_severity type="add" always_random="false" min="0" max="0" /> <!-- 1 - npc does not react to light attacks, 2 - npc does not react to light and heavy attacks -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.8" max="0.8" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.1" max="0.1" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.5" max="0.5" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.4" max="0.4" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.8" max="0.8" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.05" max="0.05" />
+      </ability>
+      <ability name="SkillSorceress">
+	    <!-- modSpectre -->
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="1" max="1" />
+		<staminaRegen type="mult" always_random="false" min="0.2" max="0.2" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <counter_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <dodge_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- hit severity reduction -->
+		<hit_severity type="add" always_random="false" min="0" max="0" /> <!-- 1 - npc does not react to light attacks, 2 - npc does not react to light and heavy attacks -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.6" max="0.6" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.3" max="0.3" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.2" max="0.2" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.6" max="0.6" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.05" max="0.05" />
+      </ability>
+	  
+      <ability name="StatsRangedSuperLame">
+        <tags> "StatsArcherEasy" </tags>
+        <aim_duration type="add" always_random="false" min="3.5" max="3.5" />
+      </ability>
+      <ability name="StatsRangedLame">
+        <tags> "StatsArcherEasy" </tags>
+        <aim_duration type="add" always_random="false" min="2.5" max="2.5" />
+      </ability>
+      <ability name="StatsRangedNormal">
+        <tags> "StatsArcherEasy" </tags>
+        <aim_duration type="add" always_random="false" min="1.5" max="1.5" />
+      </ability>
+	  
+      <ability name="OneHit">
+        <tags> "base" </tags>
+        <vitality type="mult" always_random="false" min="-0.999" max="-0.999" />
+      </ability>
+	  <ability name="Commoner">
+        <tags> "base" </tags>
+        <vitality type="mult" always_random="false" min="-0.5" max="-0.5" />
+      </ability>
+	  <!-- Added to different NPCs during main quest phases -->
+      <ability name="MinDamage">
+        <tags> "base" </tags>
+        <attack_power type="mult" always_random="false" min="-0.95" max="-0.95" />
+        <spell_power type="mult" always_random="false" min="-0.95" max="-0.95" />
+      </ability>
+	  <!-- added to Keira, Triss and Yen during their quest phases (q104 mine, q201 skellige, sq301 Triss) -->
+	  <ability name="MedDamage">
+        <tags> "base" </tags>
+        <attack_power type="mult" always_random="false" min="-0.5" max="-0.5" />
+        <spell_power type="mult" always_random="false" min="-0.5" max="-0.5" />
+      </ability>
+	  <!-- added to Hjalmar, Triss and Vesemir -->
+	  <ability name="VesemirDamage">
+        <tags> "base" </tags>
+        <level type="add" always_random="false" min="60" max="60" /> <!-- fake level! -->
+        <vitality type="base" always_random="false" min="5000" max="5000" />
+        <vitalityRegen type="mult" always_random="false" min="1" max="1" />
+		<shock_resistance_perc type="base" min="-2"/> <!-- so that yrden will work on him -->
+      </ability>
+	  <!-- Generic buff added to allies: -->
+	  <!-- Ciri, Hjalmar, Triss, Roche, Folan, Vigi, Eskel, Lambert, Jorund, Keira, Letho, Lugos, Ves, Zoltan -->
+	  <ability name="_q403Follower">
+		<vitality type="base" always_randome="false" min="3000" max="3000" />
+	  </ability>
+	  <!-- Keira additional ability -->
+	  <ability name="KeiraDmg">
+        <tags> "base" </tags>
+      </ability>
+	  <!-- unused? -->
+	  <ability name="YenDmg">
+        <tags> "base" </tags>
+      </ability>
+		
+	  <!-- Ciri --> 
+	  <ability name="Ciri_CombatRegen">
+        <tags> "base" </tags>
+        <vitalityCombatRegen type="add" always_random="false" min="50" max="50" />
+		<vitalityRegen type="mult" always_random="false" min="0.03" max="0.03" />
+      </ability>
+	  <ability name="Ciri_Rage">
+        <tags> "Ciri_Rage" </tags>
+		<critical_hit_chance type="add" min="1.0" />
+		<critical_hit_damage_bonus type="add" min="1.0" />
+		<vitality type="base" min="5000" />
+      </ability>
+	  <ability name="CiriBlink">
+        <tags> "CiriBlink" </tags>
+      </ability>
+	  <ability name="CiriCharge">
+        <tags> "CiriCharge" </tags>
+      </ability>
+	  <!-- Ciri has ConGeralt - 3500 starting health, sword - 350 dmg, 1000 armor piercing -->
+	  <!-- Velen Lvl 7 - no abls -->
+	  <ability name="Ciri_Q205"> <!-- Lofoten Lvl 17 -->
+        <tags> "base" </tags>
+        <vitality type="base" always_random="false" min="800" max="800" />
+        <armor type="base" always_random="false" min="150" max="150" />
+        <attack_power type="add" always_random="false" min="250" max="250" />
+      </ability>
+      <ability name="Ciri_Q305"> <!-- Novigrad - Whoreson Lvl 12 -->
+        <tags> "base" </tags>
+        <vitality type="base" always_random="false" min="500" max="500" />
+        <armor type="base" always_random="false" min="150" max="150" />
+        <attack_power type="add" always_random="false" min="150" max="150" />
+      </ability>
+      <ability name="Ciri_Q403"> <!-- KM battle Lvl 24 -->
+        <tags> "base" </tags>
+        <vitality type="base" always_random="false" min="2000" max="2000" />
+        <armor type="base" always_random="false" min="230" max="230" />
+        <attack_power type="add" always_random="false" min="500" max="500" />
+		<frost_resistance_perc type="base" always_random="false" min="1.0" max="1.0" />
+      </ability>
+      <ability name="Ciri_Q111"> <!-- Sabbath - Witches Lvl 26 -->
+        <tags> "base" </tags>
+        <vitality type="base" always_random="false" min="2500" max="2500" />
+        <armor type="base" always_random="false" min="260" max="260" />
+        <attack_power type="add" always_random="false" min="600" max="600" />
+      </ability>
+	  <ability name="Ciri_Q501"> <!-- Final - Lvl 30 -->
+        <tags> "base" </tags>
+		<vitality type="base" always_random="false" min="2500" max="2500" />
+        <armor type="base" always_random="false" min="320" max="320" />
+        <attack_power type="add" always_random="false" min="150" max="150" />
+		<frost_resistance_perc type="base" always_random="false" min="1.0" max="1.0" />
+      </ability>
+	   <ability name="CiriCannotTeleport">
+        <tags> "CiriCannotTeleport" </tags>
+	  </ability>
+	  <!-- Vesemir -->
+	  <ability name="VesemirTutorialFreestyle">
+		<light_action_stamina_cost type="base" min="10" />
+		<heavy_action_stamina_cost type="base" min="20" />
+		<parry_stamina_cost type="base" min="10" />
+		<counter_stamina_cost type="base" min="20" />
+		<dodge_stamina_cost type="base" min="10" />
+		<evade_stamina_cost type="base" min="10" />
+	  </ability>
+	  
+      <!-- ARMOR TYPES-->
+      <!-- use not more than one armor ability per actor-->
+	  <ability name="NPC Leather Armor">
+		<tags></tags>
+		<armor type="base" always_random="false" min="30" max="30"/>
+		<physical_resistance_perc type="base" always_random="false" min="0.07" max="0.07" />
+		<slashing_resistance_perc type="base" always_random="false" min="0.07" max="0.07"/>
+		<piercing_resistance_perc type="base" always_random="false" min="0.07" max="0.07"/>
+		<bludgeoning_resistance_perc type="base" always_random="false" min="0.1" max="0.1"/>
+		<rending_resistance_perc type="base" always_random="false" min="0.1" max="0.1"/>
+		<elemental_resistance_perc type="base" always_random="false" min="0.1" max="0.1"/>
+		<!-- modSpectre -->
+		<shock_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+		<burning_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+		<fire_resistance_perc type="add" always_random="false" min="0.2" max="0.2"/>
+	  </ability>
+	  
+	  <ability name="NPC Heavy Leather Armor">
+		<tags></tags>
+		<armor type="base" always_random="false" min="45" max="45"/>
+		<physical_resistance_perc type="base" always_random="false" min="0.1" max="0.1" />
+		<slashing_resistance_perc type="base" always_random="false" min="0.1" max="0.1"/>
+		<piercing_resistance_perc type="base" always_random="false" min="0.1" max="0.1"/>
+		<bludgeoning_resistance_perc type="base" always_random="false" min="0.1" max="0.1"/>
+		<rending_resistance_perc type="base" always_random="false" min="0.1" max="0.1"/>
+		<elemental_resistance_perc type="base" always_random="false" min="0.1" max="0.1"/>
+		<!-- modSpectre -->
+		<shock_resistance_perc type="add" always_random="false" min="0.2" max="0.2" />
+		<burning_resistance_perc type="add" always_random="false" min="0.2" max="0.2" />
+		<fire_resistance_perc type="add" always_random="false" min="0.3" max="0.3"/>
+	  </ability>
+	  
+	  <ability name="NPC Chainmail Armor">	
+		<tags></tags>
+		<armor type="base" always_random="false" min="60" max="60"/>
+		<physical_resistance_perc type="base" always_random="false" min="0.13" max="0.13" />
+		<slashing_resistance_perc type="base" always_random="false" min="0.13" max="0.13"/>
+		<piercing_resistance_perc type="base" always_random="false" min="0.13" max="0.13"/>
+		<bludgeoning_resistance_perc type="base" always_random="false" min="0.13" max="0.13"/>
+		<rending_resistance_perc type="base" always_random="false" min="0.13" max="0.13"/>
+		<elemental_resistance_perc type="base" always_random="false" min="0.13" max="0.13"/>
+		<!-- modSpectre -->
+		<will_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+		<force_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+	  </ability>
+	  
+	  <ability name="NPC Partial Plate Armor">
+		<tags></tags>
+		<armor type="base" always_random="false" min="90" max="90"/>
+		<physical_resistance_perc type="base" always_random="false" min="0.14" max="0.14" />
+		<slashing_resistance_perc type="base" always_random="false" min="0.14" max="0.14"/>
+		<piercing_resistance_perc type="base" always_random="false" min="0.14" max="0.14"/>
+		<bludgeoning_resistance_perc type="base" always_random="false" min="0.14" max="0.14"/>
+		<rending_resistance_perc type="base" always_random="false" min="0.14" max="0.14"/>
+		<elemental_resistance_perc type="base" always_random="false" min="0.14" max="0.14"/>
+		<!-- modSpectre -->
+		<will_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+		<force_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+		<bleeding_resistance_perc type="add" always_random="false" min="0.1" max="0.1" />
+	  </ability>
+	  
+	  <ability name="NPC Full Plate Armor">
+		<tags></tags>
+		<armor type="base" always_random="false" min="120" max="120"/>
+		<physical_resistance_perc type="base" always_random="false" min="0.15" max="0.15" />
+		<slashing_resistance_perc type="base" always_random="false" min="0.15" max="0.15"/>
+		<piercing_resistance_perc type="base" always_random="false" min="0.15" max="0.15"/>
+		<bludgeoning_resistance_perc type="base" always_random="false" min="0.15" max="0.15"/>
+		<rending_resistance_perc type="base" always_random="false" min="0.15" max="0.15"/>
+		<elemental_resistance_perc type="base" always_random="false" min="0.15" max="0.15"/>
+		<!-- modSpectre -->
+		<will_resistance_perc type="add" always_random="false" min="0.2" max="0.2" />
+		<force_resistance_perc type="add" always_random="false" min="0.2" max="0.2" />
+		<bleeding_resistance_perc type="add" always_random="false" min="0.2" max="0.2" />
+	  </ability>
+	  
+	  <ability name="NPC_Wild_Hunt_Armor">
+		<tags></tags>
+		<armor type="add" min="90" max="90"/>
+		<physical_resistance_perc type="add" min="0.15" max="0.15" />
+		<slashing_resistance_perc type="add" min="0.15" max="0.15"/>
+		<piercing_resistance_perc type="add" min="0.15" max="0.15"/>
+		<bludgeoning_resistance_perc type="add" min="0.15" max="0.15"/>
+		<rending_resistance_perc type="add" min="0.15" max="0.15"/>
+		<elemental_resistance_perc type="add" min="0.15" max="0.15"/>
+	  </ability>
+	  
+      <ability name="ArmorLeatherJacket_01">
+        <tags> "base" </tags>
+      </ability>
+      <ability name="ArmorLeatherJacket_02">
+        <tags> "base" </tags>
+      </ability>
+      <ability name="ArmorCombatJacket">
+        <tags> "base" </tags>
+      </ability>
+      <ability name="ArmorChainmail_01">
+        <tags> "base" </tags>
+      </ability>
+      <ability name="ArmorChainmail_02">
+        <tags> "base" </tags>
+      </ability>
+      <ability name="ArmorBreastplate_01">
+        <tags> "base" </tags>
+      </ability>
+      <ability name="ArmorBreastplate_02">
+        <tags> "base" </tags>
+      </ability>
+      <ability name="ArmorPlatemail_01">
+        <tags> "base" </tags>
+      </ability>
+      <ability name="ArmorPlatemail_02">
+        <tags> "base" </tags>
+      </ability>
+      <!-- troll rear armor-->
+      <ability name="ArmorRear_Rock">
+        <tags> "base" </tags>
+        <physical_resistance type="add" always_random="false" min="100" max="100" />
+        <physical_resistance_perc type="add" always_random="false" min="0.7" max="0.7" />
+      </ability>
+	  
+	  <!-- unused? -->
+      <ability name="sq308_martin_officer_ghostly">
+        <tags> "base" </tags>
+        <!-- <vitality type="mult" always_random="false" min="-1" max="-1" />
+        <essence type="add" always_random="false" min="4600" max="4600" />
+        <attack_power type="base" always_random="false" min="45" max="45" /> -->
+      </ability>
+      <ability name="sq308_familiar_ghostly">
+        <tags> "base" </tags>
+        <!-- <vitality type="mult" always_random="false" min="-1" max="-1" />
+        <essence type="add" always_random="false" min="2000" max="2000" />
+        <attack_power type="base" always_random="false" min="30" max="30" /> -->
+      </ability>
+      <ability name="q403BuffUp">
+		<!-- <attack_power type="mult" always_random="false" min="1.2" max="1.2" /> -->
+	  </ability>
+	  
+	  <!-- FIST FIGHTS -->
+	  
+	  <ability name="NPCLevelModFistFightLower">
+        <tags> "base" </tags>
+      </ability>
+	  
+	  <ability name="NPCLevelModFistFightHigher">
+        <tags> "base" </tags>
+      </ability>
+	  
+	  <!-- Fist fight skills -->
+	  
+	  <!--FistFighters-->
+      <ability name="SkillFistsHard">
+	    <!-- modSpectre -->
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="1" max="1" />
+		<staminaRegen type="mult" always_random="false" min="0.33" max="0.33" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <counter_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <dodge_stamina_cost type="base" always_random="false" min="16" max="16" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.8" max="0.8" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.1" max="0.1" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.6" max="0.6" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.6" max="0.6" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.8" max="0.8" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.1" max="0.1" />
+      </ability>
+      <ability name="SkillFistsMedium">
+	    <!-- modSpectre -->
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="1" max="1" />
+		<staminaRegen type="mult" always_random="false" min="0.2" max="0.2" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <counter_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <dodge_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.6" max="0.6" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.4" max="0.4" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.5" max="0.5" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.2" max="0.2" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.6" max="0.6" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.1" max="0.1" />
+      </ability>
+      <ability name="SkillFistsEasy">
+	    <!-- modSpectre -->
+        <tags> "base" </tags>
+        <experience type="add" always_random="false" min="0" max="0" />
+        <threat_level type="add" always_random="false" min="1" max="1" />
+		<staminaRegen type="mult" always_random="false" min="0.2" max="0.2" />
+		<!-- Stamina group -->
+        <light_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- modSpectre: used for all attacks that don't have stamina cost set -->
+        <heavy_action_stamina_cost type="base" always_random="false" min="20" max="20" /> <!-- is sometimes used by some attacks -->
+		<light_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <heavy_special_stamina_cost type="base" always_random="false" min="33" max="33" /> <!-- is sometimes used by some attacks -->
+        <parry_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <counter_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <dodge_stamina_cost type="base" always_random="false" min="20" max="20" />
+        <stamina_cost_modifier type="mult" always_random="false" min="0.0" max="0.0" /> <!-- not always accounted for properly, better avoid using it -->
+		<!-- guard -->
+		<delay_between_raise_guard type="add" always_random="false" min="0.0" max="0.0" /> <!-- how often an npc can raise his guard (sec) -->
+        <hits_to_raise_guard type="add" always_random="false" min="0" max="0" /> <!-- how much hits and npc will take before rolling for raise guard -->
+        <raise_guard_chance type="add" always_random="false" min="0.4" max="0.4" /> <!-- base raise guard chance -->
+        <raise_guard_chance_mult_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- raise guard chance increment per additional hit -->
+        <lower_guard_chance type="add" always_random="false" min="0.8" max="0.8" /> <!-- chance to lower guard if already guarded -->
+		<!-- counter: NPC will automatically parry an attack if guarded, roll for counter is performed on successive parries -->
+        <hits_to_roll_counter type="add" always_random="true" min="0" max="0" /> <!-- how much defence actions an npc will perform before rolling for counter -->
+        <counter_chance type="add" always_random="false" min="0.4" max="0.4" /> <!-- base counter on defence chance -->
+        <counter_chance_per_hit type="add" always_random="false" min="0.1" max="0.1" /> <!-- counter chance increment per additional defence action -->
+		<!-- dodge -->
+        <dodge_melee_light_chance type="add" always_random="false" min="0.2" max="0.2" />
+        <dodge_melee_heavy_chance type="add" always_random="false" min="0.4" max="0.4" />
+        <dodge_magic_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_projectile_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_bomb_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- doesn't work properly, no point in using it -->
+        <dodge_fear_chance type="add" always_random="false" min="0.0" max="0.0" /> <!-- kinda works -->
+		<!-- taunt -->
+        <taunt_chance type="add" always_random="false" min="0.2" max="0.2" />
+      </ability>
+
+	  <!-- Fist fight stats -->
+	  
+      <ability name="StatsFistsTutorial">
+        <tags> "base" </tags>
+      </ability>
+      <ability name="StatsFistsEasy">
+        <tags> "base" </tags>
+		<fist_dmg_bonus type="add" always_random="false" min="50" max="50" /> 
+      </ability>
+      <ability name="StatsFistsMedium">
+        <tags> "base" </tags>
+		<fist_dmg_bonus type="add" always_random="false" min="100" max="100" /> 
+      </ability>
+      <ability name="StatsFistsHard">
+        <tags> "base" </tags>
+		<fist_dmg_bonus type="add" always_random="false" min="150" max="150" /> 
+      </ability>
+
+	  <!-- Fist fight additional abilities -->
+	  
+	  <!-- prologue fistfighters -->
+	  <ability name="fistfight_q002">
+        <tags> "base" </tags>
+		<vitality type="add" always_random="false" min="50" max="50" />
+      </ability>
+	  <!-- This fight is considered fistfight minigame, baron gets SkillFistsHard and StatsFistsHard
+	       through w2phase script, but not HealthFistFightHard, so we set it up manually -->
+	  <ability name="q103_baron_fist_fight">
+        <tags> "base" </tags>
+		<vitality type="mult" always_random="false" min="-1.0" max="-1.0" /> <!-- remove lvl vitality bonuses -->
+		<vitality type="add" always_random="false" min="1000" max="1000" />
+		<fist_dmg_bonus type="add" always_random="false" min="-100" max="-100" /> 
+      </ability>
+	  <ability name="sq303_fist_fight_bandits">
+        <tags> "base" </tags>
+      </ability>
+	  <ability name="q304_fist_fight_vagrants">
+        <tags> "base" </tags>
+      </ability>
+	  <ability name="q308_fist_fight">
+        <tags> "base" </tags>
+        <parry_stamina_cost type="base" always_random="false" min="35" max="35" />
+      </ability>
+	  <ability name="q310_stable_guard_fist_fight">
+        <tags> "base" </tags>
+      </ability>
+	  <ability name="q201_Lugos_fist_fight">
+        <tags> "base" </tags>
+      </ability>
+	  <ability name="sq301_fistfighters"> <!-- to compensate for MedDamage ability -->
+        <tags> "base" </tags>
+        <attack_power type="mult" always_random="false" min="0.5" max="0.5" />
+      </ability>
+	 
+	  <!-- Fist fight minigame abilities -->
+	  
+	  <ability name="fistfight_minigame">
+		<tags> "base" </tags>
+	  </ability>  
+	 
+	  <!-- Fistfighters -->
+	  <ability name="qSergeantFistFIght">
+      <tags> "base" </tags>
+		<vitality type="mult" always_random="false" min="-10.0" max="-10.0" /> <!-- remove lvl vitality bonuses -->
+        <vitality type="add" always_random="false" min="1500" max="1500" />
+      </ability>
+	  <ability name="ff202_einar">
+	 	<tags> "base" </tags>
+	  </ability>
+	  <ability name="ff203_grim">
+	 	<tags> "base" </tags>
+	  </ability>
+
+	  <ability name="HealthFistFightTutorial">
+		<tags> "base" </tags>
+		<vitality type="mult" always_random="false" min="-10.0" max="-10.0" /> <!-- remove lvl vitality bonuses -->
+		<vitality type="add" always_random="false" min="750" max="750" />
+	  </ability>
+	  <ability name="HealthFistFightEasy">
+		<tags> "base" </tags>
+		<vitality type="mult" always_random="false" min="-10.0" max="-10.0" /> <!-- remove lvl vitality bonuses -->
+		<vitality type="add" always_random="false" min="1000" max="1000" />
+	  </ability>
+	  <ability name="HealthFistFightMedium">
+		<tags> "base" </tags>
+		<vitality type="mult" always_random="false" min="-10.0" max="-10.0" /> <!-- remove lvl vitality bonuses -->
+		<vitality type="add" always_random="false" min="1500" max="1500" />
+	  </ability>
+	  <ability name="HealthFistFightHard">
+		<tags> "base" </tags>
+		<vitality type="mult" always_random="false" min="-10.0" max="-10.0" /> <!-- remove lvl vitality bonuses -->
+		<vitality type="add" always_random="false" min="2000" max="2000" />
+	  </ability>
+	 
+    </abilities>
+  </definitions>
+</redxml>

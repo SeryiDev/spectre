@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+<definitions>
+
+<!-- ######################## ABILITY DEFINITIONS ######################## -->
+<abilities>
+
+<!-- LIGHT -->
+
+	<ability name="Crafted Ofir Armor _Stats"> <!-- lvl 32 -->
+		<weight							type="base"	min="6.5"				/>
+		<quality						type="add"	min="4"					/>
+		<armor							type="base" min="185"	max="185"	/>
+		<slashing_resistance_perc		type="base"	min="0.05"				/>
+		<piercing_resistance_perc		type="base"	min="0.04"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.04"				/>
+		<rending_resistance_perc		type="base" min="0.05"				/>
+		<elemental_resistance_perc		type="base" min="0.05"				/>
+		<spell_power_yrden 				type="mult" min="0.15" 				/>
+		<spell_power_quen 				type="mult" min="0.15"				/>
+		<spell_power_axii 				type="mult" min="0.15" 				/>
+		<staminaRegen_armor_mod			type="mult"	min="0.07"				/>
+	</ability>
+	
+<!-- HEAVY -->
+
+	<ability name="Crafted Burning Rose Armor _Stats"> <!-- lvl 33 -->
+		<weight							type="base"	min="17.5"				/>
+		<quality						type="add"	min="4"					/>
+		<armor							type="base" min="190"	max="190"	/>
+		<slashing_resistance_perc		type="base"	min="0.22"				/>
+		<piercing_resistance_perc		type="base"	min="0.22"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.22"				/>
+		<rending_resistance_perc		type="base" min="0.22"				/>
+		<elemental_resistance_perc		type="base" min="0.22"				/>
+		<burning_resistance_perc 		type="base" min="0.5" 				/>
+		<staminaRegen_armor_mod 		type="mult" min="-0.20"				/>
+	</ability>
+	
+<!-- MEDIUM -->
+
+	<ability name="EP1 Witcher Armor _Stats"> <!-- lvl 34 -->
+		<weight							type="base"	min="10"				/>
+		<quality						type="add"	min="5"		max="5"		/>
+		<armor							type="base"	min="195"	max="195"	/>
+		<slashing_resistance_perc		type="base" min="0.2"				/>
+		<piercing_resistance_perc		type="base" min="0.1"				/>
+		<bludgeoning_resistance_perc	type="base"	min="0.1"				/>
+		<rending_resistance_perc		type="base" min="0.2"				/>
+		<elemental_resistance_perc		type="base" min="0.2"				/>
+		<toxicity 						type="base" min="5" 				/>
+		<vitality 						type="base" min="300"				/>
+	</ability>
+	
+</abilities>
+
+
+<!-- ######################## ITEM DEFINITIONS ######################## -->
+<items>
+	<item 
+		name							="Crafted Ofir Armor" 
+		category						="armor" 
+		price							="600"
+		initial_durability				="100" 
+		max_durability					="100" 
+		enhancement_slots				="3" 
+		stackable						="1"
+		grid_size 						="2"
+		ability_mode					="OnMount" 
+		equip_template					="t_01_mg__ofir_lv1" 
+		localisation_key_name 			="item_name_ofir_armor" 
+		localisation_key_description 	="item_category_light_armor_description" 
+		icon_path						="icons/inventory/armors/ofir_armor_1_64x128.png" 
+	>
+		<tags>							Armor, LightArmor, mod_armor, mod_legendary, mod_origin_ofir, Ofir, EP1
+		</tags>
+		<bound_items>
+		</bound_items>
+		<base_abilities>
+										<a>Crafted Ofir Armor _Stats</a>
+										<a>Default armor _Stats</a>
+		</base_abilities>		
+		<recycling_parts>				<parts count="2">Silk</parts>
+										<parts count="2">Hardened leather</parts>
+										<parts count="2">String</parts>
+		</recycling_parts> 	
+		<variants>					<variant equip_template="t_01_mg__ofir_lv1">
+											<item>Crafted Ofir Gloves</item>         <!-- this item uses special bracer version -->										
+									</variant>
+									<variant equip_template="t_01a_mg__ofir_lv1" category="gloves"></variant>
+										
+		</variants>		
+	</item>
+	
+	<item
+		name							="Crafted Burning Rose Armor"
+		category						="armor"
+		price							="1600"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		ability_mode					="OnMount"
+		grid_size						="2"
+		equip_template					="t_01_mg__flaming_rose_lv1"
+		localisation_key_name			="item_name_rose_armor"
+		localisation_key_description	="item_category_heavy_armor_description"
+		icon_path						="icons/inventory/armors/flaming_rose_armor_64x128.png"
+	>
+		<tags>							Armor, HeavyArmor, mod_armor, mod_legendary, EP1
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>Crafted Burning Rose Armor _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Dwimeryte plate</parts>
+										<parts count="1">Leather</parts>
+										<parts count="1">String</parts>
+		</recycling_parts>	
+		<variants>						<variant equip_template="t_01a_mg__flaming_rose_lv1" category="gloves"></variant>
+		</variants>
+	</item>
+
+	<item
+		name							="EP1 Witcher Armor"
+		category						="armor"
+		price							="3200"
+		initial_durability				="100"
+		max_durability					="100" 
+		enhancement_slots				="3"
+		stackable						="1"
+		grid_size						="2"
+		ability_mode					="OnMount"
+		equip_template					="t_01_mg__viper_v2"
+		localisation_key_name			="item_name_hoscorset_armor"
+		localisation_key_description	="item_category_medium_armor_description"
+		icon_path						="icons/inventory/armors/viper_armor_64x128.png"
+	>
+		<tags>							Armor, MediumArmor, mod_armor, mod_legendary, EP1, ViperSet, SetBonusPiece
+		</tags>
+		<base_abilities>				<a>Default armor _Stats</a>
+										<a>EP1 Witcher Armor _Stats</a>
+		</base_abilities>
+		<recycling_parts>				<parts count="1">Geralt Shirt</parts>
+										<parts count="1">Hardened leather</parts>
+										<parts count="1">Dwimeryte ingot</parts>
+										<parts count="1">Meteorite ingot</parts>
+										<parts count="1">Draconide leather</parts>
+		</recycling_parts>
+		<variants>						<variant equip_template="t_01a_mg__viper_v2" category="gloves"></variant>
+		</variants>
+	</item>
+	
+</items>
+
+</definitions>
+</redxml>

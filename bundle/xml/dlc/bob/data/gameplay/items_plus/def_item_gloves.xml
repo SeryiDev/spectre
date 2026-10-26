@@ -1,0 +1,867 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<redxml>
+	<definitions>
+
+		<!-- ######################## ABILITY DEFINITIONS ######################## -->
+		<abilities>
+
+		<!-- ARMOR LIGHT -->
+
+			<!-- GLOVES GUARD LVL1 -->
+				<ability name="Guard Lvl1 Gloves 1 _Stats">
+					<weight							type="base"	min="1" 				/>
+					<quality						type="add"	min="2"		max="2"		/>
+					<slashing_resistance_perc		type="base"	min="0.02"				/>
+					<piercing_resistance_perc		type="base"	min="0.0"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.0"				/>
+					<rending_resistance_perc		type="base"	min="0.02"				/>
+					<elemental_resistance_perc		type="base"	min="0.02"				/>
+					<staminaRegen_armor_mod			type="mult" min="0.01"				/>
+				</ability>
+
+				<ability name="Guard Lvl1 Gloves 2 _Stats">
+					<weight							type="base"	min="1" 				/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc		type="base"	min="0.02"				/>
+					<piercing_resistance_perc		type="base"	min="0.0"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.0"				/>
+					<rending_resistance_perc		type="base"	min="0.02"				/>
+					<elemental_resistance_perc		type="base"	min="0.02"				/>
+					<staminaRegen_armor_mod			type="mult" min="0.01"				/>
+				</ability>
+
+			<!-- GLOVES GUARD LVL1 A -->
+				<ability name="Guard Lvl1 A Gloves 1 _Stats">
+					<weight							type="base"	min="1" 				/>
+					<quality						type="add"	min="2"		max="2"		/>
+					<slashing_resistance_perc		type="base"	min="0.02"				/>
+					<piercing_resistance_perc		type="base"	min="0.0"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.0"				/>
+					<rending_resistance_perc		type="base"	min="0.02"				/>
+					<elemental_resistance_perc		type="base"	min="0.02"				/>
+					<staminaRegen_armor_mod			type="mult" min="0.01"				/>
+				</ability>
+
+				<ability name="Guard Lvl1 A Gloves 2 _Stats">
+					<weight							type="base"	min="1" 				/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc		type="base"	min="0.02"				/>
+					<piercing_resistance_perc		type="base"	min="0.0"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.0"				/>
+					<rending_resistance_perc		type="base"	min="0.02"				/>
+					<elemental_resistance_perc		type="base"	min="0.02"				/>
+					<staminaRegen_armor_mod			type="mult" min="0.01"				/>
+				</ability>
+
+			
+		<!-- ARMOR MEDIUM -->		
+
+			<!-- GLOVES GUARD LVL2-->
+				<ability name="Guard Lvl2 Gloves 1 _Stats">
+					<weight							type="base"	min="3" 				/>
+					<quality						type="add"	min="2"		max="2"		/>
+					<slashing_resistance_perc		type="base"	min="0.04"				/>
+					<piercing_resistance_perc		type="base"	min="0.02"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.02"				/>
+					<rending_resistance_perc		type="base"	min="0.04"				/>
+					<elemental_resistance_perc		type="base"	min="0.04"				/>
+				</ability>
+
+				<ability name="Guard Lvl2 Gloves 2 _Stats">
+					<weight							type="base"	min="3" 				/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc		type="base"	min="0.04"				/>
+					<piercing_resistance_perc		type="base"	min="0.02"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.02"				/>
+					<rending_resistance_perc		type="base"	min="0.04"				/>
+					<elemental_resistance_perc		type="base"	min="0.04"				/>
+				</ability>
+
+			<!-- GLOVES GUARD LVL2 A-->
+				<ability name="Guard Lvl2 A Gloves 1 _Stats">
+					<weight							type="base"	min="3" 				/>
+					<quality						type="add"	min="2"		max="2"		/>
+					<slashing_resistance_perc		type="base"	min="0.04"				/>
+					<piercing_resistance_perc		type="base"	min="0.02"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.02"				/>
+					<rending_resistance_perc		type="base"	min="0.04"				/>
+					<elemental_resistance_perc		type="base"	min="0.04"				/>
+				</ability>
+
+				<ability name="Guard Lvl2 A Gloves 2 _Stats">
+					<weight							type="base"	min="3" 				/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc		type="base"	min="0.04"				/>
+					<piercing_resistance_perc		type="base"	min="0.02"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.02"				/>
+					<rending_resistance_perc		type="base"	min="0.04"				/>
+					<elemental_resistance_perc		type="base"	min="0.04"				/>
+				</ability>
+			
+		<!-- ARMOR HEAVY -->
+
+			<!-- GLOVES KNIGHT GERALT -->
+				<ability name="Knight Geralt Gloves 1 _Stats">
+					<weight							type="base"	min="7" 				/>
+					<quality						type="add"	min="2"		max="2"		/>
+					<slashing_resistance_perc		type="base"	min="0.08"				/>
+					<piercing_resistance_perc		type="base"	min="0.08"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.08"				/>
+					<rending_resistance_perc		type="base"	min="0.08"				/>
+					<elemental_resistance_perc		type="base"	min="0.08"				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.05"				/>
+				</ability>
+
+				<ability name="Knight Geralt Gloves 2 _Stats">
+					<weight							type="base"	min="7" 				/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc		type="base"	min="0.08"				/>
+					<piercing_resistance_perc		type="base"	min="0.08"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.08"				/>
+					<rending_resistance_perc		type="base"	min="0.08"				/>
+					<elemental_resistance_perc		type="base"	min="0.08"				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.05"				/>
+				</ability>
+
+			<!-- GLOVES KNIGHT GERALT A -->
+				<ability name="Knight Geralt A Gloves 1 _Stats">
+					<weight							type="base"	min="7" 				/>
+					<quality						type="add"	min="2"		max="2"		/>
+					<slashing_resistance_perc		type="base"	min="0.08"				/>
+					<piercing_resistance_perc		type="base"	min="0.08"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.08"				/>
+					<rending_resistance_perc		type="base"	min="0.08"				/>
+					<elemental_resistance_perc		type="base"	min="0.08"				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.05"				/>
+				</ability>	
+
+				<ability name="Knight Geralt A Gloves 2 _Stats">
+					<weight							type="base"	min="7" 				/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc		type="base"	min="0.08"				/>
+					<piercing_resistance_perc		type="base"	min="0.08"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.08"				/>
+					<rending_resistance_perc		type="base"	min="0.08"				/>
+					<elemental_resistance_perc		type="base"	min="0.08"				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.05"				/>
+				</ability>
+				
+			<!-- GLOVES TOUSSAINT -->
+				<ability name="Toussaint Gloves 2 _Stats">
+					<weight							type="base"	min="7" 				/>
+					<quality						type="add"	min="3"		max="3"		/>
+					<slashing_resistance_perc		type="base"	min="0.08"				/>
+					<piercing_resistance_perc		type="base"	min="0.08"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.08"				/>
+					<rending_resistance_perc		type="base"	min="0.08"				/>
+					<elemental_resistance_perc		type="base"	min="0.08"				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.05"				/>
+				</ability>
+				
+			<!-- GLOVES QUEST -->
+				<ability name="sq701_geralt_gloves _Stats">
+					<weight							type="base"	min="7" 				/>
+					<quality						type="add"	min="4"					/>
+					<slashing_resistance_perc		type="base"	min="0.08"				/>
+					<piercing_resistance_perc		type="base"	min="0.08"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.08"				/>
+					<rending_resistance_perc		type="base"	min="0.08"				/>
+					<elemental_resistance_perc		type="base"	min="0.08"				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.05"				/>
+				</ability>	
+				
+				<ability name="q702_vampire_gloves _Stats">
+					<weight							type="base"	min="7" 				/>
+					<quality						type="add"	min="4"					/>
+					<slashing_resistance_perc		type="base"	min="0.08"				/>
+					<piercing_resistance_perc		type="base"	min="0.08"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.08"				/>
+					<rending_resistance_perc		type="base"	min="0.08"				/>
+					<elemental_resistance_perc		type="base"	min="0.08"				/>
+					<bleeding_resistance_perc 		type="base" min="0.25" 				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.025"			/>
+				</ability>	
+				
+				<ability name="q704_vampire_gloves _Stats">
+					<weight							type="base"	min="7" 				/>
+					<quality						type="add"	min="4"					/>
+					<slashing_resistance_perc		type="base"	min="0.08"				/>
+					<piercing_resistance_perc		type="base"	min="0.08"				/>
+					<bludgeoning_resistance_perc	type="base"	min="0.08"				/>
+					<rending_resistance_perc		type="base"	min="0.08"				/>
+					<elemental_resistance_perc		type="base"	min="0.08"				/>
+					<bleeding_resistance_perc 		type="base" min="0.25" 				/>
+					<staminaRegen_armor_mod			type="mult"	min="-0.025"			/>
+				</ability>	
+				
+		</abilities>
+				
+
+
+		<!-- ######################## ITEMS DEFINITIONS ######################## -->
+		<items>
+
+		<!-- ARMOR LIGHT -->
+			<!-- GUARD LVL1 GLOVES -->
+			<item
+				name							="Guard Lvl1 Gloves 1"
+				category						="gloves"
+				price							="55"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__guard_lvl1"
+				localisation_key_name			="item_name_guard_lvl1_geralt_gloves"
+				localisation_key_description	="item_category_light_armor_description"
+				icon_path						="icons/inventory/armors/guard_1a_gloves_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, LightArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl1 Gloves 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Steel ingot</parts>
+												<parts count="2">Leather straps</parts>
+				</recycling_parts>
+				<variants>			
+												<variant equip_template="g_01a_mg__guard_lvl1">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01_mg__guard_lvl1" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+			<item
+				name							="Guard Lvl1 Gloves 2"
+				category						="gloves"
+				price							="90"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__guard_lvl1"
+				localisation_key_name			="item_name_guard_lvl1_geralt_gloves"
+				localisation_key_description	="item_category_light_armor_description"
+				icon_path						="icons/inventory/armors/guard_1a_gloves_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, LightArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl1 Gloves 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Silver ingot</parts>
+												<parts count="2">Leather straps</parts>
+				</recycling_parts>
+				<variants>			
+												<variant equip_template="g_01a_mg__guard_lvl1">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01_mg__guard_lvl1" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+			<!-- GUARD LVL1 A GLOVES -->
+			<item
+				name							="Guard Lvl1 A Gloves 1"
+				category						="gloves"
+				price							="57"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_02a_mg__guard_lvl1"
+				localisation_key_name			="item_name_guard_lvl1_A_geralt_gloves"
+				localisation_key_description	="item_category_light_armor_description"
+				icon_path						="icons/inventory/armors/guard_1_gloves_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, LightArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl1 A Gloves 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Steel ingot</parts>
+												<parts count="2">Leather straps</parts>
+				</recycling_parts>
+				<variants>			
+												<variant equip_template="g_02a_mg__guard_lvl1">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_02_mg__guard_lvl1" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+			<item
+				name							="Guard Lvl1 A Gloves 2"
+				category						="gloves"
+				price							="92"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_02a_mg__guard_lvl1"
+				localisation_key_name			="item_name_guard_lvl1_A_geralt_gloves"
+				localisation_key_description	="item_category_light_armor_description"
+				icon_path						="icons/inventory/armors/guard_1_gloves_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, LightArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl1 A Gloves 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Silver ingot</parts>
+												<parts count="2">Leather straps</parts>
+				</recycling_parts>
+				<variants>			
+												<variant equip_template="g_02a_mg__guard_lvl1">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_02_mg__guard_lvl1" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+		<!-- ARMOR MEDIUM -->
+
+			<!-- GUARD LVL2 GLOVES -->
+			<item
+				name							="Guard Lvl2 Gloves 1"
+				category						="gloves"
+				price							="100"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__common_light_lvl3"
+				localisation_key_name			="item_name_guard_lvl2_geralt_gloves"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/common_light_lvl3_64x128.png"
+			>
+				<tags>							Autogen, Armor, MediumArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl2 Gloves 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Dark steel ingot</parts>
+												<parts count="1">Leather squares</parts>
+				</recycling_parts>
+				<variants>			
+												<variant equip_template="g_01a_mg__common_light_lvl3">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01_mg__common_light_lvl3" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+			<item
+				name							="Guard Lvl2 Gloves 2"
+				category						="gloves"
+				price							="159"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__common_light_lvl3"
+				localisation_key_name			="item_name_guard_lvl2_geralt_gloves"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/common_light_lvl3_64x128.png"
+			>
+				<tags>							Autogen, Armor, MediumArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl2 Gloves 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Glowing ingot</parts>
+												<parts count="1">Leather</parts>
+				</recycling_parts>
+				<variants>			
+												<variant equip_template="g_01a_mg__common_light_lvl3">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01_mg__common_light_lvl3" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+			<!-- GUARD LVL2 A GLOVES -->
+			<item
+				name							="Guard Lvl2 A Gloves 1"
+				category						="gloves"
+				price							="102"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__guard_lvl2"
+				localisation_key_name			="item_name_guard_lvl2_A_geralt_gloves"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/guard_2a_gloves_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, MediumArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl2 A Gloves 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Dark steel ingot</parts>
+												<parts count="1">Leather squares</parts>
+				</recycling_parts>
+				<variants>			
+												<variant equip_template="g_01a_mg__guard_lvl2">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01_mg__guard_lvl2" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+			<item
+				name							="Guard Lvl2 A Gloves 2"
+				category						="gloves"
+				price							="161"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__guard_lvl2"
+				localisation_key_name			="item_name_guard_lvl2_A_geralt_gloves"
+				localisation_key_description	="item_category_medium_armor_description"
+				icon_path						="icons/inventory/armors/guard_2a_gloves_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, MediumArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Guard Lvl2 A Gloves 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Glowing ingot</parts>
+												<parts count="1">Leather</parts>
+				</recycling_parts>
+				<variants>			
+												<variant equip_template="g_01a_mg__guard_lvl2">
+													<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+													<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01_mg__guard_lvl2" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+		<!-- ARMOR HEAVY -->
+
+			<!-- KNIGHT GERALT GLOVES -->
+			<item
+				name							="Knight Geralt Gloves 1"
+				category						="gloves"
+				price							="200"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__errant_knight"
+				localisation_key_name			="item_name_knight_geralt_gloves"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/knight_1_gloves_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, HeavyArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Knight Geralt Gloves 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Dark steel ingot</parts>
+												<parts count="1">Silver ingot</parts>
+												<parts count="1">Leather</parts>
+				</recycling_parts>
+				<variants>						<variant equip_template="g_01a_mg__errant_knight">
+												<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+												<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01b_mg__errant_knight">
+												<item>Toussaint Armor 2</item>      
+												<item>Knight Geralt A Armor 2</item>   
+												<item>Knight Geralt A Armor 1</item>      
+												<item>Knight Geralt Armor 2</item>  
+												<item>Knight Geralt Armor 1</item>      
+												<item>Knight Geralt Armor 3</item>  
+												<item>Knight Geralt A Armor 3</item>      
+												<item>sq701_geralt_armor</item> 
+												<item>sq701_ravix_armor</item> 
+												<item>Toussaint Armor 3</item>
+												<item>q702_vampire_armor</item>  	
+												<item>q704_vampire_armor</item>
+												</variant>
+												<variant equip_template="g_01_mg__errant_knight" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+			<item
+				name							="Knight Geralt Gloves 2"
+				category						="gloves"
+				price							="305"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__errant_knight"
+				localisation_key_name			="item_name_knight_geralt_gloves"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/knight_1_gloves_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, HeavyArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Knight Geralt Gloves 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Glowing ingot</parts>
+												<parts count="1">Leather</parts>
+				</recycling_parts>
+				<variants>						<variant equip_template="g_01a_mg__errant_knight">
+												<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+												<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01b_mg__errant_knight">
+												<item>Toussaint Armor 2</item>      
+												<item>Knight Geralt A Armor 2</item>   
+												<item>Knight Geralt A Armor 1</item>      
+												<item>Knight Geralt Armor 2</item>  
+												<item>Knight Geralt Armor 1</item>      
+												<item>Knight Geralt Armor 3</item>  
+												<item>Knight Geralt A Armor 3</item>      
+												<item>sq701_geralt_armor</item> 
+												<item>sq701_ravix_armor</item> 
+												<item>Toussaint Armor 3</item>
+												<item>q702_vampire_armor</item>  
+												<item>q704_vampire_armor</item>
+												</variant>
+												<variant equip_template="g_01_mg__errant_knight" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+			<!-- KNIGHT GERALT A GLOVES -->
+			<item
+				name							="Knight Geralt A Gloves 1"
+				category						="gloves"
+				price							="202"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_02a_mg__errant_knight"
+				localisation_key_name			="item_name_knight_A_geralt_gloves"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/knight_2_gloves_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, HeavyArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Knight Geralt A Gloves 1 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Dark steel ingot</parts>
+												<parts count="1">Silver ingot</parts>
+												<parts count="1">Leather</parts>
+				</recycling_parts>
+				<variants>						<variant equip_template="g_02a_mg__errant_knight">
+												<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+												<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_02b_mg__errant_knight">
+												<item>Toussaint Armor 2</item>      
+												<item>Knight Geralt A Armor 2</item>   
+												<item>Knight Geralt A Armor 1</item>      
+												<item>Knight Geralt Armor 2</item>  
+												<item>Knight Geralt Armor 1</item>      
+												<item>Knight Geralt Armor 3</item>  
+												<item>Knight Geralt A Armor 3</item>      
+												<item>sq701_geralt_armor</item> 
+												<item>sq701_ravix_armor</item> 
+												<item>Toussaint Armor 3</item>
+												<item>q702_vampire_armor</item>  
+												<item>q704_vampire_armor</item>												
+												</variant>
+												<variant equip_template="g_02_mg__errant_knight" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+
+			<item
+				name							="Knight Geralt A Gloves 2"
+				category						="gloves"
+				price							="307"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_02a_mg__errant_knight"
+				localisation_key_name			="item_name_knight_A_geralt_gloves"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/knight_2_gloves_1_64x128.png"
+			>
+				<tags>							Autogen, Armor, HeavyArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Knight Geralt A Gloves 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Glowing ingot</parts>
+												<parts count="1">Leather</parts>
+				</recycling_parts>
+				<variants>						<variant equip_template="g_02a_mg__errant_knight">
+												<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+												<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_02b_mg__errant_knight">
+												<item>Toussaint Armor 2</item>      
+												<item>Knight Geralt A Armor 2</item>   
+												<item>Knight Geralt A Armor 1</item>      
+												<item>Knight Geralt Armor 2</item>  
+												<item>Knight Geralt Armor 1</item>      
+												<item>Knight Geralt Armor 3</item>  
+												<item>Knight Geralt A Armor 3</item>      
+												<item>sq701_geralt_armor</item> 
+												<item>sq701_ravix_armor</item> 
+												<item>Toussaint Armor 3</item>
+												<item>q702_vampire_armor</item> 
+												<item>q704_vampire_armor</item>
+												</variant>
+												<variant equip_template="g_02_mg__errant_knight" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+			
+			<item
+				name							="Toussaint Gloves 2"
+				category						="gloves"
+				price							="310"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_03a_mg__errant_knight"
+				localisation_key_name			="item_name_toussaint_gloves"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/toussaint_gloves_2_64x128.png"
+			>
+				<tags>							Autogen, Armor, HeavyArmor, mod_armor
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>Toussaint Gloves 2 _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Orichalcum ingot</parts>
+				</recycling_parts>
+				<variants>						<variant equip_template="g_03a_mg__errant_knight">
+												<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+												<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_03b_mg__errant_knight">
+												<item>Toussaint Armor 2</item>      
+												<item>Knight Geralt A Armor 2</item>   
+												<item>Knight Geralt A Armor 1</item>      
+												<item>Knight Geralt Armor 2</item>  
+												<item>Knight Geralt Armor 1</item>      
+												<item>Knight Geralt Armor 3</item>  
+												<item>Knight Geralt A Armor 3</item>      
+												<item>sq701_geralt_armor</item> 
+												<item>sq701_ravix_armor</item> 
+												<item>Toussaint Armor 3</item>
+												<item>q702_vampire_armor</item> 
+												<item>q704_vampire_armor</item>
+												</variant>
+												<variant equip_template="g_03_mg__errant_knight" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+			
+			<!-- GLOVES QUEST -->
+			
+			<item
+				name							="sq701_geralt_gloves"
+				category						="gloves"
+				price							="300"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__errant_knight"
+				localisation_key_name			="item_name_knight_geralt_gloves"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/knight_1_gloves_1_64x128.png"
+			>
+				<tags>							Autogen, AutogenForceLevel, Armor, HeavyArmor, mod_armor, mod_legendary
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>sq701_geralt_gloves _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite ingot</parts>
+												<parts count="1">Orichalcum ingot</parts>
+				</recycling_parts>
+				<variants>						<variant equip_template="g_01a_mg__errant_knight">
+												<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+												<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01b_mg__errant_knight">
+												<item>Toussaint Armor 2</item>      
+												<item>Knight Geralt A Armor 2</item>   
+												<item>Knight Geralt A Armor 1</item>      
+												<item>Knight Geralt Armor 2</item>  
+												<item>Knight Geralt Armor 1</item>      
+												<item>Knight Geralt Armor 3</item>  
+												<item>Knight Geralt A Armor 3</item>      
+												<item>sq701_geralt_armor</item> 
+												<item>sq701_ravix_armor</item> 
+												<item>Toussaint Armor 3</item>
+												<item>q702_vampire_armor</item>  
+												<item>q704_vampire_armor</item>
+												</variant>
+												<variant equip_template="g_01_mg__errant_knight" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+			
+			<item
+				name							="q702_vampire_gloves"
+				category						="gloves"
+				price							="485"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="q704_g_01a_mg__vampire" 
+				localisation_key_name			="item_name_baw_vampire_gloves"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/q704_vampire_gloves_64x128.png" 
+			>
+				<tags>							Autogen, Armor, HeavyArmor, mod_armor, mod_legendary, VampireSet, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>q702_vampire_gloves _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite silver ingot</parts>
+												<parts count="1">Dark steel ingot</parts>
+												<parts count="1">Leather</parts>
+				</recycling_parts>
+				<variants>						<variant equip_template="q704_g_01a_mg__vampire"> 
+												<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+												<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="q704_g_01b_mg__vampire"> 
+												<item>Toussaint Armor 2</item>      
+												<item>Knight Geralt A Armor 2</item>   
+												<item>Knight Geralt A Armor 1</item>      
+												<item>Knight Geralt Armor 2</item>  
+												<item>Knight Geralt Armor 1</item>      
+												<item>Knight Geralt Armor 3</item>  
+												<item>Knight Geralt A Armor 3</item>      
+												<item>sq701_geralt_armor</item> 
+												<item>sq701_ravix_armor</item> 
+												<item>Toussaint Armor 3</item>
+												<item>q702_vampire_armor</item> 
+												<item>q704_vampire_armor</item>
+												</variant>
+												<variant equip_template="q704_g_01_mg__vampire" category="armor"></variant>  <!-- this item uses bold version --> 
+				</variants> 
+			</item>
+			
+			<item
+				name							="q704_vampire_gloves"
+				category						="gloves"
+				price							="485"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="1"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__vampire"
+				localisation_key_name			="item_name_baw_vampire_gloves_2"
+				localisation_key_description	="item_category_heavy_armor_description"
+				icon_path						="icons/inventory/armors/vampire_gloves_64x128.png"
+			>
+				<tags>							Autogen, Armor, HeavyArmor, mod_armor, mod_legendary, VampireSet, SetBonusPiece
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+												<a>q704_vampire_gloves _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Meteorite silver ingot</parts>
+												<parts count="1">Dark steel ingot</parts>
+												<parts count="1">Leather</parts>
+				</recycling_parts>
+				<variants>						<variant equip_template="g_01a_mg__vampire">
+												<item>Geralt Shirt</item>         <!-- this item uses slim version -->
+												<item>Lynx Armor</item>           <!-- this item uses slim version -->
+												</variant>
+												<variant equip_template="g_01b_mg__vampire">
+												<item>Toussaint Armor 2</item>      
+												<item>Knight Geralt A Armor 2</item>   
+												<item>Knight Geralt A Armor 1</item>      
+												<item>Knight Geralt Armor 2</item>  
+												<item>Knight Geralt Armor 1</item>      
+												<item>Knight Geralt Armor 3</item>  
+												<item>Knight Geralt A Armor 3</item>      
+												<item>sq701_geralt_armor</item> 
+												<item>sq701_ravix_armor</item> 
+												<item>Toussaint Armor 3</item>
+												<item>q702_vampire_armor</item>  
+												<item>q704_vampire_armor</item>  												
+												</variant>
+												<variant equip_template="g_01_mg__vampire" category="armor"></variant>  <!-- this item uses bold version -->
+				</variants>
+			</item>
+			
+			<item
+				name							="q705_mandragora_gloves"
+				category						="gloves"
+				price							="20"
+				initial_durability				="100"
+				max_durability					="100"
+				enhancement_slots				="0"
+				stackable						="1"
+				grid_size						="2"
+				ability_mode					="OnMount"
+				equip_template					="g_01a_mg__common_light_lvl1"
+				localisation_key_name			="item_name_q705_mandragora_gloves"
+				localisation_key_description	="item_category_light_armor_description"
+				icon_path						="icons/inventory/armors/common_light_64x128.png"
+			>
+				<tags>							Armor, LightArmor, mod_armor, Quest, DoNotEnhance
+				</tags>
+				<base_abilities>				<a>Default armor _Stats</a>
+				</base_abilities>
+				<recycling_parts>				<parts count="1">Leather straps</parts>
+				</recycling_parts>
+				<variants>						
+				</variants>
+			</item>
+			
+		</items>
+
+	</definitions>
+</redxml>
