@@ -1,5 +1,12 @@
 # Spectre CHANGELOG for The Witcher 3 5.01
 
+# 1.09
+
+## Fixes
+
+- Loading a save no longer takes skills out of their slots.
+- Script merge tools can read spectre.ws: some lines used a form the game accepts but merge tools could not parse.
+
 # 1.08
 
 ## Fixes

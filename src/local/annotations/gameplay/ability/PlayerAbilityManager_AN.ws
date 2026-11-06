@@ -177,7 +177,6 @@ var spectreActiveSkills : array<ESkill>;
 	}
 
 	SpectreFillActiveSkills();
-	SpectreUnequipLockedSlots();
 }
 
 // Skills that work without a slot. This list is the only place that decides it: Spectre's own

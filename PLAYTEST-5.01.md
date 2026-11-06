@@ -127,6 +127,7 @@ Opening one container can pull others of the same kind into that loot window. A 
 ## Skill tree and slots
 
 - **Pass.** New game: one skill slot open; the others open at 2, 4, 6... total skill points. The 4 middle slots stay locked until a mutation is equipped and enough are researched. An older save with skills in locked slots loads with them unequipped.
+- **Not tested.** "Use Spectre's skill progression" off, several slots open by skill points, skills in all of them (vanilla alchemy package too): save and load, twice. Every skill stays in its slot, with no potion sound on load.
 - **Pass.** Option "Use Spectre's skill progression": on, all 16 slots open at once; off again, they close by skill points. With one slot open before, turning it off keeps that slot and its skill, and the skills in the three slots that close are unequipped.
 - **Pass.** New game with the default options: Whirl, Rend, Arrow Deflection, Cold Blood, Razor Focus, Axii: Delusion, the five alternate sign modes, Aard: Far-Reaching, Igni: Melt Armor, Yrden: Sustained Glyphs and Quen: Exploding Shield are at rank 1, every skill point is still free, and they work without a slot (tooltip says Passive).
 - **Pass.** Muscle Memory at rank 5 in a slot. Turn "Use Spectre's skill tree" off and close the menu: "Skill tree updated." shows, the combat tree is the 5.01 one, the 5.01 Muscle Memory is at rank 3 in the same slot, and 2 points come back as unspent. Turn it on again: Spectre's Muscle Memory is at rank 3 (not 5) in that slot, and no point comes back.

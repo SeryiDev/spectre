@@ -1,6 +1,6 @@
 function spectreGetVersion() : float
 {
-	return 1.08;
+	return 1.09;
 }
 
 function spectreSettingsGetConfigValue(menuName, menuItemName : name) : string
@@ -2057,7 +2057,7 @@ state spectreAlchemyBrewing in W3PlayerWitcher extends MeditationBase
 	}
 
 	public function DeclareSessionType(use_fire : bool)
-	{	session_type = (1 * (int)use_fire) + (-1 * (int)!use_fire);
+	{	session_type = (1 * (int)use_fire) + (-1 * (int)(!use_fire));
 	}
 
 	public function OpenAlchemyMenu()
@@ -2908,8 +2908,8 @@ class SpectreAlchemyExtensions extends SpectreAlchemyExtensionsConfig
 			increment = potion_duration_added;
 			multiplier = potion_duration_mult;
 		}
-		duration = duration * (int)!((bool)_override) + _override;
-		duration += increment * (int)!((bool)_override);
+		duration = duration * (int)(!((bool)_override)) + _override;
+		duration += increment * (int)(!((bool)_override));
 		duration *= (1 + multiplier - (int)(bool)multiplier);
 
 		if (FactsQuerySum("ACS_In_Meditation") > 0 )
@@ -3868,7 +3868,7 @@ class spectreAbilityManager extends W3PlayerAbilityManager
 	{
 		if (itemSet == EIST_RedWolf)
 		{	if (enable)
-				alchexts.toxicity_dmg_modifier -= 0.1f * (int)!manticore_bonus;
+				alchexts.toxicity_dmg_modifier -= 0.1f * (int)(!manticore_bonus);
 			else alchexts.toxicity_dmg_modifier += 0.1f * (int)manticore_bonus;
 			manticore_bonus = enable;
 		}
@@ -5095,7 +5095,7 @@ class spectreIngredientManager
 
 				invalid = (invalid || item == data.filterForbiddenTagsList[j]);
 			}
-			for (j = (data.filterTagsList.Size() - 1) * (int)!invalid - (int)invalid; j >= 0; j -= 1)
+			for (j = (data.filterTagsList.Size() - 1) * (int)(!invalid) - (int)invalid; j >= 0; j -= 1)
 			{	
 				switch(data.filterTagsList[j])				//whitelist
 				{	
@@ -5407,9 +5407,9 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 			filters.primary = primary;
 			filters.composite = composite;
 			// Kept in the save, so the menu opens with the same filters.
-			FactsSet("spectre_alchemy_hide_normal", (int)!standard);
-			FactsSet("spectre_alchemy_hide_enhanced", (int)!primary);
-			FactsSet("spectre_alchemy_hide_superior", (int)!composite);
+			FactsSet("spectre_alchemy_hide_normal", (int)(!standard));
+			FactsSet("spectre_alchemy_hide_enhanced", (int)(!primary));
+			FactsSet("spectre_alchemy_hide_superior", (int)(!composite));
 			PopulateData();
 		}
 		return true;
@@ -5846,7 +5846,7 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 			default:
 				return (quantity);
 		}
-		return (quantity + (int)!quantity);
+		return (quantity + (int)(!quantity));
 	}
 
 
@@ -6430,7 +6430,7 @@ class CR4AlchemyMenu extends CR4ListBaseMenu
 		}
 		if (config.time_based_alchemy && player.GetCurrentStateName() == 'spectreAlchemyBrewing')
 			((W3PlayerWitcherStatespectreAlchemyBrewing)player.GetCurrentState() ).AddBrewTime(
-				(config.distillation_time * (int)is_distilling + (int)!is_distilling * config.alchemy_time_cost) );
+				(config.distillation_time * (int)is_distilling + (int)(!is_distilling) * config.alchemy_time_cost) );
 		for (i = recipe.requiredIngredients.Size() - 1; i >= 0 ; i -= 1)
 		{	ingredient = recipe.requiredIngredients[i].itemName;
 			if(!dm.IsItemSingletonItem(ingredient) )
@@ -7197,7 +7197,7 @@ class spectreToxicityEffect extends W3Effect_Toxicity
 			degenrate = -1 * elapsed * degenrate * alchext.toxicity_degen_modifier;
 		}	
 		else degenrate = (-1 * elapsed * 0.1f * target.GetStatMax(BCS_Toxicity) * alchext.residual_degen_rate *
-			(float)!effectManager.HasEffect(EET_PotionDigestion) ) * alchext.toxicity_degen_modifier;
+			(float)(!effectManager.HasEffect(EET_PotionDigestion)) ) * alchext.toxicity_degen_modifier;
 		effectManager.CacheStatUpdate(BCS_Toxicity, degenrate);
 		elapsed = 0;
 	}
