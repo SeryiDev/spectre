@@ -1,5 +1,11 @@
 # Spectre CHANGELOG for The Witcher 3 5.01
 
+# 1.10
+
+## Fixes
+
+- Glyphwords work on every armor piece, not only the chest. Mods that let you enchant boots, trousers or gloves (like Enchantment by Slot) now work.
+
 # 1.09
 
 ## Fixes

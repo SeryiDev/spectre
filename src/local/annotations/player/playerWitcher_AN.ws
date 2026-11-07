@@ -4033,16 +4033,15 @@ private var cachedToxDmg : float;
 @addMethod(W3PlayerWitcher) function HasGlyphwordActive(abilityName : name) : bool
 {
 	var item : SItemUniqueId;
-	var hasGlyphword : bool;
-	
-	hasGlyphword = false;
-	
-	if(GetItemEquippedOnSlot(EES_Armor, item))
+	var slot : int;
+
+	for( slot = (int)EES_SilverSword; slot <= (int)EES_Potion4; slot += 1 )
 	{
-		hasGlyphword = inv.ItemHasAbility(item, abilityName);
+		if( GetItemEquippedOnSlot( (EEquipmentSlots)slot, item ) && inv.ItemHasAbility( item, abilityName ) )
+			return true;
 	}
-	
-	return hasGlyphword;
+
+	return false;
 }
 
 @wrapMethod(W3PlayerWitcher) function AddRepairObjectBuff(armor : bool, weapon : bool) : bool

@@ -253,6 +253,7 @@ Check the tooltip and the effect at ranks 1, 5, and 10.
 - **Not tested.** Vitality recovery in combat, and vitality recovery out of combat. At 0 both stay as they are.
 - **Not tested.** Sprint, melee, and sign stamina costs. At 0 each cost stays as it is.
 - **Not tested.** Stamina delay. At 0, the pause before stamina returns is unchanged. A positive value waits longer. A negative value shortens it, and the pause never goes below 0.
+- **Not tested.** Glyphwords on any armor piece. Without other mods, a chest glyphword (for example Glyphword 6 on Aard) still works. With Enchantment by Slot, the same glyphword on boots, trousers or gloves (and no chest glyphword) works too.
 - **Pass.** On horseback with keyboard and mouse: a short press of E next to a container loots it without dismounting; holding E dismounts.
 
 ## Uninstalling
